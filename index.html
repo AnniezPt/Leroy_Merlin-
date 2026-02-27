@@ -97,4 +97,141 @@
                         categoria: "Modelos Fundacionales",
                         fecha: "Febrero 2026",
                         titulo: "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
-                        resumen: "DeepSeek democratiza el cálculo en tiempo de inferencia con el lanzamiento del modelo V3.2. Esta versión reduce drásticamente los costes, iguala
+                        resumen: "DeepSeek democratiza el cálculo en tiempo de inferencia con el lanzamiento del modelo V3.2. Esta versión reduce drásticamente los costes, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use'.[2]",
+                        imagen: "", 
+                        enlace: "https://api-docs.deepseek.com/news/news251201" 
+                    },
+                    {
+                        categoria: "Generación de Vídeo",
+                        fecha: "Febrero 2026",
+                        titulo: "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
+                        resumen: "OpenAI presenta Sora 2, un simulador de mundos físicos con nuevas capacidades como la continuación infinita de vídeos ('Extensions') y la animación de imágenes reales.[3] Sin embargo, la herramienta no está disponible en España debido a las regulaciones de la EU AI Act.[4]",
+                        imagen: "", 
+                        enlace: "https://openai.com/index/sora-2/" 
+                    },
+                    {
+                        categoria: "Síntesis de Información",
+                        fecha: "Febrero 2026",
+                        titulo: "NotebookLM redefine la asimilación de conocimiento mediante 'Audio Overviews' Globales",
+                        resumen: "Google Labs actualiza NotebookLM añadiendo soporte para más de 50 idiomas en su función de resúmenes 'Audio Overviews'.[7] Esto permite procesar documentaciones complejas en distintos idiomas y generar un debate o podcast explicativo en español.[8]",
+                        imagen: "", 
+                        enlace: "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/" 
+                    }
+                ]
+            },
+
+            // ==========================================
+            // EDICIÓN 2: SEMANA PASADA (Aparecerá abajo, separada y más clarita)
+            // ==========================================
+            {
+                tituloAudio: "Resumen de noticias (Semana Pasada)",
+                audioSrc: "audio-antiguo.mp3", 
+                noticias: [
+                    {
+                        categoria: "Logística",
+                        fecha: "20 feb 2026",
+                        titulo: "Mejoras en la cadena de suministro",
+                        resumen: "Se han implementado nuevos sistemas de rastreo satelital que mejoran la eficiencia de entrega en un 15% a nivel europeo.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=Imagen+Antigua+1",
+                        enlace: "#" 
+                    },
+                    {
+                        categoria: "Retail",
+                        fecha: "20 feb 2026",
+                        titulo: "Nuevas tiendas con formato híbrido",
+                        resumen: "Apertura de nuevos espacios que combinan la experiencia de compra tradicional con puntos de recogida automatizados.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=Imagen+Antigua+2",
+                        enlace: "#"
+                    },
+                    {
+                        categoria: "Tendencias",
+                        fecha: "20 feb 2026",
+                        titulo: "Sostenibilidad en materiales de construcción",
+                        resumen: "El aumento en la demanda de materiales ecológicos impulsa cambios en el inventario para el próximo trimestre.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=Imagen+Antigua+3",
+                        enlace: "#"
+                    }
+                ]
+            }
+
+        ];
+
+
+        // =========================================================================
+        // MOTOR DE LA PÁGINA (ESTO CONSTRUYE EL DISEÑO AUTOMÁTICAMENTE - NO TOCAR)
+        // =========================================================================
+        const contenedor = document.getElementById('contenedor-boletines');
+        let htmlFinal = '';
+
+        EDICIONES_DEL_BOLETIN.forEach((edicion, index) => {
+            const esLaMasNueva = index === 0;
+            const opacidad = esLaMasNueva ? '' : 'opacity-75';
+
+            // Dibujar el separador antes de las ediciones antiguas
+            if (!esLaMasNueva && index === 1) {
+                htmlFinal += `
+                <div class="flex items-center justify-center mt-20 mb-14 opacity-60">
+                    <div class="h-[2px] bg-gray-300 w-full rounded-full"></div>
+                    <span class="px-5 text-gray-500 text-sm font-bold uppercase tracking-widest whitespace-nowrap bg-[#f4f6f8]">
+                        Ediciones Anteriores
+                    </span>
+                    <div class="h-[2px] bg-gray-300 w-full rounded-full"></div>
+                </div>`;
+            }
+
+            // Crear las tarjetas de la edición actual
+            let tarjetasNoticias = '';
+            edicion.noticias.forEach(noticia => {
+                // this.onerror=null evita el bucle infinito si la imagen de repuesto también falla
+                tarjetasNoticias += `
+                <article class="tarjeta-noticia bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
+                    <div class="contenedor-imagen ${esLaMasNueva ? '' : 'opacity-90'}">
+                        <img src="${noticia.imagen}" alt="${noticia.titulo}" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Imagen+No+Encontrada'">
+                    </div>
+                    <div class="p-7 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wide">${noticia.categoria}</span>
+                            <span class="text-gray-400 text-xs font-medium">${noticia.fecha}</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900">${noticia.titulo}</h3>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4 leading-relaxed">${noticia.resumen}</p>
+                        
+                        <!-- ESTE ES EL BOTÓN QUE LEE TU ENLACE -->
+                        <a href="${noticia.enlace}" target="_blank" class="text-sm font-bold text-gray-800 hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
+                            Leer informe completo 
+                            <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </article>`;
+            });
+
+            // Ensamblar el bloque de la edición (Audio + Tarjetas)
+            htmlFinal += `
+            <section class="mb-16 ${opacidad}">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-10 w-full max-w-4xl mx-auto">
+                    <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-gray-900' : 'text-lg text-gray-500'} mb-5">${edicion.tituloAudio}</h2>
+                    <audio controls class="w-full audio-boletin bg-gray-50 rounded-lg">
+                        <source src="${edicion.audioSrc}" type="audio/mpeg">
+                        Tu navegador no soporta el audio.
+                    </audio>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    ${tarjetasNoticias}
+                </div>
+            </section>`;
+        });
+
+        contenedor.innerHTML = htmlFinal;
+
+        // SISTEMA PARA PAUSAR AUDIOS: Si le das al play a uno, los demás se callan.
+        document.addEventListener('play', function(e){
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                if(audios[i] != e.target){
+                    audios[i].pause();
+                }
+            }
+        }, true);
+    </script>
+</body>
+</html>
