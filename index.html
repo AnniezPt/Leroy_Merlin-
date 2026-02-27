@@ -62,6 +62,11 @@
             appearance: none;
             -webkit-appearance: none;
         }
+        /* Arreglo específico para que el input de fecha no se colapse en iOS/Safari */
+        input[type="date"] {
+            min-width: 140px;
+            justify-content: center;
+        }
         .filtro-estilizado::-webkit-calendar-picker-indicator {
             cursor: pointer;
             opacity: 0.6;
@@ -81,7 +86,7 @@
             <!-- CONTROLES DE FILTRADO -->
             <div class="flex flex-wrap justify-center gap-3">
                 <div class="relative">
-                    <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8">
+                    <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
                         <!-- Las opciones se inyectan por JS -->
                     </select>
@@ -90,7 +95,8 @@
                     </div>
                 </div>
 
-                <input type="date" id="filtro-fecha" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado" title="Filtrar por fecha">
+                <!-- ELIMINADA LA CLASE filtro-estilizado DE AQUÍ PARA EVITAR EL BUG EN MÓVILES -->
+                <input type="date" id="filtro-fecha" class="border border-lm-green text-lm-dark font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none bg-transparent text-center flex items-center" title="Filtrar por fecha">
                 
                 <button id="btn-limpiar" class="hidden border border-gray-300 text-gray-500 font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-gray-100 transition-colors focus:outline-none">
                     Limpiar x
@@ -124,8 +130,8 @@
                         fechaISO: "2026-02-27",
                         fechaTexto: "27 Feb 2026",
                         titulo: "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
-                        resumen: "DeepSeek democratiza el cálculo en tiempo de inferencia con el lanzamiento del modelo V3.2. Esta versión reduce drásticamente los costes, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use'.",
-                        imagen: "1noticia27F", // Solo el nombre. Buscará ./archivos/1noticia27F.jpg
+                        resumen: "DeepSeek democratiza el cálculo en tiempo de inferencia con el revolucionario lanzamiento del modelo V3.2. Esta nueva versión no solo reduce drásticamente los costes operativos, sino que iguala el rendimiento de los modelos premium más avanzados del mercado e introduce la innovadora capacidad autónoma 'Thinking in Tool-Use'.",
+                        imagen: "1noticia27F", 
                         enlace: "https://api-docs.deepseek.com/news/news251201" 
                     },
                     {
@@ -133,22 +139,21 @@
                         fechaISO: "2026-02-27",
                         fechaTexto: "27 Feb 2026",
                         titulo: "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
-                        resumen: "OpenAI presenta Sora 2, un simulador de mundos físicos con nuevas capacidades como la continuación infinita de vídeos y la animación de imágenes reales. Sin embargo, la herramienta no está disponible en España debido a las regulaciones de la EU AI Act.",
-                        imagen: "2noticia27F", // Si prefieres poner un vídeo, cambia "imagen" por "video: '2noticia27F.mp4'"
+                        resumen: "OpenAI presenta oficialmente Sora 2, un avanzado simulador de mundos físicos equipado con capacidades sin precedentes, como la continuación infinita de vídeos y la animación hiperrealista de imágenes. Sin embargo, esta potente herramienta tecnológica no estará disponible en España ni en el resto de Europa debido a las estrictas regulaciones impuestas.",
+                        imagen: "2noticia27F", 
                         enlace: "https://openai.com/index/sora-2/" 
                     },
                     {
                         categoria: "Síntesis de Información",
                         fechaISO: "2026-02-27",
                         fechaTexto: "27 Feb 2026",
-                        titulo: "NotebookLM redefine la asimilación de conocimiento mediante 'Audio Overviews' Globales",
-                        resumen: "Google Labs actualiza NotebookLM añadiendo soporte para más de 50 idiomas en su función de resúmenes 'Audio Overviews'. Esto permite procesar documentaciones complejas en distintos idiomas y generar un debate o podcast explicativo en español.",
+                        titulo: "NotebookLM redefine la asimilación mediante 'Audio Overviews'",
+                        resumen: "Google Labs da un salto gigantesco actualizando NotebookLM, añadiendo soporte nativo para más de 50 idiomas en su popular función de resúmenes 'Audio Overviews'. Esta mejora global permite a los usuarios procesar documentaciones técnicas complejas en múltiples idiomas y generar automáticamente un debate o podcast explicativo altamente detallado.",
                         imagen: "3noticia27F", 
                         enlace: "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/" 
                     }
                 ]
             }
-            // Cuando quieras añadir la semana que viene, pones una coma arriba y pegas un bloque nuevo aquí.
         ];
 
         // =========================================================================
