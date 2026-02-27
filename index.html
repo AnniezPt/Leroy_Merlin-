@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín Noticias - Leroy Merlin</title>
+    <!-- Importamos Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lm-green': '#6cc24a',
+                        'lm-dark': '#5aa33e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .tarjeta-noticia {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .tarjeta-noticia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.15);
+        }
+        .contenedor-imagen {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #e2e8f0;
+        }
+        .contenedor-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased pb-12">
+
+    <!-- CABECERA PRINCIPAL (No necesitas tocar esto) -->
+    <header class="bg-white border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Boletín Noticias</h1>
+                <p class="text-sm text-gray-500 font-medium">Leroy Merlin</p>
+            </div>
+            <div class="flex gap-3">
+                <button class="border border-lm-green text-lm-dark font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none">Categorías</button>
+                <button class="border border-lm-green text-lm-dark font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none">Fechas</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- AQUÍ SE INYECTARÁN LAS NOTICIAS AUTOMÁTICAMENTE -->
+    <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <!-- El contenido aparecerá aquí por arte de magia gracias al código de abajo -->
+    </main>
+
+    <!-- ========================================================================= -->
+    <!-- ZONA DE INFORMACIÓN: TÚ SOLO EDITAS ESTA PARTE                            -->
+    <!-- ========================================================================= -->
+    <script>
+        // Aquí guardas tus noticias. El diseño HTML nunca se romperá porque está separado.
+        // Para añadir una nueva semana, simplemente copia una edición entera { ... } y ponla arriba.
+
+        const EDICIONES_DEL_BOLETIN = [
+            
+            // --- EDICIÓN MÁS RECIENTE ---
+            {
+                tituloAudio: "Resumen de noticias de esta semana",
+                audioSrc: "audio-semana-actual.mp3",
+                noticias: [
+                    {
+                        categoria: "E-Commerce",
+                        fecha: "17 feb 2026",
+                        titulo: "Universal Commerce Protocol: El Estándar Agéntico",
+                        resumen: "Google, en alianza con Shopify y Walmart, ha lanzado un estándar abierto para eliminar la fricción en compras por IA. Permite que los agentes descubran productos y ejecuten pagos autónomos.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=[Imagen+Carrito]",
+                        enlace: "#"
+                    },
+                    {
+                        categoria: "Deep Research",
+                        fecha: "17 feb 2026",
+                        titulo: "El Gran Salto: De Asistente a Investigador Autónomo",
+                        resumen: "La integración en Google elimina límites de almacenamiento y amplía las fuentes procesables. Los nuevos agentes verifican datos en internet en tiempo real para crear infografías.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=[Imagen+Teclado+Carton]",
+                        enlace: "#"
+                    },
+                    {
+                        categoria: "Innovación",
+                        fecha: "17 feb 2026",
+                        titulo: "Título de la tercera noticia destacada",
+                        resumen: "Agrega aquí el texto de resumen para la tercera noticia. Al mantener esta estructura, garantizamos que las tres columnas se vean exactamente del mismo tamaño y alineadas.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=[Imagen+Tercera+Noticia]",
+                        enlace: "#"
+                    }
+                ]
+            },
+
+            // --- EDICIÓN DE LA SEMANA PASADA ---
+            {
+                tituloAudio: "Resumen de noticias (Semana Pasada)",
+                audioSrc: "audio-semana-pasada.mp3",
+                noticias: [
+                    {
+                        categoria: "Logística",
+                        fecha: "10 feb 2026",
+                        titulo: "Mejoras en la cadena de suministro global",
+                        resumen: "Se han implementado nuevos sistemas de rastreo satelital que mejoran la eficiencia de entrega en un 15% a nivel europeo.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=[Imagen+Antigua+1]",
+                        enlace: "#"
+                    },
+                    {
+                        categoria: "Retail",
+                        fecha: "10 feb 2026",
+                        titulo: "Nuevas tiendas con formato híbrido",
+                        resumen: "Apertura de nuevos espacios que combinan la experiencia de compra tradicional con puntos de recogida automatizados.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=[Imagen+Antigua+2]",
+                        enlace: "#"
+                    },
+                    {
+                        categoria: "Tendencias",
+                        fecha: "10 feb 2026",
+                        titulo: "Sostenibilidad en materiales de construcción",
+                        resumen: "El aumento en la demanda de materiales ecológicos impulsa cambios en el inventario para el próximo trimestre.",
+                        imagen: "https://placehold.co/600x400/e2e8f0/64748b?text=[Imagen+Antigua+3]",
+                        enlace: "#"
+                    }
+                ]
+            }
+
+        ];
+
+
+        // =========================================================================
+        // MOTOR DE LA PÁGINA: ESTE CÓDIGO CONSTRUYE EL DISEÑO (NO TOCAR)
+        // =========================================================================
+        const contenedor = document.getElementById('contenedor-boletines');
+        let htmlFinal = '';
+
+        EDICIONES_DEL_BOLETIN.forEach((edicion, index) => {
+            const esLaMasNueva = index === 0;
+            const opacidad = esLaMasNueva ? '' : 'opacity-80';
+
+            // Insertar separador visual antes de las noticias antiguas (a partir de la segunda edición)
+            if (!esLaMasNueva && index === 1) {
+                htmlFinal += `
+                <div class="flex items-center justify-center my-14 opacity-70">
+                    <div class="h-[1px] bg-gray-300 w-full"></div>
+                    <span class="px-4 text-gray-400 text-xs font-bold uppercase tracking-widest whitespace-nowrap bg-[#f4f6f8]">
+                        Ediciones Anteriores
+                    </span>
+                    <div class="h-[1px] bg-gray-300 w-full"></div>
+                </div>`;
+            }
+
+            // Construir las tarjetas de noticias de esta edición
+            let tarjetasNoticias = '';
+            edicion.noticias.forEach(noticia => {
+                tarjetasNoticias += `
+                <article class="tarjeta-noticia bg-white rounded-xl border border-gray-100 flex flex-col overflow-hidden">
+                    <div class="contenedor-imagen ${esLaMasNueva ? '' : 'opacity-80'}">
+                        <img src="${noticia.imagen}" alt="${noticia.titulo}">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded uppercase">${noticia.categoria}</span>
+                            <span class="text-gray-400 text-xs font-medium">${noticia.fecha}</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 leading-tight">${noticia.titulo}</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-4">${noticia.resumen}</p>
+                        <a href="${noticia.enlace}" class="text-sm font-bold text-gray-800 hover:text-lm-green transition-colors mt-auto inline-flex items-center">
+                            Leer informe completo <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </article>`;
+            });
+
+            // Construir el bloque completo (Audio + Noticias)
+            htmlFinal += `
+            <section class="mb-16 ${opacidad}">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-8 w-full max-w-5xl mx-auto">
+                    <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-gray-800' : 'text-lg text-gray-500'} mb-4">${edicion.tituloAudio}</h2>
+                    <audio controls class="w-full h-10 rounded outline-none audio-boletin">
+                        <source src="${edicion.audioSrc}" type="audio/mpeg">
+                        Tu navegador no soporta el audio.
+                    </audio>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    ${tarjetasNoticias}
+                </div>
+            </section>`;
+        });
+
+        // Inyectar todo en la página
+        contenedor.innerHTML = htmlFinal;
+
+        // Script para pausar audios antiguos si se le da al Play al nuevo (y viceversa)
+        document.addEventListener('play', function(e){
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                if(audios[i] != e.target){
+                    audios[i].pause();
+                }
+            }
+        }, true);
+    </script>
+</body>
+</html>
