@@ -1,0 +1,35 @@
+[
+    {
+        "tituloAudio": "Resumen de noticias de esta semana",
+        "audioSrc": "audio27F.mp3",
+        "noticias": [
+            {
+                "categoria": "Modelos Fundacionales",
+                "fechaISO": "2026-02-27",
+                "fechaTexto": "27 Feb 2026",
+                "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
+                "resumen": "DeepSeek democratiza el cálculo en tiempo de inferencia con el revolucionario lanzamiento del modelo V3.2. Esta nueva versión no solo reduce drásticamente los costes operativos, sino que iguala el rendimiento de los modelos premium más avanzados del mercado e introduce la innovadora capacidad autónoma 'Thinking in Tool-Use'.",
+                "imagen": "1noticia27F",
+                "enlace": "https://api-docs.deepseek.com/news/news251201"
+            },
+            {
+                "categoria": "Generación de Vídeo",
+                "fechaISO": "2026-02-27",
+                "fechaTexto": "27 Feb 2026",
+                "titulo": "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
+                "resumen": "OpenAI presenta oficialmente Sora 2, un avanzado simulador de mundos físicos equipado con capacidades sin precedentes, como la continuación infinita de vídeos y la animación hiperrealista de imágenes. Sin embargo, esta potente herramienta tecnológica no estará disponible en España ni en el resto de Europa.",
+                "imagen": "2noticia27F",
+                "enlace": "https://openai.com/index/sora-2/"
+            },
+            {
+                "categoria": "Síntesis de Información",
+                "fechaISO": "2026-02-27",
+                "fechaTexto": "27 Feb 2026",
+                "titulo": "NotebookLM redefine la asimilación mediante 'Audio Overviews'",
+                "resumen": "Google Labs da un salto gigantesco actualizando NotebookLM, añadiendo soporte nativo para más de 50 idiomas en su popular función de resúmenes 'Audio Overviews'. Esta mejora global permite a los usuarios procesar documentaciones técnicas complejas en múltiples idiomas.",
+                "imagen": "3noticia27F",
+                "enlace": "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/"
+            }
+        ]
+    }
+]
