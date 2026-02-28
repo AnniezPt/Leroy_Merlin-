@@ -1,6 +1,39 @@
 [
     {
         "tituloAudio": "Resumen de noticias de esta semana",
+        "audioSrc": "Audio28F.m4a",
+        "noticias": [
+            {
+                "categoria": "Búsqueda Generativa",
+                "fechaISO": "2026-02-28",
+                "fechaTexto": "28 Feb 2026",
+                "titulo": "Optimización para Motores Generativos (GEO)",
+                "resumen": "Las búsquedas tradicionales caerán un 25% en 2026, exigiendo adoptar el GEO. Será vital usar respuestas directas y FAQs en las webs para lograr que inteligencias artificiales como ChatGPT o Claude citen a las marcas en sus resúmenes.",
+                "imagen": "./archivos/1imagen28F.png",
+                "enlace": "https://searchengineland.com/mastering-generative-engine-optimization-in-2026-full-guide-469142"
+            },
+            {
+                "categoria": "SEO / Patentes IA",
+                "fechaISO": "2026-02-28",
+                "fechaTexto": "28 Feb 2026",
+                "titulo": "Patente de Landing Pages generadas por IA",
+                "resumen": "Google patentó un sistema que evalúa webs de minoristas. Si la original no es óptima, genera una \"landing page\" sintética al instante con el inventario del vendedor, reteniendo así al usuario dentro del propio ecosistema de Google.",
+                "imagen": "./archivos/2imagen28F.png",
+                "enlace": "https://searchengineland.com/google-patent-hints-searchers-will-land-on-ai-generated-pages-and-not-web-pages-470499"
+            },
+            {
+                "categoria": "Finanzas / IA Autónoma",
+                "fechaISO": "2026-02-28",
+                "fechaTexto": "28 Feb 2026",
+                "titulo": "Colapso Bursátil por modernización de COBOL",
+                "resumen": "El mercado sufrió el \"Software-mageddon\" cuando Claude lanzó una guía para modernizar código COBOL bancario con IA. El pánico a perder el lucrativo monopolio de este mantenimiento provocó que IBM perdiera 30.000 millones en bolsa.",
+                "imagen": "./archivos/3imagen28F.png",
+                "enlace": "https://devops.com/a-blog-post-about-cobol-just-cost-ibm-30-billion-heres-what-actually-happened/"
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Resumen de noticias de la semana pasada",
         "audioSrc": "Audio27F.m4a",
         "noticias": [
             {
