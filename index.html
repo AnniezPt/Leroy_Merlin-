@@ -117,56 +117,38 @@
     </main>
 
     <!-- ========================================================================= -->
-    <!-- ZONA DE DATOS (AQUÍ ES DONDE ACTUALIZAS CADA SEMANA)                      -->
+    <!-- ZONA DE LÓGICA (AQUÍ YA NO HAY QUE TOCAR DATOS)                           -->
     <!-- ========================================================================= -->
     <script>
         // CARPETA BASE PARA TUS FOTOS Y VÍDEOS
         const CARPETA_ASSETS = "./archivos/";
+        
+        // Ahora es un array vacío, los datos se llenarán desde data.json
+        let EDICIONES_DEL_BOLETIN = []; 
 
-        const EDICIONES_DEL_BOLETIN = [
-            // EDICIÓN DE ESTA SEMANA
-            {
-                tituloAudio: "Resumen de noticias de esta semana",
-                audioSrc: "audio27F.mp3", 
-                noticias: [
-                    {
-                        categoria: "Modelos Fundacionales",
-                        fechaISO: "2026-02-27",
-                        fechaTexto: "27 Feb 2026",
-                        titulo: "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
-                        resumen: "DeepSeek democratiza el cálculo en tiempo de inferencia con el revolucionario lanzamiento del modelo V3.2. Esta nueva versión no solo reduce drásticamente los costes operativos, sino que iguala el rendimiento de los modelos premium más avanzados del mercado e introduce la innovadora capacidad autónoma 'Thinking in Tool-Use'.",
-                        imagen: "1noticia27F", 
-                        enlace: "https://api-docs.deepseek.com/news/news251201" 
-                    },
-                    {
-                        categoria: "Generación de Vídeo",
-                        fechaISO: "2026-02-27",
-                        fechaTexto: "27 Feb 2026",
-                        titulo: "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
-                        resumen: "OpenAI presenta oficialmente Sora 2, un avanzado simulador de mundos físicos equipado con capacidades sin precedentes, como la continuación infinita de vídeos y la animación hiperrealista de imágenes. Sin embargo, esta potente herramienta tecnológica no estará disponible en España ni en el resto de Europa.",
-                        imagen: "2noticia27F", 
-                        enlace: "https://openai.com/index/sora-2/" 
-                    },
-                    {
-                        categoria: "Síntesis de Información",
-                        fechaISO: "2026-02-27",
-                        fechaTexto: "27 Feb 2026",
-                        titulo: "NotebookLM redefine la asimilación mediante 'Audio Overviews'",
-                        resumen: "Google Labs da un salto gigantesco actualizando NotebookLM, añadiendo soporte nativo para más de 50 idiomas en su popular función de resúmenes 'Audio Overviews'. Esta mejora global permite a los usuarios procesar documentaciones técnicas complejas en múltiples idiomas.",
-                        imagen: "3noticia27F", 
-                        enlace: "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/" 
-                    }
-                ]
-            }
-        ];
-
-        // =========================================================================
-        // MOTOR DE RENDERIZADO Y FILTRADO (NO TOCAR)
-        // =========================================================================
         const contenedor = document.getElementById('contenedor-boletines');
         const selectCategoria = document.getElementById('filtro-categoria');
         const inputFecha = document.getElementById('filtro-fecha');
         const btnLimpiar = document.getElementById('btn-limpiar');
+
+        // Función para cargar el JSON de manera asíncrona
+        async function cargarDatos() {
+            try {
+                // Fetch lee el archivo data.json que debe estar en la misma carpeta
+                // Añadimos un timestamp para evitar que GitHub Pages cachee una versión vieja
+                const respuesta = await fetch('./data.json?t=' + new Date().getTime());
+                if (!respuesta.ok) throw new Error('No se pudo cargar el archivo data.json');
+                
+                EDICIONES_DEL_BOLETIN = await respuesta.json();
+                
+                // Una vez cargados los datos, iniciamos la interfaz
+                inicializarCategorias();
+                renderizarNoticias();
+            } catch (error) {
+                console.error("Error al cargar las noticias:", error);
+                contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe en la raíz de tu repositorio.</div>`;
+            }
+        }
 
         function inicializarCategorias() {
             const todasLasCategorias = EDICIONES_DEL_BOLETIN.flatMap(edicion => 
@@ -251,7 +233,6 @@
                                 </span>
                             </div>
                             <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900 line-clamp-2" title="${noticia.titulo}">${noticia.titulo}</h3>
-                            <!-- Se aplica la nueva clase line-clamp-4-exact -->
                             <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4-exact">${noticia.resumen}</p>
                             
                             <a href="${noticia.enlace}" target="_blank" class="text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
@@ -301,7 +282,7 @@
         btnLimpiar.addEventListener('click', () => {
             selectCategoria.value = '';
             inputFecha.value = '';
-            inputFecha.type = 'text'; // Resetea visualmente a texto el input de fecha
+            inputFecha.type = 'text'; 
             renderizarNoticias();
         });
 
@@ -314,8 +295,8 @@
             }
         }, true);
 
-        inicializarCategorias();
-        renderizarNoticias();
+        // Llamamos a la función que carga los datos
+        cargarDatos();
     </script>
 </body>
 </html>
