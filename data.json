@@ -4,7 +4,7 @@
         "audioSrc": "Audio4M.m4a",
         "noticias": [
             {
-                "categoria": "IA / Estrategia / MarTech",
+                "categoria": "Negocios IA",
                 "fechaISO": "2026-02-13",
                 "fechaTexto": "13 Feb 2026",
                 "titulo": "Anthropic impulsa Claude Code en B2B y lo sitúa en 2.500M$ de ingresos",
@@ -14,7 +14,7 @@
                 "enlace": "https://www.nxcode.io/resources/news/anthropic-380b-valuation-super-bowl-claude-code-2026"
             },
             {
-                "categoria": "IA / Generación de Contenido",
+                "categoria": "IA Generativa",
                 "fechaISO": "2026-02-26",
                 "fechaTexto": "26 Feb 2026",
                 "titulo": "Google DeepMind lanza Nano Banana 2 (Gemini 3.1 Flash Image)",
@@ -23,7 +23,7 @@
                 "enlace": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/"
             },
             {
-                "categoria": "IA / Hardware Local",
+                "categoria": "Modelos IA",
                 "fechaISO": "2026-03-03",
                 "fechaTexto": "03 Mar 2026",
                 "titulo": "Alibaba lanza Qwen 3.5 para llevar inferencia agéntica a hardware local",
@@ -38,7 +38,7 @@
         "audioSrc": "Audio28F.m4a",
         "noticias": [
             {
-                "categoria": "Búsqueda Generativa",
+                "categoria": "SEO y Búsqueda",
                 "fechaISO": "2026-02-28",
                 "fechaTexto": "28 Feb 2026",
                 "titulo": "Optimización para Motores Generativos (GEO)",
@@ -47,7 +47,7 @@
                 "enlace": "https://searchengineland.com/mastering-generative-engine-optimization-in-2026-full-guide-469142"
             },
             {
-                "categoria": "SEO / Patentes IA",
+                "categoria": "SEO y Búsqueda",
                 "fechaISO": "2026-02-28",
                 "fechaTexto": "28 Feb 2026",
                 "titulo": "Patente de Landing Pages generadas por IA",
@@ -56,7 +56,7 @@
                 "enlace": "https://searchengineland.com/google-patent-hints-searchers-will-land-on-ai-generated-pages-and-not-web-pages-470499"
             },
             {
-                "categoria": "Finanzas / IA Autónoma",
+                "categoria": "Negocios IA",
                 "fechaISO": "2026-02-28",
                 "fechaTexto": "28 Feb 2026",
                 "titulo": "Colapso Bursátil por modernización de COBOL",
@@ -71,7 +71,7 @@
         "audioSrc": "Audio27F.m4a",
         "noticias": [
             {
-                "categoria": "Modelos Fundacionales",
+                "categoria": "Modelos IA",
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
@@ -80,7 +80,7 @@
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
             {
-                "categoria": "Generación de Vídeo",
+                "categoria": "IA Generativa",
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
@@ -89,7 +89,7 @@
                 "enlace": "https://openai.com/index/sora-2/"
             },
             {
-                "categoria": "Síntesis de Información",
+                "categoria": "Herramientas IA",
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "NotebookLM redefine la asimilación mediante 'Audio Overviews'",
