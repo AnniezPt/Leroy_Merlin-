@@ -8,7 +8,7 @@
                 "fechaISO": "2026-03-05",
                 "fechaTexto": "05 Mar 2026",
                 "titulo": "OpenAI lanza GPT-5.4 con capacidades nativas de uso de computadora",
-                "resumen": "La compañía ha presentado su modelo más avanzado para el trabajo profesional, el cual integra flujos de trabajo agénticos y destaca por ser el primer modelo de propósito general capaz de operar ordenadores de forma autónoma mediante la emisión visual de comandos de ratón y teclado.",
+                "resumen": "OpenAI presenta su modelo más avanzado para uso profesional. Destaca por integrar flujos agénticos y ser el primer modelo capaz de operar ordenadores de forma autónoma, controlando el ratón y el teclado visualmente.",
                 "imagen": "./archivos/1imagen6M.png",
                 "enlace": "https://openai.com/index/introducing-gpt-5-4/"
             },
@@ -17,7 +17,7 @@
                 "fechaISO": "2026-03-01",
                 "fechaTexto": "01 Mar 2026",
                 "titulo": "Lanzamiento de LTX-2.3 para la generación conjunta de video y audio",
-                "resumen": "Este nuevo modelo fundacional asimétrico permite crear contenido audiovisual sincronizado y de alta fidelidad, ofreciendo soporte nativo para formato vertical a resoluciones 4K, lo que resulta ideal para optimizar los tiempos y costes de producción publicitaria comercial.",
+                "resumen": "Este modelo fundacional asimétrico crea contenido audiovisual sincronizado de alta fidelidad. Su soporte nativo para formato vertical 4K es ideal para optimizar tiempos y costes de producción publicitaria comercial.",
                 "imagen": "./archivos/2imagen6M.png",
                 "enlace": "https://ltx.io/model/ltx-2-3"
             },
@@ -26,7 +26,7 @@
                 "fechaISO": "2026-03-05",
                 "fechaTexto": "05 Mar 2026",
                 "titulo": "Conflicto entre Donald Trump y Anthropic por el control y uso militar de la IA",
-                "resumen": "El Pentágono ha designado a Anthropic como un \"riesgo para la cadena de suministro\" nacional después de que su director se negara a permitir el uso de su tecnología para la vigilancia masiva o armamento autónomo, forzando a diversas agencias a cancelar contratos y migrar hacia OpenAI.",
+                "resumen": "El Pentágono califica a Anthropic como \"riesgo\" tras negarse a ceder su tecnología para vigilancia masiva o armas autónomas. Esta sanción ha forzado a diversas agencias a cancelar contratos y migrar hacia OpenAI.",
                 "imagen": "./archivos/3imagen6M.png",
                 "enlace": "https://www.elespanol.com/invertia/disruptores-americas/20260305/trump-vs-anthropic-guerra-control-absoluto-inteligencia-artificial/1003744149880_0.html"
             }
@@ -108,7 +108,7 @@
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
-                "resumen": "DeepSeek democratiza el cálculo en tiempo de inferencia con el revolucionario lanzamiento del modelo V3.2. Esta nueva versión no solo reduce drásticamente los costes operativos, sino que iguala el rendimiento de los modelos premium más avanzados del mercado e introduce la innovadora capacidad autónoma 'Thinking in Tool-Use'.",
+                "resumen": "DeepSeek democratiza el cálculo en inferencia con el modelo V3.2. Reduce costes operativos, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use' revolucionando el mercado.",
                 "imagen": "./archivos/1Imagen27F.png",
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
@@ -117,7 +117,7 @@
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
-                "resumen": "OpenAI presenta oficialmente Sora 2, un avanzado simulador de mundos físicos equipado con capacidades sin precedentes, como la continuación infinita de vídeos y la animación hiperrealista de imágenes. Sin embargo, esta potente herramienta tecnológica no estará disponible en España ni en el resto de Europa.",
+                "resumen": "OpenAI presenta Sora 2, simulador de mundos físicos con capacidades inéditas como continuación infinita de vídeos y animación hiperrealista. Sin embargo, esta potente herramienta no estará disponible en Europa.",
                 "imagen": "./archivos/2imagen27F.png",
                 "enlace": "https://openai.com/index/sora-2/"
             },
@@ -126,7 +126,7 @@
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "NotebookLM redefine la asimilación mediante 'Audio Overviews'",
-                "resumen": "Google Labs da un salto gigantesco actualizando NotebookLM, añadiendo soporte nativo para más de 50 idiomas en su popular función de resúmenes 'Audio Overviews'. Esta mejora global permite a los usuarios procesar documentaciones técnicas complejas en múltiples idiomas.",
+                "resumen": "Google Labs actualiza NotebookLM con soporte nativo para más de 50 idiomas en su función de resúmenes 'Audio Overviews'. Esta mejora permite procesar y asimilar documentación técnica compleja a escala global.",
                 "imagen": "./archivos/3imagen27F.png",
                 "enlace": "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/"
             }
