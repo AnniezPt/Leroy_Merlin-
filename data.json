@@ -29,6 +29,15 @@
                 "resumen": "El Pentágono califica a Anthropic como \"riesgo\" tras negarse a ceder su tecnología para vigilancia masiva o armas autónomas. Esta sanción ha forzado a diversas agencias a cancelar contratos y migrar hacia OpenAI.",
                 "imagen": "./archivos/3imagen6M.png",
                 "enlace": "https://www.elespanol.com/invertia/disruptores-americas/20260305/trump-vs-anthropic-guerra-control-absoluto-inteligencia-artificial/1003744149880_0.html"
+            },
+            {
+                "categoria": "Herramientas IA",
+                "fechaISO": "2026-03-06",
+                "fechaTexto": "06 Mar 2026",
+                "titulo": "Google Labs despliega Pomelli para la automatización de activos de marca",
+                "resumen": "Desarrollada con DeepMind, esta herramienta experimental escanea la web de una empresa para codificar su 'ADN empresarial'. Genera de forma autónoma campañas, copys e imágenes con una coherencia estética impecable.",
+                "imagen": "./archivos/4imagen6M.png",
+                "enlace": "https://www.lanacion.com.ar/tecnologia/que-es-pomelli-la-nueva-inteligencia-artificial-de-google-para-contenido-de-marca-nid06032026/"
             }
         ]
     },
