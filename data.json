@@ -1,6 +1,39 @@
 [
     {
         "tituloAudio": "Resumen de noticias de esta semana",
+        "audioSrc": "Audio6M.m4a",
+        "noticias": [
+            {
+                "categoria": "Modelos IA",
+                "fechaISO": "2026-03-05",
+                "fechaTexto": "05 Mar 2026",
+                "titulo": "OpenAI lanza GPT-5.4 con capacidades nativas de uso de computadora",
+                "resumen": "La compañía ha presentado su modelo más avanzado para el trabajo profesional, el cual integra flujos de trabajo agénticos y destaca por ser el primer modelo de propósito general capaz de operar ordenadores de forma autónoma mediante la emisión visual de comandos de ratón y teclado.",
+                "imagen": "./archivos/1imagen6M.png",
+                "enlace": "https://openai.com/index/introducing-gpt-5-4/"
+            },
+            {
+                "categoria": "IA Generativa",
+                "fechaISO": "2026-03-01",
+                "fechaTexto": "01 Mar 2026",
+                "titulo": "Lanzamiento de LTX-2.3 para la generación conjunta de video y audio",
+                "resumen": "Este nuevo modelo fundacional asimétrico permite crear contenido audiovisual sincronizado y de alta fidelidad, ofreciendo soporte nativo para formato vertical a resoluciones 4K, lo que resulta ideal para optimizar los tiempos y costes de producción publicitaria comercial.",
+                "imagen": "./archivos/2imagen6M.png",
+                "enlace": "https://ltx.io/model/ltx-2-3"
+            },
+            {
+                "categoria": "Negocios IA",
+                "fechaISO": "2026-03-05",
+                "fechaTexto": "05 Mar 2026",
+                "titulo": "Conflicto entre Donald Trump y Anthropic por el control y uso militar de la IA",
+                "resumen": "El Pentágono ha designado a Anthropic como un \"riesgo para la cadena de suministro\" nacional después de que su director se negara a permitir el uso de su tecnología para la vigilancia masiva o armamento autónomo, forzando a diversas agencias a cancelar contratos y migrar hacia OpenAI.",
+                "imagen": "./archivos/3imagen6M.png",
+                "enlace": "https://www.elespanol.com/invertia/disruptores-americas/20260305/trump-vs-anthropic-guerra-control-absoluto-inteligencia-artificial/1003744149880_0.html"
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Resumen de noticias de la semana pasada",
         "audioSrc": "Audio4M.m4a",
         "noticias": [
             {
@@ -34,7 +67,7 @@
         ]
     },
     {
-        "tituloAudio": "Resumen de noticias de la semana pasada",
+        "tituloAudio": "Noticias de ediciones anteriores",
         "audioSrc": "Audio28F.m4a",
         "noticias": [
             {
