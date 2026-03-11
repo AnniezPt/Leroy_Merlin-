@@ -1,5 +1,47 @@
 [
     {
+        "tituloAudio": "Resumen de noticias de esta semana (11 Mar)",
+        "audioSrc": "Audio11M.m4a",
+        "noticias": [
+            {
+                "categoria": "IA / Robótica",
+                "fechaISO": "2026-03-10",
+                "fechaTexto": "10 Mar 2026",
+                "titulo": "Figure AI demuestra el poder del robot humanoide Helix 02 como ayudante doméstico.",
+                "resumen": "En una reciente exhibición, el sistema logró ordenar una sala de estar de forma autónoma, proyectando un futuro con asistencia robótica avanzada en el hogar.",
+                "imagen": "./archivos/1imagen11M.png",
+                "enlace": "https://x.com/virginiog"
+            },
+            {
+                "categoria": "MarTech / Generación de Campañas",
+                "fechaISO": "2026-03-10",
+                "fechaTexto": "10 Mar 2026",
+                "titulo": "Google Labs y DeepMind expanden la herramienta Pomelli a más de 170 países.",
+                "resumen": "Esta solución permite a cualquier pyme generar campañas automatizadas para redes sociales en minutos, creando imágenes y copys de alta conversión alineados con su marca.",
+                "imagen": "./archivos/2imagen11M.png",
+                "enlace": "https://labs.google.com/pomelli"
+            },
+            {
+                "categoria": "IA / Desarrollo de Software",
+                "fechaISO": "2026-03-09",
+                "fechaTexto": "09 Mar 2026",
+                "titulo": "Anthropic presenta la función \"Code Review\" para su plataforma Claude Code.",
+                "resumen": "A partir de ahora, cuando se abre un Pull Request, el sistema despliega automáticamente un equipo de agentes de IA dedicados exclusivamente a cazar errores en el código.",
+                "imagen": "./archivos/3imagen11M.png",
+                "enlace": "https://x.com/claudeai"
+            },
+            {
+                "categoria": "IA / Automatización",
+                "fechaISO": "2026-03-08",
+                "fechaTexto": "08 Mar 2026",
+                "titulo": "Claude AI de Anthropic logra cultivar tomates de forma autónoma.",
+                "resumen": "El sistema superó los 100 días gestionando agua, luz y temperatura en tiempo real. Además, diseñó sus propios circuitos, demostrando la capacidad de la IA en el mundo físico.",
+                "imagen": "./archivos/4imagen11M.png",
+                "enlace": "https://x.com/LesNews"
+            }
+        ]
+    },
+    {
         "tituloAudio": "Resumen de noticias de esta semana",
         "audioSrc": "Audio6M.m4a",
         "noticias": [
@@ -118,7 +160,7 @@
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
                 "resumen": "DeepSeek democratiza el cálculo en inferencia con el modelo V3.2. Reduce costes operativos, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use' revolucionando el mercado.",
-                "imagen": "./archivos/1Imagen27F.png",
+                "imagen": "./archivos/1imagen27F.png",
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
             {
