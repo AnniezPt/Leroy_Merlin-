@@ -92,7 +92,7 @@
                 "fechaISO": "2026-03-03",
                 "fechaTexto": "03 Mar 2026",
                 "titulo": "Alibaba lanza Qwen 3.5 para llevar inferencia agéntica a hardware local",
-                "resumen": "Su MoE permite alto rendimiento activando solo 3B parámetros en variantes como Qwen3.5-35B-A3B. El lanzamiento coincide con la renuncia de Junyang Lin, arquitecto líder e influyente del equipo Qwen.",
+                "resumen": "Su MoE permite alto rendimiento activando solo 3B parameters en variantes como Qwen3.5-35B-A3B. El lanzamiento coincide con la renuncia de Junyang Lin, arquitecto líder e influyente del equipo Qwen.",
                 "imagen": "./archivos/3imagen4M.png",
                 "enlace": "https://qwen.ai/research"
             },
@@ -160,7 +160,7 @@
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
                 "resumen": "DeepSeek democratiza el cálculo en inferencia con el modelo V3.2. Reduce costes operativos, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use' revolucionando el mercado.",
-                "imagen": "./archivos/1imagen27F.png",
+                "imagen": "./archivos/1imagen27M.png",
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
             {
