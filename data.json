@@ -10,7 +10,7 @@
                 "titulo": "Figure AI demuestra el poder del robot humanoide Helix 02 como ayudante doméstico.",
                 "resumen": "En una reciente exhibición, el sistema logró ordenar una sala de estar de forma autónoma, proyectando un futuro con asistencia robótica avanzada en el hogar.",
                 "imagen": "./archivos/2imagen11M.png",
-                "enlace": "https://x.com/virginiog"
+                "enlace": "https://www.figure.ai/news/helix-02-living-room-tidy"
             },
             {
                 "categoria": "Marketing y SEO",
@@ -19,7 +19,7 @@
                 "titulo": "Google Labs y DeepMind expanden la herramienta Pomelli a más de 170 países.",
                 "resumen": "Esta solución permite a cualquier pyme generar campañas automatizadas para redes sociales en minutos, creando imágenes y copys de alta conversión alineados con su marca.",
                 "imagen": "./archivos/4imagen11M.png",
-                "enlace": "https://labs.google.com/pomelli"
+                "enlace": "https://blog.google/innovation-and-ai/models-and-research/google-labs/pomelli/"
             },
             {
                 "categoria": "Software y Herramientas",
@@ -28,7 +28,7 @@
                 "titulo": "Anthropic presenta la función \"Code Review\" para su plataforma Claude Code.",
                 "resumen": "A partir de ahora, cuando se abre un Pull Request, el sistema despliega automáticamente un equipo de agentes de IA dedicados exclusivamente a cazar errores en el código.",
                 "imagen": "./archivos/3imagen11M.png",
-                "enlace": "https://x.com/claudeai"
+                "enlace": "https://code.claude.com/docs/en/code-review"
             },
             {
                 "categoria": "Robótica y Hardware",
@@ -37,7 +37,7 @@
                 "titulo": "Claude AI de Anthropic logra cultivar tomates de forma autónoma.",
                 "resumen": "El sistema superó los 100 días gestionando agua, luz y temperatura en tiempo real. Además, diseñó sus propios circuitos, demostrando la capacidad de la IA en el mundo físico.",
                 "imagen": "./archivos/1imagen11M.png",
-                "enlace": "https://x.com/LesNews"
+                "enlace": "https://sinapti.ca/post/en/an-anthropic-ai-has-been-autonomously-growing-tomatoes-for-o-62jpmna4?utm_source=chatgpt.com"
             }
         ]
     },
