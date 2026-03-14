@@ -1,5 +1,15 @@
 [
     {
+        "tituloAudio": "Especial de la semana: Novedades GEO",
+        "audioSrc": "AudioGEO.m4a",
+        "bannerLanding": {
+            "titulo": "Especial: El futuro del SEO Generativo",
+            "imagen": "./archivos/banner-geo.png",
+            "enlace": "https://landing-page-leroy.com/especial-geo"
+        },
+        "noticias": []
+    },
+    {
         "tituloAudio": "Resumen de noticias de esta semana",
         "audioSrc": "Audio11M.m4a",
         "noticias": [
