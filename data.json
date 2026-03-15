@@ -1,11 +1,11 @@
 [
     {
         "tituloAudio": "Especial de la semana: Novedades GEO",
-        "audioSrc": "AudioGEO.m4a",
+        "audioSrc": "AudioGEO15M.m4a",
         "bannerLanding": {
             "titulo": "Especial: El futuro del SEO Generativo",
-            "imagen": "./archivos/Imagen14MB.png", 
-            "enlace": "https://anniezpt.github.io/GEO_LeroyMerlin/"
+            "imagen": "./archivos/banner-geo.png",
+            "enlace": "https://landing-page-leroy.com/especial-geo"
         },
         "noticias": []
     },
