@@ -4,7 +4,7 @@
         "audioSrc": "AudioGEO15M.m4a",
         "bannerLanding": {
             "titulo": "Especial: El futuro del SEO Generativo",
-            "imagen": "./archivos/banner-geo.png",
+            "imagen": "./archivos/Imagen14MB.png",
             "enlace": "https://landing-page-leroy.com/especial-geo"
         },
         "noticias": []
@@ -170,7 +170,7 @@
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
                 "resumen": "DeepSeek democratiza el cálculo en inferencia con el modelo V3.2. Reduce costes operativos, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use' revolucionando el mercado.",
-                "imagen": "./archivos/1imagen27M.png",
+                "imagen": "./archivos/1imagen27F.png",
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
             {
