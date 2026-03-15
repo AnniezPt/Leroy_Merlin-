@@ -293,7 +293,8 @@
                     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
                         <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-lm-dark' : 'text-lg text-gray-500'} mb-4">${edicion.tituloAudio}</h2>
                         <audio controls class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner">
-                            <source src="${CARPETA_ASSETS}${edicion.audioSrc}" type="audio/mpeg">
+                            <!-- NOTA: Hemos quitado el type="audio/mpeg" para que el iPad reconozca los .m4a -->
+                            <source src="${CARPETA_ASSETS}${edicion.audioSrc}">
                             Tu navegador no soporta el audio.
                         </audio>
                     </div>
