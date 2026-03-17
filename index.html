@@ -172,6 +172,9 @@
             EDICIONES_DEL_BOLETIN.forEach((edicion) => {
                 // Filtrar noticias normales si las hay
                 const noticiasFiltradas = (edicion.noticias || []).filter(noticia => {
+                    // MENTOR DEV: Aquí está la magia. Si la noticia tiene visible en false, la ignoramos.
+                    if (noticia.visible === false) return false;
+
                     const cumpleCategoria = categoriaSeleccionada === "" || noticia.categoria === categoriaSeleccionada;
                     const cumpleFecha = fechaSeleccionada === "" || noticia.fechaISO === fechaSeleccionada;
                     return cumpleCategoria && cumpleFecha;
@@ -287,7 +290,6 @@
                     </article>`;
                 });
 
-                // --- CORRECCIÓN APLICADA AQUÍ: Eliminado el atributo type="audio/mpeg" ---
                 htmlFinal += `
                 <section class="mb-16 ${opacidad} transition-all duration-300">
                     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
