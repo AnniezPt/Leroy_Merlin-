@@ -1,10 +1,10 @@
 [
     {
-        "tituloAudio": "Resumen de noticias de esta semana",
+        "tituloAudio": "Novedades de esta semana: 17 de Marzo",
         "audioSrc": "Audio17M.m4a",
         "noticias": [
             {
-                "categoria": "IA Aplicada a Comercio Electrónico / Protocolos",
+                "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Google anuncia en fase beta el Universal Commerce Protocol (UCP).",
@@ -13,7 +13,7 @@
                 "enlace": "https://searchengineland.com/google-universal-commerce-protocol-search-conversions-471676"
             },
             {
-                "categoria": "Infraestructura Corporativa de IA y Ciberseguridad",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Nvidia lanza NemoClaw en GTC 2026 para asegurar IA Agéntica.",
@@ -22,7 +22,7 @@
                 "enlace": "https://www.therundown.ai/p/nvidia-big-ai-day-at-gtc"
             },
             {
-                "categoria": "Automatización MarTech / Transformación de Agencias",
+                "categoria": "Marketing y SEO",
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Lanzamiento de la plataforma de marketing autónomo \"AI CMO\" de Okara.",
