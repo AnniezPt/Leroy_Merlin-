@@ -1,5 +1,38 @@
 [
     {
+        "tituloAudio": "Novedades de esta semana: 17 de Marzo",
+        "audioSrc": "Audio17M.m4a",
+        "noticias": [
+            {
+                "categoria": "IA Aplicada a Comercio Electrónico / Protocolos",
+                "fechaISO": "2026-03-17",
+                "fechaTexto": "17 Mar 2026",
+                "titulo": "Google anuncia en fase beta el Universal Commerce Protocol (UCP).",
+                "resumen": "El CEO Sundar Pichai presentó un estándar tecnológico de código abierto (UCP) que habilita por primera vez el modelo de \"comercio agéntico\" absoluto. Este avance disruptivo permite a modelos como Gemini buscar inventarios de marcas en milisegundos, cruzar datos de preferencias, ejecutar el pago financiero vía Google Pay y confirmar envíos sin que el comprador humano deba abandonar la interfaz del chat conversacional ni interactuar con la web tradicional del minorista, reteniendo este último el estatus crucial de \"merchant of record\".",
+                "imagen": "./archivos/1imagen17M.png",
+                "enlace": "https://searchengineland.com/google-universal-commerce-protocol-search-conversions-471676"
+            },
+            {
+                "categoria": "Infraestructura Corporativa de IA y Ciberseguridad",
+                "fechaISO": "2026-03-17",
+                "fechaTexto": "17 Mar 2026",
+                "titulo": "Nvidia lanza NemoClaw en GTC 2026 para asegurar IA Agéntica.",
+                "resumen": "Jensen Huang desveló una arquitectura de seguridad crítica denominada NemoClaw, diseñada para blindar a los agentes autónomos de código abierto (OpenClaw). A través del entorno \"sandbox\" NVIDIA OpenShell y complejos enrutadores de privacidad criptográficos, el sistema permite a los grandes minoristas ejecutar redes de IA operando bajo la estrategia \"local-first\" en hardware propio (como DGX Spark), evitando radicalmente riesgos catastróficos de cumplimiento, filtración de datos de clientes corporativos y fuga de propiedad intelectual hacia la nube externa.",
+                "imagen": "./archivos/2imagen17M.png",
+                "enlace": "https://www.therundown.ai/p/nvidia-big-ai-day-at-gtc"
+            },
+            {
+                "categoria": "Automatización MarTech / Transformación de Agencias",
+                "fechaISO": "2026-03-17",
+                "fechaTexto": "17 Mar 2026",
+                "titulo": "Lanzamiento de la plataforma de marketing autónomo \"AI CMO\" de Okara.",
+                "resumen": "En una disrupción masiva para la estructura de las agencias de publicidad, la startup de privacidad tecnológica Okara lanzó comercialmente una herramienta que condensa la gestión del marketing. Tras introducir la URL corporativa, un enjambre de agentes de IA orquestados asume y ejecuta simultánea y autónomamente auditorías técnicas de SEO y GEO, redacta e implementa el código de estrategias de arquitectura de contenidos, y lanza campañas de interacción \"human-like\" continuas en foros como Reddit y X, operando bajo un entorno seguro de cero retención de datos en más de 30 modelos de lenguaje.",
+                "imagen": "./archivos/3imagen17M.png",
+                "enlace": "https://okara.ai/agent/cmo"
+            }
+        ]
+    },
+    {
         "tituloAudio": "Especial de la semana: Novedades GEO",
         "audioSrc": "AudioGEO15M.m4a",
         "bannerLanding": {
@@ -122,8 +155,8 @@
                 "titulo": "Anthropic impulsa Claude Code en B2B y lo sitúa en 2.500M$ de ingresos",
                 "resumen": "La adopción corporativa acelera y las suscripciones empresariales se cuadruplican desde inicios de año. Con MCP + Puppeteer, automatiza auditorías SEO avanzadas interactuando con navegadores reales y código.",
                 "imagen": "./archivos/1imagen4M.png",
-                "enlacePDF": "informe-marzo.pdf",
-                "enlace": "https://www.nxcode.io/resources/news/anthropic-380b-valuation-super-bowl-claude-code-2026"
+                "enlace": "https://www.nxcode.io/resources/news/anthropic-380b-valuation-super-bowl-claude-code-2026",
+                "enlacePDF": "informe-marzo.pdf"
             }
         ]
     },
