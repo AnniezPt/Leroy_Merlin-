@@ -8,7 +8,7 @@
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Google anuncia en fase beta el Universal Commerce Protocol (UCP).",
-                "resumen": "El CEO Sundar Pichai presentó un estándar tecnológico de código abierto (UCP) que habilita por primera vez el modelo de \"comercio agéntico\" absoluto. Este avance disruptivo permite a modelos como Gemini buscar inventarios de marcas en milisegundos, cruzar datos de preferencias, ejecutar el pago financiero vía Google Pay y confirmar envíos sin que el comprador humano deba abandonar la interfaz del chat conversacional ni interactuar con la web tradicional del minorista, reteniendo este último el estatus crucial de \"merchant of record\".",
+                "resumen": "Sundar Pichai presentó un estándar de \"comercio agéntico\" que permite a IA como Gemini buscar productos, pagar y confirmar envíos sin salir del chat, manteniendo a la marca como vendedora oficial.",
                 "imagen": "./archivos/1imagen17M.png",
                 "enlace": "https://searchengineland.com/google-universal-commerce-protocol-search-conversions-471676"
             },
@@ -17,7 +17,7 @@
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Nvidia lanza NemoClaw en GTC 2026 para asegurar IA Agéntica.",
-                "resumen": "Jensen Huang desveló una arquitectura de seguridad crítica denominada NemoClaw, diseñada para blindar a los agentes autónomos de código abierto (OpenClaw). A través del entorno \"sandbox\" NVIDIA OpenShell y complejos enrutadores de privacidad criptográficos, el sistema permite a los grandes minoristas ejecutar redes de IA operando bajo la estrategia \"local-first\" en hardware propio (como DGX Spark), evitando radicalmente riesgos catastróficos de cumplimiento, filtración de datos de clientes corporativos y fuga de propiedad intelectual hacia la nube externa.",
+                "resumen": "Jensen Huang desveló NemoClaw, una arquitectura de seguridad que permite a minoristas ejecutar agentes de IA autónomos en hardware propio (\"local-first\"), evitando fugas de datos corporativos.",
                 "imagen": "./archivos/2imagen17M.png",
                 "enlace": "https://www.therundown.ai/p/nvidia-big-ai-day-at-gtc"
             },
@@ -26,7 +26,7 @@
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Lanzamiento de la plataforma de marketing autónomo \"AI CMO\" de Okara.",
-                "resumen": "En una disrupción masiva para la estructura de las agencias de publicidad, la startup de privacidad tecnológica Okara lanzó comercialmente una herramienta que condensa la gestión del marketing. Tras introducir la URL corporativa, un enjambre de agentes de IA orquestados asume y ejecuta simultánea y autónomamente auditorías técnicas de SEO y GEO, redacta e implementa el código de estrategias de arquitectura de contenidos, y lanza campañas de interacción \"human-like\" continuas en foros como Reddit y X, operando bajo un entorno seguro de cero retención de datos en más de 30 modelos de lenguaje.",
+                "resumen": "Okara lanzó \"AI CMO\", una plataforma donde un enjambre de agentes IA automatiza auditorías SEO/GEO, redacta contenido y lanza campañas orgánicas en redes sociales de forma simultánea.",
                 "imagen": "./archivos/3imagen17M.png",
                 "enlace": "https://okara.ai/agent/cmo"
             }
@@ -80,7 +80,8 @@
                 "titulo": "Claude AI de Anthropic logra cultivar tomates de forma autónoma.",
                 "resumen": "El sistema superó los 100 días gestionando agua, luz y temperatura en tiempo real. Además, diseñó sus propios circuitos, demostrando la capacidad de la IA en el mundo físico.",
                 "imagen": "./archivos/1imagen11M.png",
-                "enlace": "https://sinapti.ca/post/en/an-anthropic-ai-has-been-autonomously-growing-tomatoes-for-o-62jpmna4?utm_source=chatgpt.com"
+                "enlace": "https://sinapti.ca/post/en/an-anthropic-ai-has-been-autonomously-growing-tomatoes-for-o-62jpmna4?utm_source=chatgpt.com",
+                "visible": false
             }
         ]
     },
@@ -122,7 +123,8 @@
                 "titulo": "Lanzamiento de LTX-2.3 para la generación conjunta de video y audio",
                 "resumen": "Este modelo fundacional asimétrico crea contenido audiovisual sincronizado de alta fidelidad. Su soporte nativo para formato vertical 4K es ideal para optimizar tiempos y costes de producción publicitaria comercial.",
                 "imagen": "./archivos/2imagen6M.png",
-                "enlace": "https://ltx.io/model/ltx-2-3"
+                "enlace": "https://ltx.io/model/ltx-2-3",
+                "visible": false
             }
         ]
     },
@@ -203,7 +205,7 @@
                 "fechaTexto": "27 Feb 2026",
                 "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
                 "resumen": "DeepSeek democratiza el cálculo en inferencia con el modelo V3.2. Reduce costes operativos, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use' revolucionando el mercado.",
-                "imagen": "./archivos/1imagen27F.png",
+                "imagen": "./archivos/1Imagen27F.png",
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
             {
