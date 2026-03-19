@@ -1,7 +1,7 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana",
-        "audioSrc": "Audio17M.m4a",
+        "tituloAudio": "Novedades de esta semana: 19 de Marzo",
+        "audioSrc": "Audio19M.m4a",
         "noticias": [
             {
                 "categoria": "Contenidos MarTech",
@@ -29,7 +29,13 @@
                 "resumen": "Las empresas apuestan por agentes autónomos capaces de recomendar, negociar y comprar por el usuario, consolidando el avance del 'Agentic Commerce' en ecommerce.",
                 "imagen": "./archivos/3imagen19M.png",
                 "enlace": "https://www.retaildive.com/news/retails-ai-bet-risks-data-market-share/810202/"
-            },
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de principios de semana: 17 de Marzo",
+        "audioSrc": "Audio17M.m4a",
+        "noticias": [
             {
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-17",
