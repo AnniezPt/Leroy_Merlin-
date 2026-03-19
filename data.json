@@ -5,29 +5,29 @@
         "noticias": [
             {
                 "categoria": "Contenidos MarTech",
-                "fechaISO": "2026-03-17",
-                "fechaTexto": "17 Mar 2026",
+                "fechaISO": "2026-03-19",
+                "fechaTexto": "19 Mar 2026",
                 "titulo": "Midjourney lanza V8 Alpha con generación 5x más rápida y resolución 2K nativa.",
                 "resumen": "La actualización incluye una mejor inserción de texto en imágenes. Este avance refuerza drásticamente su potencial para campañas visuales a gran escala.",
-                "imagen": "./archivos/4imagen17M.png",
+                "imagen": "./archivos/1imagen19M.png",
                 "enlace": "https://the-decoder.com/midjourney-v8-rolls-out-with-5x-faster-generation-but-charges-4x-more-for-its-best-features/"
             },
             {
                 "categoria": "Diseño UI/UX e IA",
-                "fechaISO": "2026-03-18",
-                "fechaTexto": "18 Mar 2026",
+                "fechaISO": "2026-03-19",
+                "fechaTexto": "19 Mar 2026",
                 "titulo": "Google actualiza Stitch con Gemini para flujos UX complejos.",
                 "resumen": "Permite crear flujos desde texto y voz, conectando diseño y prototipado interactivo. Además, incorpora de forma nativa tokens de marca mediante DESIGN.md.",
-                "imagen": "./archivos/1imagen18M.png",
+                "imagen": "./archivos/2imagen19M.png",
                 "enlace": "https://www.indiatoday.in/technology/news/story/google-launches-stitch-new-platform-which-lets-you-vibe-design-app-and-web-pages-2884045-2026-03-19"
             },
             {
                 "categoria": "Estrategia Retail e IA",
-                "fechaISO": "2026-03-18",
-                "fechaTexto": "18 Mar 2026",
+                "fechaISO": "2026-03-19",
+                "fechaTexto": "19 Mar 2026",
                 "titulo": "Retailers aceleran su inversión en IA para comercio agéntico.",
                 "resumen": "Las empresas apuestan por agentes autónomos capaces de recomendar, negociar y comprar por el usuario, consolidando el avance del 'Agentic Commerce' en ecommerce.",
-                "imagen": "./archivos/2imagen18M.png",
+                "imagen": "./archivos/3imagen19M.png",
                 "enlace": "https://www.retaildive.com/news/retails-ai-bet-risks-data-market-share/810202/"
             },
             {
