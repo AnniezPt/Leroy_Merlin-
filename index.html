@@ -85,27 +85,26 @@
             <!-- CONTROLES DE FILTRADO -->
             <div class="flex flex-wrap justify-center items-center gap-3">
                 <div class="relative">
-                    <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
+                    <select id="filtro-categoria" aria-label="Filtrar por categoría" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
                         <!-- Las opciones se inyectan por JS -->
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-lm-dark">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        <svg class="fill-current h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
 
-                <!-- SOLUCIÓN AL INPUT DE FECHA: Inicia como texto, cambia a fecha al hacer focus -->
+                <!-- Input de fecha limpio (lógica movida al JS) -->
                 <input 
                     type="text" 
                     id="filtro-fecha" 
                     placeholder="Filtrar por fecha" 
-                    onfocus="(this.type='date')" 
-                    onblur="if(!this.value) this.type='text'" 
+                    aria-label="Filtrar por fecha"
                     class="border border-lm-green text-lm-dark font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none bg-transparent text-center min-w-[150px] cursor-pointer" 
                     title="Filtrar por fecha"
                 >
                 
-                <button id="btn-limpiar" class="hidden border border-gray-300 text-gray-500 font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-gray-100 transition-colors focus:outline-none">
+                <button id="btn-limpiar" aria-label="Limpiar filtros" class="hidden border border-gray-300 text-gray-500 font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-gray-100 transition-colors focus:outline-none">
                     Limpiar ✕
                 </button>
             </div>
@@ -130,6 +129,14 @@
         const selectCategoria = document.getElementById('filtro-categoria');
         const inputFecha = document.getElementById('filtro-fecha');
         const btnLimpiar = document.getElementById('btn-limpiar');
+
+        // Manejo del input de fecha (separado del HTML para mayor limpieza)
+        inputFecha.addEventListener('focus', function() {
+            this.type = 'date';
+        });
+        inputFecha.addEventListener('blur', function() {
+            if (!this.value) this.type = 'text';
+        });
 
         // Función para cargar el JSON de manera asíncrona
         async function cargarDatos() {
@@ -172,7 +179,7 @@
             EDICIONES_DEL_BOLETIN.forEach((edicion) => {
                 // Filtrar noticias normales si las hay
                 const noticiasFiltradas = (edicion.noticias || []).filter(noticia => {
-                    // MENTOR DEV: Aquí está la magia. Si la noticia tiene visible en false, la ignoramos.
+                    // MENTOR DEV: Si la noticia tiene visible en false, la ignoramos.
                     if (noticia.visible === false) return false;
 
                     const cumpleCategoria = categoriaSeleccionada === "" || noticia.categoria === categoriaSeleccionada;
@@ -282,7 +289,7 @@
                             <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900 line-clamp-2" title="${noticia.titulo}">${noticia.titulo}</h3>
                             <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4-exact">${noticia.resumen}</p>
                             
-                            <a href="${noticia.enlace}" target="_blank" class="text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
+                            <a href="${noticia.enlace}" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
                                 Leer noticia completa 
                                 <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                             </a>
