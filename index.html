@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boletín Noticias - Leroy Merlin</title>
-    <!-- Importamos Tailwind CSS para el diseño profesional y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -74,7 +73,6 @@
 </head>
 <body class="text-gray-800 antialiased pb-12">
 
-    <!-- CABECERA PRINCIPAL FIJA -->
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
@@ -82,19 +80,16 @@
                 <p class="text-sm text-gray-500 font-medium">Leroy Merlin</p>
             </div>
             
-            <!-- CONTROLES DE FILTRADO -->
             <div class="flex flex-wrap justify-center items-center gap-3">
                 <div class="relative">
                     <select id="filtro-categoria" aria-label="Filtrar por categoría" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
-                        <!-- Las opciones se inyectan por JS -->
-                    </select>
+                        </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-lm-dark">
                         <svg class="fill-current h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
 
-                <!-- Input de fecha limpio (lógica movida al JS) -->
                 <input 
                     type="text" 
                     id="filtro-fecha" 
@@ -111,13 +106,9 @@
         </div>
     </header>
 
-    <!-- AQUÍ APARECERÁN LAS NOTICIAS -->
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <!-- ========================================================================= -->
-    <!-- ZONA DE LÓGICA (AQUÍ YA NO HAY QUE TOCAR DATOS)                           -->
-    <!-- ========================================================================= -->
     <script>
         // CARPETA BASE PARA TUS FOTOS Y VÍDEOS
         const CARPETA_ASSETS = "./archivos/";
@@ -142,15 +133,28 @@
         async function cargarDatos() {
             try {
                 const respuesta = await fetch('./data.json?t=' + new Date().getTime());
-                if (!respuesta.ok) throw new Error('No se pudo cargar el archivo data.json');
                 
+                // MENTOR DEV: Mejora en el diagnóstico de errores
+                if (!respuesta.ok) {
+                    throw new Error(`Error HTTP: ${respuesta.status} - No se encontró el archivo data.json`);
+                }
+                
+                // Si la estructura del JSON está rota, esto fallará
                 EDICIONES_DEL_BOLETIN = await respuesta.json();
                 
                 inicializarCategorias();
                 renderizarNoticias();
             } catch (error) {
                 console.error("Error al cargar las noticias:", error);
-                contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe en la raíz de tu repositorio.</div>`;
+                // MENTOR DEV: Mensaje más descriptivo en pantalla
+                contenedor.innerHTML = `
+                <div class="bg-red-50 border-l-4 border-red-500 p-6 my-10 max-w-2xl mx-auto rounded-lg shadow-sm">
+                    <h3 class="text-red-800 font-bold text-lg mb-2">¡Ups! Hay un problema con los datos</h3>
+                    <p class="text-red-700 mb-2"><strong>Motivo:</strong> ${error.message}</p>
+                    <p class="text-sm text-red-600 mt-4">
+                        💡 <strong>Sugerencia:</strong> Si dice "Unexpected token" o "JSON", significa que tu archivo <code>data.json</code> tiene un error de sintaxis (falta una coma, unas comillas o una llave de cierre). Revisa el archivo JSON.
+                    </p>
+                </div>`;
             }
         }
 
@@ -222,13 +226,10 @@
                     tarjetasNoticias += `
                     <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-6">
                         <a href="${banner.enlace}" target="_blank" rel="noopener noreferrer" class="block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md border border-gray-200 group">
-                            <!-- Imagen de fondo -->
                             <img src="${rutaImagenBanner}" alt="${banner.titulo}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/e2e8f0/64748b?text=Banner+Leroy+Merlin'">
                             
-                            <!-- Degradado para oscurecer la imagen y leer bien el texto -->
                             <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent"></div>
                             
-                            <!-- Contenido del Banner -->
                             <div class="absolute bottom-0 left-0 p-6 md:p-10 w-full flex flex-col items-start">
                                 <span class="bg-lm-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded shadow-sm uppercase tracking-wider mb-3">
                                     Especial Temático
@@ -237,7 +238,6 @@
                                     ${banner.titulo}
                                 </h3>
                                 
-                                <!-- Botón estilo Leroy Merlin -->
                                 <span class="inline-flex items-center text-sm font-bold text-gray-900 bg-white hover:bg-lm-green hover:text-white px-5 py-2.5 rounded-full transition-all group-hover:px-6 shadow-lg">
                                     Leer el informe completo 
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -306,7 +306,6 @@
                             Tu navegador no soporta el audio.
                         </audio>
                     </div>
-                    <!-- Contenedor Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                         ${tarjetasNoticias}
                     </div>
