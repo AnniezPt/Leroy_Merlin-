@@ -37,4 +37,11 @@
                 "titulo": "Google anuncia en fase beta el Universal Commerce Protocol (UCP).",
                 "resumen": "Sundar Pichai presentó un estándar de \"comercio agéntico\" que permite a IA como Gemini buscar productos, pagar y confirmar envíos sin salir del chat, manteniendo a la marca como vendedora oficial.",
                 "imagen": "./archivos/1imagen17M.png",
-                "enlace": "
+                "enlace": "https://searchengineland.com/google-universal-commerce-protocol-search-conversions-471676"
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-03-17",
+                "fechaTexto": "17 Mar 2026",
+                "titulo": "Nvidia lanza NemoClaw en GTC 2026 para asegurar IA Agéntica.",
+                "resumen": "Jensen Huang desveló NemoClaw, una arquitectura de seguridad que permite a minoristas ejecutar agentes de IA autónomos en hardware propio (\"local
