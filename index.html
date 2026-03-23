@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boletín Noticias - Leroy Merlin</title>
-    <!-- Importamos Tailwind CSS para el diseño profesional y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -70,11 +69,72 @@
             cursor: pointer;
             opacity: 0.6;
         }
+
+        /* ========================================= */
+        /* ESTILOS DEL MINIJUEGO "ATRAPA EL ROBOT"   */
+        /* ========================================= */
+        #moving-avatar {
+            position: fixed; 
+            width: 45px;
+            height: 45px;
+            background-color: white; 
+            border: 3px solid #6cc24a; /* Verde Leroy */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            cursor: pointer;
+            z-index: 10000; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            /* El movimiento es suave */
+            transition: top 1s ease-in-out, left 1s ease-in-out, transform 0.2s ease;
+        }
+
+        #moving-avatar:hover {
+            transform: scale(1.15); 
+            border-color: #ff6600; /* Naranja para dar feedback visual */
+        }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 20000;
+        }
+
+        .modal-content.truth-theme {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border-top: 8px solid #9333ea; /* Púrpura "Suero de la Verdad" */
+            max-width: 400px; 
+            text-align: center;
+            position: relative;
+            animation: dropSerum 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .serum-icon {
+            font-size: 55px; margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(147, 51, 234, 0.4));
+        }
+
+        .close-btn {
+            position: absolute; top: 10px; right: 15px;
+            cursor: pointer; font-size: 28px; color: #9ca3af;
+            line-height: 1;
+        }
+        
+        .close-btn:hover { color: #374151; }
+
+        @keyframes dropSerum {
+            from { transform: translateY(-50px) scale(0.9); opacity: 0; }
+            to { transform: translateY(0) scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body class="text-gray-800 antialiased pb-12">
 
-    <!-- CABECERA PRINCIPAL FIJA -->
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
@@ -82,19 +142,16 @@
                 <p class="text-sm text-gray-500 font-medium">Leroy Merlin</p>
             </div>
             
-            <!-- CONTROLES DE FILTRADO -->
             <div class="flex flex-wrap justify-center items-center gap-3">
                 <div class="relative">
                     <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
-                        <!-- Las opciones se inyectan por JS -->
-                    </select>
+                        </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-lm-dark">
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
 
-                <!-- SOLUCIÓN AL INPUT DE FECHA: Inicia como texto, cambia a fecha al hacer focus -->
                 <input 
                     type="text" 
                     id="filtro-fecha" 
@@ -112,13 +169,20 @@
         </div>
     </header>
 
-    <!-- AQUÍ APARECERÁN LAS NOTICIAS -->
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <!-- ========================================================================= -->
-    <!-- ZONA DE LÓGICA (AQUÍ YA NO HAY QUE TOCAR DATOS)                           -->
-    <!-- ========================================================================= -->
+    <div id="moving-avatar" title="¡Atrápame si puedes!">🤖</div>
+    
+    <div id="truth-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content truth-theme">
+            <span id="close-truth-modal" class="close-btn">&times;</span>
+            <div class="serum-icon">🧪</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Suero de la verdad inyectado</h3>
+            <p id="truth-text" class="text-gray-600 font-medium">Cargando dato revelado...</p>
+        </div>
+    </div>
+
     <script>
         // CARPETA BASE PARA TUS FOTOS Y VÍDEOS
         const CARPETA_ASSETS = "./archivos/";
@@ -215,13 +279,10 @@
                     tarjetasNoticias += `
                     <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-6">
                         <a href="${banner.enlace}" target="_blank" rel="noopener noreferrer" class="block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md border border-gray-200 group">
-                            <!-- Imagen de fondo -->
                             <img src="${rutaImagenBanner}" alt="${banner.titulo}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/e2e8f0/64748b?text=Banner+Leroy+Merlin'">
                             
-                            <!-- Degradado para oscurecer la imagen y leer bien el texto -->
                             <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent"></div>
                             
-                            <!-- Contenido del Banner -->
                             <div class="absolute bottom-0 left-0 p-6 md:p-10 w-full flex flex-col items-start">
                                 <span class="bg-lm-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded shadow-sm uppercase tracking-wider mb-3">
                                     Especial Temático
@@ -230,7 +291,6 @@
                                     ${banner.titulo}
                                 </h3>
                                 
-                                <!-- Botón estilo Leroy Merlin -->
                                 <span class="inline-flex items-center text-sm font-bold text-gray-900 bg-white hover:bg-lm-green hover:text-white px-5 py-2.5 rounded-full transition-all group-hover:px-6 shadow-lg">
                                     Leer el informe completo 
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -302,7 +362,6 @@
                         </audio>
                         ` : ''}
                     </div>
-                    <!-- Contenedor Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                         ${tarjetasNoticias}
                     </div>
@@ -346,8 +405,95 @@
             }
         }, true);
 
-        // Llamamos a la función que carga los datos
+        // Llamamos a la función que carga los datos de las noticias
         cargarDatos();
+
+        // =========================================================================
+        // LÓGICA DEL MINIJUEGO: "ATRAPA AL ROBOT"
+        // =========================================================================
+        
+        const verdadesReveladas = [
+            "Dato #1: El término 'Agentic Commerce' significa que tu IA podrá negociar y comprar por ti un destornillador si detecta que el tuyo está roto.",
+            "Dato #2: Gemini procesa la información en tokens. En Leroy Merlin, estamos usando tokens de marca nativos para asegurar coherencia visual.",
+            "Dato #3: Midjourney V8Alpha no solo es rápido, ¡aprende de tus selecciones previas para mejorar las sugerencias de diseño!",
+            "Dato #4: El SEO Generativo (GEO) prioriza respuestas directas sobre enlaces. Optimizamos para ser LA RESPUESTA.",
+            "Dato #5: ¡Has descubierto un huevo de pascua digital! El 60% de los usuarios prefieren usar el buscador antes que el menú.",
+            "Dato #6: La primera tienda de Leroy Merlin en España se abrió en 1989 en Leganés, ¡mucho antes de que existiera la IA!",
+            "Dato #7: La Inteligencia Artificial ya nos ayuda a predecir picos de demanda en productos de jardín semanas antes de la primavera.",
+            "Dato #8: Un buen diseño UX no es solo estético; un retraso de 1 segundo en la carga móvil puede hacer caer las conversiones hasta un 20%.",
+            "Dato #9: Históricamente, el término más buscado en Leroy Merlin durante la primavera suele ser 'Césped artificial'.",
+            "Dato #10: Más del 70% de los proyectos de mejora del hogar comienzan con una búsqueda online. ¡Por eso el SEO es clave!",
+            "Dato #11: Las herramientas de IA Generativa pueden reducir el tiempo de creación de prototipos de interfaces hasta en un 40%.",
+            "Dato #12: Los 'Retailers' están acelerando su inversión en IA no solo para vender más, sino para ofrecer recomendaciones hiper-personalizadas."
+        ];
+
+        const avatar = document.getElementById('moving-avatar');
+        const modalVerdad = document.getElementById('truth-modal');
+        const btnCerrarVerdad = document.getElementById('close-truth-modal');
+        const textoVerdad = document.getElementById('truth-text');
+
+        let intervaloMovimiento; 
+        let robotAtrapado = false; 
+
+        function obtenerPosicionAleatoria() {
+            // Restamos 60px para asegurarnos de que el robot no se salga de la pantalla
+            const anchoDisponible = window.innerWidth - 60; 
+            const altoDisponible = window.innerHeight - 60;
+            
+            const randomTop = Math.floor(Math.random() * altoDisponible);
+            const randomLeft = Math.floor(Math.random() * anchoDisponible);
+            
+            return { top: randomTop, left: randomLeft };
+        }
+
+        function moverRobot() {
+            if (robotAtrapado) return; 
+            const pos = obtenerPosicionAleatoria();
+            avatar.style.top = pos.top + "px";
+            avatar.style.left = pos.left + "px";
+        }
+
+        function iniciarJuegoRobot() {
+            robotAtrapado = false;
+            avatar.style.display = 'flex'; // Asegurar que esté visible
+            moverRobot(); 
+            // Se mueve cada 2.5 segundos (2500 ms) - Puedes ajustarlo si es muy rápido o muy lento
+            intervaloMovimiento = setInterval(moverRobot, 2500); 
+        }
+
+        // Al atraparlo...
+        avatar.addEventListener('click', () => {
+            robotAtrapado = true; 
+            clearInterval(intervaloMovimiento); 
+            
+            // Elegir verdad al azar
+            const randomFact = verdadesReveladas[Math.floor(Math.random() * verdadesReveladas.length)];
+            textoVerdad.textContent = randomFact;
+            
+            modalVerdad.style.display = 'flex';
+            
+            // Ocultamos el robot temporalmente mientras lee
+            avatar.style.display = 'none'; 
+        });
+
+        // Al cerrar el modal
+        btnCerrarVerdad.addEventListener('click', () => {
+            modalVerdad.style.display = 'none';
+            // Volvemos a iniciar el juego por si quiere atraparlo de nuevo
+            iniciarJuegoRobot();
+        });
+
+        // Ocultar modal al hacer clic en el fondo negro
+        window.addEventListener('click', (event) => {
+            if (event.target === modalVerdad) {
+                modalVerdad.style.display = 'none';
+                iniciarJuegoRobot();
+            }
+        });
+
+        // Arrancamos el minijuego en cuanto cargue la web
+        iniciarJuegoRobot();
+
     </script>
 </body>
 </html>
