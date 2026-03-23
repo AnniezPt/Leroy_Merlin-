@@ -9,8 +9,9 @@
                 "fechaTexto": "20 Mar 2026",
                 "titulo": "Google está probando la reescritura automática de titulares en los resultados de búsqueda mediante IA generativa.",
                 "resumen": "Este movimiento reduce el control de las marcas sobre su mensaje en la SERP y puede afectar negativamente al CTR al alterar el tono y enfoque original de los títulos.",
-                "imagen": "./archivos/1imagen20M.PNG",
-                "enlace": "https://searchengineland.com/google-search-ai-headline-rewrites-test-472146"
+                "imagen": "./archivos/1imagen23M.PNG",
+                "enlace": "https://searchengineland.com/google-search-ai-headline-rewrites-test-472146",
+                "visible": false
             },
             {
                 "categoria": "Mercados Globales / Estrategia Logística B2B",
@@ -18,8 +19,9 @@
                 "fechaTexto": "20 Mar 2026",
                 "titulo": "Alibaba está impulsando herramientas de IA operativa para compensar la caída de márgenes y beneficios.",
                 "resumen": "Su apuesta se centra en soluciones B2B como AI Mode, capaces de analizar redes de proveedores y variables logísticas complejas para mejorar eficiencia, optimizar operaciones y reforzar su estructura financiera.",
-                "imagen": "./archivos/2imagen20M.PNG",
-                "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/"
+                "imagen": "./archivos/2imagen23M.PNG",
+                "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/",
+                "visible": false
             }
         ]
     },
@@ -66,8 +68,9 @@
                 "fechaTexto": "18 Mar 2026",
                 "titulo": "El 47% de los grandes líderes del comercio electrónico prevé invertir más de 1 millón de dólares en arquitecturas de IA agéntica este año.",
                 "resumen": "La inversión se concentra en sistemas de descubrimiento de producto, pricing dinámico e inventario automatizado, mostrando un giro claro hacia aplicaciones de IA con impacto directo en eficiencia y rentabilidad.",
-                "imagen": "./archivos/1imagen18M.PNG",
-                "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/"
+                "imagen": "./archivos/3imagen23M.PNG",
+                "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/",
+                "visible": false
             }
         ]
     },
