@@ -21,9 +21,8 @@
         body {
             background-color: #f4f6f8;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            overflow-x: hidden; /* Evita scroll horizontal si Richie se va muy al borde */
+            overflow-x: hidden; 
         }
-        /* Efecto al pasar el ratón por encima de la noticia */
         .tarjeta-noticia {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             height: 100%;
@@ -49,7 +48,6 @@
             border-radius: 8px;
             outline: none;
         }
-        /* Forzar SIEMPRE 4 líneas de altura en el resumen */
         .line-clamp-4-exact {
             display: -webkit-box;
             -webkit-line-clamp: 4;
@@ -58,8 +56,6 @@
             line-height: 1.5rem; 
             min-height: 6rem; 
         }
-        
-        /* Estilos selectores nativos */
         .filtro-estilizado {
             background-color: transparent;
             cursor: pointer;
@@ -71,17 +67,24 @@
             opacity: 0.6;
         }
 
-        /* Animación suave para la cajita de diálogo */
-        @keyframes fadeUp {
-            from { transform: translate(-50%, -40%); opacity: 0; }
-            to { transform: translate(-50%, -50%); opacity: 1; }
+        @keyframes popUp {
+            from { transform: translateY(20px) scale(0.95); opacity: 0; }
+            to { transform: translateY(0) scale(1); opacity: 1; }
         }
-        .animate-fade-up {
-            animation: fadeUp 0.3s ease-out forwards;
+        .animate-pop-up {
+            animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .latido-suave {
+            animation: latido 3s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased pb-12">
+<body class="text-gray-800 antialiased pb-12 relative">
 
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -120,22 +123,22 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <div id="truth-avatar" class="fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" style="bottom: 20px; right: 20px; display: none;" title="¡Atrápame si puedes!">
-        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-lg">
+    <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
+        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl">
     </div>
 
-    <div id="truth-message" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border-t-4 border-lm-green p-5 rounded-xl shadow-2xl z-[2000] w-[280px] animate-fade-up">
+    <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[280px] animate-pop-up">
         
         <div id="truth-question-view">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span class="text-xl">🤖</span> ¡Me atrapaste!
+                <span class="text-xl" id="emoji-saludo">🤖</span> <span id="texto-saludo">¡Hola!</span>
             </p>
             <p class="text-xs text-gray-600 font-medium leading-relaxed mb-4">
                 Soy <strong>Richie</strong>, el asistente IA de Leroy Merlin. ¿Me inyectas el suero de la verdad para que te cuente un secreto?
             </p>
             <div class="flex gap-2">
-                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded hover:bg-lm-dark transition shadow-sm">💉 ¡Sí!</button>
-                <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded hover:bg-gray-200 transition shadow-sm">Ahora no</button>
+                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">💉 ¡Sí!</button>
+                <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Ahora no</button>
             </div>
         </div>
 
@@ -145,7 +148,8 @@
             </p>
             <p id="truth-text" class="text-xs text-gray-600 font-medium leading-relaxed"></p>
         </div>
-
+        
+        <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 shadow-sm"></div>
     </div>
 
     <script>
@@ -308,7 +312,7 @@
 
 
         // ==========================================
-        // 2. LÓGICA DE RICHIE MOVIL (ATRÁPAME)
+        // 2. LÓGICA DE RICHIE (EL ONBOARDING HÍBRIDO)
         // ==========================================
         
         const verdadesReveladas = [
@@ -333,51 +337,92 @@
         const btnYes = document.getElementById('btn-yes-truth');
         const btnNo = document.getElementById('btn-no-truth');
         const truthText = document.getElementById('truth-text');
+        
+        const textoSaludo = document.getElementById('texto-saludo');
+        const emojiSaludo = document.getElementById('emoji-saludo');
 
         let intervaloMovimiento;
-        let timeoutOcultar; 
+        let timeoutRetirada;
+        let timeoutOcultarModal;
+        let estaCorriendo = false; 
 
-        // Función para mover al robot aleatoriamente
-        function moverRichie() {
-            // Restamos 100px para que no se salga por los bordes y haya margen
+        // Movimiento aleatorio por la pantalla
+        function volarAleatorio() {
             const anchoDisponible = window.innerWidth - 100; 
             const altoDisponible = window.innerHeight - 100;
-            
             const randomTop = Math.floor(Math.random() * altoDisponible);
             const randomLeft = Math.floor(Math.random() * anchoDisponible);
             
-            // Quitamos las clases iniciales de "abajo-derecha" y le damos las nuevas coordenadas
-            avatar.style.bottom = "auto";
-            avatar.style.right = "auto";
             avatar.style.top = Math.max(20, randomTop) + "px";
             avatar.style.left = Math.max(20, randomLeft) + "px";
         }
 
-        // Arrancar el movimiento (Bucle)
-        function iniciarJuego() {
-            avatar.style.display = 'block'; // Aseguramos que es visible
-            // Se mueve cada 2500ms (2.5 segundos)
-            intervaloMovimiento = setInterval(moverRichie, 2500);
+        // Función que manda a Richie a la esquina inferior derecha a descansar
+        function retirarACola() {
+            estaCorriendo = false;
+            clearInterval(intervaloMovimiento);
+            
+            // Le decimos que vuele hacia las coordenadas de la esquina
+            const destinoTop = window.innerHeight - 90; 
+            const destinoLeft = window.innerWidth - 90; 
+            
+            avatar.style.top = destinoTop + "px";
+            avatar.style.left = destinoLeft + "px";
+            
+            // Cuando termine el vuelo (1 segundo), le quitamos el TOP/LEFT fijo 
+            // y usamos las clases de Tailwind para que se quede anclado al redimensionar
+            setTimeout(() => {
+                avatar.style.top = "";
+                avatar.style.left = "";
+                avatar.classList.add('bottom-6', 'right-6', 'latido-suave');
+            }, 1000);
         }
 
         if (avatar) {
-            // Arrancamos el minijuego a los 3 segundos de entrar en la web
-            setTimeout(iniciarJuego, 3000);
+            // FASE 1: EL JUEGO (Empieza a los 1.5 segundos de abrir la web)
+            setTimeout(() => {
+                estaCorriendo = true;
+                avatar.classList.remove('hidden');
+                
+                // Hace su primer vuelo
+                volarAleatorio();
+                
+                // Se mueve cada 2 segundos
+                intervaloMovimiento = setInterval(volarAleatorio, 2000);
+                
+                // FASE 2: SE CANSA (A los 12 segundos, si no lo has atrapado, se va a su esquina)
+                timeoutRetirada = setTimeout(retirarACola, 12000);
+                
+            }, 1500);
 
-            // 1. Clic en Richie flotante (LO ATRAPASTE)
+            // INTERACCIÓN: Clic en Richie
             avatar.addEventListener('click', () => {
-                clearInterval(intervaloMovimiento); // ¡Detenemos el movimiento!
-                clearTimeout(timeoutOcultar); // Limpiamos temporizadores antiguos
+                clearTimeout(timeoutOcultarModal);
                 
-                avatar.style.display = 'none'; // Ocultamos a Richie
+                // Si le haces clic mientras volaba...
+                if (estaCorriendo) {
+                    clearTimeout(timeoutRetirada); // Cancelamos su cansancio programado
+                    retirarACola(); // Lo mandamos inmediatamente a la esquina
+                    textoSaludo.textContent = "¡Me atrapaste!";
+                    emojiSaludo.textContent = "⚡";
+                } else {
+                    // Si le haces clic cuando ya estaba descansando en la esquina
+                    textoSaludo.textContent = "¡Hola de nuevo!";
+                    emojiSaludo.textContent = "🤖";
+                }
                 
-                // Preparamos y mostramos el modal centrado
+                // Ocultamos a Richie y mostramos el bocadillo
+                avatar.style.display = 'none'; 
                 questionView.classList.remove('hidden');
                 factView.classList.add('hidden');
-                messageBox.classList.remove('hidden'); 
+                
+                // Esperamos un pelín para que Richie llegue a su esquina antes de abrir el modal
+                setTimeout(() => {
+                    messageBox.classList.remove('hidden'); 
+                }, estaCorriendo ? 1000 : 0);
             });
 
-            // 2. Clic en el botón verde "Sí"
+            // Botón verde "Sí"
             btnYes.addEventListener('click', () => {
                 const datoAleatorio = verdadesReveladas[Math.floor(Math.random() * verdadesReveladas.length)];
                 truthText.textContent = datoAleatorio;
@@ -385,17 +430,17 @@
                 questionView.classList.add('hidden');
                 factView.classList.remove('hidden');
 
-                // Tras leer el dato (8 segundos), desaparece el modal y vuelve a huir
-                timeoutOcultar = setTimeout(() => {
+                // A los 8 segundos desaparece el modal y vuelve Richie a su esquina
+                timeoutOcultarModal = setTimeout(() => {
                     messageBox.classList.add('hidden');
-                    iniciarJuego(); 
+                    avatar.style.display = 'block'; 
                 }, 8000); 
             });
 
-            // 3. Clic en el botón gris "Ahora no"
+            // Botón gris "Ahora no"
             btnNo.addEventListener('click', () => {
-                messageBox.classList.add('hidden'); // Ocultar diálogo
-                iniciarJuego(); // Vuelve a escapar inmediatamente
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
             });
         }
     </script>
