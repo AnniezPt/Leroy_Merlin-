@@ -21,6 +21,7 @@
         body {
             background-color: #f4f6f8;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden; /* Evita scroll horizontal si Richie se va muy al borde */
         }
         /* Efecto al pasar el ratón por encima de la noticia */
         .tarjeta-noticia {
@@ -70,17 +71,17 @@
             opacity: 0.6;
         }
 
-        /* Animación para la cajita de Richie */
+        /* Animación suave para la cajita de diálogo */
         @keyframes fadeUp {
-            from { transform: translateY(10px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from { transform: translate(-50%, -40%); opacity: 0; }
+            to { transform: translate(-50%, -50%); opacity: 1; }
         }
         .animate-fade-up {
             animation: fadeUp 0.3s ease-out forwards;
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased pb-12 overflow-x-hidden">
+<body class="text-gray-800 antialiased pb-12">
 
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -119,22 +120,22 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <div id="truth-avatar" class="fixed bottom-5 right-5 cursor-pointer animate-bounce z-[1000] hover:scale-110 transition-transform" title="¡Hazme clic!">
-        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-lg">
+    <div id="truth-avatar" class="fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" style="bottom: 20px; right: 20px;" title="¡Atrápame si puedes!">
+        <img src="archivos/Imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-lg">
     </div>
 
-    <div id="truth-message" class="hidden fixed bottom-24 right-5 bg-white border-t-4 border-lm-green p-4 rounded-lg shadow-xl z-[1000] w-64 animate-fade-up">
+    <div id="truth-message" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border-t-4 border-lm-green p-5 rounded-xl shadow-2xl z-[2000] w-[280px] animate-fade-up">
         
         <div id="truth-question-view">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span class="text-xl">🤖</span> ¡Hola!
+                <span class="text-xl">🤖</span> ¡Me atrapaste!
             </p>
-            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-3">
+            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-4">
                 Soy <strong>Richie</strong>, el asistente IA de Leroy Merlin. ¿Me inyectas el suero de la verdad para que te cuente un secreto?
             </p>
             <div class="flex gap-2">
-                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-1.5 rounded hover:bg-lm-dark transition">💉 ¡Sí!</button>
-                <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-1.5 rounded hover:bg-gray-200 transition">Ahora no</button>
+                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded hover:bg-lm-dark transition shadow-sm">💉 ¡Sí!</button>
+                <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded hover:bg-gray-200 transition shadow-sm">Ahora no</button>
             </div>
         </div>
 
@@ -148,9 +149,10 @@
     </div>
 
     <script>
-        // CARPETA BASE PARA TUS FOTOS Y VÍDEOS
+        // ==========================================
+        // 1. CARGA DE NOTICIAS (DATA.JSON)
+        // ==========================================
         const CARPETA_ASSETS = "./archivos/";
-        
         let EDICIONES_DEL_BOLETIN = []; 
 
         const contenedor = document.getElementById('contenedor-boletines');
@@ -158,19 +160,16 @@
         const inputFecha = document.getElementById('filtro-fecha');
         const btnLimpiar = document.getElementById('btn-limpiar');
 
-        // Función para cargar el JSON
         async function cargarDatos() {
             try {
                 const respuesta = await fetch('./data.json?t=' + new Date().getTime());
                 if (!respuesta.ok) throw new Error('No se pudo cargar el archivo data.json');
-                
                 EDICIONES_DEL_BOLETIN = await respuesta.json();
-                
                 inicializarCategorias();
                 renderizarNoticias();
             } catch (error) {
-                console.error("Error al cargar las noticias:", error);
-                contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe en la raíz de tu repositorio.</div>`;
+                console.error("Error cargando noticias:", error);
+                contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe.</div>`;
             }
         }
 
@@ -179,7 +178,6 @@
                 (edicion.noticias || []).map(noticia => noticia.categoria)
             );
             const categoriasUnicas = [...new Set(todasLasCategorias)].sort();
-            
             categoriasUnicas.forEach(cat => {
                 if(!cat) return; 
                 const option = document.createElement('option');
@@ -204,7 +202,6 @@
                 });
 
                 const mostrarBanner = edicion.bannerLanding && (categoriaSeleccionada === "" && fechaSeleccionada === "");
-
                 if (noticiasFiltradas.length === 0 && !mostrarBanner) return;
 
                 const esLaMasNueva = edicionesVisibles === 0;
@@ -214,9 +211,7 @@
                     htmlFinal += `
                     <div class="flex items-center justify-center mt-20 mb-14">
                         <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
-                        <span class="px-5 text-lm-dark text-sm font-bold uppercase tracking-widest whitespace-nowrap bg-[#f4f6f8]">
-                            Noticias Anteriores
-                        </span>
+                        <span class="px-5 text-lm-dark text-sm font-bold uppercase tracking-widest whitespace-nowrap bg-[#f4f6f8]">Noticias Anteriores</span>
                         <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
                     </div>`;
                 }
@@ -229,55 +224,38 @@
                     if (!rutaImagenBanner.startsWith('http') && !rutaImagenBanner.startsWith('./')) {
                         rutaImagenBanner = CARPETA_ASSETS + banner.imagen;
                     }
-                    
                     tarjetasNoticias += `
                     <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-6">
-                        <a href="${banner.enlace}" target="_blank" rel="noopener noreferrer" class="block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md border border-gray-200 group">
-                            <img src="${rutaImagenBanner}" alt="${banner.titulo}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/e2e8f0/64748b?text=Banner+Leroy+Merlin'">
+                        <a href="${banner.enlace}" target="_blank" class="block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md group">
+                            <img src="${rutaImagenBanner}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/e2e8f0/64748b?text=Banner+Leroy+Merlin'">
                             <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent"></div>
                             <div class="absolute bottom-0 left-0 p-6 md:p-10 w-full flex flex-col items-start">
-                                <span class="bg-lm-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded shadow-sm uppercase tracking-wider mb-3">
-                                    Especial Temático
-                                </span>
-                                <h3 class="text-2xl md:text-4xl font-bold text-white mb-5 leading-tight drop-shadow-md">
-                                    ${banner.titulo}
-                                </h3>
+                                <span class="bg-lm-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded shadow-sm uppercase mb-3">Especial Temático</span>
+                                <h3 class="text-2xl md:text-4xl font-bold text-white mb-5 drop-shadow-md">${banner.titulo}</h3>
                                 <span class="inline-flex items-center text-sm font-bold text-gray-900 bg-white hover:bg-lm-green hover:text-white px-5 py-2.5 rounded-full transition-all group-hover:px-6 shadow-lg">
-                                    Leer el informe completo 
-                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    Leer el informe completo →
                                 </span>
                             </div>
                         </a>
-                    </div>
-                    `;
+                    </div>`;
                 }
 
                 noticiasFiltradas.forEach(noticia => {
                     let htmlMultimedia = '';
                     if (noticia.video) {
                         const rutaVideo = noticia.video.startsWith('http') ? noticia.video : CARPETA_ASSETS + noticia.video;
-                        htmlMultimedia = `
-                        <video controls preload="metadata" class="w-full h-full object-cover">
-                            <source src="${rutaVideo}" type="video/mp4">
-                            Tu navegador no soporta vídeos.
-                        </video>`;
+                        htmlMultimedia = `<video controls class="w-full h-full object-cover"><source src="${rutaVideo}" type="video/mp4"></video>`;
                     } else {
-                        let imagenSrc = noticia.imagen && noticia.imagen.trim() !== "" 
-                            ? noticia.imagen 
-                            : 'https://placehold.co/600x400/e2e8f0/64748b?text=Leroy+Merlin';
-                        if (!imagenSrc.startsWith('http') && !imagenSrc.includes('.')) {
-                            imagenSrc = CARPETA_ASSETS + imagenSrc + '.png';
-                        }
-                        htmlMultimedia = `<img src="${imagenSrc}" alt="${noticia.titulo}" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Subiendo+Imagen...'">`;
+                        let imagenSrc = noticia.imagen && noticia.imagen.trim() !== "" ? noticia.imagen : 'https://placehold.co/600x400/e2e8f0/64748b?text=Leroy+Merlin';
+                        if (!imagenSrc.startsWith('http') && !imagenSrc.includes('.')) imagenSrc = CARPETA_ASSETS + imagenSrc + '.png';
+                        htmlMultimedia = `<img src="${imagenSrc}" alt="${noticia.titulo}" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Cargando...'">`;
                     }
 
                     tarjetasNoticias += `
                     <article class="tarjeta-noticia bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
                         <div class="contenedor-imagen ${esLaMasNueva ? '' : 'opacity-90'} relative">
                             ${htmlMultimedia}
-                            <span class="absolute top-3 left-3 bg-white/90 text-lm-dark text-xs font-bold px-2.5 py-1 rounded shadow uppercase tracking-wide">
-                                ${noticia.categoria}
-                            </span>
+                            <span class="absolute top-3 left-3 bg-white/90 text-lm-dark text-xs font-bold px-2.5 py-1 rounded shadow uppercase tracking-wide">${noticia.categoria}</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="flex justify-end mb-3">
@@ -288,10 +266,8 @@
                             </div>
                             <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900 line-clamp-2" title="${noticia.titulo}">${noticia.titulo}</h3>
                             <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4-exact">${noticia.resumen}</p>
-                            
                             <a href="${noticia.enlace}" target="_blank" class="text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
-                                Leer noticia completa 
-                                <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
+                                Leer noticia completa <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                             </a>
                         </div>
                     </article>`;
@@ -301,59 +277,38 @@
                 <section class="mb-16 ${opacidad} transition-all duration-300">
                     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
                         <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-lm-dark' : 'text-lg text-gray-500'} ${edicion.audioSrc ? 'mb-4' : 'mb-0'}">${edicion.tituloAudio}</h2>
-                        ${edicion.audioSrc ? `
-                        <audio controls class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner">
-                            <source src="${CARPETA_ASSETS}${edicion.audioSrc}">
-                            Tu navegador no soporta el audio.
-                        </audio>
-                        ` : ''}
+                        ${edicion.audioSrc ? `<audio controls class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner"><source src="${CARPETA_ASSETS}${edicion.audioSrc}"></audio>` : ''}
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-                        ${tarjetasNoticias}
-                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">${tarjetasNoticias}</div>
                 </section>`;
                 edicionesVisibles++;
             });
 
             if (edicionesVisibles === 0) {
-                htmlFinal = `
-                <div class="text-center py-20">
-                    <p class="text-gray-500 text-lg mb-4">No hay noticias que coincidan con los filtros seleccionados.</p>
-                </div>`;
+                htmlFinal = `<div class="text-center py-20"><p class="text-gray-500 text-lg mb-4">No hay noticias que coincidan con los filtros seleccionados.</p></div>`;
             }
 
             contenedor.innerHTML = htmlFinal;
-
-            if (categoriaSeleccionada || fechaSeleccionada) {
-                btnLimpiar.classList.remove('hidden');
-            } else {
-                btnLimpiar.classList.add('hidden');
-            }
+            (categoriaSeleccionada || fechaSeleccionada) ? btnLimpiar.classList.remove('hidden') : btnLimpiar.classList.add('hidden');
         }
 
         selectCategoria.addEventListener('change', renderizarNoticias);
         inputFecha.addEventListener('change', renderizarNoticias);
+        btnLimpiar.addEventListener('click', () => { selectCategoria.value = ''; inputFecha.value = ''; inputFecha.type = 'text'; renderizarNoticias(); });
         
-        btnLimpiar.addEventListener('click', () => {
-            selectCategoria.value = '';
-            inputFecha.value = '';
-            inputFecha.type = 'text'; 
-            renderizarNoticias();
-        });
-
         document.addEventListener('play', function(e){
             var audios = document.getElementsByTagName('audio');
             for(var i = 0, len = audios.length; i < len;i++){
-                if(audios[i] != e.target){
-                    audios[i].pause();
-                }
+                if(audios[i] != e.target) audios[i].pause();
             }
         }, true);
 
+        // Arrancar la carga JSON
         cargarDatos();
 
+
         // ==========================================
-        // LÓGICA DE RICHIE (EL ASISTENTE IA)
+        // 2. LÓGICA DE RICHIE MOVIL (ATRÁPAME)
         // ==========================================
         
         const verdadesReveladas = [
@@ -379,19 +334,50 @@
         const btnNo = document.getElementById('btn-no-truth');
         const truthText = document.getElementById('truth-text');
 
+        let intervaloMovimiento;
         let timeoutOcultar; 
 
+        // Función para mover al robot aleatoriamente
+        function moverRichie() {
+            // Restamos 100px para que no se salga por los bordes y haya margen
+            const anchoDisponible = window.innerWidth - 100; 
+            const altoDisponible = window.innerHeight - 100;
+            
+            const randomTop = Math.floor(Math.random() * altoDisponible);
+            const randomLeft = Math.floor(Math.random() * anchoDisponible);
+            
+            // Quitamos las clases iniciales de "abajo-derecha" y le damos las nuevas coordenadas
+            avatar.style.bottom = "auto";
+            avatar.style.right = "auto";
+            avatar.style.top = Math.max(20, randomTop) + "px";
+            avatar.style.left = Math.max(20, randomLeft) + "px";
+        }
+
+        // Arrancar el movimiento (Bucle)
+        function iniciarJuego() {
+            avatar.style.display = 'block'; // Aseguramos que es visible
+            // Se mueve cada 2500ms (2.5 segundos)
+            intervaloMovimiento = setInterval(moverRichie, 2500);
+        }
+
         if (avatar) {
-            // Clic en Richie flotante
+            // Arrancamos el minijuego a los 3 segundos de entrar en la web
+            setTimeout(iniciarJuego, 3000);
+
+            // 1. Clic en Richie flotante (LO ATRAPASTE)
             avatar.addEventListener('click', () => {
+                clearInterval(intervaloMovimiento); // ¡Detenemos el movimiento!
+                clearTimeout(timeoutOcultar); // Limpiamos temporizadores antiguos
+                
+                avatar.style.display = 'none'; // Ocultamos a Richie
+                
+                // Preparamos y mostramos el modal centrado
                 questionView.classList.remove('hidden');
                 factView.classList.add('hidden');
-                messageBox.classList.remove('hidden');
-                avatar.style.display = 'none';
-                clearTimeout(timeoutOcultar);
+                messageBox.classList.remove('hidden'); 
             });
 
-            // Clic en el botón verde "Sí"
+            // 2. Clic en el botón verde "Sí"
             btnYes.addEventListener('click', () => {
                 const datoAleatorio = verdadesReveladas[Math.floor(Math.random() * verdadesReveladas.length)];
                 truthText.textContent = datoAleatorio;
@@ -399,16 +385,17 @@
                 questionView.classList.add('hidden');
                 factView.classList.remove('hidden');
 
+                // Tras leer el dato (8 segundos), desaparece el modal y vuelve a huir
                 timeoutOcultar = setTimeout(() => {
                     messageBox.classList.add('hidden');
-                    avatar.style.display = 'block'; 
-                }, 8000); // 8 segundos para leer el dato
+                    iniciarJuego(); 
+                }, 8000); 
             });
 
-            // Clic en el botón gris "Ahora no"
+            // 3. Clic en el botón gris "Ahora no"
             btnNo.addEventListener('click', () => {
-                messageBox.classList.add('hidden');
-                avatar.style.display = 'block';
+                messageBox.classList.add('hidden'); // Ocultar diálogo
+                iniciarJuego(); // Vuelve a escapar inmediatamente
             });
         }
     </script>
