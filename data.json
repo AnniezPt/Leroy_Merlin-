@@ -1,7 +1,7 @@
 [
     {
-        "tituloAudio": "Novedades de cierre de semana: 24 de Marzo",
-        "audioSrc": "Audio20M.m4a",
+        "tituloAudio": "Novedades de esta semana: 24 de Marzo",
+        "audioSrc": "Audio24M.m4a",
         "noticias": [
             {
                 "categoria": "Marketing y SEO",
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "tituloAudio": "Novedades de esta semana: 19 de Marzo",
+        "tituloAudio": "Noticias de la semana pasada: 19 de Marzo",
         "audioSrc": "Audio19M.m4a",
         "noticias": [
             {
@@ -66,7 +66,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de principios de semana: 17 de Marzo",
+        "tituloAudio": "Noticias de principios de la semana pasada: 17 de Marzo",
         "audioSrc": "Audio17M.m4a",
         "noticias": [
             {
