@@ -10,8 +10,7 @@
                 "titulo": "Google está probando la reescritura automática de titulares en los resultados de búsqueda mediante IA generativa.",
                 "resumen": "Este movimiento reduce el control de las marcas sobre su mensaje en la SERP y puede afectar negativamente al CTR al alterar el tono y enfoque original de los títulos.",
                 "imagen": "./archivos/1imagen23M.PNG",
-                "enlace": "https://searchengineland.com/google-search-ai-headline-rewrites-test-472146",
-                "visible": false
+                "enlace": "https://searchengineland.com/google-search-ai-headline-rewrites-test-472146"
             },
             {
                 "categoria": "Mercados Globales / Estrategia Logística B2B",
@@ -20,8 +19,7 @@
                 "titulo": "Alibaba está impulsando herramientas de IA operativa para compensar la caída de márgenes y beneficios.",
                 "resumen": "Su apuesta se centra en soluciones B2B como AI Mode, capaces de analizar redes de proveedores y variables logísticas complejas para mejorar eficiencia, optimizar operaciones y reforzar su estructura financiera.",
                 "imagen": "./archivos/2imagen23M.PNG",
-                "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/",
-                "visible": false
+                "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/"
             }
         ]
     },
@@ -69,8 +67,7 @@
                 "titulo": "El 47% de los grandes líderes del comercio electrónico prevé invertir más de 1 millón de dólares en arquitecturas de IA agéntica este año.",
                 "resumen": "La inversión se concentra en sistemas de descubrimiento de producto, pricing dinámico e inventario automatizado, mostrando un giro claro hacia aplicaciones de IA con impacto directo en eficiencia y rentabilidad.",
                 "imagen": "./archivos/3imagen23M.PNG",
-                "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/",
-                "visible": false
+                "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/"
             }
         ]
     },
@@ -101,7 +98,7 @@
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
                 "titulo": "Lanzamiento de la plataforma de marketing autónomo \"AI CMO\" de Okara.",
-                "resumen": "Okara lanzó \"AI CMO\", una plataforma donde un enjambre de agentes IA automatiza auditorías SEO/GEO, redacta contenido y lanza campañas orgánicas en redes sociales de forma simultánea.",
+                "resumen": "Okara lanzó \"AI CMO\", una plataforma donde un enjambre de agentes IA automatiza auditorías SEO/GEO, redacta contenido y lanza campaigns orgánicas en redes sociales de forma simultánea.",
                 "imagen": "./archivos/3imagen17M.png",
                 "enlace": "https://okara.ai/agent/cmo"
             }
