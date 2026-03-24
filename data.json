@@ -20,6 +20,15 @@
                 "resumen": "Su apuesta se centra en soluciones B2B como AI Mode, capaces de analizar redes de proveedores y variables logísticas complejas para mejorar eficiencia, optimizar operaciones y reforzar su estructura financiera.",
                 "imagen": "./archivos/2imagen23M.PNG",
                 "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/"
+            },
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-03-18",
+                "fechaTexto": "18 Mar 2026",
+                "titulo": "Líderes del ecommerce prevén invertir más de 1 millón de dólares en arquitecturas de IA agéntica.",
+                "resumen": "El 47% de los directivos concentra su inversión en sistemas de descubrimiento de producto, pricing dinámico e inventario automatizado, mostrando un giro claro hacia aplicaciones de IA con impacto directo en eficiencia.",
+                "imagen": "./archivos/3imagen23M.PNG",
+                "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/"
             }
         ]
     },
@@ -53,21 +62,6 @@
                 "resumen": "Las empresas apuestan por agentes autónomos capaces de recomendar, negociar y comprar por el usuario, consolidando el avance del 'Agentic Commerce' en ecommerce.",
                 "imagen": "./archivos/3imagen19M.PNG",
                 "enlace": "https://www.retaildive.com/news/retails-ai-bet-risks-data-market-share/810202/"
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Actualización de mitad de semana: 18 de Marzo",
-        "audioSrc": "Audio18M.m4a",
-        "noticias": [
-            {
-                "categoria": "Negocios y Regulación",
-                "fechaISO": "2026-03-18",
-                "fechaTexto": "18 Mar 2026",
-                "titulo": "Líderes del ecommerce prevén invertir más de 1 millón de dólares en arquitecturas de IA agéntica.",
-                "resumen": "El 47% de los directivos concentra su inversión en sistemas de descubrimiento de producto, pricing dinámico e inventario automatizado, mostrando un giro claro hacia aplicaciones de IA con impacto directo en eficiencia.",
-                "imagen": "./archivos/3imagen23M.PNG",
-                "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/"
             }
         ]
     },
