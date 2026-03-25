@@ -1,5 +1,41 @@
 [
     {
+        "tituloAudio": "Novedades de esta semana: 26 de Marzo",
+        "audioSrc": "Audio26M.m4a",
+        "noticias": [
+            {
+                "categoria": "IA / MarTech",
+                "fechaISO": "2026-03-26",
+                "fechaTexto": "26 Mar 2026",
+                "titulo": "Suno AI lanza \"MILO-1080\": El primer secuenciador de pasos integrado con modelos de IA.",
+                "resumen": "Suno ha dado un giro estratégico al pasar de la generación por texto (prompt-based) a la producción técnica con el lanzamiento de MILO-1080 (Model-Integrated Loop Orchestrator). Este nuevo sistema es un secuenciador de 16 pistas que permite a los usuarios mayor control granular: pueden generar sonidos específicos mediante prompts para cada pista, reutilizar clips de proyectos anteriores o modelar sonidos manualmente mediante un motor de síntesis integrado. Esta función busca transformar a Suno de un \"juguete generativo\" a una herramienta profesional para flujos de trabajo en estudios y departamentos de marketing.",
+                "imagen": "./archivos/1imagen26M.PNG",
+                "enlace": "https://routenote.com/blog/suno-milo-1080-ai-step-sequencer/$0",
+                "visible": true
+            },
+            {
+                "categoria": "IA",
+                "fechaISO": "2026-03-26",
+                "fechaTexto": "26 Mar 2026",
+                "titulo": "Anthropic lanza \"Computer Use\": La IA de Claude ahora toma el control directo del cursor y el teclado.",
+                "resumen": "Anthropic ha habilitado una función que permite a Claude interactuar con ordenadores igual que un humano, moviendo el cursor y escribiendo en cualquier app. El modelo procesa capturas de pantalla en tiempo real para ejecutar tareas complejas como completar formularios, navegar o gestionar archivos. Esta innovación convierte a la IA en un agente de acción directa capaz de automatizar flujos de trabajo técnicos y administrativos.",
+                "imagen": "./archivos/2imagen26M.PNG",
+                "enlace": "https://x.com/claudeai/status/2036195789601374705?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "IA / Deep Learning",
+                "fechaISO": "2026-03-26",
+                "fechaTexto": "26 Mar 2026",
+                "titulo": "Google presenta \"TurboQuant\": Compresión de modelos sin pérdida de precisión.",
+                "resumen": "Google Research ha lanzado TurboQuant, un algoritmo que reduce el uso de memoria del caché (KV) en modelos de lenguaje en al menos 6 veces. Esta tecnología logra acelerar la inferencia hasta 8 veces en hardware como H100, manteniendo un 100% de precisión en tareas complejas y contextos largos. Al eliminar los cuellos de botella de memoria, TurboQuant permite ejecutar modelos de alta calidad de forma más económica y eficiente, incluso en dispositivos con hardware limitado.",
+                "imagen": "./archivos/3imagen26M.PNG",
+                "enlace": "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/$0",
+                "visible": true
+            }
+        ]
+    },
+    {
         "tituloAudio": "Novedades de esta semana: 24 de Marzo",
         "audioSrc": "Audio23M.m4a",
         "noticias": [
