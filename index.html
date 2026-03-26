@@ -97,7 +97,7 @@
                 <div class="relative">
                     <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
-                        </select>
+                    </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-lm-dark">
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
@@ -123,30 +123,33 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
+    <!-- Avatar de Richie -->
     <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
-        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl">
+        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl rounded-full">
     </div>
 
-    <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[280px] animate-pop-up">
+    <!-- Modal de Richie -->
+    <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[300px] animate-pop-up">
         
         <div id="truth-question-view">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
                 <span class="text-xl" id="emoji-saludo">🤖</span> <span id="texto-saludo">¡Hola!</span>
             </p>
-            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-4">
-                Soy <strong>Richie</strong>, el asistente IA de Leroy Merlin. ¿Me inyectas el suero de la verdad para que te cuente un secreto?
+            <p id="texto-pregunta" class="text-xs text-gray-600 font-medium leading-relaxed mb-4">
+                Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?
             </p>
             <div class="flex gap-2">
-                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">💉 ¡Sí!</button>
+                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">💉 ¡Claro!</button>
                 <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Ahora no</button>
             </div>
         </div>
 
         <div id="truth-fact-view" class="hidden">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span class="text-xl">🧪</span> Suero inyectado
+                <span class="text-xl">💡</span> <span id="titulo-perfil">Aquí tienes:</span>
             </p>
-            <p id="truth-text" class="text-xs text-gray-600 font-medium leading-relaxed"></p>
+            <div id="truth-text" class="text-xs text-gray-600 font-medium leading-relaxed space-y-2 mb-3"></div>
+            <button id="btn-close-fact" class="w-full bg-gray-100 text-gray-600 text-xs font-bold py-1.5 rounded-lg hover:bg-gray-200 transition shadow-sm">Entendido (Cerrar)</button>
         </div>
         
         <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 shadow-sm"></div>
@@ -154,7 +157,7 @@
 
     <script>
         // ==========================================
-        // 1. CARGA DE NOTICIAS (DATA.JSON)
+        // 1. LÓGICA DE NOTICIAS Y RASTREADOR
         // ==========================================
         const CARPETA_ASSETS = "./archivos/";
         let EDICIONES_DEL_BOLETIN = []; 
@@ -163,6 +166,22 @@
         const selectCategoria = document.getElementById('filtro-categoria');
         const inputFecha = document.getElementById('filtro-fecha');
         const btnLimpiar = document.getElementById('btn-limpiar');
+
+        let scoreTechie = parseInt(localStorage.getItem('lm_score_techie')) || 0;
+        let scoreBusiness = parseInt(localStorage.getItem('lm_score_business')) || 0;
+
+        function actualizarPuntuacion(categoria) {
+            if (!categoria) return;
+            const cat = categoria.toUpperCase();
+            if (cat.includes('IA') || cat.includes('TECH') || cat.includes('DATOS')) {
+                scoreTechie++;
+                localStorage.setItem('lm_score_techie', scoreTechie);
+            } 
+            else if (cat.includes('GEO') || cat.includes('RETAIL') || cat.includes('NEGOCIO') || cat.includes('MARKETING') || cat.includes('SEO')) {
+                scoreBusiness++;
+                localStorage.setItem('lm_score_business', scoreBusiness);
+            }
+        }
 
         async function cargarDatos() {
             try {
@@ -197,6 +216,8 @@
             let htmlFinal = '';
             let edicionesVisibles = 0;
 
+            if (categoriaSeleccionada) actualizarPuntuacion(categoriaSeleccionada);
+
             EDICIONES_DEL_BOLETIN.forEach((edicion) => {
                 const noticiasFiltradas = (edicion.noticias || []).filter(noticia => {
                     if (noticia.visible === false) return false;
@@ -230,7 +251,7 @@
                     }
                     tarjetasNoticias += `
                     <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-6">
-                        <a href="${banner.enlace}" target="_blank" class="block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md group">
+                        <a href="${banner.enlace}" target="_blank" data-categoria="Especial" class="link-noticia block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md group">
                             <img src="${rutaImagenBanner}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/e2e8f0/64748b?text=Banner+Leroy+Merlin'">
                             <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent"></div>
                             <div class="absolute bottom-0 left-0 p-6 md:p-10 w-full flex flex-col items-start">
@@ -270,7 +291,7 @@
                             </div>
                             <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900 line-clamp-2" title="${noticia.titulo}">${noticia.titulo}</h3>
                             <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4-exact">${noticia.resumen}</p>
-                            <a href="${noticia.enlace}" target="_blank" class="text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
+                            <a href="${noticia.enlace}" target="_blank" data-categoria="${noticia.categoria}" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
                                 Leer noticia completa <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                             </a>
                         </div>
@@ -296,6 +317,14 @@
             (categoriaSeleccionada || fechaSeleccionada) ? btnLimpiar.classList.remove('hidden') : btnLimpiar.classList.add('hidden');
         }
 
+        contenedor.addEventListener('click', (event) => {
+            const enlaceClicked = event.target.closest('.link-noticia');
+            if (enlaceClicked) {
+                const cat = enlaceClicked.getAttribute('data-categoria');
+                actualizarPuntuacion(cat);
+            }
+        });
+
         selectCategoria.addEventListener('change', renderizarNoticias);
         inputFecha.addEventListener('change', renderizarNoticias);
         btnLimpiar.addEventListener('click', () => { selectCategoria.value = ''; inputFecha.value = ''; inputFecha.type = 'text'; renderizarNoticias(); });
@@ -307,27 +336,28 @@
             }
         }, true);
 
-        // Arrancar la carga JSON
         cargarDatos();
 
-
         // ==========================================
-        // 2. LÓGICA DE RICHIE (EL ONBOARDING HÍBRIDO)
+        // 2. LÓGICA DE RICHIE (CEREBRO DINÁMICO)
         // ==========================================
         
-        const verdadesReveladas = [
-            "Dato #1: El término 'Agentic Commerce' significa que tu IA podrá negociar y comprar por ti un destornillador si detecta que el tuyo está roto.",
-            "Dato #2: Gemini procesa la información en tokens. En Leroy Merlin, estamos usando tokens de marca nativos para asegurar coherencia visual.",
-            "Dato #3: Midjourney V8Alpha no solo es rápido, ¡aprende de tus selecciones previas para mejorar las sugerencias de diseño!",
-            "Dato #4: El SEO Generativo (GEO) prioriza respuestas directas sobre enlaces. Optimizamos para ser LA RESPUESTA.",
-            "Dato #5: ¡Has descubierto un huevo de pascua digital! El 60% de los usuarios prefieren usar el buscador antes que el menú.",
-            "Dato #6: La primera tienda de Leroy Merlin en España se abrió en 1989 en Leganés, ¡mucho antes de que existiera la IA!",
-            "Dato #7: La Inteligencia Artificial ya nos ayuda a predecir picos de demanda en productos de jardín semanas antes de la primavera.",
-            "Dato #8: Un buen diseño UX no es solo estético; un retraso de 1 segundo en la carga móvil puede hacer caer las conversiones hasta un 20%.",
-            "Dato #9: Históricamente, el término más buscado en Leroy Merlin durante la primavera suele ser 'Césped artificial'.",
-            "Dato #10: Más del 70% de los proyectos de mejora del hogar comienzan con una búsqueda online. ¡Por eso el SEO es clave!",
-            "Dato #11: Las herramientas de IA Generativa pueden reducir el tiempo de creación de prototipos de interfaces hasta en un 40%.",
-            "Dato #12: Los 'Retailers' están acelerando su inversión en IA no solo para vender más, sino para ofrecer recomendaciones hiper-personalizadas."
+        const verdadesTechie = [
+            "<p>¡Buenas! Estaba leyendo sobre cómo funciona el 'Agentic Commerce'. Básicamente la IA negocia y compra por ti. Me voló la cabeza.</p><p class='mt-2'>Mírate este hilo en X cuando tengas 5 mins: <a href='https://twitter.com/LeroyMerlin_es' target='_blank' class='text-blue-600 underline font-bold'>Ver hilo</a></p>",
+            "<p>¡Buenas! Google Research acaba de presentar <strong>TurboQuant</strong>. Es un algoritmo que comprime la caché de los LLMs 6 veces y los acelera x8 sin perder precisión.</p><p class='mt-2'>Un avance técnico brutal que puedes ver aquí: <a href='https://x.com/GoogleResearch' target='_blank' class='text-blue-600 underline font-bold'>Leer en X</a></p>"
+        ];
+
+        const verdadesBusiness = [
+            "<p>¡Qué tal! He visto un dato brutal: optimizar rutas de entrega usando datos GEO reduce costes operativos una locura.</p><p class='mt-2'>Me acordé de un Reel que lo explica en 1 minuto: <a href='https://instagram.com/leroymerlines' target='_blank' class='text-blue-600 underline font-bold'>Ver Reel en IG</a></p>",
+            "<p>¡Oye! Anthropic ha sacado una preview tremenda: <strong>Claude ya puede controlar tu ordenador</strong> (abrir apps, navegar, rellenar excels) como si estuvieras frente a la pantalla.</p><p class='mt-2'>Imagínate la automatización de tareas. Míralo aquí: <a href='https://x.com/claudeai' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio en X</a></p>",
+            "<p>¡Qué tal! Google acaba de lanzar <strong>Lyria 3 Pro</strong>. Atrás quedan los clips cortos: ya puede generar pistas musicales de 3 minutos con intros y coros perfectos para nuestras campañas.</p><p class='mt-2'>Míralo en acción aquí: <a href='https://x.com/WesRoth' target='_blank' class='text-blue-600 underline font-bold'>Ver en X</a></p>"
+        ];
+
+        const verdadesCotilleos = [
+            "<p>Oye, guárdame el secreto, pero me han soplado que están montando unas pantallas holográficas en la zona de baños de un par de tiendas. ¡Imagínate ver cómo queda la ducha flotando en 3D! 🤯</p><p class='mt-2'>Haz como que no sabes nada, ¿eh?</p>",
+            "<p>Me parto... Dicen por ahí que el equipo de Datos está entrenando una IA usando solo los chistes malos de las reuniones de dirección. A ver qué sale de ahí... 😂</p>",
+            "<p>Oye, ¿has visto la movida de <strong>Suno</strong> esta semana? Han pillado un audio de voz cutrísimo cantando a capela y la IA le ha metido una banda entera brutal por detrás. 🤯</p><p class='mt-2'>Tienes que escucharlo, es una locura: <a href='https://x.com/suno' target='_blank' class='text-blue-600 underline font-bold'>Ver el vídeo en X</a></p>",
+            "<p>¿Sabes cuál es el verdadero salseo del sector hoy? Me acabo de enterar viendo a DotCSV que la guerra ya no es hacer IAs gigantes, sino comprimirlas a lo bestia para que funcionen en tu portátil de casa sin explotar.</p><p class='mt-2'>Échale un ojo, que no tiene desperdicio: <a href='https://youtube.com/@DotCSV' target='_blank' class='text-blue-600 underline font-bold'>Ver vídeo en YouTube</a></p>"
         ];
 
         const avatar = document.getElementById('truth-avatar');
@@ -336,17 +366,19 @@
         const factView = document.getElementById('truth-fact-view');
         const btnYes = document.getElementById('btn-yes-truth');
         const btnNo = document.getElementById('btn-no-truth');
+        const btnCloseFact = document.getElementById('btn-close-fact');
         const truthText = document.getElementById('truth-text');
-        
         const textoSaludo = document.getElementById('texto-saludo');
         const emojiSaludo = document.getElementById('emoji-saludo');
+        const tituloPerfil = document.getElementById('titulo-perfil');
+        const textoPregunta = document.getElementById('texto-pregunta'); 
 
         let intervaloMovimiento;
         let timeoutRetirada;
         let timeoutOcultarModal;
         let estaCorriendo = false; 
+        let esCotilleoActual = false; 
 
-        // Movimiento aleatorio por la pantalla
         function volarAleatorio() {
             const anchoDisponible = window.innerWidth - 100; 
             const altoDisponible = window.innerHeight - 100;
@@ -357,20 +389,16 @@
             avatar.style.left = Math.max(20, randomLeft) + "px";
         }
 
-        // Función que manda a Richie a la esquina inferior derecha a descansar
         function retirarACola() {
             estaCorriendo = false;
             clearInterval(intervaloMovimiento);
             
-            // Le decimos que vuele hacia las coordenadas de la esquina
             const destinoTop = window.innerHeight - 90; 
             const destinoLeft = window.innerWidth - 90; 
             
             avatar.style.top = destinoTop + "px";
             avatar.style.left = destinoLeft + "px";
             
-            // Cuando termine el vuelo (1 segundo), le quitamos el TOP/LEFT fijo 
-            // y usamos las clases de Tailwind para que se quede anclado al redimensionar
             setTimeout(() => {
                 avatar.style.top = "";
                 avatar.style.left = "";
@@ -379,66 +407,95 @@
         }
 
         if (avatar) {
-            // FASE 1: EL JUEGO (Empieza a los 1.5 segundos de abrir la web)
             setTimeout(() => {
                 estaCorriendo = true;
                 avatar.classList.remove('hidden');
-                
-                // Hace su primer vuelo
                 volarAleatorio();
-                
-                // Se mueve cada 2 segundos
                 intervaloMovimiento = setInterval(volarAleatorio, 2000);
-                
-                // FASE 2: SE CANSA (A los 12 segundos, si no lo has atrapado, se va a su esquina)
                 timeoutRetirada = setTimeout(retirarACola, 12000);
-                
             }, 1500);
 
-            // INTERACCIÓN: Clic en Richie
             avatar.addEventListener('click', () => {
                 clearTimeout(timeoutOcultarModal);
                 
-                // Si le haces clic mientras volaba...
-                if (estaCorriendo) {
-                    clearTimeout(timeoutRetirada); // Cancelamos su cansancio programado
-                    retirarACola(); // Lo mandamos inmediatamente a la esquina
-                    textoSaludo.textContent = "¡Me atrapaste!";
-                    emojiSaludo.textContent = "⚡";
+                // DECIDIMOS LA PERSONALIDAD NADA MÁS HACERLE CLIC
+                esCotilleoActual = Math.random() < 0.25;
+
+                // ADAPTAMOS EL TEXTO DEL BOCADILLO ANTES DE MOSTRARLO
+                if (esCotilleoActual) {
+                    textoSaludo.textContent = "¡Psst! Acércate...";
+                    emojiSaludo.textContent = "🤫";
+                    textoPregunta.innerHTML = "Me acabo de enterar de un <strong>cotilleo</strong> buenísimo. ¿Te lo cuento rápido antes de que nos vean?";
+                    btnYes.textContent = "👀 ¡Dime!";
                 } else {
-                    // Si le haces clic cuando ya estaba descansando en la esquina
-                    textoSaludo.textContent = "¡Hola de nuevo!";
-                    emojiSaludo.textContent = "🤖";
+                    if (estaCorriendo) {
+                        textoSaludo.textContent = "¡Me atrapaste!";
+                        emojiSaludo.textContent = "⚡";
+                    } else {
+                        textoSaludo.textContent = "¡Hola de nuevo!";
+                        emojiSaludo.textContent = "🤖";
+                    }
+                    textoPregunta.innerHTML = "Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?";
+                    btnYes.textContent = "💉 ¡Claro!";
+                }
+
+                if (estaCorriendo) {
+                    clearTimeout(timeoutRetirada); 
+                    retirarACola(); 
                 }
                 
-                // Ocultamos a Richie y mostramos el bocadillo
                 avatar.style.display = 'none'; 
                 questionView.classList.remove('hidden');
                 factView.classList.add('hidden');
                 
-                // Esperamos un pelín para que Richie llegue a su esquina antes de abrir el modal
                 setTimeout(() => {
                     messageBox.classList.remove('hidden'); 
                 }, estaCorriendo ? 1000 : 0);
             });
 
-            // Botón verde "Sí"
             btnYes.addEventListener('click', () => {
-                const datoAleatorio = verdadesReveladas[Math.floor(Math.random() * verdadesReveladas.length)];
-                truthText.textContent = datoAleatorio;
+                let poolDeFrases = [];
+                
+                if (esCotilleoActual) {
+                    poolDeFrases = verdadesCotilleos;
+                    tituloPerfil.textContent = "Secreto de pasillo:";
+                } else {
+                    if (scoreTechie > scoreBusiness) {
+                        poolDeFrases = verdadesTechie;
+                        tituloPerfil.textContent = "Para mi colega Techie:";
+                    } else if (scoreBusiness > scoreTechie) {
+                        poolDeFrases = verdadesBusiness;
+                        tituloPerfil.textContent = "Para mi compi de Negocio:";
+                    } else {
+                        if (Math.random() > 0.5) {
+                            poolDeFrases = verdadesTechie;
+                            tituloPerfil.textContent = "Para mi colega Techie:";
+                        } else {
+                            poolDeFrases = verdadesBusiness;
+                            tituloPerfil.textContent = "Para mi compi de Negocio:";
+                        }
+                    }
+                }
+
+                const datoAleatorio = poolDeFrases[Math.floor(Math.random() * poolDeFrases.length)];
+                truthText.innerHTML = datoAleatorio;
                 
                 questionView.classList.add('hidden');
                 factView.classList.remove('hidden');
 
-                // A los 8 segundos desaparece el modal y vuelve Richie a su esquina
                 timeoutOcultarModal = setTimeout(() => {
                     messageBox.classList.add('hidden');
                     avatar.style.display = 'block'; 
-                }, 8000); 
+                }, 12000); 
             });
 
-            // Botón gris "Ahora no"
             btnNo.addEventListener('click', () => {
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+
+            btnCloseFact.addEventListener('click', () => {
+                clearTimeout(timeoutOcultarModal);
                 messageBox.classList.add('hidden'); 
                 avatar.style.display = 'block'; 
             });
