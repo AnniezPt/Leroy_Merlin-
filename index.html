@@ -123,6 +123,17 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
+    <!-- PANEL DE PRUEBAS TEMPORAL -->
+    <div id="debug-panel" class="fixed top-24 left-4 bg-white border-2 border-red-500 p-3 rounded shadow-lg z-[3000] text-xs">
+        <p class="font-bold text-red-500 mb-2">🛠 Panel de Pruebas</p>
+        <button onclick="forzarPerfil('techie')" class="block w-full text-left px-2 py-1 bg-gray-100 hover:bg-gray-200 mb-1 rounded font-medium">🤖 Simular Techie</button>
+        <button onclick="forzarPerfil('business')" class="block w-full text-left px-2 py-1 bg-gray-100 hover:bg-gray-200 mb-1 rounded font-medium">📈 Simular Business</button>
+        <button onclick="forzarPerfil('cotilleo')" class="block w-full text-left px-2 py-1 bg-blue-50 text-blue-700 hover:bg-blue-100 mb-1 rounded font-bold border border-blue-200">🤫 Forzar Cotilleo</button>
+        <button onclick="forzarPerfil('pregunta')" class="block w-full text-left px-2 py-1 bg-purple-100 text-purple-700 hover:bg-purple-200 mb-1 rounded font-bold border border-purple-200">🙋‍♂️ Forzar Pregunta</button>
+        <button onclick="forzarPerfil('reset')" class="block w-full text-center px-2 py-1 bg-red-50 text-red-600 hover:bg-red-100 mt-2 rounded border border-red-200 font-bold">Resetear</button>
+        <p id="debug-mensaje" class="text-green-600 font-bold mt-2 text-center hidden"></p>
+    </div>
+
     <!-- Avatar de Richie -->
     <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
         <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl rounded-full">
@@ -186,6 +197,50 @@
 
         let scoreTechie = parseInt(localStorage.getItem('lm_score_techie')) || 0;
         let scoreBusiness = parseInt(localStorage.getItem('lm_score_business')) || 0;
+        
+        let flagCotilleoForzado = false;
+        let flagPreguntaForzada = false;
+
+        window.forzarPerfil = function(perfil) {
+            const mensaje = document.getElementById('debug-mensaje');
+            flagCotilleoForzado = false; 
+            flagPreguntaForzada = false;
+            
+            if (perfil === 'techie') {
+                scoreTechie = 100; scoreBusiness = 0;
+                mensaje.textContent = "✅ Modo Techie";
+            } else if (perfil === 'business') {
+                scoreTechie = 0; scoreBusiness = 100;
+                mensaje.textContent = "✅ Modo Business";
+            } else if (perfil === 'cotilleo') {
+                flagCotilleoForzado = true;
+                mensaje.textContent = "🤫 Forzando Cotilleo";
+            } else if (perfil === 'pregunta') {
+                flagPreguntaForzada = true;
+                mensaje.textContent = "🙋‍♂️ Forzando Pregunta";
+            } else if (perfil === 'reset') {
+                scoreTechie = 0; scoreBusiness = 0;
+                localStorage.removeItem('lm_score_techie');
+                localStorage.removeItem('lm_score_business');
+                mensaje.textContent = "🔄 Reseteado";
+                mensaje.className = "text-red-600 font-bold mt-2 text-center block";
+                setTimeout(() => { mensaje.classList.add('hidden'); }, 2500);
+                return;
+            }
+            
+            if (perfil !== 'reset' && perfil !== 'cotilleo' && perfil !== 'pregunta') {
+                localStorage.setItem('lm_score_techie', scoreTechie);
+                localStorage.setItem('lm_score_business', scoreBusiness);
+            }
+
+            if (perfil !== 'reset') {
+                mensaje.className = "text-green-600 font-bold mt-2 text-center block";
+            }
+            
+            document.getElementById('truth-message').classList.add('hidden');
+            document.getElementById('truth-avatar').style.display = 'block';
+            setTimeout(() => { mensaje.classList.add('hidden'); }, 2500);
+        };
 
         function actualizarPuntuacion(categoria) {
             if (!categoria) return;
@@ -367,7 +422,8 @@
         const verdadesBusiness = [
             "<p>¡Qué tal! He visto un dato brutal: optimizar rutas de entrega usando datos GEO reduce costes operativos una locura.</p><p class='mt-2'>Me acordé de un Reel que lo explica en 1 minuto: <a href='https://instagram.com/leroymerlines' target='_blank' class='text-blue-600 underline font-bold'>Ver Reel en IG</a></p>",
             "<p>¡Oye! Anthropic ha sacado una actualización tremenda: <strong>Claude ya puede controlar tu ordenador</strong> como un humano (abrir archivos, navegar, usar Slack).</p><p class='mt-2'>Por ahora está en fase research preview para macOS. Míralo aquí: <a href='https://indianexpress.com/article/technology/artificial-intelligence/anthropic-claude-computer-use-ai-agents-openclaw-10598605/' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia</a></p>",
-            "<p>¡Qué tal! Google ha lanzado oficialmente <strong>Lyria 3 Pro</strong>. Ahora permite generar pistas musicales coherentes de hasta 3 minutos con control total sobre la estructura (intros, coros, versos) a través de prompts de texto, imagen o vídeo.</p><p class='mt-2'>Míralo en acción aquí: <a href='https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio oficial</a></p>"
+            "<p>¡Qué tal! Google ha lanzado oficialmente <strong>Lyria 3 Pro</strong>. Ahora permite generar pistas musicales coherentes de hasta 3 minutos con control total sobre la estructura (intros, coros, versos) a través de prompts de texto, imagen o vídeo.</p><p class='mt-2'>Míralo en acción aquí: <a href='https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio oficial</a></p>",
+            "<p>¡Ey! ¿Has visto lo último de Claude? Ahora puedes conectar tus herramientas del curro y usarlas directamente desde el móvil con la IA.</p><p class='mt-2'>Imagínate poder revisar un diseño en Figma, montarte un Canva o mirar datos de Amplitude mientras te tomas un café. Una pasada: <a href='https://x.com/claudeai/status/2036850783526719610?s=46' target='_blank' class='text-blue-600 underline font-bold'>Ver el anuncio en X</a></p>"
         ];
 
         const verdadesCotilleos = [
@@ -452,10 +508,20 @@
                 esCotilleoActual = false;
                 esPreguntaActual = false;
 
-                if (tiradaDados < 0.20) {
-                    esPreguntaActual = true; // 20% pregunta interactiva
-                } else if (tiradaDados < 0.40) {
-                    esCotilleoActual = true; // 20% cotilleo
+                // TRUCOS DEL PANEL DE PRUEBAS
+                if (flagPreguntaForzada) {
+                    esPreguntaActual = true;
+                    flagPreguntaForzada = false;
+                } else if (flagCotilleoForzado) {
+                    esCotilleoActual = true;
+                    flagCotilleoForzado = false;
+                } else {
+                    // LÓGICA NORMAL (20% Pregunta, 20% Cotilleo, 60% Dato)
+                    if (tiradaDados < 0.20) {
+                        esPreguntaActual = true; 
+                    } else if (tiradaDados < 0.40) {
+                        esCotilleoActual = true; 
+                    }
                 }
 
                 // MOSTRAR LA VISTA ADECUADA
@@ -505,12 +571,23 @@
                 const tarea = userTaskInput.value.trim();
                 
                 if (tarea !== "") {
-                    // Guardamos la tarea en el LocalStorage para que puedas analizarla luego
+                    // 1. Guardamos la tarea en el LocalStorage (memoria local)
                     let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
                     tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
                     localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
 
-                    // Pasamos a la vista de confirmación
+                    // 2. MAGIA: Enviamos la respuesta a tu Google Forms en secreto
+                    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfGTBfGsS7SDzTCWBbIlD6tWTgbcPwczyxAewCeXAOCb-QeXg/formResponse";
+                    const formData = new FormData();
+                    formData.append("entry.1868246976", tarea); // El código secreto de tu pregunta
+                    
+                    fetch(googleFormUrl, {
+                        method: "POST",
+                        mode: "no-cors", // Esto evita que Google bloquee el envío por seguridad cruzada
+                        body: formData
+                    }).catch(error => console.error("Error silencioso:", error));
+
+                    // 3. Pasamos a la vista de confirmación visual para el usuario
                     askView.classList.add('hidden');
                     factView.classList.remove('hidden');
                     
