@@ -448,22 +448,16 @@
             avatar.addEventListener('click', () => {
                 clearTimeout(timeoutOcultarModal);
                 
-                // DECIDIMOS LA PERSONALIDAD (SECUENCIA INTELIGENTE)
-                let clickRichie = parseInt(localStorage.getItem('lm_richie_click_count')) || 0;
-                clickRichie++;
-                localStorage.setItem('lm_richie_click_count', clickRichie);
-
+                // DECIDIMOS LA PERSONALIDAD (100% ALEATORIO)
+                let tiradaDados = Math.random();
                 esCotilleoActual = false;
                 esPreguntaActual = false;
 
-                // Ciclo exacto para no depender de la suerte:
-                // Clic 1: Dato | Clic 2: Cotilleo | Clic 3: Pregunta | Clic 4: Dato | Clic 5: Pregunta
-                let ciclo = clickRichie % 5;
-                
-                if (ciclo === 2) {
-                    esCotilleoActual = true;
-                } else if (ciclo === 3 || ciclo === 0) {
-                    esPreguntaActual = true;
+                // LÓGICA: 20% Pregunta, 40% Cotilleo, 40% Dato de valor
+                if (tiradaDados < 0.20) {
+                    esPreguntaActual = true; 
+                } else if (tiradaDados < 0.60) {
+                    esCotilleoActual = true; 
                 }
 
                 // MOSTRAR LA VISTA ADECUADA
