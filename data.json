@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 26 de Marzo",
+        "tituloAudio": "Novedades de esta semana: 31 de Marzo",
+        "audioSrc": "Audio31M.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "IA",
+                "fechaISO": "2026-03-30",
+                "fechaTexto": "30 Mar 2026",
+                "titulo": "Sephora lanza un programa piloto en ChatGPT para ofrecer asesoramiento personalizado y compras directas mediante IA.",
+                "resumen": "La iniciativa de \"comercio conversacional\" en Estados Unidos busca captar al usuario que usa la IA como buscador. Esta integración permite descubrir productos y gestionar pedidos sin salir de la interfaz de chat de OpenAI.",
+                "imagen": "./archivos/1imagen31M.PNG",
+                "enlace": "https://www.retaildetail.eu/news/beauty-care/you-can-now-shop-at-sephora-via-chatgpt/",
+                "visible": true
+            },
+            {
+                "categoria": "IA",
+                "fechaISO": "2026-03-24",
+                "fechaTexto": "24 Mar 2026",
+                "titulo": "Meta presenta TRIBE v2, un modelo fundacional que predice la respuesta del cerebro ante estímulos visuales y auditivos.",
+                "resumen": "Esta arquitectura trimodal busca mejorar las interfaces cerebro-computadora y entender la percepción estética digital. El avance conecta el procesamiento sensorial humano con sistemas sintéticos para anticipar reacciones emocionales.",
+                "imagen": "./archivos/2imagen31M.PNG",
+                "enlace": "https://x.com/aiatmeta/status/2037153756346016207?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
+                "visible": true
+            },
+            {
+                "categoria": "IA",
+                "fechaISO": "2026-03-24",
+                "fechaTexto": "24 Mar 2026",
+                "titulo": "OpenAI anuncia el cierre inesperado de Sora para priorizar la robótica y herramientas de productividad empresarial.",
+                "resumen": "La decisión cancela un acuerdo millonario con Disney y responde a presiones por deepfakes y derechos de autor. Los usuarios tienen hasta el 26 de abril de 2026 para exportar sus creaciones antes del cese definitivo del servicio.",
+                "imagen": "./archivos/3imagen31M.PNG",
+                "enlace": "https://x.com/soraofficialapp/status/2036546752535470382?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 26 de Marzo",
         "audioSrc": "Audio26M.m4a",
         "visible": true,
         "noticias": [
@@ -11,7 +48,7 @@
                 "titulo": "Suno AI lanza \"MILO-1080\": El primer secuenciador de pasos integrado con modelos de IA.",
                 "resumen": "Suno ha dado un giro estratégico al pasar de la generación por texto (prompt-based) a la producción técnica con el lanzamiento de MILO-1080 (Model-Integrated Loop Orchestrator). Este nuevo sistema es un secuenciador de 16 pistas que permite a los usuarios mayor control granular: pueden generar sonidos específicos mediante prompts para cada pista, reutilizar clips de proyectos anteriores o modelar sonidos manualmente mediante un motor de síntesis integrado. Esta función busca transformar a Suno de un \"juguete generativo\" a una herramienta profesional para flujos de trabajo en estudios y departamentos de marketing.",
                 "imagen": "./archivos/1imagen26M.PNG",
-                "enlace": "https://routenote.com/blog/suno-milo-1080-ai-step-sequencer/$0",
+                "enlace": "https://routenote.com/blog/suno-milo-1080-ai-step-sequencer/",
                 "visible": true
             },
             {
@@ -31,13 +68,13 @@
                 "titulo": "Google presenta \"TurboQuant\": Compresión de modelos sin pérdida de precisión.",
                 "resumen": "Google Research ha lanzado TurboQuant, un algoritmo que reduce el uso de memoria del caché (KV) en modelos de lenguaje en al menos 6 veces. Esta tecnología logra acelerar la inferencia hasta 8 veces en hardware como H100, manteniendo un 100% de precisión en tareas complejas y contextos largos. Al eliminar los cuellos de botella de memoria, TurboQuant permite ejecutar modelos de alta calidad de forma más económica y eficiente, incluso en dispositivos con hardware limitado.",
                 "imagen": "./archivos/3imagen26M.PNG",
-                "enlace": "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/$0",
+                "enlace": "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/",
                 "visible": true
             }
         ]
     },
     {
-        "tituloAudio": "Novedades de esta semana: 24 de Marzo",
+        "tituloAudio": "Noticias de ediciones anteriores: 24 de Marzo",
         "audioSrc": "Audio23M.m4a",
         "noticias": [
             {
@@ -70,7 +107,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 19 de Marzo",
+        "tituloAudio": "Noticias de ediciones anteriores: 19 de Marzo",
         "audioSrc": "Audio19M.m4a",
         "noticias": [
             {
@@ -103,7 +140,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de principios de la semana pasada: 17 de Marzo",
+        "tituloAudio": "Noticias de ediciones anteriores: 17 de Marzo",
         "audioSrc": "Audio17M.m4a",
         "noticias": [
             {
