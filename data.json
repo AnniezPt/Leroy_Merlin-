@@ -42,7 +42,7 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "IA / MarTech",
+                "categoria": "IA",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
                 "titulo": "Suno AI lanza \"MILO-1080\": El primer secuenciador de pasos integrado con modelos de IA.",
@@ -62,7 +62,7 @@
                 "visible": true
             },
             {
-                "categoria": "IA / Deep Learning",
+                "categoria": "IA",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
                 "titulo": "Google presenta \"TurboQuant\": Compresión de modelos sin pérdida de precisión.",
