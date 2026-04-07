@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 31 de Marzo",
+        "tituloAudio": "Novedades de esta semana: 7 de Abril",
+        "audioSrc": "Audio7A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software / Local LLM",
+                "fechaISO": "2026-04-06",
+                "fechaTexto": "06 Abr 2026",
+                "titulo": "LM Studio se actualiza para dar soporte nativo a la arquitectura Gemma 4.",
+                "resumen": "El popular software de ejecución local permite ya correr modelos Gemma 4 aprovechando la aceleración de hardware de las nuevas GPUs de 2026. Esta actualización facilita el despliegue de agentes multimodales privados directamente en el escritorio del usuario.",
+                "imagen": "./archivos/1imagen7A.PNG",
+                "enlace": "https://ai.google.dev/gemma/docs/core?hl=es-419",
+                "visible": true
+            },
+            {
+                "categoria": "IA / Código Abierto",
+                "fechaISO": "2026-04-02",
+                "fechaTexto": "02 Abr 2026",
+                "titulo": "Google lanza Gemma 4: La nueva frontera de los modelos abiertos multimodales.",
+                "resumen": "Google libera su familia de modelos más avanzada (2B a 31B) bajo licencia Apache 2.0. Destaca su arquitectura nativa para procesar texto, audio y visión con un razonamiento de nivel superior y una ventana de contexto masiva de 256k tokens.",
+                "imagen": "./archivos/2imagen7A.PNG",
+                "enlace": "https://deepmind.google/models/gemma/",
+                "visible": true
+            },
+            {
+                "categoria": "Innovación Disruptiva",
+                "fechaISO": "2026-03-30",
+                "fechaTexto": "30 Mar 2026",
+                "titulo": "\"Is This Real?\": La primera Webshop de Europa 100% controlada por IA.",
+                "resumen": "Studio Fledge y NXTGN lanzan una tienda autónoma de ropa urbana print-on-demand para caridad (Awel). Redes neuronales gestionan todo el ciclo: crean diseños basados en cultura global cada 24 horas, controlan la logística de rareza y ejecutan marketing digital mediante avatares algorítmicos.",
+                "imagen": "./archivos/3imagen7A.PNG",
+                "enlace": "https://www.retaildetail.eu/news/fashion/ai-takes-the-helm-belgian-online-store-operates-completely-autonomously/",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 31 de Marzo",
         "audioSrc": "Audio31M.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 26 de Marzo",
+        "tituloAudio": "Noticias de ediciones anteriores: 26 de Marzo",
         "audioSrc": "Audio26M.m4a",
         "visible": true,
         "noticias": [
