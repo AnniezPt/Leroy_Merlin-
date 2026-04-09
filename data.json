@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 7 de Abril",
+        "tituloAudio": "Novedades de esta semana: 9 de Abril",
+        "audioSrc": "Audio9A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Inteligencia Artificial / Innovación Disruptiva",
+                "fechaISO": "2026-04-09",
+                "fechaTexto": "09 Abr 2026",
+                "titulo": "Meta presenta Muse Spark, el primer modelo fundacional de su nueva familia para redefinir la interacción digital.",
+                "resumen": "Desarrollado por Meta Superintelligence Labs, este sistema de razonamiento multimodal nativo integra texto, imagen y voz con soporte avanzado para uso de herramientas. Su objetivo es evolucionar hacia una superinteligencia personal capaz de gestionar tareas de alta complejidad.",
+                "imagen": "./archivos/1imagen9A.png",
+                "enlace": "https://x.com/AIatMeta",
+                "visible": true
+            },
+            {
+                "categoria": "Ciberseguridad / Inteligencia Artificial",
+                "fechaISO": "2026-04-09",
+                "fechaTexto": "09 Abr 2026",
+                "titulo": "Anthropic anuncia Project Glasswing, una iniciativa de seguridad crítica para infraestructuras globales.",
+                "resumen": "El proyecto utiliza Claude Mythos Preview, su nuevo modelo de frontera que supera a los expertos humanos en la detección de brechas. Esta tecnología se aplica de forma defensiva para parchear sistemas en tiempo real, garantizando la integridad vital.",
+                "imagen": "./archivos/2imagen9A.png",
+                "enlace": "https://t.co/NQ7IfEtYk7",
+                "visible": true
+            },
+            {
+                "categoria": "MarTech / Comercio Agéntico",
+                "fechaISO": "2026-04-09",
+                "fechaTexto": "09 Abr 2026",
+                "titulo": "Unilever y Google Cloud formalizan una alianza estratégica por el comercio agéntico a escala masiva.",
+                "resumen": "El acuerdo se sustenta en inteligencia de marketing predictiva y asistentes de compra autónomos mediante flujos de trabajo inteligentes. Buscan transformar la experiencia del consumidor mediante la automatización de procesos para ganar ventaja competitiva.",
+                "imagen": "./archivos/3imagen9A.png",
+                "enlace": "https://www.revistainforetail.com/noticiadet/unilever-se-alia-con-google-cloud/4887a16516c78baa4c77777ab5150834",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 7 de Abril",
         "audioSrc": "Audio7A.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 31 de Marzo",
+        "tituloAudio": "Noticias de ediciones anteriores: 31 de Marzo",
         "audioSrc": "Audio31M.m4a",
         "visible": true,
         "noticias": [
@@ -56,7 +93,7 @@
                 "fechaISO": "2026-03-24",
                 "fechaTexto": "24 Mar 2026",
                 "titulo": "Meta presenta TRIBE v2, un modelo fundacional que predice la respuesta del cerebro ante estímulos visuales y auditivos.",
-                "resumen": "Esta arquitectura trimodal busca mejorar las interfaces cerebro-computadora y entender la percepción estética digital. El avance conecta el procesamiento sensorial humano con sistemas sintéticos para anticipar reacciones emocionales.",
+                "resumen": "Esta arquitectura trimodal busca mejorar las interfaces cerebro-computadora y entender la percepción estética digital. El avance conecta el procesamiento sensorial humano con sistemasীকার sensorial humano con sistemas sintéticos para anticipar reacciones emocionales.",
                 "imagen": "./archivos/1imagen31M.PNG",
                 "enlace": "https://x.com/aiatmeta/status/2037153756346016207?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
@@ -83,7 +120,7 @@
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
                 "titulo": "Suno AI lanza \"MILO-1080\": El primer secuenciador de pasos integrado con modelos de IA.",
-                "resumen": "Suno ha dado un giro estratégico al pasar de la generation por texto (prompt-based) a la producción técnica con el lanzamiento de MILO-1080 (Model-Integrated Loop Orchestrator). Este nuevo sistema es un secuenciador de 16 pistas que permite a los usuarios mayor control granular: pueden generar sonidos específicos mediante prompts para cada pista, reutilizar clips de proyectos anteriores o modelar sonidos manualmente mediante un motor de síntesis integrado. Esta función busca transformar a Suno de un \"juguete generativo\" a una herramienta profesional para flujos de trabajo en estudios y departamentos de marketing.",
+                "resumen": "Suno ha dado un giro estratégico al pasar de la generación por texto (prompt-based) a la producción técnica con el lanzamiento de MILO-1080 (Model-Integrated Loop Orchestrator). Este nuevo sistema es un secuenciador de 16 pistas que permite a los usuarios mayor control granular: pueden generar sonidos específicos mediante prompts para cada pista, reutilizar clips de proyectos anteriores o modelar sonidos manualmente mediante un motor de síntesis integrado. Esta función busca transformar a Suno de un \"juguete generativo\" a una herramienta profesional para flujos de trabajo en estudios y departamentos de marketing.",
                 "imagen": "./archivos/1imagen26M.PNG",
                 "enlace": "https://routenote.com/blog/suno-milo-1080-ai-step-sequencer/",
                 "visible": true
