@@ -5,7 +5,7 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "Inteligencia Artificial / Innovación Disruptiva",
+                "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
                 "titulo": "Meta presenta Muse Spark, el primer modelo fundacional de su nueva familia para redefinir la interacción digital.",
@@ -15,7 +15,7 @@
                 "visible": true
             },
             {
-                "categoria": "Ciberseguridad / Inteligencia Artificial",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
                 "titulo": "Anthropic anuncia Project Glasswing, una iniciativa de seguridad crítica para infraestructuras globales.",
@@ -25,7 +25,7 @@
                 "visible": true
             },
             {
-                "categoria": "MarTech / Comercio Agéntico",
+                "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
                 "titulo": "Unilever y Google Cloud formalizan una alianza estratégica por el comercio agéntico a escala masiva.",
@@ -42,7 +42,7 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "Software / Local LLM",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-06",
                 "fechaTexto": "06 Abr 2026",
                 "titulo": "LM Studio se actualiza para dar soporte nativo a la arquitectura Gemma 4.",
@@ -52,7 +52,7 @@
                 "visible": true
             },
             {
-                "categoria": "IA / Código Abierto",
+                "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-02",
                 "fechaTexto": "02 Abr 2026",
                 "titulo": "Google lanza Gemma 4: La nueva frontera de los modelos abiertos multimodales.",
@@ -62,7 +62,7 @@
                 "visible": true
             },
             {
-                "categoria": "Innovación Disruptiva",
+                "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-03-30",
                 "fechaTexto": "30 Mar 2026",
                 "titulo": "\"Is This Real?\": La primera Webshop de Europa 100% controlada por IA.",
@@ -79,7 +79,7 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "IA",
+                "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-03-30",
                 "fechaTexto": "30 Mar 2026",
                 "titulo": "Sephora lanza un programa piloto en ChatGPT para ofrecer asesoramiento personalizado y compras directas mediante IA.",
@@ -89,17 +89,17 @@
                 "visible": true
             },
             {
-                "categoria": "IA",
+                "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-24",
                 "fechaTexto": "24 Mar 2026",
                 "titulo": "Meta presenta TRIBE v2, un modelo fundacional que predice la respuesta del cerebro ante estímulos visuales y auditivos.",
-                "resumen": "Esta arquitectura trimodal busca mejorar las interfaces cerebro-computadora y entender la percepción estética digital. El avance conecta el procesamiento sensorial humano con sistemasীকার sensorial humano con sistemas sintéticos para anticipar reacciones emocionales.",
+                "resumen": "Esta arquitectura trimodal busca mejorar las interfaces cerebro-computadora y entender la percepción estética digital. El avance conecta el procesamiento sensorial humano con sistemas sintéticos para anticipar reacciones emocionales.",
                 "imagen": "./archivos/1imagen31M.PNG",
                 "enlace": "https://x.com/aiatmeta/status/2037153756346016207?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
             {
-                "categoria": "IA",
+                "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-24",
                 "fechaTexto": "24 Mar 2026",
                 "titulo": "OpenAI anuncia el cierre inesperado de Sora para priorizar la robótica y herramientas de productividad empresarial.",
@@ -116,7 +116,7 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "IA / MarTech",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
                 "titulo": "Suno AI lanza \"MILO-1080\": El primer secuenciador de pasos integrado con modelos de IA.",
@@ -126,7 +126,7 @@
                 "visible": true
             },
             {
-                "categoria": "IA",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
                 "titulo": "Anthropic lanza \"Computer Use\": La IA de Claude ahora toma el control directo del cursor y el teclado.",
@@ -136,7 +136,7 @@
                 "visible": true
             },
             {
-                "categoria": "IA / Deep Learning",
+                "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
                 "titulo": "Google presenta \"TurboQuant\": Compresión de modelos sin pérdida de precisión.",
@@ -185,7 +185,7 @@
         "audioSrc": "Audio19M.m4a",
         "noticias": [
             {
-                "categoria": "Contenidos MarTech",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
                 "titulo": "Midjourney lanza V8 Alpha con generación 5x más rápida y resolución 2K nativa.",
