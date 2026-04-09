@@ -178,6 +178,7 @@
         // ==========================================
         const CARPETA_ASSETS = "./archivos/";
         let EDICIONES_DEL_BOLETIN = []; 
+        let mostrarTodasAnteriores = false;
 
         const contenedor = document.getElementById('contenedor-boletines');
         const selectCategoria = document.getElementById('filtro-categoria');
@@ -230,13 +231,19 @@
         function renderizarNoticias() {
             const categoriaSeleccionada = selectCategoria.value;
             const fechaSeleccionada = inputFecha.type === 'date' ? inputFecha.value : '';
+            const hayFiltros = (categoriaSeleccionada !== "" || fechaSeleccionada !== "");
             
             let htmlFinal = '';
             let edicionesVisibles = 0;
+            let hayMasOcultas = false;
+
+            // Calculamos hace exactamente una semana
+            const haceUnaSemana = new Date();
+            haceUnaSemana.setDate(haceUnaSemana.getDate() - 7);
 
             if (categoriaSeleccionada) actualizarPuntuacion(categoriaSeleccionada);
 
-            EDICIONES_DEL_BOLETIN.forEach((edicion) => {
+            EDICIONES_DEL_BOLETIN.forEach((edicion, indexEdicion) => {
                 const noticiasFiltradas = (edicion.noticias || []).filter(noticia => {
                     if (noticia.visible === false) return false;
                     const cumpleCategoria = categoriaSeleccionada === "" || noticia.categoria === categoriaSeleccionada;
@@ -244,8 +251,23 @@
                     return cumpleCategoria && cumpleFecha;
                 });
 
-                const mostrarBanner = edicion.bannerLanding && (categoriaSeleccionada === "" && fechaSeleccionada === "");
+                const mostrarBanner = edicion.bannerLanding && !hayFiltros;
                 if (noticiasFiltradas.length === 0 && !mostrarBanner) return;
+
+                // Verificar si la edición es reciente (menos de 7 días) o es la primera de la lista
+                let esReciente = (indexEdicion === 0); 
+                noticiasFiltradas.forEach(noticia => {
+                    if (noticia.fechaISO) {
+                        const fechaNoticia = new Date(noticia.fechaISO);
+                        if (fechaNoticia >= haceUnaSemana) esReciente = true;
+                    }
+                });
+
+                // Si no hay filtros, no hemos dado al botón de ver todo, y es antigua -> Ocultar
+                if (!hayFiltros && !mostrarTodasAnteriores && !esReciente) {
+                    hayMasOcultas = true;
+                    return; 
+                }
 
                 const esLaMasNueva = edicionesVisibles === 0;
                 const opacidad = esLaMasNueva ? '' : 'opacity-80';
@@ -327,11 +349,30 @@
                 edicionesVisibles++;
             });
 
-            if (edicionesVisibles === 0) {
+            // Si hay noticias apartadas por ser antiguas, mostramos el botón
+            if (hayMasOcultas) {
+                htmlFinal += `
+                <div class="text-center mt-2 mb-16 animate-pop-up">
+                    <button id="btn-ver-anteriores" class="bg-white border-2 border-lm-green text-lm-dark font-bold py-3 px-8 rounded-full hover:bg-lm-green hover:text-white transition-colors shadow-sm">
+                        Ver boletines de semanas anteriores ⬇️
+                    </button>
+                </div>`;
+            }
+
+            if (edicionesVisibles === 0 && !hayMasOcultas) {
                 htmlFinal = `<div class="text-center py-20"><p class="text-gray-500 text-lg mb-4">No hay noticias que coincidan con los filtros seleccionados.</p></div>`;
             }
 
             contenedor.innerHTML = htmlFinal;
+
+            // Le damos vida al botón de "Ver anteriores"
+            const btnVerAnteriores = document.getElementById('btn-ver-anteriores');
+            if (btnVerAnteriores) {
+                btnVerAnteriores.addEventListener('click', () => {
+                    mostrarTodasAnteriores = true;
+                    renderizarNoticias();
+                });
+            }
 
             (categoriaSeleccionada || fechaSeleccionada) ? btnLimpiar.classList.remove('hidden') : btnLimpiar.classList.add('hidden');
         }
@@ -350,6 +391,7 @@
             selectCategoria.value = ''; 
             inputFecha.value = ''; 
             inputFecha.type = 'text'; 
+            mostrarTodasAnteriores = false; // Vuelve a ocultar las antiguas al limpiar
             renderizarNoticias(); 
         });
         
