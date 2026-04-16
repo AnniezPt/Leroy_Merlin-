@@ -1,37 +1,37 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 14 de Abril",
-        "audioSrc": "Audio14A.m4a",
+        "tituloAudio": "Novedades de esta semana: 16 de Abril",
+        "audioSrc": "Audio16A.m4a",
         "visible": true,
         "noticias": [
             {
-                "categoria": "IA",
+                "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
                 "titulo": "Amazon defiende su histórica inversión de 200.000 millones de dólares en IA, centrada en la infraestructura de AWS y su asistente virtual.",
-                "resumen": "El CEO Andy Jassy reveló que, gracias a las mejoras del nuevo modelo Alexa+, los clientes han triplicado sus compras directamente a través de interacciones por voz. Este avance valida el comercio conversacional sin fricciones y justifica la agresiva inyección de capital de la compañía.",
-                "imagen": "./archivos/1imagen14A.png",
+                "resumen": "El CEO Andy Jassy reveló que, gracias al nuevo modelo Alexa+, los clientes han triplicado sus compras por voz. Este avance valida el comercio conversacional sin fricciones y justifica la agresiva inyección de capital de la compañía.",
+                "imagen": "./archivos/1imagen16A.png",
                 "enlace": "https://www.retaildive.com/news/amazon-andy-jassy-defend-billions-ai-investment-shareholder-letter/817058/",
+                "visible": true
+            },
+            {
+                "categoria": "Estrategia Retail e IA",
+                "fechaISO": "2026-04-09",
+                "fechaTexto": "09 Abr 2026",
+                "titulo": "Tesco inicia pruebas de su nuevo asistente de IA con 280.000 empleados antes de su lanzamiento nacional.",
+                "resumen": "Desarrollada junto a Mistral, la herramienta planifica comidas, automatiza la cesta de la compra y sugiere recetas para aprovechar sobras.",
+                "imagen": "./archivos/2imagen16A.png",
+                "enlace": "https://www.tescoplc.com/tesco-launches-large-scale-colleague-trial-of-new-ai-assistant-designed-to-lighten-the-load-for-customers/",
                 "visible": true
             },
             {
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-04-07",
                 "fechaTexto": "07 Abr 2026",
-                "titulo": "Google Ads lanza una función que permite a los especialistas en marketing establecer y reutilizar directrices de texto de IA en múltiples campañas.",
-                "resumen": "Esto soluciona la pérdida de la \"voz de la marca\", permitiendo escalar masivamente la creación de anuncios automatizados sin sacrificar el control humano ni el tono corporativo. Los anunciantes recuperan así la dirección estratégica frente a la optimización algorítmica ciega.",
-                "imagen": "./archivos/2imagen14A.png",
+                "titulo": "Google Ads lanza una función para reutilizar directrices de texto de IA a través de múltiples campañas.",
+                "resumen": "Esta actualización permite a los anunciantes escalar la creación de anuncios manteniendo la voz de la marca y un estricto control humano.",
+                "imagen": "./archivos/3imagen16A.png",
                 "enlace": "https://searchengineland.com/google-ads-lets-marketers-reuse-ai-text-rules-across-campaigns-473859",
-                "visible": true
-            },
-            {
-                "categoria": "IA",
-                "fechaISO": "2026-04-03",
-                "fechaTexto": "03 Abr 2026",
-                "titulo": "Carrefour marca un hito al integrar su catálogo y logística directamente en ChatGPT, alcanzando a 26 millones de usuarios en Francia.",
-                "resumen": "La inteligencia artificial permite a los clientes planificar menús, verificar stock local en tiempo real y armar el carrito de compras íntegramente dentro del chat. El usuario solo es redirigido a la web del supermercado en el paso final para pagar, revolucionando el embudo de conversión tradicional.",
-                "imagen": "./archivos/3imagen14A.png",
-                "enlace": "https://www.retaildetail.eu/news/food/grocery-shopping-via-chatgpt-how-carrefour-is-embracing-ai/",
                 "visible": true
             }
         ]
