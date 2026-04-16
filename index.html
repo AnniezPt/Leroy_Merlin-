@@ -83,6 +83,40 @@
             animation: latido 3s ease-in-out infinite;
         }
     </style>
+
+    <!-- INICIO ONESIGNAL -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "a911aeb6-7ef9-41d3-9b76-6a5b3dfa9df2",
+          notifyButton: {
+            enable: true,
+            size: 'medium',
+            theme: 'default',
+            position: 'bottom-left',
+            text: {
+                'tip.state.unsubscribed': '¡Suscríbete a las alertas!',
+                'tip.state.subscribed': 'Estás suscrito a los avisos',
+                'tip.state.blocked': 'Has bloqueado las notificaciones',
+                'message.prenotify': 'Haz clic para recibir avisos cuando suba noticias nuevas',
+                'message.action.subscribed': '¡Gracias por suscribirte!',
+                'message.action.resubscribed': '¡Estás suscrito de nuevo!',
+                'message.action.unsubscribed': 'Ya no recibirás avisos',
+                'dialog.main.title': 'Notificaciones del Boletín',
+                'dialog.main.button.subscribe': 'SUSCRIBIRME',
+                'dialog.main.button.unsubscribe': 'DARME DE BAJA',
+            }
+          }
+        });
+        
+        // Magia anti-Apple: Forzamos el cartel nativo grande por si no sale la campana
+        OneSignal.showSlidedownPrompt();
+      });
+    </script>
+    <!-- FIN ONESIGNAL -->
+
 </head>
 <body class="text-gray-800 antialiased pb-12 relative">
 
@@ -94,6 +128,12 @@
             </div>
             
             <div class="flex flex-wrap justify-center items-center gap-3">
+                
+                <!-- NUEVO BOTÓN MANUAL DE NOTIFICACIONES -->
+                <button id="btn-suscribir-push" class="flex items-center gap-2 border border-blue-500 text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm hover:bg-blue-50 transition-colors focus:outline-none bg-white shadow-sm" title="Activar notificaciones">
+                    🔔 Avisos
+                </button>
+
                 <div class="relative">
                     <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
@@ -131,7 +171,6 @@
     <!-- Modal de Richie -->
     <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[300px] animate-pop-up">
         
-        <!-- VISTA 1: Pregunta normal o Cotilleo -->
         <div id="truth-question-view" class="hidden">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
                 <span class="text-xl" id="emoji-saludo">🤖</span> <span id="texto-saludo">¡Hola!</span>
@@ -145,7 +184,6 @@
             </div>
         </div>
 
-        <!-- VISTA 2: Interactiva (Preguntando al usuario) -->
         <div id="truth-ask-view" class="hidden">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
                 <span class="text-xl">🕵️‍♂️</span> ¡Momento cotilla inverso!
@@ -160,7 +198,6 @@
             </div>
         </div>
 
-        <!-- VISTA 3: La respuesta (El dato, el cotilleo o la confirmación) -->
         <div id="truth-fact-view" class="hidden">
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
                 <span class="text-xl" id="icono-perfil">💡</span> <span id="titulo-perfil">Aquí tienes:</span>
@@ -173,6 +210,15 @@
     </div>
 
     <script>
+        // Lógica del nuevo botón "Avisos" para OneSignal
+        document.getElementById('btn-suscribir-push').addEventListener('click', () => {
+            if (window.OneSignalDeferred) {
+                window.OneSignalDeferred.push(function(OneSignal) {
+                    OneSignal.showSlidedownPrompt({ force: true });
+                });
+            }
+        });
+
         // ==========================================
         // 1. LÓGICA DE NOTICIAS Y RASTREADOR
         // ==========================================
@@ -349,7 +395,6 @@
                 edicionesVisibles++;
             });
 
-            // Si hay noticias apartadas por ser antiguas, mostramos el botón
             if (hayMasOcultas) {
                 htmlFinal += `
                 <div class="text-center mt-2 mb-16 animate-pop-up">
@@ -365,7 +410,6 @@
 
             contenedor.innerHTML = htmlFinal;
 
-            // Le damos vida al botón de "Ver anteriores"
             const btnVerAnteriores = document.getElementById('btn-ver-anteriores');
             if (btnVerAnteriores) {
                 btnVerAnteriores.addEventListener('click', () => {
@@ -391,7 +435,7 @@
             selectCategoria.value = ''; 
             inputFecha.value = ''; 
             inputFecha.type = 'text'; 
-            mostrarTodasAnteriores = false; // Vuelve a ocultar las antiguas al limpiar
+            mostrarTodasAnteriores = false; 
             renderizarNoticias(); 
         });
         
@@ -408,10 +452,6 @@
         // 2. LÓGICA DE RICHIE (CEREBRO DINÁMICO)
         // ==========================================
         
-        // ¡CÓMO AÑADIR MÁS INFORMACIÓN!
-        // Simplemente añade una coma al final de la frase anterior, y escribe tu nueva frase 
-        // entre comillas. Puedes usar etiquetas HTML como <strong> (negrita) o enlaces.
-
         const verdadesTechie = [
             "<p>¡Buenas! Estaba leyendo sobre cómo funciona el 'Agentic Commerce'. Básicamente la IA negocia y compra por ti. Me voló la cabeza.</p><p class='mt-2'>Mírate este hilo en X cuando tengas 5 mins: <a href='https://twitter.com/LeroyMerlin_es' target='_blank' class='text-blue-600 underline font-bold'>Ver hilo</a></p>",
             "<p>¡Buenas! Google acaba de presentar <strong>TurboQuant</strong>. Es un algoritmo que reduce la memoria caché de los LLM hasta 6 veces y acelera la inferencia x8 sin ninguna pérdida de precisión.</p><p class='mt-2'>Un avance tremendo para abaratar costes de IA. Puedes leerlo aquí: <a href='https://venturebeat.com/infrastructure/googles-new-turboquant-algorithm-speeds-up-ai-memory-8x-cutting-costs-by-50' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia</a></p>",
@@ -442,12 +482,10 @@
         const avatar = document.getElementById('truth-avatar');
         const messageBox = document.getElementById('truth-message');
         
-        // Vistas
         const questionView = document.getElementById('truth-question-view');
         const askView = document.getElementById('truth-ask-view');
         const factView = document.getElementById('truth-fact-view');
         
-        // Botones e Inputs
         const btnYes = document.getElementById('btn-yes-truth');
         const btnNo = document.getElementById('btn-no-truth');
         const btnCloseFact = document.getElementById('btn-close-fact');
@@ -455,7 +493,6 @@
         const btnSkipTask = document.getElementById('btn-skip-task');
         const userTaskInput = document.getElementById('user-task-input');
         
-        // Textos
         const truthText = document.getElementById('truth-text');
         const textoSaludo = document.getElementById('texto-saludo');
         const emojiSaludo = document.getElementById('emoji-saludo');
@@ -509,19 +546,16 @@
             avatar.addEventListener('click', () => {
                 clearTimeout(timeoutOcultarModal);
                 
-                // DECIDIMOS LA PERSONALIDAD (100% ALEATORIO)
                 let tiradaDados = Math.random();
                 esCotilleoActual = false;
                 esPreguntaActual = false;
 
-                // LÓGICA: 20% Pregunta, 40% Cotilleo, 40% Dato de valor
                 if (tiradaDados < 0.20) {
                     esPreguntaActual = true; 
                 } else if (tiradaDados < 0.60) {
                     esCotilleoActual = true; 
                 }
 
-                // MOSTRAR LA VISTA ADECUADA
                 if (esPreguntaActual) {
                     userTaskInput.value = "";
                     userTaskInput.placeholder = "Ej: Peleándome con un excel de ventas...";
@@ -563,17 +597,14 @@
                 }, estaCorriendo ? 1000 : 0);
             });
 
-            // LOGICA DEL BOTON DE ENVIAR TAREA (La Interacción Majete)
             btnSendTask.addEventListener('click', () => {
                 const tarea = userTaskInput.value.trim();
                 
                 if (tarea !== "") {
-                    // 1. Guardamos la tarea en el LocalStorage (memoria local del usuario, como historial)
                     let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
                     tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
                     localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
 
-                    // 2. MAGIA: Enviamos la respuesta a tu Email usando Formspree
                     const emailEndpoint = "https://formspree.io/f/maqlnbdp"; 
                     
                     fetch(emailEndpoint, {
@@ -589,7 +620,6 @@
                         })
                     }).catch(error => console.error("Error silencioso:", error));
 
-                    // 3. Pasamos a la vista de confirmación visual para el usuario
                     askView.classList.add('hidden');
                     factView.classList.remove('hidden');
                     
@@ -611,7 +641,6 @@
                 avatar.style.display = 'block'; 
             });
 
-            // LÓGICA DEL BOTON "SÍ" (Datos y Cotilleos)
             btnYes.addEventListener('click', () => {
                 let poolDeFrases = [];
                 iconoPerfil.textContent = "💡";
@@ -638,8 +667,6 @@
                     }
                 }
 
-                // NUEVA LÓGICA: Favorecer las frases más nuevas (las del final de la lista)
-                // Usamos Math.sqrt() para que la probabilidad se concentre en los últimos índices
                 const indiceSesgado = Math.floor(Math.sqrt(Math.random()) * poolDeFrases.length);
                 const datoAleatorio = poolDeFrases[indiceSesgado];
                 
