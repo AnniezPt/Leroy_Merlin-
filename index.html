@@ -210,12 +210,37 @@
     </div>
 
     <script>
-        // Lógica del nuevo botón "Avisos" para OneSignal
-        document.getElementById('btn-suscribir-push').addEventListener('click', () => {
+        // Lógica del nuevo botón "Avisos" para OneSignal (VERSIÓN FORZADA PARA APPLE)
+        document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
             if (window.OneSignalDeferred) {
-                window.OneSignalDeferred.push(function(OneSignal) {
-                    OneSignal.showSlidedownPrompt({ force: true });
+                window.OneSignalDeferred.push(async function(OneSignal) {
+                    try {
+                        // 1. Primero comprobamos si ya están habilitadas
+                        const isPushSupported = OneSignal.Notifications.isPushSupported();
+                        if (!isPushSupported) {
+                            alert("Vaya, parece que tu navegador o dispositivo no soporta notificaciones web. Prueba desde Google Chrome o un ordenador.");
+                            return;
+                        }
+
+                        // 2. Comprobamos el permiso actual
+                        const permission = await OneSignal.Notifications.permission;
+                        
+                        if (permission === 'granted') {
+                            alert("¡Ya estás suscrito! Te avisaremos cuando haya novedades.");
+                        } else if (permission === 'denied') {
+                            alert("Tienes las notificaciones bloqueadas para esta web en los ajustes de tu navegador. Debes desbloquearlas primero.");
+                        } else {
+                            // 3. Forzamos el prompt nativo del navegador (este no lo puede ignorar Safari tan fácilmente)
+                            await OneSignal.Notifications.requestPermission();
+                        }
+                    } catch (error) {
+                        console.error("Error al intentar suscribir:", error);
+                        // Fallback al slidedown si el nativo falla
+                        OneSignal.showSlidedownPrompt({ force: true });
+                    }
                 });
+            } else {
+                 alert("El sistema de notificaciones aún se está cargando. Espera un segundo y vuelve a intentarlo.");
             }
         });
 
