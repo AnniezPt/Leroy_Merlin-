@@ -215,10 +215,11 @@
             if (window.OneSignalDeferred) {
                 window.OneSignalDeferred.push(async function(OneSignal) {
                     try {
-                        // 1. Primero comprobamos si ya están habilitadas
+                        // 1. Primero comprobamos si el navegador soporta notificaciones o si las está bloqueando por defecto
                         const isPushSupported = OneSignal.Notifications.isPushSupported();
+                        
                         if (!isPushSupported) {
-                            alert("Vaya, parece que tu navegador o dispositivo no soporta notificaciones web. Prueba desde Google Chrome o un ordenador.");
+                            alert("⚠️ Tu dispositivo o navegador está bloqueando las notificaciones.\n\nSi usas iPad o iPhone:\n1. Toca el botón de Compartir (arriba a la derecha).\n2. Dale a 'Añadir a la pantalla de inicio'.\n3. Abre el Boletín desde el icono nuevo y vuelve a pulsar este botón.\n\n(Asegúrate de NO estar en modo incógnito).");
                             return;
                         }
 
@@ -226,21 +227,21 @@
                         const permission = await OneSignal.Notifications.permission;
                         
                         if (permission === 'granted') {
-                            alert("¡Ya estás suscrito! Te avisaremos cuando haya novedades.");
+                            alert("✅ ¡Ya estás suscrito! Te avisaremos cuando haya novedades.");
                         } else if (permission === 'denied') {
-                            alert("Tienes las notificaciones bloqueadas para esta web en los ajustes de tu navegador. Debes desbloquearlas primero.");
+                            alert("❌ Tienes las notificaciones bloqueadas. Ve a los Ajustes de tu navegador y permite las notificaciones para esta página.");
                         } else {
-                            // 3. Forzamos el prompt nativo del navegador (este no lo puede ignorar Safari tan fácilmente)
+                            // 3. Forzamos el prompt nativo del navegador
                             await OneSignal.Notifications.requestPermission();
                         }
                     } catch (error) {
                         console.error("Error al intentar suscribir:", error);
-                        // Fallback al slidedown si el nativo falla
+                        // Fallback de emergencia
                         OneSignal.showSlidedownPrompt({ force: true });
                     }
                 });
             } else {
-                 alert("El sistema de notificaciones aún se está cargando. Espera un segundo y vuelve a intentarlo.");
+                 alert("⏳ El sistema de notificaciones aún se está cargando. Espera un segundo y vuelve a intentarlo.");
             }
         });
 
