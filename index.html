@@ -8,7 +8,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TRL7Z8HF');</script>
     <!-- End Google Tag Manager -->
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boletín Noticias - Leroy Merlin</title>
@@ -92,6 +92,7 @@
         }
     </style>
 
+    <!-- INICIO ONESIGNAL -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -117,14 +118,619 @@
             }
           }
         });
+        
+        // Magia anti-Apple: Forzamos el cartel nativo grande por si no sale la campana
         OneSignal.showSlidedownPrompt();
       });
     </script>
+    <!-- FIN ONESIGNAL -->
+
 </head>
 <body class="text-gray-800 antialiased pb-12 relative">
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRL7Z8HF"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Boletín Noticias</h1>
+                <p class="text-sm text-gray-500 font-medium">Leroy Merlin</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-3">
+                
+                <!-- NUEVO BOTÓN MANUAL DE NOTIFICACIONES -->
+                <button id="btn-suscribir-push" class="flex items-center gap-2 border border-blue-500 text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm hover:bg-blue-50 transition-colors focus:outline-none bg-white shadow-sm" title="Activar notificaciones">
+                    🔔 Avisos
+                </button>
+
+                <div class="relative">
+                    <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
+                        <option value="">Todas las categorías</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-lm-dark">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+
+                <input 
+                    type="text" 
+                    id="filtro-fecha" 
+                    placeholder="Filtrar por fecha" 
+                    onfocus="(this.type='date')" 
+                    onblur="if(!this.value) this.type='text'" 
+                    class="border border-lm-green text-lm-dark font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none bg-transparent text-center min-w-[150px] cursor-pointer" 
+                    title="Filtrar por fecha"
+                >
+                
+                <button id="btn-limpiar" class="hidden border border-gray-300 text-gray-500 font-semibold px-4 py-1.5 rounded-full text-sm hover:bg-gray-100 transition-colors focus:outline-none">
+                    Limpiar ✕
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    </main>
+
+    <!-- Avatar de Richie -->
+    <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
+        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl rounded-full">
+    </div>
+
+    <!-- Modal de Richie -->
+    <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[300px] animate-pop-up">
+        
+        <div id="truth-question-view" class="hidden">
+            <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span class="text-xl" id="emoji-saludo">🤖</span> <span id="texto-saludo">¡Hola!</span>
+            </p>
+            <p id="texto-pregunta" class="text-xs text-gray-600 font-medium leading-relaxed mb-4">
+                Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?
+            </p>
+            <div class="flex gap-2">
+                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">💉 ¡Claro!</button>
+                <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Ahora no</button>
+            </div>
+        </div>
+
+        <div id="truth-ask-view" class="hidden">
+            <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span class="text-xl">🕵️‍♂️</span> ¡Momento cotilla inverso!
+            </p>
+            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-3">
+                ¡Oye, para un segundo! 🛑 Siempre soy yo el que habla... ¿Tú en qué andas metido ahora mismo en el curro?
+            </p>
+            <textarea id="user-task-input" class="w-full text-xs p-3 border border-gray-300 rounded-lg mb-3 focus:outline-none focus:border-lm-green focus:ring-1 focus:ring-lm-green resize-none text-gray-700 bg-gray-50" rows="2" placeholder="Ej: Peleándome con un excel de ventas..."></textarea>
+            <div class="flex gap-2">
+                <button id="btn-send-task" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">Enviar 🚀</button>
+                <button id="btn-skip-task" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Paso</button>
+            </div>
+        </div>
+
+        <div id="truth-fact-view" class="hidden">
+            <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span class="text-xl" id="icono-perfil">💡</span> <span id="titulo-perfil">Aquí tienes:</span>
+            </p>
+            <div id="truth-text" class="text-xs text-gray-600 font-medium leading-relaxed space-y-2 mb-3"></div>
+            <button id="btn-close-fact" class="w-full bg-gray-100 text-gray-600 text-xs font-bold py-1.5 rounded-lg hover:bg-gray-200 transition shadow-sm">Entendido (Cerrar)</button>
+        </div>
+        
+        <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 shadow-sm"></div>
+    </div>
+
+    <script>
+        // Lógica del nuevo botón "Avisos" para OneSignal (VERSIÓN FORZADA PARA APPLE)
+        document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
+            if (window.OneSignalDeferred) {
+                window.OneSignalDeferred.push(async function(OneSignal) {
+                    try {
+                        // 1. Primero comprobamos si el navegador soporta notificaciones o si las está bloqueando por defecto
+                        const isPushSupported = OneSignal.Notifications.isPushSupported();
+                        
+                        if (!isPushSupported) {
+                            alert("⚠️ Tu dispositivo o navegador está bloqueando las notificaciones.\n\nSi usas iPad o iPhone:\n1. Toca el botón de Compartir (arriba a la derecha).\n2. Dale a 'Añadir a la pantalla de inicio'.\n3. Abre el Boletín desde el icono nuevo y vuelve a pulsar este botón.\n\n(Asegúrate de NO estar en modo incógnito).");
+                            return;
+                        }
+
+                        // 2. Comprobamos el permiso actual
+                        const permission = await OneSignal.Notifications.permission;
+                        
+                        if (permission === 'granted') {
+                            alert("✅ ¡Ya estás suscrito! Te avisaremos cuando haya novedades.");
+                        } else if (permission === 'denied') {
+                            alert("❌ Tienes las notificaciones bloqueadas. Ve a los Ajustes de tu navegador y permite las notificaciones para esta página.");
+                        } else {
+                            // 3. Forzamos el prompt nativo del navegador
+                            await OneSignal.Notifications.requestPermission();
+                        }
+                    } catch (error) {
+                        console.error("Error al intentar suscribir:", error);
+                        // Fallback de emergencia
+                        OneSignal.showSlidedownPrompt({ force: true });
+                    }
+                });
+            } else {
+                 alert("⏳ El sistema de notificaciones aún se está cargando. Espera un segundo y vuelve a intentarlo.");
+            }
+        });
+
+        // ==========================================
+        // 1. LÓGICA DE NOTICIAS Y RASTREADOR
+        // ==========================================
+        const CARPETA_ASSETS = "./archivos/";
+        let EDICIONES_DEL_BOLETIN = []; 
+        let mostrarTodasAnteriores = false;
+
+        const contenedor = document.getElementById('contenedor-boletines');
+        const selectCategoria = document.getElementById('filtro-categoria');
+        const inputFecha = document.getElementById('filtro-fecha');
+        const btnLimpiar = document.getElementById('btn-limpiar');
+
+        let scoreTechie = parseInt(localStorage.getItem('lm_score_techie')) || 0;
+        let scoreBusiness = parseInt(localStorage.getItem('lm_score_business')) || 0;
+
+        function actualizarPuntuacion(categoria) {
+            if (!categoria) return;
+            const cat = categoria.toUpperCase();
+            if (cat.includes('IA') || cat.includes('TECH') || cat.includes('DATOS')) {
+                scoreTechie++;
+                localStorage.setItem('lm_score_techie', scoreTechie);
+            } 
+            else if (cat.includes('GEO') || cat.includes('RETAIL') || cat.includes('NEGOCIO') || cat.includes('MARKETING') || cat.includes('SEO')) {
+                scoreBusiness++;
+                localStorage.setItem('lm_score_business', scoreBusiness);
+            }
+        }
+
+        async function cargarDatos() {
+            try {
+                const respuesta = await fetch('./data.json?t=' + new Date().getTime());
+                if (!respuesta.ok) throw new Error('No se pudo cargar el archivo data.json');
+                EDICIONES_DEL_BOLETIN = await respuesta.json();
+                inicializarCategorias();
+                renderizarNoticias();
+            } catch (error) {
+                console.error("Error cargando noticias:", error);
+                contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe.</div>`;
+            }
+        }
+
+        function inicializarCategorias() {
+            const todasLasCategorias = EDICIONES_DEL_BOLETIN.flatMap(edicion => 
+                (edicion.noticias || []).map(noticia => noticia.categoria)
+            );
+            const categoriasUnicas = [...new Set(todasLasCategorias)].sort();
+            categoriasUnicas.forEach(cat => {
+                if(!cat) return; 
+                const option = document.createElement('option');
+                option.value = cat;
+                option.textContent = cat;
+                selectCategoria.appendChild(option);
+            });
+        }
+
+        function renderizarNoticias() {
+            const categoriaSeleccionada = selectCategoria.value;
+            const fechaSeleccionada = inputFecha.type === 'date' ? inputFecha.value : '';
+            const hayFiltros = (categoriaSeleccionada !== "" || fechaSeleccionada !== "");
+            
+            let htmlFinal = '';
+            let edicionesVisibles = 0;
+            let hayMasOcultas = false;
+
+            // Calculamos hace exactamente una semana
+            const haceUnaSemana = new Date();
+            haceUnaSemana.setDate(haceUnaSemana.getDate() - 7);
+
+            if (categoriaSeleccionada) actualizarPuntuacion(categoriaSeleccionada);
+
+            EDICIONES_DEL_BOLETIN.forEach((edicion, indexEdicion) => {
+                const noticiasFiltradas = (edicion.noticias || []).filter(noticia => {
+                    if (noticia.visible === false) return false;
+                    const cumpleCategoria = categoriaSeleccionada === "" || noticia.categoria === categoriaSeleccionada;
+                    const cumpleFecha = fechaSeleccionada === "" || noticia.fechaISO === fechaSeleccionada;
+                    return cumpleCategoria && cumpleFecha;
+                });
+
+                const mostrarBanner = edicion.bannerLanding && !hayFiltros;
+                if (noticiasFiltradas.length === 0 && !mostrarBanner) return;
+
+                // Verificar si la edición es reciente (menos de 7 días) o es la primera de la lista
+                let esReciente = (indexEdicion === 0); 
+                noticiasFiltradas.forEach(noticia => {
+                    if (noticia.fechaISO) {
+                        const fechaNoticia = new Date(noticia.fechaISO);
+                        if (fechaNoticia >= haceUnaSemana) esReciente = true;
+                    }
+                });
+
+                // Si no hay filtros, no hemos dado al botón de ver todo, y es antigua -> Ocultar
+                if (!hayFiltros && !mostrarTodasAnteriores && !esReciente) {
+                    hayMasOcultas = true;
+                    return; 
+                }
+
+                const esLaMasNueva = edicionesVisibles === 0;
+                const opacidad = esLaMasNueva ? '' : 'opacity-80';
+
+                if (!esLaMasNueva && edicionesVisibles > 0) {
+                    htmlFinal += `
+                    <div class="flex items-center justify-center mt-20 mb-14">
+                        <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
+                        <span class="px-5 text-lm-dark text-sm font-bold uppercase tracking-widest whitespace-nowrap bg-[#f4f6f8]">Noticias Anteriores</span>
+                        <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
+                    </div>`;
+                }
+
+                let tarjetasNoticias = '';
+
+                if (mostrarBanner) {
+                    const banner = edicion.bannerLanding;
+                    let rutaImagenBanner = banner.imagen;
+                    if (!rutaImagenBanner.startsWith('http') && !rutaImagenBanner.startsWith('./')) {
+                        rutaImagenBanner = CARPETA_ASSETS + banner.imagen;
+                    }
+                    tarjetasNoticias += `
+                    <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-6">
+                        <a href="${banner.enlace}" target="_blank" data-categoria="Especial" class="link-noticia block relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md group">
+                            <img src="${rutaImagenBanner}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x400/e2e8f0/64748b?text=Banner+Leroy+Merlin'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-6 md:p-10 w-full flex flex-col items-start">
+                                <span class="bg-lm-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded shadow-sm uppercase mb-3">Especial Temático</span>
+                                <h3 class="text-2xl md:text-4xl font-bold text-white mb-5 drop-shadow-md">${banner.titulo}</h3>
+                                <span class="inline-flex items-center text-sm font-bold text-gray-900 bg-white hover:bg-lm-green hover:text-white px-5 py-2.5 rounded-full transition-all group-hover:px-6 shadow-lg">
+                                    Leer el informe completo →
+                                </span>
+                            </div>
+                        </a>
+                    </div>`;
+                }
+
+                noticiasFiltradas.forEach(noticia => {
+                    let htmlMultimedia = '';
+                    if (noticia.video) {
+                        const rutaVideo = noticia.video.startsWith('http') ? noticia.video : CARPETA_ASSETS + noticia.video;
+                        htmlMultimedia = `<video controls class="w-full h-full object-cover"><source src="${rutaVideo}" type="video/mp4"></video>`;
+                    } else {
+                        let imagenSrc = noticia.imagen && noticia.imagen.trim() !== "" ? noticia.imagen : 'https://placehold.co/600x400/e2e8f0/64748b?text=Leroy+Merlin';
+                        if (!imagenSrc.startsWith('http') && !imagenSrc.includes('.')) imagenSrc = CARPETA_ASSETS + imagenSrc + '.png';
+                        htmlMultimedia = `<img src="${imagenSrc}" alt="${noticia.titulo}" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Cargando...'">`;
+                    }
+
+                    tarjetasNoticias += `
+                    <article class="tarjeta-noticia bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
+                        <div class="contenedor-imagen ${esLaMasNueva ? '' : 'opacity-90'} relative">
+                            ${htmlMultimedia}
+                            <span class="absolute top-3 left-3 bg-white/90 text-lm-dark text-xs font-bold px-2.5 py-1 rounded shadow uppercase tracking-wide">${noticia.categoria}</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-end mb-3">
+                                <span class="text-gray-400 text-xs font-semibold flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    ${noticia.fechaTexto}
+                                </span>
+                            </div>
+                            <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900 line-clamp-2" title="${noticia.titulo}">${noticia.titulo}</h3>
+                            <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4-exact">${noticia.resumen}</p>
+                            <a href="${noticia.enlace}" target="_blank" data-categoria="${noticia.categoria}" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
+                                Leer noticia completa <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                    </article>`;
+                });
+
+                htmlFinal += `
+                <section class="mb-16 ${opacidad} transition-all duration-300">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
+                        <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-lm-dark' : 'text-lg text-gray-500'} ${edicion.audioSrc ? 'mb-4' : 'mb-0'}">${edicion.tituloAudio}</h2>
+                        ${edicion.audioSrc ? `<audio controls class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner"><source src="${CARPETA_ASSETS}${edicion.audioSrc}"></audio>` : ''}
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">${tarjetasNoticias}</div>
+                </section>`;
+                edicionesVisibles++;
+            });
+
+            if (hayMasOcultas) {
+                htmlFinal += `
+                <div class="text-center mt-2 mb-16 animate-pop-up">
+                    <button id="btn-ver-anteriores" class="bg-white border-2 border-lm-green text-lm-dark font-bold py-3 px-8 rounded-full hover:bg-lm-green hover:text-white transition-colors shadow-sm">
+                        Ver boletines de semanas anteriores ⬇️
+                    </button>
+                </div>`;
+            }
+
+            if (edicionesVisibles === 0 && !hayMasOcultas) {
+                htmlFinal = `<div class="text-center py-20"><p class="text-gray-500 text-lg mb-4">No hay noticias que coincidan con los filtros seleccionados.</p></div>`;
+            }
+
+            contenedor.innerHTML = htmlFinal;
+
+            const btnVerAnteriores = document.getElementById('btn-ver-anteriores');
+            if (btnVerAnteriores) {
+                btnVerAnteriores.addEventListener('click', () => {
+                    mostrarTodasAnteriores = true;
+                    renderizarNoticias();
+                });
+            }
+
+            (categoriaSeleccionada || fechaSeleccionada) ? btnLimpiar.classList.remove('hidden') : btnLimpiar.classList.add('hidden');
+        }
+
+        contenedor.addEventListener('click', (event) => {
+            const enlaceClicked = event.target.closest('.link-noticia');
+            if (enlaceClicked) {
+                const cat = enlaceClicked.getAttribute('data-categoria');
+                actualizarPuntuacion(cat);
+            }
+        });
+
+        selectCategoria.addEventListener('change', renderizarNoticias);
+        inputFecha.addEventListener('change', renderizarNoticias);
+        btnLimpiar.addEventListener('click', () => { 
+            selectCategoria.value = ''; 
+            inputFecha.value = ''; 
+            inputFecha.type = 'text'; 
+            mostrarTodasAnteriores = false; 
+            renderizarNoticias(); 
+        });
+        
+        document.addEventListener('play', function(e){
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                if(audios[i] != e.target) audios[i].pause();
+            }
+        }, true);
+
+        cargarDatos();
+
+        // ==========================================
+        // 2. LÓGICA DE RICHIE (CEREBRO DINÁMICO)
+        // ==========================================
+        
+        const verdadesTechie = [
+            "<p>¡Buenas! Estaba leyendo sobre cómo funciona el 'Agentic Commerce'. Básicamente la IA negocia y compra por ti. Me voló la cabeza.</p><p class='mt-2'>Mírate este hilo en X cuando tengas 5 mins: <a href='https://twitter.com/LeroyMerlin_es' target='_blank' class='text-blue-600 underline font-bold'>Ver hilo</a></p>",
+            "<p>¡Buenas! Google acaba de presentar <strong>TurboQuant</strong>. Es un algoritmo que reduce la memoria caché de los LLM hasta 6 veces y acelera la inferencia x8 sin ninguna pérdida de precisión.</p><p class='mt-2'>Un avance tremendo para abaratar costes de IA. Puedes leerlo aquí: <a href='https://venturebeat.com/infrastructure/googles-new-turboquant-algorithm-speeds-up-ai-memory-8x-cutting-costs-by-50' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia</a></p>",
+            "<p>¡Ojo al dato! Me he enterado de que ChatGPT-5 está a la vuelta de la esquina y promete razonamiento matemático nivel doctorado. ¡Habrá que prepararse!</p>",
+            "<p>¡Me explota la cabeza! Acaba de salir una tienda online belga llamada 'Is This Real?' que es 100% autónoma. Una IA diseña la ropa leyendo noticias, crea escasez, y hasta hace el marketing con avatares sintéticos.</p><p class='mt-2'>Ni un solo humano interviniendo. Míralo aquí: <a href='https://www.retaildetail.eu/news/fashion/ai-takes-the-helm-belgian-online-store-operates-completely-autonomously/' target='_blank' class='text-blue-600 underline font-bold'>Ver locura autónoma</a></p>",
+            "<p>¡Notición! Meta acaba de lanzar <strong>Muse Spark</strong>. Es su primer modelo multimodal nativo (texto, imagen, voz) que sabe usar herramientas por su cuenta.</p><p class='mt-2'>Están yendo a saco a por la 'superinteligencia personal'. Tienes que ver lo que están cocinando: <a href='https://x.com/AIatMeta' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio de Meta</a></p>",
+            "<p>¡Oye, esto es de película de hackers! Anthropic ha lanzado <strong>Project Glasswing</strong>. Han puesto a su nuevo modelo Claude Mythos a detectar vulnerabilidades y parchear infraestructuras a nivel global en tiempo real.</p><p class='mt-2'>Supera incluso a los expertos humanos en ciberseguridad. Échale un vistazo: <a href='https://t.co/NQ7IfEtYk7' target='_blank' class='text-blue-600 underline font-bold'>Leer sobre Project Glasswing</a></p>"
+        ];
+
+        const verdadesBusiness = [
+            "<p>¡Qué tal! He visto un dato brutal: optimizar rutas de entrega usando datos GEO reduce costes operativos una locura.</p><p class='mt-2'>Me acordé de un Reel que lo explica en 1 minuto: <a href='https://instagram.com/leroymerlines' target='_blank' class='text-blue-600 underline font-bold'>Ver Reel en IG</a></p>",
+            "<p>¡Oye! Anthropic ha sacado una actualización tremenda: <strong>Claude ya puede controlar tu ordenador</strong> como un humano (abrir archivos, navegar, usar Slack).</p><p class='mt-2'>Por ahora está en fase research preview para macOS. Míralo aquí: <a href='https://indianexpress.com/article/technology/artificial-intelligence/anthropic-claude-computer-use-ai-agents-openclaw-10598605/' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia</a></p>",
+            "<p>¡Qué tal! Google ha lanzado oficialmente <strong>Lyria 3 Pro</strong>. Ahora permite generar pistas musicales coherentes de hasta 3 minutos con control total sobre la estructura.</p><p class='mt-2'>Míralo en acción aquí: <a href='https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio oficial</a></p>",
+            "<p>¡Ey! ¿Has visto lo último de Claude? Ahora puedes conectar tus herramientas del curro y usarlas directamente desde el móvil con la IA.</p><p class='mt-2'>Imagínate poder revisar un diseño en Figma, montarte un Canva o mirar datos de Amplitude. Una pasada: <a href='https://x.com/claudeai/status/2036850783526719610?s=46' target='_blank' class='text-blue-600 underline font-bold'>Ver el anuncio en X</a></p>",
+            "<p>¿Sabías que la personalización en tiempo real puede subir la conversión un 15%? Deberíamos darle una vuelta a esto para las campañas del mes que viene. 📈</p>",
+            "<p>¡Oye! ¿Has visto lo de Macy's? Han metido a Google Gemini como asistente de compras en vez de los filtros clásicos de web, para que les pidas lo que buscas al natural.</p><p class='mt-2'>¿El resultado? Las conversiones han subido un x4.75. Es brutal: <a href='https://www.retaildive.com/news/ask-macys-AI-conversational-shopping-assistant/815928/' target='_blank' class='text-blue-600 underline font-bold'>Leer caso de éxito</a></p>",
+            "<p>¡Ojo al movimiento! Unilever acaba de firmar una alianza gigante con Google Cloud para meterse de lleno en el <strong>comercio agéntico</strong> a escala masiva.</p><p class='mt-2'>Van a usar IAs como asistentes de compra autónomos para revolucionar el sector consumo. Esto va a cambiar las reglas del juego: <a href='https://www.revistainforetail.com/noticiadet/unilever-se-alia-con-google-cloud/4887a16516c78baa4c77777ab5150834' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia de la alianza</a></p>"
+        ];
+
+        const verdadesCotilleos = [
+            "<p>Oye, guárdame el secreto, pero me han soplado que están montando unas pantallas holográficas en la zona de baños de un par de tiendas. ¡Imagínate ver cómo queda la ducha flotando en 3D! 🤯</p><p class='mt-2'>Haz como que no sabes nada, ¿eh?</p>",
+            "<p>Me parto... Dicen por ahí que el equipo de Datos está entrenando una IA usando solo los chistes malos de las reuniones de dirección. A ver qué sale de ahí... 😂</p>",
+            "<p>Oye, ¿has visto la movida de <strong>Suno</strong> esta semana? Han pillado un audio de voz cutrísimo cantando a capela y la IA le ha metido una banda entera brutal por detrás. 🤯</p><p class='mt-2'>Tienes que escucharlo, es una locura: <a href='https://x.com/suno' target='_blank' class='text-blue-600 underline font-bold'>Ver el vídeo en X</a></p>",
+            "<p>¿Sabes cuál es el verdadero salseo del sector hoy? Me acabo de enterar viendo a Carlos Santana (DotCSV) que la guerra ya no es hacer IAs gigantes, sino comprimirlas a lo bestia para abaratar costes.</p><p class='mt-2'>Échale un ojo a su último análisis que no tiene desperdicio: <a href='https://www.youtube.com/@DotCSV/videos' target='_blank' class='text-blue-600 underline font-bold'>Ver último vídeo en YouTube</a></p>",
+            "<p>Psst... he escuchado que alguien del equipo de diseño se ha dejado la cámara encendida hoy mientras desayunaba cereales en la reunión de las 9:00. ¡Qué momentazo! 🥣🤫</p>"
+        ];
+
+        const avatar = document.getElementById('truth-avatar');
+        const messageBox = document.getElementById('truth-message');
+        
+        const questionView = document.getElementById('truth-question-view');
+        const askView = document.getElementById('truth-ask-view');
+        const factView = document.getElementById('truth-fact-view');
+        
+        const btnYes = document.getElementById('btn-yes-truth');
+        const btnNo = document.getElementById('btn-no-truth');
+        const btnCloseFact = document.getElementById('btn-close-fact');
+        const btnSendTask = document.getElementById('btn-send-task');
+        const btnSkipTask = document.getElementById('btn-skip-task');
+        const userTaskInput = document.getElementById('user-task-input');
+        
+        const truthText = document.getElementById('truth-text');
+        const textoSaludo = document.getElementById('texto-saludo');
+        const emojiSaludo = document.getElementById('emoji-saludo');
+        const tituloPerfil = document.getElementById('titulo-perfil');
+        const textoPregunta = document.getElementById('texto-pregunta'); 
+        const iconoPerfil = document.getElementById('icono-perfil');
+
+        let intervaloMovimiento;
+        let timeoutRetirada;
+        let timeoutOcultarModal;
+        let estaCorriendo = false; 
+        let esCotilleoActual = false; 
+        let esPreguntaActual = false;
+
+        function volarAleatorio() {
+            const anchoDisponible = window.innerWidth - 100; 
+            const altoDisponible = window.innerHeight - 100;
+            const randomTop = Math.floor(Math.random() * altoDisponible);
+            const randomLeft = Math.floor(Math.random() * anchoDisponible);
+            
+            avatar.style.top = Math.max(20, randomTop) + "px";
+            avatar.style.left = Math.max(20, randomLeft) + "px";
+        }
+
+        function retirarACola() {
+            estaCorriendo = false;
+            clearInterval(intervaloMovimiento);
+            
+            const destinoTop = window.innerHeight - 90; 
+            const destinoLeft = window.innerWidth - 90; 
+            
+            avatar.style.top = destinoTop + "px";
+            avatar.style.left = destinoLeft + "px";
+            
+            setTimeout(() => {
+                avatar.style.top = "";
+                avatar.style.left = "";
+                avatar.classList.add('bottom-6', 'right-6', 'latido-suave');
+            }, 1000);
+        }
+
+        if (avatar) {
+            setTimeout(() => {
+                estaCorriendo = true;
+                avatar.classList.remove('hidden');
+                volarAleatorio();
+                intervaloMovimiento = setInterval(volarAleatorio, 2000);
+                timeoutRetirada = setTimeout(retirarACola, 12000);
+            }, 1500);
+
+            avatar.addEventListener('click', () => {
+                clearTimeout(timeoutOcultarModal);
+                
+                let tiradaDados = Math.random();
+                esCotilleoActual = false;
+                esPreguntaActual = false;
+
+                if (tiradaDados < 0.20) {
+                    esPreguntaActual = true; 
+                } else if (tiradaDados < 0.60) {
+                    esCotilleoActual = true; 
+                }
+
+                if (esPreguntaActual) {
+                    userTaskInput.value = "";
+                    userTaskInput.placeholder = "Ej: Peleándome con un excel de ventas...";
+                    questionView.classList.add('hidden');
+                    factView.classList.add('hidden');
+                    askView.classList.remove('hidden');
+                } else {
+                    askView.classList.add('hidden');
+                    factView.classList.add('hidden');
+                    questionView.classList.remove('hidden');
+                    
+                    if (esCotilleoActual) {
+                        textoSaludo.textContent = "¡Psst! Acércate...";
+                        emojiSaludo.textContent = "🤫";
+                        textoPregunta.innerHTML = "Me acabo de enterar de un <strong>cotilleo</strong> buenísimo. ¿Te lo cuento rápido antes de que nos vean?";
+                        btnYes.textContent = "👀 ¡Dime!";
+                    } else {
+                        if (estaCorriendo) {
+                            textoSaludo.textContent = "¡Me atrapaste!";
+                            emojiSaludo.textContent = "⚡";
+                        } else {
+                            textoSaludo.textContent = "¡Hola de nuevo!";
+                            emojiSaludo.textContent = "🤖";
+                        }
+                        textoPregunta.innerHTML = "Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?";
+                        btnYes.textContent = "💉 ¡Claro!";
+                    }
+                }
+
+                if (estaCorriendo) {
+                    clearTimeout(timeoutRetirada); 
+                    retirarACola(); 
+                }
+                
+                avatar.style.display = 'none'; 
+                
+                setTimeout(() => {
+                    messageBox.classList.remove('hidden'); 
+                }, estaCorriendo ? 1000 : 0);
+            });
+
+            btnSendTask.addEventListener('click', () => {
+                const tarea = userTaskInput.value.trim();
+                
+                if (tarea !== "") {
+                    let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
+                    tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
+                    localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
+
+                    const emailEndpoint = "https://formspree.io/f/maqlnbdp"; 
+                    
+                    fetch(emailEndpoint, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify({
+                            Origen: "Richie - Boletín",
+                            Tarea_del_usuario: tarea,
+                            Fecha: new Date().toLocaleString()
+                        })
+                    }).catch(error => console.error("Error silencioso:", error));
+
+                    askView.classList.add('hidden');
+                    factView.classList.remove('hidden');
+                    
+                    iconoPerfil.textContent = "💾";
+                    tituloPerfil.textContent = "¡Anotado en mi RAM!";
+                    truthText.innerHTML = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
+                    
+                    timeoutOcultarModal = setTimeout(() => {
+                        messageBox.classList.add('hidden');
+                        avatar.style.display = 'block'; 
+                    }, 8000);
+                } else {
+                    userTaskInput.placeholder = "¡Escribe algo primero, anda! 😂";
+                }
+            });
+
+            btnSkipTask.addEventListener('click', () => {
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+
+            btnYes.addEventListener('click', () => {
+                let poolDeFrases = [];
+                iconoPerfil.textContent = "💡";
+
+                if (esCotilleoActual) {
+                    poolDeFrases = verdadesCotilleos;
+                    tituloPerfil.textContent = "Secreto de pasillo:";
+                    iconoPerfil.textContent = "🤫";
+                } else {
+                    if (scoreTechie > scoreBusiness) {
+                        poolDeFrases = verdadesTechie;
+                        tituloPerfil.textContent = "Para mi colega Techie:";
+                    } else if (scoreBusiness > scoreTechie) {
+                        poolDeFrases = verdadesBusiness;
+                        tituloPerfil.textContent = "Para mi compi de Negocio:";
+                    } else {
+                        if (Math.random() > 0.5) {
+                            poolDeFrases = verdadesTechie;
+                            tituloPerfil.textContent = "Para mi colega Techie:";
+                        } else {
+                            poolDeFrases = verdadesBusiness;
+                            tituloPerfil.textContent = "Para mi compi de Negocio:";
+                        }
+                    }
+                }
+
+                const indiceSesgado = Math.floor(Math.sqrt(Math.random()) * poolDeFrases.length);
+                const datoAleatorio = poolDeFrases[indiceSesgado];
+                
+                truthText.innerHTML = datoAleatorio;
+                
+                questionView.classList.add('hidden');
+                factView.classList.remove('hidden');
+
+                timeoutOcultarModal = setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                    avatar.style.display = 'block'; 
+                }, 12000); 
+            });
+
+            btnNo.addEventListener('click', () => {
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+
+            btnCloseFact.addEventListener('click', () => {
+                clearTimeout(timeoutOcultarModal);
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+        }
+    </script>
+</body>
+</html>
