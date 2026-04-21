@@ -95,15 +95,13 @@
       OneSignalDeferred.push(async function(OneSignal) {
         await OneSignal.init({
           appId: "a911aeb6-7ef9-41d3-9b76-6a5b3dfa9df2",
-          // Rutas específicas para que OneSignal no se pierda en GitHub Pages
           serviceWorkerParam: { scope: "/Leroy_Merlin-/" },
           serviceWorkerPath: "/Leroy_Merlin-/OneSignalSDKWorker.js",
           notifyButton: {
-            enable: false, // Desactivado porque usas tu propio botón "🔔 Avisos" en la cabecera
+            enable: false,
           },
         });
         
-        // Muestra el aviso de suscripción automáticamente al entrar si el usuario no ha respondido aún
         if (OneSignal.Slidedown) {
             OneSignal.Slidedown.promptPush();
         }
@@ -201,18 +199,15 @@
     </div>
 
     <script>
-        // Lógica del botón "Avisos" actualizada para OneSignal API v16
         document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
             if (window.OneSignalDeferred) {
                 window.OneSignalDeferred.push(async function(OneSignal) {
                     try {
-                        // 1. Comprobamos soporte nativo del navegador
                         if (!('Notification' in window)) {
                             alert("⚠️ Tu dispositivo o navegador no soporta notificaciones web.\n\nSi usas iPad o iPhone:\n1. Toca el botón de Compartir (arriba a la derecha).\n2. Dale a 'Añadir a la pantalla de inicio'.\n3. Abre el Boletín desde el icono nuevo y vuelve a pulsar este botón.");
                             return;
                         }
 
-                        // 2. Comprobamos el permiso nativo actual
                         const permission = window.Notification.permission;
                         
                         if (permission === 'granted') {
@@ -220,7 +215,6 @@
                         } else if (permission === 'denied') {
                             alert("❌ Tienes las notificaciones bloqueadas. Ve a los Ajustes de Safari/Chrome y permite las notificaciones para esta página.");
                         } else {
-                            // 3. Forzamos el prompt de OneSignal compatible con v16
                             if (OneSignal.Slidedown) {
                                 await OneSignal.Slidedown.promptPush();
                             } else {
@@ -237,9 +231,6 @@
             }
         });
 
-        // ==========================================
-        // 1. LÓGICA DE NOTICIAS Y RASTREADOR
-        // ==========================================
         const CARPETA_ASSETS = "./archivos/";
         let EDICIONES_DEL_BOLETIN = []; 
         let mostrarTodasAnteriores = false;
@@ -267,7 +258,7 @@
 
         async function cargarDatos() {
             try {
-                const respuesta = await fetch('./data.json?t=' + new Date().getTime());
+                const respuesta = await fetch('data.json?t=' + new Date().getTime());
                 if (!respuesta.ok) throw new Error('No se pudo cargar el archivo data.json');
                 EDICIONES_DEL_BOLETIN = await respuesta.json();
                 inicializarCategorias();
@@ -301,7 +292,6 @@
             let edicionesVisibles = 0;
             let hayMasOcultas = false;
 
-            // Calculamos hace exactamente una semana
             const haceUnaSemana = new Date();
             haceUnaSemana.setDate(haceUnaSemana.getDate() - 7);
 
@@ -318,7 +308,6 @@
                 const mostrarBanner = edicion.bannerLanding && !hayFiltros;
                 if (noticiasFiltradas.length === 0 && !mostrarBanner) return;
 
-                // Verificar si la edición es reciente (menos de 7 días) o es la primera de la lista
                 let esReciente = (indexEdicion === 0); 
                 noticiasFiltradas.forEach(noticia => {
                     if (noticia.fechaISO) {
@@ -327,7 +316,6 @@
                     }
                 });
 
-                // Si no hay filtros, no hemos dado al botón de ver todo, y es antigua -> Ocultar
                 if (!hayFiltros && !mostrarTodasAnteriores && !esReciente) {
                     hayMasOcultas = true;
                     return; 
@@ -416,4 +404,296 @@
             if (hayMasOcultas) {
                 htmlFinal += `
                 <div class="text-center mt-2 mb-16 animate-pop-up">
-                    <button id="btn-ver-anteriores" class="bg-white border-2 border-lm-green text
+                    <button id="btn-ver-anteriores" class="bg-white border-2 border-lm-green text-lm-dark font-bold py-3 px-8 rounded-full hover:bg-lm-green hover:text-white transition-colors shadow-sm">
+                        Ver boletines de semanas anteriores ⬇️
+                    </button>
+                </div>`;
+            }
+
+            if (edicionesVisibles === 0 && !hayMasOcultas) {
+                htmlFinal = `<div class="text-center py-20"><p class="text-gray-500 text-lg mb-4">No hay noticias que coincidan con los filtros seleccionados.</p></div>`;
+            }
+
+            contenedor.innerHTML = htmlFinal;
+
+            const btnVerAnteriores = document.getElementById('btn-ver-anteriores');
+            if (btnVerAnteriores) {
+                btnVerAnteriores.addEventListener('click', () => {
+                    mostrarTodasAnteriores = true;
+                    renderizarNoticias();
+                });
+            }
+
+            (categoriaSeleccionada || fechaSeleccionada) ? btnLimpiar.classList.remove('hidden') : btnLimpiar.classList.add('hidden');
+        }
+
+        contenedor.addEventListener('click', (event) => {
+            const enlaceClicked = event.target.closest('.link-noticia');
+            if (enlaceClicked) {
+                const cat = enlaceClicked.getAttribute('data-categoria');
+                actualizarPuntuacion(cat);
+            }
+        });
+
+        selectCategoria.addEventListener('change', renderizarNoticias);
+        inputFecha.addEventListener('change', renderizarNoticias);
+        btnLimpiar.addEventListener('click', () => { 
+            selectCategoria.value = ''; 
+            inputFecha.value = ''; 
+            inputFecha.type = 'text'; 
+            mostrarTodasAnteriores = false; 
+            renderizarNoticias(); 
+        });
+        
+        document.addEventListener('play', function(e){
+            var audios = document.getElementsByTagName('audio');
+            for(var i = 0, len = audios.length; i < len;i++){
+                if(audios[i] != e.target) audios[i].pause();
+            }
+        }, true);
+
+        cargarDatos();
+
+        const verdadesTechie = [
+            "<p>¡Buenas! Estaba leyendo sobre cómo funciona el 'Agentic Commerce'. Básicamente la IA negocia y compra por ti. Me voló la cabeza.</p><p class='mt-2'>Mírate este hilo en X cuando tengas 5 mins: <a href='https://twitter.com/LeroyMerlin_es' target='_blank' class='text-blue-600 underline font-bold'>Ver hilo</a></p>",
+            "<p>¡Buenas! Google acaba de presentar <strong>TurboQuant</strong>. Es un algoritmo que reduce la memoria caché de los LLM hasta 6 veces y acelera la inferencia x8 sin ninguna pérdida de precisión.</p><p class='mt-2'>Un avance tremendo para abaratar costes de IA. Puedes leerlo aquí: <a href='https://venturebeat.com/infrastructure/googles-new-turboquant-algorithm-speeds-up-ai-memory-8x-cutting-costs-by-50' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia</a></p>",
+            "<p>¡Ojo al dato! Me he enterado de que ChatGPT-5 está a la vuelta de la esquina y promete razonamiento matemático nivel doctorado. ¡Habrá que prepararse!</p>",
+            "<p>¡Me explota la cabeza! Acaba de salir una tienda online belga llamada 'Is This Real?' que es 100% autónoma. Una IA diseña la ropa leyendo noticias, crea escasez, y hasta hace el marketing con avatares sintéticos.</p><p class='mt-2'>Ni un solo humano interviniendo. Míralo aquí: <a href='https://www.retaildetail.eu/news/fashion/ai-takes-the-helm-belgian-online-store-operates-completely-autonomously/' target='_blank' class='text-blue-600 underline font-bold'>Ver locura autónoma</a></p>",
+            "<p>¡Notición! Meta acaba de lanzar <strong>Muse Spark</strong>. Es su primer modelo multimodal nativo (texto, imagen, voz) que sabe usar herramientas por su cuenta.</p><p class='mt-2'>Están yendo a saco a por la 'superinteligencia personal'. Tienes que ver lo que están cocinando: <a href='https://x.com/AIatMeta' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio de Meta</a></p>",
+            "<p>¡Oye, esto es de película de hackers! Anthropic ha lanzado <strong>Project Glasswing</strong>. Han puesto a su nuevo modelo Claude Mythos a detectar vulnerabilidades y parchear infraestructuras a nivel global en tiempo real.</p><p class='mt-2'>Supera incluso a los expertos humanos en ciberseguridad. Échale un vistazo: <a href='https://t.co/NQ7IfEtYk7' target='_blank' class='text-blue-600 underline font-bold'>Leer sobre Project Glasswing</a></p>"
+        ];
+
+        const verdadesBusiness = [
+            "<p>¡Qué tal! He visto un dato brutal: optimizar rutas de entrega usando datos GEO reduce costes operativos una locura.</p><p class='mt-2'>Me acordé de un Reel que lo explica en 1 minuto: <a href='https://instagram.com/leroymerlines' target='_blank' class='text-blue-600 underline font-bold'>Ver Reel en IG</a></p>",
+            "<p>¡Oye! Anthropic ha sacado una actualización tremenda: <strong>Claude ya puede controlar tu ordenador</strong> como un humano (abrir archivos, navegar, usar Slack).</p><p class='mt-2'>Por ahora está en fase research preview para macOS. Míralo aquí: <a href='https://indianexpress.com/article/technology/artificial-intelligence/anthropic-claude-computer-use-ai-agents-openclaw-10598605/' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia</a></p>",
+            "<p>¡Qué tal! Google ha lanzado oficialmente <strong>Lyria 3 Pro</strong>. Ahora permite generar pistas musicales coherentes de hasta 3 minutos con control total sobre la estructura.</p><p class='mt-2'>Míralo en acción aquí: <a href='https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/' target='_blank' class='text-blue-600 underline font-bold'>Ver anuncio oficial</a></p>",
+            "<p>¡Ey! ¿Has visto lo último de Claude? Ahora puedes conectar tus herramientas del curro y usarlas directamente desde el móvil con la IA.</p><p class='mt-2'>Imagínate poder revisar un diseño en Figma, montarte un Canva o mirar datos de Amplitude. Una pasada: <a href='https://x.com/claudeai/status/2036850783526719610?s=46' target='_blank' class='text-blue-600 underline font-bold'>Ver el anuncio en X</a></p>",
+            "<p>¿Sabías que la personalización en tiempo real puede subir la conversión un 15%? Deberíamos darle una vuelta a esto para las campañas del mes que viene. 📈</p>",
+            "<p>¡Oye! ¿Has visto lo de Macy's? Han metido a Google Gemini como asistente de compras en vez de los filtros clásicos de web, para que les pidas lo que buscas al natural.</p><p class='mt-2'>¿El resultado? Las conversiones han subido un x4.75. Es brutal: <a href='https://www.retaildive.com/news/ask-macys-AI-conversational-shopping-assistant/815928/' target='_blank' class='text-blue-600 underline font-bold'>Leer caso de éxito</a></p>",
+            "<p>¡Ojo al movimiento! Unilever acaba de firmar una alianza gigante con Google Cloud para meterse de lleno en el <strong>comercio agéntico</strong> a escala masiva.</p><p class='mt-2'>Van a usar IAs como asistentes de compra autónomos para revolucionar el sector consumo. Esto va a cambiar las reglas del juego: <a href='https://www.revistainforetail.com/noticiadet/unilever-se-alia-con-google-cloud/4887a16516c78baa4c77777ab5150834' target='_blank' class='text-blue-600 underline font-bold'>Leer noticia de la alianza</a></p>"
+        ];
+
+        const verdadesCotilleos = [
+            "<p>Oye, guárdame el secreto, pero me han soplado que están montando unas pantallas holográficas en la zona de baños de un par de tiendas. ¡Imagínate ver cómo queda la ducha flotando en 3D! 🤯</p><p class='mt-2'>Haz como que no sabes nada, ¿eh?</p>",
+            "<p>Me parto... Dicen por ahí que el equipo de Datos está entrenando una IA usando solo los chistes malos de las reuniones de dirección. A ver qué sale de ahí... 😂</p>",
+            "<p>Oye, ¿has visto la movida de <strong>Suno</strong> esta semana? Han pillado un audio de voz cutrísimo cantando a capela y la IA le ha metido una banda entera brutal por detrás. 🤯</p><p class='mt-2'>Tienes que escucharlo, es una locura: <a href='https://x.com/suno' target='_blank' class='text-blue-600 underline font-bold'>Ver el vídeo en X</a></p>",
+            "<p>¿Sabes cuál es el verdadero salseo del sector hoy? Me acabo de enterar viendo a Carlos Santana (DotCSV) que la guerra ya no es hacer IAs gigantes, sino comprimirlas a lo bestia para abaratar costes.</p><p class='mt-2'>Échale un ojo a su último análisis que no tiene desperdicio: <a href='https://www.youtube.com/@DotCSV/videos' target='_blank' class='text-blue-600 underline font-bold'>Ver último vídeo en YouTube</a></p>",
+            "<p>Psst... he escuchado que alguien del equipo de diseño se ha dejado la cámara encendida hoy mientras desayunaba cereales en la reunión de las 9:00. ¡Qué momentazo! 🥣🤫</p>"
+        ];
+
+        const avatar = document.getElementById('truth-avatar');
+        const messageBox = document.getElementById('truth-message');
+        
+        const questionView = document.getElementById('truth-question-view');
+        const askView = document.getElementById('truth-ask-view');
+        const factView = document.getElementById('truth-fact-view');
+        
+        const btnYes = document.getElementById('btn-yes-truth');
+        const btnNo = document.getElementById('btn-no-truth');
+        const btnCloseFact = document.getElementById('btn-close-fact');
+        const btnSendTask = document.getElementById('btn-send-task');
+        const btnSkipTask = document.getElementById('btn-skip-task');
+        const userTaskInput = document.getElementById('user-task-input');
+        
+        const truthText = document.getElementById('truth-text');
+        const textoSaludo = document.getElementById('texto-saludo');
+        const emojiSaludo = document.getElementById('emoji-saludo');
+        const tituloPerfil = document.getElementById('titulo-perfil');
+        const textoPregunta = document.getElementById('texto-pregunta'); 
+        const iconoPerfil = document.getElementById('icono-perfil');
+
+        let intervaloMovimiento;
+        let timeoutRetirada;
+        let timeoutOcultarModal;
+        let estaCorriendo = false; 
+        let esCotilleoActual = false; 
+        let esPreguntaActual = false;
+
+        function volarAleatorio() {
+            const anchoDisponible = window.innerWidth - 100; 
+            const altoDisponible = window.innerHeight - 100;
+            const randomTop = Math.floor(Math.random() * altoDisponible);
+            const randomLeft = Math.floor(Math.random() * anchoDisponible);
+            
+            avatar.style.top = Math.max(20, randomTop) + "px";
+            avatar.style.left = Math.max(20, randomLeft) + "px";
+        }
+
+        function retirarACola() {
+            estaCorriendo = false;
+            clearInterval(intervaloMovimiento);
+            
+            const destinoTop = window.innerHeight - 90; 
+            const destinoLeft = window.innerWidth - 90; 
+            
+            avatar.style.top = destinoTop + "px";
+            avatar.style.left = destinoLeft + "px";
+            
+            setTimeout(() => {
+                avatar.style.top = "";
+                avatar.style.left = "";
+                avatar.classList.add('bottom-6', 'right-6', 'latido-suave');
+            }, 1000);
+        }
+
+        if (avatar) {
+            setTimeout(() => {
+                estaCorriendo = true;
+                avatar.classList.remove('hidden');
+                volarAleatorio();
+                intervaloMovimiento = setInterval(volarAleatorio, 2000);
+                timeoutRetirada = setTimeout(retirarACola, 12000);
+            }, 1500);
+
+            avatar.addEventListener('click', () => {
+                clearTimeout(timeoutOcultarModal);
+                
+                let tiradaDados = Math.random();
+                esCotilleoActual = false;
+                esPreguntaActual = false;
+
+                if (tiradaDados < 0.20) {
+                    esPreguntaActual = true; 
+                } else if (tiradaDados < 0.60) {
+                    esCotilleoActual = true; 
+                }
+
+                if (esPreguntaActual) {
+                    userTaskInput.value = "";
+                    userTaskInput.placeholder = "Ej: Peleándome con un excel de ventas...";
+                    questionView.classList.add('hidden');
+                    factView.classList.add('hidden');
+                    askView.classList.remove('hidden');
+                } else {
+                    askView.classList.add('hidden');
+                    factView.classList.add('hidden');
+                    questionView.classList.remove('hidden');
+                    
+                    if (esCotilleoActual) {
+                        textoSaludo.textContent = "¡Psst! Acércate...";
+                        emojiSaludo.textContent = "🤫";
+                        textoPregunta.innerHTML = "Me acabo de enterar de un <strong>cotilleo</strong> buenísimo. ¿Te lo cuento rápido antes de que nos vean?";
+                        btnYes.textContent = "👀 ¡Dime!";
+                    } else {
+                        if (estaCorriendo) {
+                            textoSaludo.textContent = "¡Me atrapaste!";
+                            emojiSaludo.textContent = "⚡";
+                        } else {
+                            textoSaludo.textContent = "¡Hola de nuevo!";
+                            emojiSaludo.textContent = "🤖";
+                        }
+                        textoPregunta.innerHTML = "Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?";
+                        btnYes.textContent = "💉 ¡Claro!";
+                    }
+                }
+
+                if (estaCorriendo) {
+                    clearTimeout(timeoutRetirada); 
+                    retirarACola(); 
+                }
+                
+                avatar.style.display = 'none'; 
+                
+                setTimeout(() => {
+                    messageBox.classList.remove('hidden'); 
+                }, estaCorriendo ? 1000 : 0);
+            });
+
+            btnSendTask.addEventListener('click', () => {
+                const tarea = userTaskInput.value.trim();
+                
+                if (tarea !== "") {
+                    let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
+                    tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
+                    localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
+
+                    const emailEndpoint = "https://formspree.io/f/maqlnbdp"; 
+                    
+                    fetch(emailEndpoint, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify({
+                            Origen: "Richie - Boletín",
+                            Tarea_del_usuario: tarea,
+                            Fecha: new Date().toLocaleString()
+                        })
+                    }).catch(error => console.error("Error silencioso:", error));
+
+                    askView.classList.add('hidden');
+                    factView.classList.remove('hidden');
+                    
+                    iconoPerfil.textContent = "💾";
+                    tituloPerfil.textContent = "¡Anotado en mi RAM!";
+                    truthText.innerHTML = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
+                    
+                    timeoutOcultarModal = setTimeout(() => {
+                        messageBox.classList.add('hidden');
+                        avatar.style.display = 'block'; 
+                    }, 8000);
+                } else {
+                    userTaskInput.placeholder = "¡Escribe algo primero, anda! 😂";
+                }
+            });
+
+            btnSkipTask.addEventListener('click', () => {
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+
+            btnYes.addEventListener('click', () => {
+                let poolDeFrases = [];
+                iconoPerfil.textContent = "💡";
+
+                if (esCotilleoActual) {
+                    poolDeFrases = verdadesCotilleos;
+                    tituloPerfil.textContent = "Secreto de pasillo:";
+                    iconoPerfil.textContent = "🤫";
+                } else {
+                    if (scoreTechie > scoreBusiness) {
+                        poolDeFrases = verdadesTechie;
+                        tituloPerfil.textContent = "Para mi colega Techie:";
+                    } else if (scoreBusiness > scoreTechie) {
+                        poolDeFrases = verdadesBusiness;
+                        tituloPerfil.textContent = "Para mi compi de Negocio:";
+                    } else {
+                        if (Math.random() > 0.5) {
+                            poolDeFrases = verdadesTechie;
+                            tituloPerfil.textContent = "Para mi colega Techie:";
+                        } else {
+                            poolDeFrases = verdadesBusiness;
+                            tituloPerfil.textContent = "Para mi compi de Negocio:";
+                        }
+                    }
+                }
+
+                const indiceSesgado = Math.floor(Math.sqrt(Math.random()) * poolDeFrases.length);
+                const datoAleatorio = poolDeFrases[indiceSesgado];
+                
+                truthText.innerHTML = datoAleatorio;
+                
+                questionView.classList.add('hidden');
+                factView.classList.remove('hidden');
+
+                timeoutOcultarModal = setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                    avatar.style.display = 'block'; 
+                }, 12000); 
+            });
+
+            btnNo.addEventListener('click', () => {
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+
+            btnCloseFact.addEventListener('click', () => {
+                clearTimeout(timeoutOcultarModal);
+                messageBox.classList.add('hidden'); 
+                avatar.style.display = 'block'; 
+            });
+        }
+    </script>
+</body>
+</html>
