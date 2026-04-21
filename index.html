@@ -119,8 +119,10 @@
           }
         });
         
-        // Magia anti-Apple: Forzamos el cartel nativo grande por si no sale la campana
-        OneSignal.showSlidedownPrompt();
+        // Forzamos el cartel inicial nativo si es posible (API v16)
+        if (OneSignal.Slidedown) {
+            OneSignal.Slidedown.promptPush();
+        }
       });
     </script>
     <!-- FIN ONESIGNAL -->
@@ -223,34 +225,35 @@
     </div>
 
     <script>
-        // Lógica del nuevo botón "Avisos" para OneSignal (VERSIÓN FORZADA PARA APPLE)
+        // Lógica del botón "Avisos" actualizada para OneSignal API v16
         document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
             if (window.OneSignalDeferred) {
                 window.OneSignalDeferred.push(async function(OneSignal) {
                     try {
-                        // 1. Primero comprobamos si el navegador soporta notificaciones o si las está bloqueando por defecto
-                        const isPushSupported = OneSignal.Notifications.isPushSupported();
-                        
-                        if (!isPushSupported) {
-                            alert("⚠️ Tu dispositivo o navegador está bloqueando las notificaciones.\n\nSi usas iPad o iPhone:\n1. Toca el botón de Compartir (arriba a la derecha).\n2. Dale a 'Añadir a la pantalla de inicio'.\n3. Abre el Boletín desde el icono nuevo y vuelve a pulsar este botón.\n\n(Asegúrate de NO estar en modo incógnito).");
+                        // 1. Comprobamos soporte nativo del navegador
+                        if (!('Notification' in window)) {
+                            alert("⚠️ Tu dispositivo o navegador no soporta notificaciones web.\n\nSi usas iPad o iPhone:\n1. Toca el botón de Compartir (arriba a la derecha).\n2. Dale a 'Añadir a la pantalla de inicio'.\n3. Abre el Boletín desde el icono nuevo y vuelve a pulsar este botón.");
                             return;
                         }
 
-                        // 2. Comprobamos el permiso actual
-                        const permission = await OneSignal.Notifications.permission;
+                        // 2. Comprobamos el permiso nativo actual
+                        const permission = window.Notification.permission;
                         
                         if (permission === 'granted') {
                             alert("✅ ¡Ya estás suscrito! Te avisaremos cuando haya novedades.");
                         } else if (permission === 'denied') {
-                            alert("❌ Tienes las notificaciones bloqueadas. Ve a los Ajustes de tu navegador y permite las notificaciones para esta página.");
+                            alert("❌ Tienes las notificaciones bloqueadas. Ve a los Ajustes de Safari/Chrome y permite las notificaciones para esta página.");
                         } else {
-                            // 3. Forzamos el prompt nativo del navegador
-                            await OneSignal.Notifications.requestPermission();
+                            // 3. Forzamos el prompt de OneSignal compatible con v16
+                            if (OneSignal.Slidedown) {
+                                await OneSignal.Slidedown.promptPush();
+                            } else {
+                                await OneSignal.Notifications.requestPermission();
+                            }
                         }
                     } catch (error) {
                         console.error("Error al intentar suscribir:", error);
-                        // Fallback de emergencia
-                        OneSignal.showSlidedownPrompt({ force: true });
+                        alert("Hubo un error al intentar activar las notificaciones. Inténtalo de nuevo.");
                     }
                 });
             } else {
