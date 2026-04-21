@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TRL7Z8HF');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boletín Noticias - Leroy Merlin</title>
@@ -92,7 +89,6 @@
         }
     </style>
 
-    <!-- INICIO ONESIGNAL -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -100,41 +96,21 @@
         await OneSignal.init({
           appId: "a911aeb6-7ef9-41d3-9b76-6a5b3dfa9df2",
           notifyButton: {
-            enable: true,
-            size: 'medium',
-            theme: 'default',
-            position: 'bottom-left',
-            text: {
-                'tip.state.unsubscribed': '¡Suscríbete a las alertas!',
-                'tip.state.subscribed': 'Estás suscrito a los avisos',
-                'tip.state.blocked': 'Has bloqueado las notificaciones',
-                'message.prenotify': 'Haz clic para recibir avisos cuando suba noticias nuevas',
-                'message.action.subscribed': '¡Gracias por suscribirte!',
-                'message.action.resubscribed': '¡Estás suscrito de nuevo!',
-                'message.action.unsubscribed': 'Ya no recibirás avisos',
-                'dialog.main.title': 'Notificaciones del Boletín',
-                'dialog.main.button.subscribe': 'SUSCRIBIRME',
-                'dialog.main.button.unsubscribe': 'DARME DE BAJA',
-            }
-          }
+            enable: false, // Desactivado porque usas tu propio botón "🔔 Avisos" en la cabecera
+          },
         });
         
-        // Forzamos el cartel inicial nativo si es posible (API v16)
+        // Muestra el aviso de suscripción automáticamente al entrar si el usuario no ha respondido aún
         if (OneSignal.Slidedown) {
             OneSignal.Slidedown.promptPush();
         }
       });
     </script>
-    <!-- FIN ONESIGNAL -->
-
-</head>
+    </head>
 <body class="text-gray-800 antialiased pb-12 relative">
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRL7Z8HF"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
@@ -144,7 +120,6 @@
             
             <div class="flex flex-wrap justify-center items-center gap-3">
                 
-                <!-- NUEVO BOTÓN MANUAL DE NOTIFICACIONES -->
                 <button id="btn-suscribir-push" class="flex items-center gap-2 border border-blue-500 text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm hover:bg-blue-50 transition-colors focus:outline-none bg-white shadow-sm" title="Activar notificaciones">
                     🔔 Avisos
                 </button>
@@ -178,12 +153,10 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <!-- Avatar de Richie -->
     <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
         <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl rounded-full">
     </div>
 
-    <!-- Modal de Richie -->
     <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[300px] animate-pop-up">
         
         <div id="truth-question-view" class="hidden">
