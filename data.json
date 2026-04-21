@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 16 de Abril",
+        "tituloAudio": "Novedades de esta semana: 21 de Abril",
+        "audioSrc": "Audio21A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-20",
+                "fechaTexto": "20 Abr 2026",
+                "titulo": "Google integra Gemini en Spanner para autogestión vía lenguaje natural.",
+                "resumen": "Su motor columnar acelera analíticas 200x sobre datos operativos vivos. Clave para Retail: permite IA predictiva inmediata sin latencia técnica.",
+                "imagen": "./archivos/1imagen21A.png",
+                "enlace": "https://x.com/googleai/status/2044447560384102592",
+                "visible": true
+            },
+            {
+                "categoria": "IA",
+                "fechaISO": "2026-04-16",
+                "fechaTexto": "16 Abr 2026",
+                "titulo": "Anthropic lanza Opus 4.7, optimizando el razonamiento visual y la ejecución de tareas complejas mediante agentes.",
+                "resumen": "Sobresale en auditorías de código y análisis masivos de inventario con una consistencia de nivel profesional. El modelo reduce las alucinaciones en un 30%, garantizando mayor fiabilidad en la automatización de procesos.",
+                "imagen": "./archivos/2imagen21A.png",
+                "enlace": "https://www.anthropic.com/news/claude-opus-4-7",
+                "visible": true
+            },
+            {
+                "categoria": "IA",
+                "fechaISO": "2026-04-14",
+                "fechaTexto": "14 Abr 2026",
+                "titulo": "David's Bridal integra su catálogo nupcial en ChatGPT y Microsoft Copilot usando tecnología de Shopify.",
+                "resumen": "Las clientas interactúan con la IA para buscar y filtrar vestidos por silueta o precio. Esto les permite guardar sus favoritos online antes de acudir a probárselos a la tienda física.",
+                "imagen": "./archivos/3imagen21A.png",
+                "enlace": "https://www.retaildive.com/news/davids-bridal-ai-shopping-chatgpt-copilot/817407/",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 16 de Abril",
         "audioSrc": "Audio16A.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 9 de Abril",
+        "tituloAudio": "Noticias de ediciones anteriores: 9 de Abril",
         "audioSrc": "Audio9A.m4a",
         "visible": true,
         "noticias": [
@@ -231,7 +268,7 @@
                 "enlace": "https://the-decoder.com/midjourney-v8-rolls-out-with-5x-faster-generation-but-charges-4x-more-for-its-best-features/"
             },
             {
-                "categoria": "Software y Herramientas",
+                "categoria": "Diseño UI/UX e IA",
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
                 "titulo": "Google actualiza Stitch con Gemini para flujos UX complejos.",
