@@ -184,16 +184,8 @@
             <p class="text-xs text-gray-600 font-medium leading-relaxed mb-2">
                 ¡Oye, para un segundo! 🛑 Siempre soy yo el que habla... Cuéntame, ¿qué herramienta se te está atascando hoy? ¿O qué miras en la pantalla para desconectar cinco minutitos?
             </p>
-            <textarea id="user-task-input" class="w-full text-xs p-3 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-lm-green focus:ring-1 focus:ring-lm-green resize-none text-gray-700 bg-gray-50" rows="2" placeholder="Ej: Peleándome con Figma... o viendo vídeos en YouTube"></textarea>
+            <textarea id="user-task-input" class="w-full text-xs p-3 border border-gray-300 rounded-lg mb-3 focus:outline-none focus:border-lm-green focus:ring-1 focus:ring-lm-green resize-none text-gray-700 bg-gray-50" rows="2" placeholder="Ej: Peleándome con Figma... o viendo vídeos en YouTube"></textarea>
             
-            <div class="flex items-center gap-2 mb-3">
-                <label for="user-image-input" class="cursor-pointer text-[11px] font-semibold text-lm-dark hover:text-lm-green transition flex items-center gap-1 bg-green-50 px-2 py-1 rounded border border-green-100">
-                    📸 Adjuntar foto
-                </label>
-                <input type="file" id="user-image-input" accept="image/*" class="hidden">
-                <span id="file-name-display" class="text-[10px] text-gray-500 truncate max-w-[120px]"></span>
-            </div>
-
             <div class="flex gap-2">
                 <button id="btn-send-task" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">Enviar 🚀</button>
                 <button id="btn-skip-task" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Paso</button>
@@ -490,10 +482,8 @@
             }
         }
 
-        // --- SOLUCIÓN: DEVOLVEMOS EL MOTOR DE ARRANQUE ---
         cargarDatos(); 
         cargarCerebroRichie();
-        // ------------------------------------------------
 
         const avatar = document.getElementById('truth-avatar');
         const messageBox = document.getElementById('truth-message');
@@ -509,9 +499,6 @@
         const btnSkipTask = document.getElementById('btn-skip-task');
         const userTaskInput = document.getElementById('user-task-input');
         
-        const imageInput = document.getElementById('user-image-input');
-        const fileNameDisplay = document.getElementById('file-name-display');
-
         const truthText = document.getElementById('truth-text');
         const textoSaludo = document.getElementById('texto-saludo');
         const emojiSaludo = document.getElementById('emoji-saludo');
@@ -525,15 +512,6 @@
         let estaCorriendo = false; 
         let esCotilleoActual = false; 
         let esPreguntaActual = false;
-
-        // Mostrar nombre de archivo al subir foto
-        imageInput.addEventListener('change', function() {
-            if (this.files && this.files.length > 0) {
-                fileNameDisplay.textContent = this.files[0].name;
-            } else {
-                fileNameDisplay.textContent = "";
-            }
-        });
 
         function volarAleatorio() {
             const anchoDisponible = window.innerWidth - 100; 
@@ -586,8 +564,6 @@
 
                 if (esPreguntaActual) {
                     userTaskInput.value = "";
-                    imageInput.value = "";
-                    fileNameDisplay.textContent = "";
                     userTaskInput.placeholder = "Ej: Peleándome con Figma... o viendo vídeos en YouTube";
                     questionView.classList.add('hidden');
                     factView.classList.add('hidden');
@@ -629,28 +605,27 @@
 
             btnSendTask.addEventListener('click', () => {
                 const tarea = userTaskInput.value.trim();
-                const tieneImagen = imageInput.files.length > 0;
                 
-                if (tarea !== "" || tieneImagen) {
+                if (tarea !== "") {
                     
-                    // Preparamos los datos con FormData (necesario para enviar imágenes)
-                    const formData = new FormData();
-                    formData.append("Origen", "Richie - Boletín");
-                    formData.append("Tarea_del_usuario", tarea || "Solo envió una imagen adjunta.");
-                    formData.append("Fecha", new Date().toLocaleString());
-                    
-                    if (tieneImagen) {
-                        formData.append("Imagen_adjunta", imageInput.files[0]);
-                    }
+                    // ENVÍO DE DATOS NORMAL QUE FUNCIONA CON FORMSPREE GRATUITO
+                    let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
+                    tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
+                    localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
 
                     const emailEndpoint = "https://formspree.io/f/maqlnbdp"; 
                     
                     fetch(emailEndpoint, {
                         method: "POST",
                         headers: {
+                            "Content-Type": "application/json",
                             "Accept": "application/json"
                         },
-                        body: formData
+                        body: JSON.stringify({
+                            Origen: "Richie - Boletín",
+                            Tarea_del_usuario: tarea,
+                            Fecha: new Date().toLocaleString()
+                        })
                     }).catch(error => console.error("Error silencioso enviando datos:", error));
 
                     askView.classList.add('hidden');
@@ -658,7 +633,7 @@
                     
                     // LÓGICA DE GUIÑOS / EASTER EGGS
                     const textoMinusculas = tarea.toLowerCase();
-                    let respuestaEspecial = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea || 'esta foto'}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
+                    let respuestaEspecial = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
                     
                     iconoPerfil.textContent = "💾";
                     tituloPerfil.textContent = "¡Anotado en mi RAM!";
@@ -683,10 +658,6 @@
                         iconoPerfil.textContent = "🔧";
                         tituloPerfil.textContent = "¡Maldita tecnología!";
                         respuestaEspecial = `<p>No te agobies, a veces la tecnología se levanta con el pie izquierdo. 🤖</p><p class='mt-2'>Mi mejor consejo: apaga, vete a por un buen café y vuelve a encender. Si sigue sin ir... ¡échale la culpa al wifi! ☕</p>`;
-                    } else if (tieneImagen && tarea === "") {
-                        iconoPerfil.textContent = "📸";
-                        tituloPerfil.textContent = "¡Fotaza recibida!";
-                        respuestaEspecial = `<p>¡Anda, con foto y todo! Qué nivel de detalle te gastas.</p><p class='mt-2'>Me la guardo en mi base de datos para cotillear luego. ¡Sigue dándole caña al curro! 😎</p>`;
                     }
 
                     truthText.innerHTML = respuestaEspecial;
@@ -696,7 +667,7 @@
                         avatar.style.display = 'block'; 
                     }, 9000);
                 } else {
-                    userTaskInput.placeholder = "¡Escribe algo o sube una foto! 😂";
+                    userTaskInput.placeholder = "¡Escribe algo primero, anda! 😂";
                 }
             });
 
