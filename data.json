@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 21 de Abril",
+        "tituloAudio": "Novedades de esta semana: 23 de Abril",
+        "audioSrc": "Audio23A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-23",
+                "fechaTexto": "23 Abr 2026",
+                "titulo": "Google Stitch revoluciona el diseño UI con Vibe Designing y la liberación de DESIGN.md.",
+                "resumen": "Esta actualización permite generar interfaces y código frontend mediante lenguaje natural, manteniendo la coherencia visual de la marca y exportando a Figma.",
+                "imagen": "./archivos/1imagen23A.png",
+                "enlace": "https://x.com/stitchbygoogle/status/2046624729403142320?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-04-22",
+                "fechaTexto": "22 Abr 2026",
+                "titulo": "OpenAI presenta ChatGPT Images 2.0, asumiendo tareas visuales complejas con capacidades de razonamiento.",
+                "resumen": "OpenAI ha lanzado un modelo avanzado de generación de imágenes que asume tareas visuales complejas con diseños más ricos y capacidades de razonamiento.",
+                "imagen": "./archivos/2imagen23A.png",
+                "enlace": "https://x.com/openai/status/2046670977145372771?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-23",
+                "fechaTexto": "23 Abr 2026",
+                "titulo": "OpenAI lanza Workspace Agents para automatizar flujos de trabajo corporativos complejos 24/7.",
+                "resumen": "Estos nuevos asistentes operan de forma autónoma en la nube a través de diversas herramientas, marcando el retiro progresivo de los GPTs tradicionales.",
+                "imagen": "./archivos/3imagen23A.png",
+                "enlace": "https://x.com/openai/status/2047008987665809771",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 21 de Abril",
         "audioSrc": "Audio21A.m4a",
         "visible": true,
         "noticias": [
@@ -15,7 +52,7 @@
                 "visible": true
             },
             {
-                "categoria": "IA",
+                "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-16",
                 "fechaTexto": "16 Abr 2026",
                 "titulo": "Anthropic lanza Opus 4.7, optimizando el razonamiento visual y la ejecución de tareas complejas mediante agentes.",
@@ -25,7 +62,7 @@
                 "visible": true
             },
             {
-                "categoria": "IA",
+                "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-14",
                 "fechaTexto": "14 Abr 2026",
                 "titulo": "David's Bridal integra su catálogo nupcial en ChatGPT y Microsoft Copilot usando tecnología de Shopify.",
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 16 de Abril",
+        "tituloAudio": "Noticias de ediciones anteriores: 16 de Abril",
         "audioSrc": "Audio16A.m4a",
         "visible": true,
         "noticias": [
@@ -268,7 +305,7 @@
                 "enlace": "https://the-decoder.com/midjourney-v8-rolls-out-with-5x-faster-generation-but-charges-4x-more-for-its-best-features/"
             },
             {
-                "categoria": "Diseño UI/UX e IA",
+                "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
                 "titulo": "Google actualiza Stitch con Gemini para flujos UX complejos.",
