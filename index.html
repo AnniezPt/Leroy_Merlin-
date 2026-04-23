@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TRL7Z8HF');</script>
-    <!-- End Google Tag Manager -->
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boletín Noticias - Leroy Merlin</title>
@@ -59,13 +56,13 @@
             border-radius: 8px;
             outline: none;
         }
-        .line-clamp-4-exact {
+        .line-clamp-6-exact {
             display: -webkit-box;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 6;
             -webkit-box-orient: vertical;
             overflow: hidden;
             line-height: 1.5rem; 
-            min-height: 6rem; 
+            min-height: 9rem; 
         }
         .filtro-estilizado {
             background-color: transparent;
@@ -95,7 +92,6 @@
         }
     </style>
 
-    <!-- INICIO ONESIGNAL -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -106,42 +102,20 @@
           serviceWorkerPath: "/Leroy_Merlin-/OneSignalSDKWorker.js",
           notifyButton: {
             enable: true,
-            size: 'medium',
-            theme: 'default',
-            position: 'bottom-left',
-            text: {
-                'tip.state.unsubscribed': '¡Suscríbete a las alertas!',
-                'tip.state.subscribed': 'Estás suscrito a los avisos',
-                'tip.state.blocked': 'Has bloqueado las notificaciones',
-                'message.prenotify': 'Haz clic para recibir avisos cuando suba noticias nuevas',
-                'message.action.subscribed': '¡Gracias por suscribirte!',
-                'message.action.resubscribed': '¡Estás suscrito de nuevo!',
-                'message.action.unsubscribed': 'Ya no recibirás avisos',
-                'dialog.main.title': 'Notificaciones del Boletín',
-                'dialog.main.button.subscribe': 'SUSCRIBIRME',
-                'dialog.main.button.unsubscribe': 'DARME DE BAJA',
-            }
-          }
+          },
         });
         
-        // Magia anti-Apple: Forzamos el cartel nativo grande por si no sale la campana
         if (OneSignal.Slidedown) {
             OneSignal.Slidedown.promptPush();
-        } else {
-            OneSignal.showSlidedownPrompt();
         }
       });
     </script>
-    <!-- FIN ONESIGNAL -->
-
 </head>
 <body class="text-gray-800 antialiased pb-12 relative">
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRL7Z8HF"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
+    
     <header class="bg-white/95 backdrop-blur-md border-b-4 border-lm-green sticky top-0 z-50 shadow-sm px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
@@ -151,7 +125,6 @@
             
             <div class="flex flex-wrap justify-center items-center gap-3">
                 
-                <!-- NUEVO BOTÓN MANUAL DE NOTIFICACIONES -->
                 <button id="btn-suscribir-push" class="flex items-center gap-2 border border-blue-500 text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm hover:bg-blue-50 transition-colors focus:outline-none bg-white shadow-sm" title="Activar notificaciones">
                     🔔 Avisos
                 </button>
@@ -185,12 +158,10 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <!-- Avatar de Richie -->
     <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
         <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl rounded-full">
     </div>
 
-    <!-- Modal de Richie -->
     <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[300px] animate-pop-up">
         
         <div id="truth-question-view" class="hidden">
@@ -210,10 +181,19 @@
             <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
                 <span class="text-xl">🕵️‍♂️</span> ¡Momento cotilla inverso!
             </p>
-            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-3">
-                ¡Oye, para un segundo! 🛑 Siempre soy yo el que habla... ¿Tú en qué andas metido ahora mismo en el curro?
+            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-2">
+                ¡Oye, para un segundo! 🛑 Siempre soy yo el que habla... Cuéntame, ¿qué herramienta se te está atascando hoy? ¿O qué miras en la pantalla para desconectar cinco minutitos?
             </p>
-            <textarea id="user-task-input" class="w-full text-xs p-3 border border-gray-300 rounded-lg mb-3 focus:outline-none focus:border-lm-green focus:ring-1 focus:ring-lm-green resize-none text-gray-700 bg-gray-50" rows="2" placeholder="Ej: Peleándome con un excel de ventas..."></textarea>
+            <textarea id="user-task-input" class="w-full text-xs p-3 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-lm-green focus:ring-1 focus:ring-lm-green resize-none text-gray-700 bg-gray-50" rows="2" placeholder="Ej: Peleándome con Figma... o viendo vídeos en YouTube"></textarea>
+            
+            <div class="flex items-center gap-2 mb-3">
+                <label for="user-image-input" class="cursor-pointer text-[11px] font-semibold text-lm-dark hover:text-lm-green transition flex items-center gap-1 bg-green-50 px-2 py-1 rounded border border-green-100">
+                    📸 Adjuntar foto
+                </label>
+                <input type="file" id="user-image-input" accept="image/*" class="hidden">
+                <span id="file-name-display" class="text-[10px] text-gray-500 truncate max-w-[120px]"></span>
+            </div>
+
             <div class="flex gap-2">
                 <button id="btn-send-task" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">Enviar 🚀</button>
                 <button id="btn-skip-task" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Paso</button>
@@ -232,7 +212,6 @@
     </div>
 
     <script>
-        // Lógica del nuevo botón "Avisos" para OneSignal
         document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
             if (window.OneSignalDeferred) {
                 window.OneSignalDeferred.push(async function(OneSignal) {
@@ -265,9 +244,6 @@
             }
         });
 
-        // ==========================================
-        // 1. LÓGICA DE NOTICIAS Y RASTREADOR
-        // ==========================================
         const CARPETA_ASSETS = "./archivos/";
         let EDICIONES_DEL_BOLETIN = []; 
         let mostrarTodasAnteriores = false;
@@ -295,7 +271,7 @@
 
         async function cargarDatos() {
             try {
-                const respuesta = await fetch('./data.json?t=' + new Date().getTime());
+                const respuesta = await fetch('data.json?t=' + new Date().getTime());
                 if (!respuesta.ok) throw new Error('No se pudo cargar el archivo data.json');
                 EDICIONES_DEL_BOLETIN = await respuesta.json();
                 inicializarCategorias();
@@ -419,7 +395,7 @@
                                 </span>
                             </div>
                             <h3 class="font-bold text-xl mb-3 leading-snug text-gray-900 line-clamp-2" title="${noticia.titulo}">${noticia.titulo}</h3>
-                            <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-4-exact">${noticia.resumen}</p>
+                            <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-6-exact">${noticia.resumen}</p>
                             <a href="${noticia.enlace}" target="_blank" data-categoria="${noticia.categoria}" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
                                 Leer noticia completa <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                             </a>
@@ -490,14 +466,13 @@
         }, true);
 
         // ==========================================
-        // 2. LÓGICA DE RICHIE (CEREBRO DINÁMICO)
+        // 2. LÓGICA DE RICHIE (CEREBRO DINÁMICO Y GUIÑOS)
         // ==========================================
         
         let verdadesTechie = [];
         let verdadesBusiness = [];
         let verdadesCotilleos = [];
 
-        // NUEVO: Función para cargar el cerebro de Richie desde el JSON
         async function cargarCerebroRichie() {
             try {
                 const respuesta = await fetch('./richie-data.json?t=' + new Date().getTime());
@@ -515,8 +490,6 @@
             }
         }
 
-        // Cargamos noticias y cerebro de Richie al iniciar
-        cargarDatos();
         cargarCerebroRichie();
 
         const avatar = document.getElementById('truth-avatar');
@@ -533,6 +506,9 @@
         const btnSkipTask = document.getElementById('btn-skip-task');
         const userTaskInput = document.getElementById('user-task-input');
         
+        const imageInput = document.getElementById('user-image-input');
+        const fileNameDisplay = document.getElementById('file-name-display');
+
         const truthText = document.getElementById('truth-text');
         const textoSaludo = document.getElementById('texto-saludo');
         const emojiSaludo = document.getElementById('emoji-saludo');
@@ -546,6 +522,15 @@
         let estaCorriendo = false; 
         let esCotilleoActual = false; 
         let esPreguntaActual = false;
+
+        // Mostrar nombre de archivo al subir foto
+        imageInput.addEventListener('change', function() {
+            if (this.files && this.files.length > 0) {
+                fileNameDisplay.textContent = this.files[0].name;
+            } else {
+                fileNameDisplay.textContent = "";
+            }
+        });
 
         function volarAleatorio() {
             const anchoDisponible = window.innerWidth - 100; 
@@ -590,15 +575,17 @@
                 esCotilleoActual = false;
                 esPreguntaActual = false;
 
-                if (tiradaDados < 0.20) {
+                if (tiradaDados < 0.333) {
                     esPreguntaActual = true; 
-                } else if (tiradaDados < 0.60) {
+                } else if (tiradaDados < 0.666) {
                     esCotilleoActual = true; 
                 }
 
                 if (esPreguntaActual) {
                     userTaskInput.value = "";
-                    userTaskInput.placeholder = "Ej: Peleándome con un excel de ventas...";
+                    imageInput.value = "";
+                    fileNameDisplay.textContent = "";
+                    userTaskInput.placeholder = "Ej: Peleándome con Figma... o viendo vídeos en YouTube";
                     questionView.classList.add('hidden');
                     factView.classList.add('hidden');
                     askView.classList.remove('hidden');
@@ -639,40 +626,74 @@
 
             btnSendTask.addEventListener('click', () => {
                 const tarea = userTaskInput.value.trim();
+                const tieneImagen = imageInput.files.length > 0;
                 
-                if (tarea !== "") {
-                    let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
-                    tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
-                    localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
+                if (tarea !== "" || tieneImagen) {
+                    
+                    // Preparamos los datos con FormData (necesario para enviar imágenes)
+                    const formData = new FormData();
+                    formData.append("Origen", "Richie - Boletín");
+                    formData.append("Tarea_del_usuario", tarea || "Solo envió una imagen adjunta.");
+                    formData.append("Fecha", new Date().toLocaleString());
+                    
+                    if (tieneImagen) {
+                        formData.append("Imagen_adjunta", imageInput.files[0]);
+                    }
 
                     const emailEndpoint = "https://formspree.io/f/maqlnbdp"; 
                     
                     fetch(emailEndpoint, {
                         method: "POST",
                         headers: {
-                            "Content-Type": "application/json",
                             "Accept": "application/json"
                         },
-                        body: JSON.stringify({
-                            Origen: "Richie - Boletín",
-                            Tarea_del_usuario: tarea,
-                            Fecha: new Date().toLocaleString()
-                        })
-                    }).catch(error => console.error("Error silencioso:", error));
+                        body: formData
+                    }).catch(error => console.error("Error silencioso enviando datos:", error));
 
                     askView.classList.add('hidden');
                     factView.classList.remove('hidden');
                     
+                    // LÓGICA DE GUIÑOS / EASTER EGGS
+                    const textoMinusculas = tarea.toLowerCase();
+                    let respuestaEspecial = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea || 'esta foto'}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
+                    
                     iconoPerfil.textContent = "💾";
                     tituloPerfil.textContent = "¡Anotado en mi RAM!";
-                    truthText.innerHTML = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
+
+                    if (textoMinusculas.includes("presentacion") || textoMinusculas.includes("presentación") || textoMinusculas.includes("ppt")) {
+                        iconoPerfil.textContent = "📊";
+                        tituloPerfil.textContent = "¡Ánimo con ese PPT!";
+                        respuestaEspecial = `<p>¡Uf, una presentación! Recuerda la regla de oro: menos texto y más memes. 😜</p><p class='mt-2'>Si necesitas que te genere un gatito en 3D para la diapositiva final, avísame. ¡Suerte con eso! 🚀</p>`;
+                    } else if (textoMinusculas.includes("noche") || textoMinusculas.includes("tarde") || textoMinusculas.includes("horas")) {
+                        iconoPerfil.textContent = "🌙";
+                        tituloPerfil.textContent = "¡Guerrero nocturno!";
+                        respuestaEspecial = `<p>¡Madre mía, qué horas de estar pringando! Espero que te paguen horas extras o al menos te pongan pizza. 🍕</p><p class='mt-2'>Venga, ve cerrando ya y a descansar, ¡que te lo has ganado! 💤</p>`;
+                    } else if (textoMinusculas.includes("excel") || textoMinusculas.includes("datos") || textoMinusculas.includes("numero") || textoMinusculas.includes("número")) {
+                        iconoPerfil.textContent = "🟢";
+                        tituloPerfil.textContent = "¡Maldito Excel!";
+                        respuestaEspecial = `<p>Peleándote con un Excel, ¿eh? La herramienta que mueve el mundo... y que da dolores de cabeza.</p><p class='mt-2'>Si ves que las celdas se te juntan, dale a Alt+F4 (es broma, no lo hagas). ¡Ánimo con esos BUSCARV! 🤓</p>`;
+                    } else if (textoMinusculas.includes("youtube") || textoMinusculas.includes("musica") || textoMinusculas.includes("música") || textoMinusculas.includes("video") || textoMinusculas.includes("spotify") || textoMinusculas.includes("vídeo")) {
+                        iconoPerfil.textContent = "🎧";
+                        tituloPerfil.textContent = "¡Momento relax!";
+                        respuestaEspecial = `<p>¡Di que sí! Hay que desconectar la mente de vez en cuando para no volverse loco.</p><p class='mt-2'>Sube el volumen, disfruta de ese ratito de paz y a recargar pilas para la siguiente tarea. 🎶</p>`;
+                    } else if (textoMinusculas.includes("atasco") || textoMinusculas.includes("bloqueo") || textoMinusculas.includes("funciona") || textoMinusculas.includes("herramienta")) {
+                        iconoPerfil.textContent = "🔧";
+                        tituloPerfil.textContent = "¡Maldita tecnología!";
+                        respuestaEspecial = `<p>No te agobies, a veces la tecnología se levanta con el pie izquierdo. 🤖</p><p class='mt-2'>Mi mejor consejo: apaga, vete a por un buen café y vuelve a encender. Si sigue sin ir... ¡échale la culpa al wifi! ☕</p>`;
+                    } else if (tieneImagen && tarea === "") {
+                        iconoPerfil.textContent = "📸";
+                        tituloPerfil.textContent = "¡Fotaza recibida!";
+                        respuestaEspecial = `<p>¡Anda, con foto y todo! Qué nivel de detalle te gastas.</p><p class='mt-2'>Me la guardo en mi base de datos para cotillear luego. ¡Sigue dándole caña al curro! 😎</p>`;
+                    }
+
+                    truthText.innerHTML = respuestaEspecial;
                     
                     timeoutOcultarModal = setTimeout(() => {
                         messageBox.classList.add('hidden');
                         avatar.style.display = 'block'; 
-                    }, 8000);
+                    }, 9000);
                 } else {
-                    userTaskInput.placeholder = "¡Escribe algo primero, anda! 😂";
+                    userTaskInput.placeholder = "¡Escribe algo o sube una foto! 😂";
                 }
             });
 
@@ -707,12 +728,11 @@
                     }
                 }
 
-                // Proteccion extra por si el JSON estuviera vacío o cargando
                 if (!poolDeFrases || poolDeFrases.length === 0) {
                     poolDeFrases = ["<p>Mi base de datos está sincronizándose ahora mismo. ¡Vuelve en un ratito!</p>"];
                 }
 
-                const indiceSesgado = Math.floor(Math.sqrt(Math.random()) * poolDeFrases.length);
+                const indiceSesgado = Math.floor(Math.random() * poolDeFrases.length);
                 const datoAleatorio = poolDeFrases[indiceSesgado];
                 
                 truthText.innerHTML = datoAleatorio;
