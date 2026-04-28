@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 23 de Abril",
+        "tituloAudio": "Novedades de esta semana: 28 de Abril",
+        "audioSrc": "Audio28A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-04-27",
+                "fechaTexto": "27 Abr 2026",
+                "titulo": "¡Llega GPT-5.5!",
+                "resumen": "OpenAI presentó GPT-5.5, una versión que supera a sus predecesores en la resolución de problemas complejos. Este modelo destaca por gestionar instrucciones de múltiples pasos de forma altamente eficiente.",
+                "imagen": "./archivos/1imagen28A.png",
+                "enlace": "https://x.com/openai/status/2047376561205325845?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-20",
+                "fechaTexto": "20 Abr 2026",
+                "titulo": "Adobe despliega agentes autónomos",
+                "resumen": "En alianza con NVIDIA y WPP, Adobe ha lanzado agentes de IA autónomos a gran escala. Esta integración busca potenciar nuevas capacidades de inteligencia creativa dentro del ecosistema publicitario.",
+                "imagen": "./archivos/2imagen28A.png",
+                "enlace": "https://blogs.nvidia.com/blog/ai-in-retail-cpg-survey-2026/",
+                "visible": true
+            },
+            {
+                "categoria": "Estrategia Retail e IA",
+                "fechaISO": "2026-04-19",
+                "fechaTexto": "19 Abr 2026",
+                "titulo": "El boom del Retail: La IA eleva los ingresos un 25%",
+                "resumen": "Informes confirman que la integración profunda de inteligencia artificial está transformando el sector retail. Las empresas que adoptan esta tecnología logran aumentar sus ingresos corporativos hasta en un 25%.",
+                "imagen": "./archivos/3imagen28A.png",
+                "enlace": "https://www.eleconomista.com.mx/empresas/retail-eleva-ingresos-25-inteligencia-artificial-20260419-809447.html",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 23 de Abril",
         "audioSrc": "Audio23A.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 21 de Abril",
+        "tituloAudio": "Noticias de ediciones anteriores: 21 de Abril",
         "audioSrc": "Audio21A.m4a",
         "visible": true,
         "noticias": [
@@ -102,7 +139,7 @@
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-04-03",
                 "fechaTexto": "03 Abr 2026",
-                "titulo": "Google Ads lanza una función para reutilizar directrices de texto de IA a través de múltiples campañas.",
+                "titulo": "Google Ads lanza una función para reutilizar directrices de texto de IA a través de múltiples campaigns.",
                 "resumen": "Google Ads introduce reglas de texto de IA reutilizables, ayudando a mantener la voz de marca mientras escala la automatización publicitaria.",
                 "imagen": "./archivos/3imagen16A.png",
                 "enlace": "https://searchengineland.com/google-ads-lets-marketers-reuse-ai-text-rules-across-campaigns-473859",
