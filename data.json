@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 28 de Abril",
+        "tituloAudio": "Novedades de esta semana: 30 de Abril",
+        "audioSrc": "Audio30A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-28",
+                "fechaTexto": "28 Abr 2026",
+                "titulo": "Anthropic conecta Claude a software creativo.",
+                "resumen": "La IA se integra ahora como un agente activo dentro de Adobe, Blender y Ableton, permitiendo automatizar flujos de trabajo, editar diseños y ejecutar tareas complejas directamente mediante lenguaje natural.",
+                "imagen": "./archivos/1imagen30A.PNG",
+                "enlace": "https://x.com/claudeai/status/2049143440508616863?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-15",
+                "fechaTexto": "15 Abr 2026",
+                "titulo": "Adobe lanza Agente Creativo de IA.",
+                "resumen": "El nuevo asistente ejecuta tareas complejas en Creative Cloud mediante comandos conversacionales, automatizando procesos técnicos y permitiendo a los creadores dirigir resultados con sus propias palabras.",
+                "imagen": "./archivos/2imagen30A.PNG",
+                "enlace": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
+                "visible": true
+            },
+            {
+                "categoria": "Marketing y SEO",
+                "fechaISO": "2026-04-29",
+                "fechaTexto": "29 Abr 2026",
+                "titulo": "4 señales clave para la visibilidad en búsquedas IA.",
+                "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
+                "imagen": "./archivos/3imagen30A.PNG",
+                "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 28 de Abril",
         "audioSrc": "Audio28A.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 23 de Abril",
+        "tituloAudio": "Noticias de ediciones anteriores: 23 de Abril",
         "audioSrc": "Audio23A.m4a",
         "visible": true,
         "noticias": [
