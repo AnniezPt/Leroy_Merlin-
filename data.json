@@ -8,9 +8,9 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-05-04",
                 "fechaTexto": "04 May 2026",
-                "titulo": "OpenAI capta 4.000 millones para su nueva empresa conjunta con capital privado.",
+                "titulo": "OpenAI capta 4.000 millones",
                 "resumen": "OpenAI ha cerrado un acuerdo multimillonario con gigantes de la inversión como TPG y Brookfield para crear \"The Deployment Company\". El objetivo central de esta nueva sociedad es acelerar drásticamente la adopción de sus herramientas de inteligencia artificial en grandes corporaciones a nivel mundial.",
-                "imagen": "./archivos/1imagen4Mayo.png",
+                "imagen": "./archivos/1imagen4Mayo.PNG",
                 "enlace": "https://cincodias.elpais.com/companias/2026-05-04/openai-capta-4000-millones-de-dolares-para-su-joint-venture-con-los-gigantes-del-capital-privado-para-impulsar-la-ia.html",
                 "visible": true
             },
@@ -18,9 +18,9 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-05-04",
                 "fechaTexto": "04 May 2026",
-                "titulo": "Anthropic lanza una firma de servicios de IA por 1.500 millones de dólares.",
+                "titulo": "Anthropic lanza consultora IA",
                 "resumen": "En alianza estratégica con Blackstone, Goldman Sachs y Hellman & Friedman, Anthropic ha creado una consultora independiente valorada en 1.500 millones. Su misión es integrar los modelos Claude directamente en las operaciones del mercado intermedio.",
-                "imagen": "./archivos/2imagen4Mayo.png",
+                "imagen": "./archivos/2imagen4Mayo.PNG",
                 "enlace": "https://www.businessinsider.com/blackstone-anthropic-hellman-goldman-sachs-ai-joint-venture-consulting-2026-5",
                 "visible": true
             },
@@ -28,9 +28,9 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-05-04",
                 "fechaTexto": "04 May 2026",
-                "titulo": "El Pentágono integra la IA de los gigantes tecnológicos en sus redes militares.",
+                "titulo": "Pentágono integra IA militar",
                 "resumen": "El Departamento de Defensa de EE. UU. acordó integrar herramientas cognitivas de corporaciones como Microsoft, Google y OpenAI en sus sistemas de combate. Anthropic fue la gran excluida de los pactos debido a sus estrictas exigencias sobre el uso ético de su tecnología.",
-                "imagen": "./archivos/3imagen4Mayo.png",
+                "imagen": "./archivos/3imagen4Mayo.PNG",
                 "enlace": "https://apnews.com/article/pentagon-artificial-intelligence-military-classified-systems-war-060cecf836c4cebcf012a3ceb5333f2c",
                 "visible": true
             }
@@ -45,9 +45,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-28",
                 "fechaTexto": "28 Abr 2026",
-                "titulo": "Anthropic conecta Claude a software creativo.",
+                "titulo": "Claude en software creativo",
                 "resumen": "La IA se integra ahora como un agente activo dentro de Adobe, Blender y Ableton, permitiendo automatizar flujos de trabajo, editar diseños y ejecutar tareas complejas directamente mediante lenguaje natural.",
-                "imagen": "./archivos/1imagen30A.png",
+                "imagen": "./archivos/1imagen30A.PNG",
                 "enlace": "https://x.com/claudeai/status/2049143440508616863?s=46",
                 "visible": true
             },
@@ -55,9 +55,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-15",
                 "fechaTexto": "15 Abr 2026",
-                "titulo": "Adobe lanza Agente Creativo de IA.",
+                "titulo": "Adobe lanza Agente Creativo IA",
                 "resumen": "El nuevo asistente ejecuta tareas complejas en Creative Cloud mediante comandos conversacionales, automatizando procesos técnicos y permitiendo a los creadores dirigir resultados con sus propias palabras.",
-                "imagen": "./archivos/2imagen30A.png",
+                "imagen": "./archivos/2imagen30A.PNG",
                 "enlace": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
                 "visible": true
             },
@@ -65,9 +65,9 @@
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-04-29",
                 "fechaTexto": "29 Abr 2026",
-                "titulo": "4 señales clave para la visibilidad en búsquedas IA.",
+                "titulo": "Visibilidad en búsquedas IA",
                 "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
-                "imagen": "./archivos/3imagen30A.png",
+                "imagen": "./archivos/3imagen30A.PNG",
                 "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
                 "visible": true
             }
@@ -84,7 +84,7 @@
                 "fechaTexto": "27 Abr 2026",
                 "titulo": "¡Llega GPT-5.5!",
                 "resumen": "OpenAI presentó GPT-5.5, una versión que supera a sus predecesores en la resolución de problemas complejos. Este modelo destaca por gestionar instrucciones de múltiples pasos de forma altamente eficiente.",
-                "imagen": "./archivos/1imagen28A.png",
+                "imagen": "./archivos/1imagen28A.PNG",
                 "enlace": "https://x.com/openai/status/2047376561205325845?s=46",
                 "visible": true
             },
@@ -92,9 +92,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-20",
                 "fechaTexto": "20 Abr 2026",
-                "titulo": "Adobe despliega agentes autónomos",
+                "titulo": "Adobe lanza agentes autónomos",
                 "resumen": "En alianza con NVIDIA y WPP, Adobe ha lanzado agentes de IA autónomos a gran escala. Esta integración busca potenciar nuevas capacidades de inteligencia creativa dentro del ecosistema publicitario.",
-                "imagen": "./archivos/2imagen28A.png",
+                "imagen": "./archivos/2imagen28A.PNG",
                 "enlace": "https://blogs.nvidia.com/blog/ai-in-retail-cpg-survey-2026/",
                 "visible": true
             },
@@ -102,9 +102,9 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-19",
                 "fechaTexto": "19 Abr 2026",
-                "titulo": "El boom del Retail: La IA eleva los ingresos un 25%",
+                "titulo": "IA eleva ingresos retail 25%",
                 "resumen": "Informes confirman que la integración profunda de inteligencia artificial está transformando el sector retail. Las empresas que adoptan esta tecnología logran aumentar sus ingresos corporativos hasta en un 25%.",
-                "imagen": "./archivos/3imagen28A.png",
+                "imagen": "./archivos/3imagen28A.PNG",
                 "enlace": "https://www.eleconomista.com.mx/empresas/retail-eleva-ingresos-25-inteligencia-artificial-20260419-809447.html",
                 "visible": true
             }
@@ -119,9 +119,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-23",
                 "fechaTexto": "23 Abr 2026",
-                "titulo": "Google Stitch revoluciona el diseño UI con Vibe Designing y la liberación de DESIGN.md.",
+                "titulo": "Google Stitch revoluciona el UI",
                 "resumen": "Esta actualización permite generar interfaces y código frontend mediante lenguaje natural, manteniendo la coherencia visual de la marca y exportando a Figma.",
-                "imagen": "./archivos/1imagen23A.png",
+                "imagen": "./archivos/1imagen23A.PNG",
                 "enlace": "https://x.com/stitchbygoogle/status/2046624729403142320?s=46",
                 "visible": true
             },
@@ -129,9 +129,9 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-22",
                 "fechaTexto": "22 Abr 2026",
-                "titulo": "OpenAI presenta ChatGPT Images 2.0, asumiendo tareas visuales complejas con capacidades de razonamiento.",
+                "titulo": "OpenAI lanza ChatGPT Images 2.0",
                 "resumen": "OpenAI ha lanzado un modelo avanzado de generation de imágenes que asume tareas visuales complejas con diseños más ricos y capacidades de razonamiento.",
-                "imagen": "./archivos/2imagen23A.png",
+                "imagen": "./archivos/2imagen23A.PNG",
                 "enlace": "https://x.com/openai/status/2046670977145372771?s=46",
                 "visible": true
             },
@@ -139,9 +139,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-23",
                 "fechaTexto": "23 Abr 2026",
-                "titulo": "OpenAI lanza Workspace Agents para automatizar flujos de trabajo corporativos complejos 24/7.",
+                "titulo": "OpenAI lanza Workspace Agents",
                 "resumen": "Estos nuevos asistentes operan de forma autónoma en la nube a través de diversas herramientas, marcando el retiro progresivo de los GPTs tradicionales.",
-                "imagen": "./archivos/3imagen23A.png",
+                "imagen": "./archivos/3imagen23A.PNG",
                 "enlace": "https://x.com/openai/status/2047008987665809771",
                 "visible": true
             }
@@ -156,9 +156,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-20",
                 "fechaTexto": "20 Abr 2026",
-                "titulo": "Google integra Gemini en Spanner para autogestión vía lenguaje natural.",
+                "titulo": "Google integra Gemini en Spanner",
                 "resumen": "Su motor columnar acelera analíticas 200x sobre datos operativos vivos. Clave para Retail: permite IA predictiva inmediata sin latencia técnica.",
-                "imagen": "./archivos/1imagen21A.png",
+                "imagen": "./archivos/1imagen21A.PNG",
                 "enlace": "https://x.com/googleai/status/2044447560384102592",
                 "visible": true
             },
@@ -166,9 +166,9 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-16",
                 "fechaTexto": "16 Abr 2026",
-                "titulo": "Anthropic lanza Opus 4.7, optimizando el razonamiento visual y la ejecución de tareas complejas mediante agentes.",
+                "titulo": "Anthropic lanza Claude Opus 4.7",
                 "resumen": "Sobresale en auditorías de código y análisis masivos de inventario con una consistencia de nivel profesional. El modelo reduce las alucinaciones en un 30%, garantizando mayor fiabilidad en la automatización de procesos.",
-                "imagen": "./archivos/2imagen21A.png",
+                "imagen": "./archivos/2imagen21A.PNG",
                 "enlace": "https://www.anthropic.com/news/claude-opus-4-7",
                 "visible": true
             },
@@ -176,9 +176,9 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-14",
                 "fechaTexto": "14 Abr 2026",
-                "titulo": "David's Bridal integra su catálogo nupcial en ChatGPT y Microsoft Copilot usando tecnología de Shopify.",
+                "titulo": "David's Bridal usa IA en catálogo",
                 "resumen": "Las clientas interactúan con la IA para buscar y filtrar vestidos por silueta o precio. Esto les permite guardar sus favoritos online antes de acudir a probárselos a la tienda física.",
-                "imagen": "./archivos/3imagen21A.png",
+                "imagen": "./archivos/3imagen21A.PNG",
                 "enlace": "https://www.retaildive.com/news/davids-bridal-ai-shopping-chatgpt-copilot/817407/",
                 "visible": true
             }
@@ -193,9 +193,9 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
-                "titulo": "Amazon defiende su histórica inversión de 200.000 millones de dólares en IA, centrada en la infraestructura de AWS y su asistente virtual.",
+                "titulo": "Amazon defiende inversión en IA",
                 "resumen": "Amazon refuerza su apuesta de 200.000 millones en IA tras el éxito de Alexa+, que triplica las compras por voz y consolida el comercio conversacional.",
-                "imagen": "./archivos/1imagen16A.png",
+                "imagen": "./archivos/1imagen16A.PNG",
                 "enlace": "https://www.retaildive.com/news/amazon-andy-jassy-defend-billions-ai-investment-shareholder-letter/817058/",
                 "visible": true
             },
@@ -203,9 +203,9 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-07",
                 "fechaTexto": "07 Abr 2026",
-                "titulo": "Carrefour marca un hito al integrar su catálogo y logística directamente en ChatGPT, alcanzando a 26 millones de usuarios en Francia.",
+                "titulo": "Carrefour integra catálogo en ChatGPT",
                 "resumen": "Carrefour integra su catálogo y logística en ChatGPT, permitiendo compras y planificación de menús dentro del chat y transformando el embudo de conversión.",
-                "imagen": "./archivos/2imagen16A.png",
+                "imagen": "./archivos/2imagen16A.PNG",
                 "enlace": "https://www.retaildetail.eu/news/food/grocery-shopping-via-chatgpt-how-carrefour-is-embracing-ai/",
                 "visible": true
             },
@@ -213,9 +213,9 @@
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-04-03",
                 "fechaTexto": "03 Abr 2026",
-                "titulo": "Google Ads lanza una función para reutilizar directrices de texto de IA a través de múltiples campaigns.",
+                "titulo": "Google Ads reutiliza texto de IA",
                 "resumen": "Google Ads introduce reglas de texto de IA reutilizables, ayudando a mantener la voz de marca mientras escala la automatización publicitaria.",
-                "imagen": "./archivos/3imagen16A.png",
+                "imagen": "./archivos/3imagen16A.PNG",
                 "enlace": "https://searchengineland.com/google-ads-lets-marketers-reuse-ai-text-rules-across-campaigns-473859",
                 "visible": true
             }
@@ -230,9 +230,9 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
-                "titulo": "Meta presenta Muse Spark, el primer modelo fundacional de su nueva familia para redefinir la interacción digital.",
+                "titulo": "Meta presenta Muse Spark",
                 "resumen": "Desarrollado por Meta Superintelligence Labs, este sistema de razonamiento multimodal nativo integra texto, imagen y voz con soporte avanzado para uso de herramientas. Su objetivo es evolucionar hacia una superinteligencia personal capaz de gestionar tareas de alta complejidad.",
-                "imagen": "./archivos/1imagen9A.png",
+                "imagen": "./archivos/1imagen9A.PNG",
                 "enlace": "https://x.com/AIatMeta",
                 "visible": true
             },
@@ -240,9 +240,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
-                "titulo": "Anthropic anuncia Project Glasswing, una iniciativa de seguridad crítica para infraestructuras globales.",
+                "titulo": "Anthropic anuncia Project Glasswing",
                 "resumen": "El proyecto utiliza Claude Mythos Preview, su nuevo modelo de frontera que supera a los expertos humanos en la detección de brechas. Esta tecnología se aplica de forma defensiva para parchear sistemas en tiempo real, garantizando la integridad vital.",
-                "imagen": "./archivos/2imagen9A.png",
+                "imagen": "./archivos/2imagen9A.PNG",
                 "enlace": "https://t.co/NQ7IfEtYk7",
                 "visible": true
             },
@@ -250,9 +250,9 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-04-09",
                 "fechaTexto": "09 Abr 2026",
-                "titulo": "Unilever y Google Cloud formalizan una alianza estratégica por el comercio agéntico a escala masiva.",
+                "titulo": "Unilever y Google Cloud se alían",
                 "resumen": "El acuerdo se sustenta en inteligencia de marketing predictiva y asistentes de compra autónomos mediante flujos de trabajo inteligentes. Buscan transformar la experiencia del consumidor mediante la automatización de procesos para ganar ventaja competitiva.",
-                "imagen": "./archivos/3imagen9A.png",
+                "imagen": "./archivos/3imagen9A.PNG",
                 "enlace": "https://www.revistainforetail.com/noticiadet/unilever-se-alia-con-google-cloud/4887a16516c78baa4c77777ab5150834",
                 "visible": true
             }
@@ -267,9 +267,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-04-06",
                 "fechaTexto": "06 Abr 2026",
-                "titulo": "LM Studio se actualiza para dar soporte nativo a la arquitectura Gemma 4.",
+                "titulo": "LM Studio soporta Gemma 4",
                 "resumen": "El popular software de ejecución local permite ya correr modelos Gemma 4 aprovechando la aceleración de hardware de las nuevas GPUs de 2026. Esta actualización facilita el despliegue de agentes multimodales privados directamente en el escritorio del usuario.",
-                "imagen": "./archivos/3imagen7A.png",
+                "imagen": "./archivos/3imagen7A.PNG",
                 "enlace": "https://ai.google.dev/gemma/docs/core?hl=es-419",
                 "visible": true
             },
@@ -277,9 +277,9 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-04-02",
                 "fechaTexto": "02 Abr 2026",
-                "titulo": "Google lanza Gemma 4: La nueva frontera de los modelos abiertos multimodales.",
+                "titulo": "Google lanza Gemma 4",
                 "resumen": "Google libera su familia de modelos más avanzada (2B a 31B) bajo licencia Apache 2.0. Destaca su arquitectura nativa para procesar texto, audio y visión con un razonamiento de nivel superior y una ventana de contexto masiva de 256k tokens.",
-                "imagen": "./archivos/2imagen7A.png",
+                "imagen": "./archivos/2imagen7A.PNG",
                 "enlace": "https://deepmind.google/models/gemma/",
                 "visible": true
             },
@@ -287,9 +287,9 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-03-30",
                 "fechaTexto": "30 Mar 2026",
-                "titulo": "\"Is This Real?\": La primera Webshop de Europa 100% controlada por IA.",
+                "titulo": "Webshop europea 100% autónoma",
                 "resumen": "Studio Fledge y NXTGN lanzan una tienda autónoma de ropa urbana print-on-demand para caridad (Awel). Redes neuronales gestionan todo el ciclo: crean diseños basados en cultura global cada 24 horas, controlan la logística de rareza y ejecutan marketing digital mediante avatares algorítmicos.",
-                "imagen": "./archivos/1imagen7A.png",
+                "imagen": "./archivos/1imagen7A.PNG",
                 "enlace": "https://www.retaildetail.eu/news/fashion/ai-takes-the-helm-belgian-online-store-operates-completely-autonomously/",
                 "visible": true
             }
@@ -304,7 +304,7 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-03-30",
                 "fechaTexto": "30 Mar 2026",
-                "titulo": "Sephora lanza un programa piloto en ChatGPT para ofrecer asesoramiento personalizado y compras directas mediante IA.",
+                "titulo": "Sephora lanza piloto en ChatGPT",
                 "resumen": "La iniciativa de \"comercio conversacional\" en Estados Unidos busca captar al usuario que usa la IA como buscador. Esta integración permite descubrir productos y gestionar pedidos sin salir de la interfaz de chat de OpenAI.",
                 "imagen": "./archivos/3imagen31M.PNG",
                 "enlace": "https://www.retaildetail.eu/news/beauty-care/you-can-now-shop-at-sephora-via-chatgpt/",
@@ -314,7 +314,7 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-24",
                 "fechaTexto": "24 Mar 2026",
-                "titulo": "Meta presenta TRIBE v2, un modelo fundacional que predice la respuesta del cerebro ante estímulos visuales y auditivos.",
+                "titulo": "Meta presenta TRIBE v2",
                 "resumen": "Esta arquitectura trimodal busca mejorar las interfaces cerebro-computadora y entender la percepción estética digital. El avance conecta el procesamiento sensorial humano con sistemas sintéticos para anticipar reacciones emocionales.",
                 "imagen": "./archivos/1imagen31M.PNG",
                 "enlace": "https://x.com/aiatmeta/status/2037153756346016207?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
@@ -324,7 +324,7 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-24",
                 "fechaTexto": "24 Mar 2026",
-                "titulo": "OpenAI anuncia el cierre inesperado de Sora para priorizar la robótica y herramientas de productividad empresarial.",
+                "titulo": "OpenAI anuncia el cierre de Sora",
                 "resumen": "La decisión cancela un acuerdo millonario con Disney y responde a presiones por deepfakes y derechos de autor. Los usuarios tienen hasta el 26 de abril de 2026 para exportar sus creaciones antes del cese definitivo del servicio.",
                 "imagen": "./archivos/2imagen31M.PNG",
                 "enlace": "https://x.com/soraofficialapp/status/2036546752535470382?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
@@ -341,7 +341,7 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
-                "titulo": "Suno AI lanza \"MILO-1080\": El primer secuenciador de pasos integrado con modelos de IA.",
+                "titulo": "Suno AI lanza MILO-1080",
                 "resumen": "Suno ha dado un giro estratégico al pasar de la generación por texto (prompt-based) a la producción técnica con el lanzamiento de MILO-1080 (Model-Integrated Loop Orchestrator). Este nuevo sistema es un secuenciador de 16 pistas que permite a los usuarios mayor control granular: pueden generar sonidos específicos mediante prompts para cada pista, reutilizar clips de proyectos anteriores o modelar sonidos manualmente mediante un motor de síntesis integrado. Esta función busca transformar a Suno de un \"juguete generativo\" a una herramienta profesional para flujos de trabajo en estudios y departamentos de marketing.",
                 "imagen": "./archivos/1imagen26M.PNG",
                 "enlace": "https://routenote.com/blog/suno-milo-1080-ai-step-sequencer/",
@@ -351,7 +351,7 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
-                "titulo": "Anthropic lanza \"Computer Use\": La IA de Claude ahora toma el control directo del cursor y el teclado.",
+                "titulo": "Anthropic lanza Computer Use",
                 "resumen": "Anthropic ha habilitado una función que permite a Claude interactuar con ordenadores igual que un humano, moviendo el cursor y escribiendo en cualquier app. El modelo procesa capturas de pantalla en tiempo real para ejecutar tareas complejas como completar formularios, navegar o gestionar archivos. Esta innovación convierte a la IA en un agente de acción directa capaz de automatizar flujos de trabajo técnicos y administrativos.",
                 "imagen": "./archivos/2imagen26M.PNG",
                 "enlace": "https://x.com/claudeai/status/2036195789601374705?s=46",
@@ -361,7 +361,7 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-26",
                 "fechaTexto": "26 Mar 2026",
-                "titulo": "Google presenta \"TurboQuant\": Compresión de modelos sin pérdida de precisión.",
+                "titulo": "Google presenta TurboQuant",
                 "resumen": "Google Research ha lanzado TurboQuant, un algoritmo que reduce el uso de memoria del caché (KV) en modelos de lenguaje en al menos 6 veces. Esta tecnología logra acelerar la inferencia hasta 8 veces en hardware como H100, manteniendo un 100% de precisión en tareas complejas y contextos largos. Al eliminar los cuellos de botella de memoria, TurboQuant permite ejecutar modelos de alta calidad de forma más económica y eficiente, incluso en dispositivos con hardware limitado.",
                 "imagen": "./archivos/3imagen26M.PNG",
                 "enlace": "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/",
@@ -377,7 +377,7 @@
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-03-20",
                 "fechaTexto": "20 Mar 2026",
-                "titulo": "Google prueba la reescritura automática de titulares en búsquedas mediante IA generativa.",
+                "titulo": "Google reescribe titulares con IA",
                 "resumen": "Este movimiento reduce el control de las marcas sobre su mensaje en la SERP y puede afectar negativamente al CTR al alterar el tono y enfoque original de los títulos.",
                 "imagen": "./archivos/1imagen23M.PNG",
                 "enlace": "https://searchengineland.com/google-search-ai-headline-rewrites-test-472146"
@@ -386,7 +386,7 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-03-20",
                 "fechaTexto": "20 Mar 2026",
-                "titulo": "Alibaba impulsa herramientas de IA operativa para compensar la caída de márgenes.",
+                "titulo": "Alibaba impulsa IA operativa",
                 "resumen": "Su apuesta se centra en soluciones B2B como AI Mode, capaces de analizar redes de proveedores y variables logísticas complejas para mejorar eficiencia, optimizar operaciones y reforzar su estructura financiera.",
                 "imagen": "./archivos/2imagen23M.PNG",
                 "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/"
@@ -395,7 +395,7 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-18",
                 "fechaTexto": "18 Mar 2026",
-                "titulo": "Líderes del ecommerce prevén invertir más de 1 millón de dólares en arquitecturas de IA agéntica.",
+                "titulo": "Fuerte inversión en IA agéntica",
                 "resumen": "El 47% de los directivos concentra su inversión en sistemas de descubrimiento de producto, pricing dinámico e inventario automatizado, mostrando un giro claro hacia aplicaciones de IA con impacto directo en eficiencia.",
                 "imagen": "./archivos/3imagen23M.PNG",
                 "enlace": "https://www.retaildive.com/news/e-commerce-retailers-investments-agentic-commerce/814833/"
@@ -410,7 +410,7 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
-                "titulo": "Midjourney lanza V8 Alpha con generación 5x más rápida y resolución 2K nativa.",
+                "titulo": "Midjourney lanza V8 Alpha",
                 "resumen": "La actualización incluye una mejor inserción de texto en imágenes. Este avance refuerza drásticamente su potencial para campañas visuales a gran escala.",
                 "imagen": "./archivos/1imagen19M.PNG",
                 "enlace": "https://the-decoder.com/midjourney-v8-rolls-out-with-5x-faster-generation-but-charges-4x-more-for-its-best-features/"
@@ -419,7 +419,7 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
-                "titulo": "Google actualiza Stitch con Gemini para flujos UX complejos.",
+                "titulo": "Google actualiza Stitch con Gemini",
                 "resumen": "Permite crear flujos desde texto y voz, conectando diseño y prototipado interactivo. Además, incorpora de forma nativa tokens de marca mediante DESIGN.md.",
                 "imagen": "./archivos/2imagen19M.PNG",
                 "enlace": "https://www.indiatoday.in/technology/news/story/google-launches-stitch-new-platform-which-lets-you-vibe-design-app-and-web-pages-2884045-2026-03-19"
@@ -428,7 +428,7 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
-                "titulo": "Retailers aceleran su inversión en IA para comercio agéntico.",
+                "titulo": "Inversión en comercio agéntico",
                 "resumen": "Las empresas apuestan por agentes autónomos capaces de recomendar, negociar y comprar por el usuario, consolidando el avance del 'Agentic Commerce' en ecommerce.",
                 "imagen": "./archivos/3imagen19M.PNG",
                 "enlace": "https://www.retaildive.com/news/retails-ai-bet-risks-data-market-share/810202/"
@@ -443,27 +443,27 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
-                "titulo": "Google anuncia en fase beta el Universal Commerce Protocol (UCP).",
+                "titulo": "Google anuncia UCP en beta",
                 "resumen": "Sundar Pichai presentó un estándar de \"comercio agéntico\" que permite a IA como Gemini buscar productos, pagar y confirmar envíos sin salir del chat, manteniendo a la marca como vendedora oficial.",
-                "imagen": "./archivos/1imagen17M.png",
+                "imagen": "./archivos/1imagen17M.PNG",
                 "enlace": "https://searchengineland.com/google-universal-commerce-protocol-search-conversions-471676"
             },
             {
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
-                "titulo": "Nvidia lanza NemoClaw en GTC 2026 para asegurar IA Agéntica.",
+                "titulo": "Nvidia lanza NemoClaw",
                 "resumen": "Jensen Huang desveló NemoClaw, una arquitectura de seguridad que permite a minoristas ejecutar agentes de IA autónomos en hardware propio (\"local-first\"), evitando fugas de datos corporativos.",
-                "imagen": "./archivos/2imagen17M.png",
+                "imagen": "./archivos/2imagen17M.PNG",
                 "enlace": "https://www.therundown.ai/p/nvidia-big-ai-day-at-gtc"
             },
             {
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-03-17",
                 "fechaTexto": "17 Mar 2026",
-                "titulo": "Lanzamiento de la plataforma de marketing autónomo \"AI CMO\" de Okara.",
+                "titulo": "Lanzamiento de AI CMO de Okara",
                 "resumen": "Okara lanzó \"AI CMO\", una plataforma donde un enjambre de agentes IA automatiza auditorías SEO/GEO, redacta contenido y lanza campañas orgánicas en redes sociales de forma simultánea.",
-                "imagen": "./archivos/3imagen17M.png",
+                "imagen": "./archivos/3imagen17M.PNG",
                 "enlace": "https://okara.ai/agent/cmo"
             }
         ]
@@ -473,7 +473,7 @@
         "audioSrc": "AudioGEO15M.m4a",
         "bannerLanding": {
             "titulo": "Especial: El futuro del SEO Generativo",
-            "imagen": "./archivos/Imagen14MB.png",
+            "imagen": "./archivos/Imagen14MB.PNG",
             "enlace": "https://anniezpt.github.io/GEO_LeroyMerlin/"
         },
         "noticias": []
@@ -486,36 +486,36 @@
                 "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-03-10",
                 "fechaTexto": "10 Mar 2026",
-                "titulo": "Figure AI demuestra el poder del robot humanoide Helix 02 como ayudante doméstico.",
+                "titulo": "Figure AI muestra el Helix 02",
                 "resumen": "En una reciente exhibición, el sistema logró ordenar una sala de estar de forma autónoma, proyectando un futuro con asistencia robótica avanzada en el hogar.",
-                "imagen": "./archivos/2imagen11M.png",
+                "imagen": "./archivos/2imagen11M.PNG",
                 "enlace": "https://www.figure.ai/news/helix-02-living-room-tidy"
             },
             {
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-03-10",
                 "fechaTexto": "10 Mar 2026",
-                "titulo": "Google Labs y DeepMind expanden la herramienta Pomelli a más de 170 países.",
+                "titulo": "Google expande Pomelli",
                 "resumen": "Esta solución permite a cualquier pyme generar campañas automatizadas para redes sociales en minutos, creando imágenes y copys de alta conversión alineados con su marca.",
-                "imagen": "./archivos/4imagen11M.png",
+                "imagen": "./archivos/4imagen11M.PNG",
                 "enlace": "https://blog.google/innovation-and-ai/models-and-research/google-labs/pomelli/"
             },
             {
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-03-09",
                 "fechaTexto": "09 Mar 2026",
-                "titulo": "Anthropic presenta la función \"Code Review\" para su plataforma Claude Code.",
+                "titulo": "Anthropic presenta Code Review",
                 "resumen": "A partir de ahora, cuando se abre un Pull Request, el sistema despliega automáticamente un equipo de agentes de IA dedicados exclusivamente a cazar errores en el código.",
-                "imagen": "./archivos/3imagen11M.png",
+                "imagen": "./archivos/3imagen11M.PNG",
                 "enlace": "https://code.claude.com/docs/en/code-review"
             },
             {
                 "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-03-08",
                 "fechaTexto": "08 Mar 2026",
-                "titulo": "Claude AI de Anthropic logra cultivar tomates de forma autónoma.",
+                "titulo": "Claude AI cultiva tomates",
                 "resumen": "El sistema superó los 100 días gestionando agua, luz y temperatura en tiempo real. Además, diseñó sus propios circuitos, demostrando la capacidad de la IA en el mundo físico.",
-                "imagen": "./archivos/1imagen11M.png",
+                "imagen": "./archivos/1imagen11M.PNG",
                 "enlace": "https://sinapti.ca/post/en/an-anthropic-ai-has-been-autonomously-growing-tomatoes-for-o-62jpmna4?utm_source=chatgpt.com",
                 "visible": false
             }
@@ -529,36 +529,36 @@
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-03-06",
                 "fechaTexto": "06 Mar 2026",
-                "titulo": "Google Labs despliega Pomelli para la automatización de activos de marca",
+                "titulo": "Google Labs despliega Pomelli",
                 "resumen": "Desarrollada con DeepMind, esta herramienta experimental escanea la web de una empresa para codificar su 'ADN empresarial'. Genera de forma autónoma campañas, copys e imágenes con una coherencia estética impecable.",
-                "imagen": "./archivos/4imagen6M.png",
+                "imagen": "./archivos/4imagen6M.PNG",
                 "enlace": "https://www.lanacion.com.ar/tecnologia/que-es-pomelli-la-nueva-inteligencia-artificial-de-google-para-contenido-de-marca-nid06032026/"
             },
             {
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-05",
                 "fechaTexto": "05 Mar 2026",
-                "titulo": "OpenAI lanza GPT-5.4 con capacidades nativas de uso de computadora",
+                "titulo": "OpenAI lanza GPT-5.4",
                 "resumen": "OpenAI presenta su modelo más avanzado para uso profesional. Destaca por integrar flujos agénticos y ser el primer modelo capaz de operar ordenadores de forma autónoma, controlando el ratón y el teclado visualmente.",
-                "imagen": "./archivos/1imagen6M.png",
+                "imagen": "./archivos/1imagen6M.PNG",
                 "enlace": "https://openai.com/index/introducing-gpt-5-4/"
             },
             {
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-03-05",
                 "fechaTexto": "05 Mar 2026",
-                "titulo": "Conflicto entre Donald Trump y Anthropic por el control y uso militar de la IA",
+                "titulo": "Conflicto Trump-Anthropic",
                 "resumen": "El Pentágono califica a Anthropic como \"riesgo\" tras negarse a ceder su tecnología para vigilancia masiva o armas autónomas. Esta sanción ha forzado a diversas agencias a cancelar contratos y migrar hacia OpenAI.",
-                "imagen": "./archivos/3imagen6M.png",
+                "imagen": "./archivos/3imagen6M.PNG",
                 "enlace": "https://www.elespanol.com/invertia/disruptores-americas/20260305/trump-vs-anthropic-guerra-control-absoluto-inteligencia-artificial/1003744149880_0.html"
             },
             {
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-01",
                 "fechaTexto": "01 Mar 2026",
-                "titulo": "Lanzamiento de LTX-2.3 para la generación conjunta de video y audio",
+                "titulo": "Lanzamiento de LTX-2.3",
                 "resumen": "Este modelo fundacional asimétrico crea contenido audiovisual sincronizado de alta fidelidad. Su soporte nativo para formato vertical 4K es ideal para optimizar tiempos y costes de producción publicitaria comercial.",
-                "imagen": "./archivos/2imagen6M.png",
+                "imagen": "./archivos/2imagen6M.PNG",
                 "enlace": "https://ltx.io/model/ltx-2-3",
                 "visible": false
             }
@@ -572,27 +572,27 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-03-03",
                 "fechaTexto": "03 Mar 2026",
-                "titulo": "Alibaba lanza Qwen 3.5 para llevar inferencia agéntica a hardware local",
+                "titulo": "Alibaba lanza Qwen 3.5",
                 "resumen": "Su MoE permite alto rendimiento activando solo 3B parameters en variantes como Qwen3.5-35B-A3B. El lanzamiento coincide con la renuncia de Junyang Lin, arquitecto líder e influyente del equipo Qwen.",
-                "imagen": "./archivos/3imagen4M.png",
+                "imagen": "./archivos/3imagen4M.PNG",
                 "enlace": "https://qwen.ai/research"
             },
             {
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-02-26",
                 "fechaTexto": "26 Feb 2026",
-                "titulo": "Google DeepMind lanza Nano Banana 2 (Gemini 3.1 Flash Image)",
+                "titulo": "Google lanza Nano Banana 2",
                 "resumen": "Promete calidad “Pro” con velocidad ultrarrápida gracias a la arquitectura Flash, sin perder fidelidad. En marketing destaca por consistencia de hasta 5 personajes, 4K nativo y tipografía precisa para mockups.",
-                "imagen": "./archivos/2imagen4M.png",
+                "imagen": "./archivos/2imagen4M.PNG",
                 "enlace": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/"
             },
             {
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-02-13",
                 "fechaTexto": "13 Feb 2026",
-                "titulo": "Anthropic impulsa Claude Code en B2B y lo sitúa en 2.500M$ de ingresos",
+                "titulo": "Anthropic impulsa Claude Code",
                 "resumen": "La adopción corporativa acelera y las suscripciones empresariales se cuadruplican desde inicios de año. Con MCP + Puppeteer, automatiza auditorías SEO avanzadas interactuando con navegadores reales y código.",
-                "imagen": "./archivos/1imagen4M.png",
+                "imagen": "./archivos/1imagen4M.PNG",
                 "enlace": "https://www.nxcode.io/resources/news/anthropic-380b-valuation-super-bowl-claude-code-2026",
                 "enlacePDF": "informe-marzo.pdf"
             }
@@ -606,27 +606,27 @@
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-02-28",
                 "fechaTexto": "28 Feb 2026",
-                "titulo": "Optimización para Motores Generativos (GEO)",
+                "titulo": "Optimización para GEO",
                 "resumen": "Las búsquedas tradicionales caerán un 25% en 2026, exigiendo adoptar el GEO. Será vital usar respuestas directas y FAQs en las webs para lograr que inteligencias artificiales como ChatGPT o Claude citen a las marcas en sus resúmenes.",
-                "imagen": "./archivos/1imagen28F.png",
+                "imagen": "./archivos/1imagen28F.PNG",
                 "enlace": "https://searchengineland.com/mastering-generative-engine-optimization-in-2026-full-guide-469142"
             },
             {
                 "categoria": "Marketing y SEO",
                 "fechaISO": "2026-02-28",
                 "fechaTexto": "28 Feb 2026",
-                "titulo": "Patente de Landing Pages generadas por IA",
+                "titulo": "Landing Pages generadas por IA",
                 "resumen": "Google patentó un sistema que evalúa webs de minoristas. Si la original no es óptima, genera una \"landing page\" sintética al instante con el inventario del vendedor, reteniendo así al usuario dentro del propio ecosistema de Google.",
-                "imagen": "./archivos/2imagen28F.png",
+                "imagen": "./archivos/2imagen28F.PNG",
                 "enlace": "https://searchengineland.com/google-patent-hints-searchers-will-land-on-ai-generated-pages-and-not-web-pages-470499"
             },
             {
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-02-28",
                 "fechaTexto": "28 Feb 2026",
-                "titulo": "Colapso Bursátil por modernización de COBOL",
+                "titulo": "Colapso Bursátil por COBOL",
                 "resumen": "El mercado sufrió el \"Software-mageddon\" cuando Claude lanzó una guía para modernizar código COBOL bancario con IA. El pánico a perder el lucrativo monopolio de este mantenimiento provocó que IBM perdiera 30.000 millones en bolsa.",
-                "imagen": "./archivos/3imagen28F.png",
+                "imagen": "./archivos/3imagen28F.PNG",
                 "enlace": "https://devops.com/a-blog-post-about-cobol-just-cost-ibm-30-billion-heres-what-actually-happened/"
             }
         ]
@@ -639,27 +639,27 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
-                "titulo": "La Consolidación de DeepSeek-V3.2 y el Paradigma del 'Test-Time Compute'",
+                "titulo": "Consolidación de DeepSeek-V3.2",
                 "resumen": "DeepSeek democratiza el cálculo en inferencia con el modelo V3.2. Reduce costes operativos, iguala el rendimiento de modelos premium e introduce la capacidad autónoma 'Thinking in Tool-Use' revolucionando el mercado.",
-                "imagen": "./archivos/1Imagen27F.png",
+                "imagen": "./archivos/1Imagen27F.PNG",
                 "enlace": "https://api-docs.deepseek.com/news/news251201"
             },
             {
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
-                "titulo": "OpenAI Lanza Sora 2 y choca con la 'EU AI Act'",
+                "titulo": "OpenAI Lanza Sora 2",
                 "resumen": "OpenAI presenta Sora 2, simulador de mundos físicos con capacidades inéditas como continuación infinita de vídeos y animación hiperrealista. Sin embargo, esta potente herramienta no estará disponible en Europa.",
-                "imagen": "./archivos/2imagen27F.png",
+                "imagen": "./archivos/2imagen27F.PNG",
                 "enlace": "https://openai.com/index/sora-2/"
             },
             {
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-02-27",
                 "fechaTexto": "27 Feb 2026",
-                "titulo": "NotebookLM redefine la asimilación mediante 'Audio Overviews'",
+                "titulo": "NotebookLM redefine asimilación",
                 "resumen": "Google Labs actualiza NotebookLM con soporte nativo para más de 50 idiomas en su función de resúmenes 'Audio Overviews'. Esta mejora permite procesar y asimilar documentación técnica compleja a escala global.",
-                "imagen": "./archivos/3imagen27F.png",
+                "imagen": "./archivos/3imagen27F.PNG",
                 "enlace": "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/"
             }
         ]
