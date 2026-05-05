@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 30 de Abril",
+        "tituloAudio": "Novedades de esta semana: 4 de Mayo",
+        "audioSrc": "Audio4Mayo.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-05-04",
+                "fechaTexto": "04 May 2026",
+                "titulo": "OpenAI capta 4.000 millones para su nueva empresa conjunta con capital privado.",
+                "resumen": "OpenAI ha cerrado un acuerdo multimillonario con gigantes de la inversión como TPG y Brookfield para crear \"The Deployment Company\". El objetivo central de esta nueva sociedad es acelerar drásticamente la adopción de sus herramientas de inteligencia artificial en grandes corporaciones a nivel mundial.",
+                "imagen": "./archivos/1imagen4Mayo.png",
+                "enlace": "https://cincodias.elpais.com/companias/2026-05-04/openai-capta-4000-millones-de-dolares-para-su-joint-venture-con-los-gigantes-del-capital-privado-para-impulsar-la-ia.html",
+                "visible": true
+            },
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-05-04",
+                "fechaTexto": "04 May 2026",
+                "titulo": "Anthropic lanza una firma de servicios de IA por 1.500 millones de dólares.",
+                "resumen": "En alianza estratégica con Blackstone, Goldman Sachs y Hellman & Friedman, Anthropic ha creado una consultora independiente valorada en 1.500 millones. Su misión es integrar los modelos Claude directamente en las operaciones del mercado intermedio.",
+                "imagen": "./archivos/2imagen4Mayo.png",
+                "enlace": "https://www.businessinsider.com/blackstone-anthropic-hellman-goldman-sachs-ai-joint-venture-consulting-2026-5",
+                "visible": true
+            },
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-05-04",
+                "fechaTexto": "04 May 2026",
+                "titulo": "El Pentágono integra la IA de los gigantes tecnológicos en sus redes militares.",
+                "resumen": "El Departamento de Defensa de EE. UU. acordó integrar herramientas cognitivas de corporaciones como Microsoft, Google y OpenAI en sus sistemas de combate. Anthropic fue la gran excluida de los pactos debido a sus estrictas exigencias sobre el uso ético de su tecnología.",
+                "imagen": "./archivos/3imagen4Mayo.png",
+                "enlace": "https://apnews.com/article/pentagon-artificial-intelligence-military-classified-systems-war-060cecf836c4cebcf012a3ceb5333f2c",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 30 de Abril",
         "audioSrc": "Audio30A.m4a",
         "visible": true,
         "noticias": [
@@ -10,7 +47,7 @@
                 "fechaTexto": "28 Abr 2026",
                 "titulo": "Anthropic conecta Claude a software creativo.",
                 "resumen": "La IA se integra ahora como un agente activo dentro de Adobe, Blender y Ableton, permitiendo automatizar flujos de trabajo, editar diseños y ejecutar tareas complejas directamente mediante lenguaje natural.",
-                "imagen": "./archivos/1imagen30A.PNG",
+                "imagen": "./archivos/1imagen30A.png",
                 "enlace": "https://x.com/claudeai/status/2049143440508616863?s=46",
                 "visible": true
             },
@@ -20,7 +57,7 @@
                 "fechaTexto": "15 Abr 2026",
                 "titulo": "Adobe lanza Agente Creativo de IA.",
                 "resumen": "El nuevo asistente ejecuta tareas complejas en Creative Cloud mediante comandos conversacionales, automatizando procesos técnicos y permitiendo a los creadores dirigir resultados con sus propias palabras.",
-                "imagen": "./archivos/2imagen30A.PNG",
+                "imagen": "./archivos/2imagen30A.png",
                 "enlace": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
                 "visible": true
             },
@@ -30,14 +67,14 @@
                 "fechaTexto": "29 Abr 2026",
                 "titulo": "4 señales clave para la visibilidad en búsquedas IA.",
                 "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
-                "imagen": "./archivos/3imagen30A.PNG",
+                "imagen": "./archivos/3imagen30A.png",
                 "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
                 "visible": true
             }
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 28 de Abril",
+        "tituloAudio": "Noticias de ediciones anteriores: 28 de Abril",
         "audioSrc": "Audio28A.m4a",
         "visible": true,
         "noticias": [
@@ -93,7 +130,7 @@
                 "fechaISO": "2026-04-22",
                 "fechaTexto": "22 Abr 2026",
                 "titulo": "OpenAI presenta ChatGPT Images 2.0, asumiendo tareas visuales complejas con capacidades de razonamiento.",
-                "resumen": "OpenAI ha lanzado un modelo avanzado de generación de imágenes que asume tareas visuales complejas con diseños más ricos y capacidades de razonamiento.",
+                "resumen": "OpenAI ha lanzado un modelo avanzado de generation de imágenes que asume tareas visuales complejas con diseños más ricos y capacidades de razonamiento.",
                 "imagen": "./archivos/2imagen23A.png",
                 "enlace": "https://x.com/openai/status/2046670977145372771?s=46",
                 "visible": true
