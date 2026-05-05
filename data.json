@@ -1,7 +1,7 @@
 [
     {
         "tituloAudio": "Novedades de esta semana: 4 de Mayo",
-        "audioSrc": "Audio4M.m5a",
+        "audioSrc": "Audio5M.m5a",
         "visible": true,
         "noticias": [
             {
@@ -20,7 +20,7 @@
                 "fechaTexto": "04 May 2026",
                 "titulo": "Anthropic lanza consultora IA",
                 "resumen": "En alianza estratégica con Blackstone, Goldman Sachs y Hellman & Friedman, Anthropic ha creado una consultora independiente valorada en 1.500 millones. Su misión es integrar los modelos Claude directamente en las operaciones del mercado intermedio.",
-                "imagen": "./archivos/2imagen4M.PNG",
+                "imagen": "./archivos/2imagen5M.PNG",
                 "enlace": "https://www.businessinsider.com/blackstone-anthropic-hellman-goldman-sachs-ai-joint-venture-consulting-2026-5",
                 "visible": true
             },
@@ -30,7 +30,7 @@
                 "fechaTexto": "04 May 2026",
                 "titulo": "Pentágono integra IA militar",
                 "resumen": "El Departamento de Defensa de EE. UU. acordó integrar herramientas cognitivas de corporaciones como Microsoft, Google y OpenAI en sus sistemas de combate. Anthropic fue la gran excluida de los pactos debido a sus estrictas exigencias sobre el uso ético de su tecnología.",
-                "imagen": "./archivos/3imagen4M.PNG",
+                "imagen": "./archivos/3imagen5M.PNG",
                 "enlace": "https://apnews.com/article/pentagon-artificial-intelligence-military-classified-systems-war-060cecf836c4cebcf012a3ceb5333f2c",
                 "visible": true
             }
