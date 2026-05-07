@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 5 de Mayo",
+        "tituloAudio": "Novedades de esta semana: 7 de Mayo",
+        "audioSrc": "Audio7M.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Estrategia Retail e IA",
+                "fechaISO": "2026-05-05",
+                "fechaTexto": "05 May 2026",
+                "titulo": "IA dispara ventas en Shopify",
+                "resumen": "Las búsquedas por IA disparan las ventas en Shopify. El tráfico impulsado por modelos de lenguaje creció 8 veces y los pedidos vinculados aumentaron casi 13 veces en la plataforma. Además, esta tecnología capta nuevos clientes al doble de velocidad que el formato orgánico.",
+                "imagen": "./archivos/1imagen7M.PNG",
+                "enlace": "https://x.com/shopify/status/2051315962326999501?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-05-06",
+                "fechaTexto": "06 May 2026",
+                "titulo": "Anthropic y SpaceX se alían",
+                "resumen": "Anthropic y SpaceX firman alianza de supercomputación. Claude ocupará el 100% de la capacidad del centro de datos Colossus 1, sumando 300 MW de potencia. Esto ha permitido a la empresa duplicar de inmediato los límites de uso de su API y Claude Code.",
+                "imagen": "./archivos/2imagen7M.PNG",
+                "enlace": "https://x.com/claudeai/status/2052060691893227611?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-05-02",
+                "fechaTexto": "02 May 2026",
+                "titulo": "Récord de producción en Figure",
+                "resumen": "Figure logra récord en la producción de sus humanoides. En los últimos 60 días, la compañía fabricó más robots que en sus tres años de historia combinados. Esto impulsa la captura masiva de datos en el mundo físico para acelerar el entrenamiento de su IA.",
+                "imagen": "./archivos/3imagen7M.PNG",
+                "enlace": "https://x.com/humanoidsdaily/status/2051767907349352620?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 5 de Mayo",
         "audioSrc": "Audio5M.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 30 de Abril",
+        "tituloAudio": "Noticias de ediciones anteriores: 30 de Abril",
         "audioSrc": "Audio30A.m4a",
         "visible": true,
         "noticias": [
