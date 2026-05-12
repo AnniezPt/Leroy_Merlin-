@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 7 de Mayo",
+        "tituloAudio": "Novedades de esta semana: 12 de Mayo",
+        "audioSrc": "Audio12M.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-05-11",
+                "fechaTexto": "11 May 2026",
+                "titulo": "IA nativa multicanal en tiempo real",
+                "resumen": "Thinking Machines lanza modelos para procesamiento simultáneo de audio, video y texto sin turnos. Con latencia de 200ms, permite una colaboración fluida humano-máquina en tiempo real.",
+                "imagen": "./archivos/1imagen12M.PNG",
+                "enlace": "https://x.com/thinkymachines/status/2053938892152435174?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-05-12",
+                "fechaTexto": "12 May 2026",
+                "titulo": "OpenAI lanza Daybreak y filial de despliegue",
+                "resumen": "Presenta una plataforma autónoma de ciberseguridad y una filial financiada con 4.000 millones. Enviarán ingenieros a las empresas para integrar la inteligencia artificial en sus operaciones diarias.",
+                "imagen": "./archivos/2imagen12M.PNG",
+                "enlace": "https://x.com/openai/status/2053939702110269822?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-05-12",
+                "fechaTexto": "12 May 2026",
+                "titulo": "Unitree comercializa el mecha tripulado GD01",
+                "resumen": "Lanza el primer mecha transformable producido en masa por 540.000 dólares. Pesa 500 kg y alterna entre modo humanoide y cuadrúpedo mientras transporta a un piloto humano a bordo.",
+                "imagen": "./archivos/3imagen12M.PNG",
+                "enlace": "https://x.com/unitreerobotics/status/2054067819634159622?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 7 de Mayo",
         "audioSrc": "Audio7M.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 5 de Mayo",
+        "tituloAudio": "Noticias de ediciones anteriores: 5 de Mayo",
         "audioSrc": "Audio5M.m4a",
         "visible": true,
         "noticias": [
@@ -424,7 +461,7 @@
                 "fechaISO": "2026-03-20",
                 "fechaTexto": "20 Mar 2026",
                 "titulo": "Alibaba impulsa IA operativa",
-                "resumen": "Su apuesta se centra en soluciones B2B como AI Mode, capaces de analizar redes de proveedores y variables logísticas complejas para mejorar eficiencia, optimizar operaciones y reforzar su estructura financiera.",
+                "resumen": "Su apuesta se centra en soluciones B2B como AI Mode, capaces de analizar redes de proveedores y variables logísticas complejas para mejorar eficiencia, optimizar operaciones y reforzar su structure financiera.",
                 "imagen": "./archivos/2imagen23M.PNG",
                 "enlace": "https://www.retaildetail.eu/news/general/why-alibaba-is-turning-to-ai-as-a-lifeline/"
             },
