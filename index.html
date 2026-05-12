@@ -608,7 +608,6 @@
                 
                 if (tarea !== "") {
                     
-                    // ENVÍO DE DATOS NORMAL QUE FUNCIONA CON FORMSPREE GRATUITO
                     let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
                     tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
                     localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
