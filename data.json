@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 12 de Mayo",
+        "tituloAudio": "Novedades de esta semana: 14 de Mayo",
+        "audioSrc": "Audio14M.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-05-13",
+                "fechaTexto": "13 May 2026",
+                "titulo": "WhatsApp lanza Incognito Chat",
+                "resumen": "La plataforma estrenó una función impulsada por su tecnología de procesamiento privado que permite a los usuarios interactuar con la inteligencia artificial de forma completamente invisible para terceros.",
+                "imagen": "./archivos/1imagen14M.PNG",
+                "enlace": "https://x.com/whatsapp/status/2054567974468481070?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-05-11",
+                "fechaTexto": "11 May 2026",
+                "titulo": "HeyGen lanza Avatar V",
+                "resumen": "Se introducen mejoras significativas enfocadas en resolver la consistencia de los personajes, añadiendo capacidades avanzadas de sincronización y control multiángulo sin necesidad de equipos de producción físicos.",
+                "imagen": "./archivos/2imagen14M.PNG",
+                "enlace": "https://x.com/heygen/status/2054582965137768817?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-05-14",
+                "fechaTexto": "14 May 2026",
+                "titulo": "Figure AI exhibe Figure 03",
+                "resumen": "La compañía realizó una demostración en vivo de sus robots humanoides realizando tareas complejas de forma ininterrumpida y anunció el incremento de su capacidad de fabricación a un robot por hora.",
+                "imagen": "./archivos/3imagen14M.PNG",
+                "enlace": "https://x.com/figure_robot/status/2054603845393875452?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 12 de Mayo",
         "audioSrc": "Audio12M.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 7 de Mayo",
+        "tituloAudio": "Noticias de ediciones anteriores: 7 de Mayo",
         "audioSrc": "Audio7M.m4a",
         "visible": true,
         "noticias": [
