@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 26 de Mayo",
+        "tituloAudio": "Novedades de esta semana: 28 de Mayo",
+        "audioSrc": "Audio28X.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-05-18",
+                "fechaTexto": "18 May 2026",
+                "titulo": "NVIDIA entrega CPUs Vera para IA",
+                "resumen": "La corporación inició la entrega física de procesadores Vera a gigantes como Anthropic, OpenAI y Oracle, marcando un cambio sistémico hacia infraestructuras diseñadas exclusivamente para procesar simulaciones de agentes autónomos.",
+                "imagen": "./archivos/1imagen28X.PNG",
+                "enlace": "https://www.pcmag.com/news/nvidia-exec-hand-delivers-first-vera-cpu-systems-to-ai-heavy-hitters",
+                "visible": true
+            },
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-05-26",
+                "fechaTexto": "26 May 2026",
+                "titulo": "Figure AI pacta con Catalyst Brands",
+                "resumen": "Figure desplegará robots humanoides Figure 03 en el centro logístico de Nevada para automatizar tareas físicas repetitivas y exigentes de la cadena de suministro, optimizando así la fuerza laboral.",
+                "imagen": "./archivos/2imagen28X.PNG",
+                "enlace": "https://x.com/figure_robot/status/2059350969700491632?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Marketing y SEO",
+                "fechaISO": "2026-05-08",
+                "fechaTexto": "08 May 2026",
+                "titulo": "Genspark integra GPT-Realtime-2",
+                "resumen": "El asistente autónomo \"Call for Me\" ahora ejecuta llamadas telefónicas y flujos de escritorio con mayor precisión, aumentando la efectividad conversacional un 26% sin requerir intervención humana.",
+                "imagen": "./archivos/3imagen28X.PNG",
+                "enlace": "https://x.com/genspark_ai/status/2059423824744268095?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 26 de Mayo",
         "audioSrc": "Audio26X.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 14 de Mayo",
+        "tituloAudio": "Noticias de ediciones anteriores: 14 de Mayo",
         "audioSrc": "Audio14X.m4a",
         "visible": true,
         "noticias": [
@@ -559,7 +596,7 @@
                 "fechaISO": "2026-03-19",
                 "fechaTexto": "19 Mar 2026",
                 "titulo": "Midjourney lanza V8 Alpha",
-                "resumen": "La actualización incluye una mejor inserción de texto en imágenes. Este avance refuerza drásticamente su potencial para campaigns visuales a gran escala.",
+                "resumen": "La actualización incluye una mejor inserción de texto en imágenes. Este avance refuerza drásticamente su potencial para campañas visuales a gran escala.",
                 "imagen": "./archivos/1imagen19M.PNG",
                 "enlace": "https://the-decoder.com/midjourney-v8-rolls-out-with-5x-faster-generation-but-charges-4x-more-for-its-best-features/"
             },
