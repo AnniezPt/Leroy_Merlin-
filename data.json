@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 28 de Mayo",
+        "tituloAudio": "Novedades de esta semana: 2 de Junio",
+        "audioSrc": "Audio2J.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-06-01",
+                "fechaTexto": "01 Jun 2026",
+                "titulo": "Anthropic prepara su salida a bolsa",
+                "resumen": "Anthropic ha iniciado formalmente el proceso para una Oferta Pública Inicial (IPO) enviando su registro a la SEC de EE. UU. Este movimiento busca consolidar financieramente a la compañía frente a sus grandes competidores en el sector de la inteligencia artificial.",
+                "imagen": "./archivos/1imagen2J.PNG",
+                "enlace": "https://x.com/anthropicai/status/2061478052257841495?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-05-28",
+                "fechaTexto": "28 May 2026",
+                "titulo": "Claude Opus 4.8 integra agentes múltiples",
+                "resumen": "La actualización introduce el modelo de alto rendimiento Claude Opus 4.8 equipado con \"flujos de trabajo dinámicos\". Esto permite que múltiples agentes de IA operen y se coordinen en segundo plano de manera autónoma para resolver tareas de gran complejidad.",
+                "imagen": "./archivos/2imagen2J.PNG",
+                "enlace": "https://x.com/claudeai/status/2060042702150930686?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-05-20",
+                "fechaTexto": "20 May 2026",
+                "titulo": "Rodin AI acelera la generación 3D",
+                "resumen": "DeemosTech impulsa Rodin, una herramienta de IA capaz de transformar simples textos o imágenes en activos 3D listos para la producción. Esta tecnología con mallas retopologizadas reduce drásticamente los tiempos de desarrollo para videojuegos, retail digital y realidad virtual.",
+                "imagen": "./archivos/3imagen2J.PNG",
+                "enlace": "https://x.com/deemostech/status/2056744290689441833?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 28 de Mayo",
         "audioSrc": "Audio28X.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 26 de Mayo",
+        "tituloAudio": "Noticias de ediciones anteriores: 26 de Mayo",
         "audioSrc": "Audio26X.m4a",
         "visible": true,
         "noticias": [
