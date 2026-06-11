@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 9 de Junio",
+        "tituloAudio": "Novedades de esta semana: 11 de Junio",
+        "audioSrc": "Audio11J.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-06-09",
+                "fechaTexto": "09 Jun 2026",
+                "titulo": "Anthropic lanza Claude Fable 5",
+                "resumen": "Anthropic ha presentado Claude Fable 5, un modelo de inteligencia artificial seguro para uso general. Sus capacidades superan a cualquier modelo anterior de la compañía, destacando especialmente en la resolución de problemas complejos.",
+                "imagen": "./archivos/1imagen11J.PNG",
+                "enlace": "https://x.com/claudeai/status/2064394146916229443?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-06-08",
+                "fechaTexto": "08 Jun 2026",
+                "titulo": "SpaceX presenta el satélite AI1",
+                "resumen": "SpaceX ha revelado oficialmente AI1, un satélite pionero que integra un núcleo de inteligencia artificial. El dispositivo destaca por contar con una enorme capacidad de carga útil de computación de hasta 150.000 vatios en órbita.",
+                "imagen": "./archivos/2imagen11J.PNG",
+                "enlace": "https://x.com/polymarket/status/2064118435781472335?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-06-10",
+                "fechaTexto": "10 Jun 2026",
+                "titulo": "NTU crea microrobot quirúrgico",
+                "resumen": "Científicos han creado un robot diminuto capaz de realizar intervenciones como cortar tejido, administrar fármacos y generar calor. Está diseñado para moverse por superficies blandas e irregulares del cuerpo, promoviendo cirugías menos invasivas.",
+                "imagen": "./archivos/3imagen11J.PNG",
+                "enlace": "https://x.com/wevolverapp/status/2064637345584877692?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 9 de Junio",
         "audioSrc": "Audio9J.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 4 de Junio",
+        "tituloAudio": "Noticias de ediciones anteriores: 4 de Junio",
         "audioSrc": "Audio4J.m4a",
         "visible": true,
         "noticias": [
