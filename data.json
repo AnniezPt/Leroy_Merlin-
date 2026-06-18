@@ -9,7 +9,7 @@
                 "fechaISO": "2026-06-11",
                 "fechaTexto": "11 Jun 2026",
                 "titulo": "EE. UU. restringe acceso a Claude Fable 5",
-                "resumen": "El gobierno estadounidense emitió una directiva federal de exportación que restringe de forma global el acceso a los modelos Fable 5 y Mythos 5 de Anthropic a ciudadanos extranjeros, incluyendo a sus propios empleados. Ante la imposibilidad técnica de verificar en tiempo real la nacionalidad de los usuarios, la compañía ordenó el apagado completo de los servidores globales de ambos modelos en un plazo de cumplimiento de noventa minutos. De este modo, todas las solicitudes que estaban dirigidas a estos sistemas se redirigen automáticamente hacia Claude Opus 4.8 como alternativa autorizada.",
+                "resumen": "El gobierno estadounidense emitió una directiva federal de exportación que restringe de forma global el acceso a los modelos Fable 5 y Mythos 5 de Anthropic a ciudadanos extranjeros, incluyendo a sus propios empleados. La compañía ordenó el apagado completo de los servidores globales de ambos modelos en un plazo de cumplimiento de noventa minutos. De este modo, todas las solicitudes que estaban dirigidas a estos sistemas se redirigen automáticamente hacia Claude Opus 4.8 como alternativa autorizada.",
                 "imagen": "./archivos/1imagen18J.PNG",
                 "enlace": "https://x.com/anthropicai/status/2065597531644743999?s=46",
                 "visible": true
@@ -19,7 +19,7 @@
                 "fechaISO": "2026-06-17",
                 "fechaTexto": "17 Jun 2026",
                 "titulo": "Sincronización entre Claude Design y Code",
-                "resumen": "Anthropic ha implementado una gran actualización en Claude Design que introduce la sincronización bidireccional inmediata con Claude Code a través de la consola local del programador. El sistema optimiza significativamente el consumo excesivo de tokens de contexto y añade nuevas herramientas de alineación y redimensionamiento en un lienzo visual renovado. Las maquetas terminadas ahora pueden exportarse a formatos PDF, PowerPoint, código HTML limpio o transferirse a Canva. Además, permite proteger la identidad visual corporativa bloqueando sistemas de diseño específicos preaprobados por la administración.",
+                "resumen": "Anthropic ha implementado una gran actualización en Claude Design que introduce la sincronización bidireccional inmediata con Claude Code a través de la consola local del programador. Optimiza significativamente el consumo excesivo de tokens de contexto y añade nuevas herramientas de alineación y redimensionamiento en un lienzo visual renovado. Pueden exportarse a formatos PDF, PowerPoint, código HTML limpio o transferirse a Canva. Permite proteger la identidad visual corporativa bloqueando sistemas de diseño específicos preaprobados por la administración.",
                 "imagen": "./archivos/2imagen18J.PNG",
                 "enlace": "https://x.com/claudeai/status/2067325887909884315?s=46",
                 "visible": true
@@ -29,7 +29,7 @@
                 "fechaISO": "2026-06-17",
                 "fechaTexto": "17 Jun 2026",
                 "titulo": "Unreal Engine 5.8 integra soporte MCP",
-                "resumen": "La nueva actualización experimental del motor gráfico Unreal Engine 5.8 integra soporte nativo para el protocolo abierto Model Context Protocol, facilitando la conexión directa de modelos externos como Claude y Gemini. El plugin otorga a los agentes lógicos acceso a herramientas del editor para automatizar la importación, rotación y disposición espacial de activos en la escena 3D mediante instrucciones en lenguaje natural. Este flujo asistido busca liberar tiempo de desarrollo reduciendo el trabajo manual repetitivo en la construcción de escenarios. Su adopción experimental constituye un cimiento técnico y estratégico fundamental en el camino hacia Unreal Engine 6.",
+                "resumen": "La nueva actualización experimental del motor gráfico Unreal Engine 5.8 integra soporte nativo para el protocolo abierto Model Context Protocol, facilitando la conexión directa de modelos externos como Claude y Gemini. El plugin otorga a los agentes lógicos acceso a herramientas del editor para automatizar la importación, rotación y disposición espacial de activos en la escena 3D mediante instrucciones en lenguaje natural. Su adopción experimental constituye un cimiento técnico y estratégico fundamental en el camino hacia Unreal Engine 6.",
                 "imagen": "./archivos/3imagen18J.PNG",
                 "enlace": "https://x.com/unrealengine/status/2067251500900839735?s=46",
                 "visible": true
