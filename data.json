@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 18 de Junio",
+        "tituloAudio": "Novedades de esta semana: 23 de Junio",
+        "audioSrc": "Audio23J.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-06-18",
+                "fechaTexto": "18 Jun 2026",
+                "titulo": "Midjourney presenta escáner ultrasónico 3D",
+                "resumen": "Midjourney y Butterfly Network revelaron el \"Ultrasonic CT\", un escáner que genera reconstrucciones anatómicas 3D en 60 segundos. El prototipo utiliza ondas acústicas de alta frecuencia y agua como acoplador, eludiendo la radiación de la tomografía tradicional.",
+                "imagen": "./archivos/1imagen23J.PNG",
+                "enlace": "https://x.com/midjourney/status/2067421950314688759?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-06-22",
+                "fechaTexto": "22 Jun 2026",
+                "titulo": "Sakana AI lanza arquitectura multiagente Fugu",
+                "resumen": "Sakana AI ha lanzado Fugu y Fugu Ultra, un sistema que coordina dinámicamente un grupo de modelos especialistas bajo una única API. Este método de inteligencia colectiva asegura la continuidad empresarial frente a restricciones geopolíticas de exportación.",
+                "imagen": "./archivos/2imagen23J.PNG",
+                "enlace": "https://x.com/sakanaailabs/status/2068861630327443966?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Marketing y SEO",
+                "fechaISO": "2026-06-23",
+                "fechaTexto": "23 Jun 2026",
+                "titulo": "eComrads integra protocolo MCP en anuncios",
+                "resumen": "La plataforma de marketing integró flujos basados en el protocolo MCP y herramientas de terminal en su suite de anuncios. Esto permite automatizar y acelerar la producción masiva de variaciones de anuncios directamente desde la línea de comandos.",
+                "imagen": "./archivos/3imagen23J.PNG",
+                "enlace": "https://x.com/ecomrads/status/2069195845371916290?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 18 de Junio",
         "audioSrc": "Audio18J.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 11 de Junio",
+        "tituloAudio": "Noticias de ediciones anteriores: 11 de Junio",
         "audioSrc": "Audio11J.m4a",
         "visible": true,
         "noticias": [
@@ -439,43 +476,6 @@
                 "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
                 "imagen": "./archivos/3imagen30A.PNG",
                 "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 28 de Abril",
-        "audioSrc": "Audio28A.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Modelos de IA",
-                "fechaISO": "2026-04-27",
-                "fechaTexto": "27 Abr 2026",
-                "titulo": "¡Llega GPT-5.5!",
-                "resumen": "OpenAI presentó GPT-5.5, una versión que supera a sus predecesores en la resolución de problemas complejos. Este modelo destaca por gestionar instrucciones de múltiples pasos de forma altamente eficiente.",
-                "imagen": "./archivos/1imagen28A.PNG",
-                "enlace": "https://x.com/openai/status/2047376561205325845?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-04-20",
-                "fechaTexto": "20 Abr 2026",
-                "titulo": "Adobe lanza agentes autónomos",
-                "resumen": "En alianza con NVIDIA y WPP, Adobe ha lanzado agentes de IA autónomos a gran escala. Esta integración busca potenciar nuevas capacidades de inteligencia creativa dentro del ecosistema publicitario.",
-                "imagen": "./archivos/2imagen28A.PNG",
-                "enlace": "https://blogs.nvidia.com/blog/ai-in-retail-cpg-survey-2026/",
-                "visible": true
-            },
-            {
-                "categoria": "Estrategia Retail e IA",
-                "fechaISO": "2026-04-19",
-                "fechaTexto": "19 Abr 2026",
-                "titulo": "IA eleva ingresos retail 25%",
-                "resumen": "Informes confirman que la integración profunda de inteligencia artificial está transformando el sector retail. Las empresas que adoptan esta tecnología logran aumentar sus ingresos corporativos hasta en un 25%.",
-                "imagen": "./archivos/3imagen28A.PNG",
-                "enlace": "https://www.eleconomista.com.mx/empresas/retail-eleva-ingresos-25-inteligencia-artificial-20260419-809447.html",
                 "visible": true
             }
         ]
