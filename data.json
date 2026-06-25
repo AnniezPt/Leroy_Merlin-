@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 23 de Junio",
+        "tituloAudio": "Novedades de esta semana: 25 de Junio",
+        "audioSrc": "Audio25J.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Robótica y Hardware",
+                "fechaISO": "2026-06-24",
+                "fechaTexto": "24 Jun 2026",
+                "titulo": "OpenAI y Broadcom presentan el chip Jalapeño",
+                "resumen": "OpenAI ha presentado Jalapeño, su primer procesador personalizado desarrollado en tan solo nueve meses para optimizar el rendimiento y coste energético de la IA. Este chip mitiga los cuellos de botella de memoria y comenzará a desplegarse a escala de gigavatios a finales de 2026.",
+                "imagen": "./archivos/1imagen25J.PNG",
+                "enlace": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-06-23",
+                "fechaTexto": "23 Jun 2026",
+                "titulo": "Anthropic lanza el agente colaborativo Claude Tag",
+                "resumen": "Claude Tag permite a los equipos delegar tareas a un agente de inteligencia artificial con identidad compartida que asimila de forma continua la memoria organizativa del canal. Esta herramienta opera asíncronamente en segundo plano, ejecutando acciones de forma totalmente proactiva.",
+                "imagen": "./archivos/2imagen25J.PNG",
+                "enlace": "https://x.com/claudeai/status/2069468693017268244?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-06-24",
+                "fechaTexto": "24 Jun 2026",
+                "titulo": "Notion integra agentes de IA en su plataforma",
+                "resumen": "Notion ha lanzado una nueva API que permite asignar tareas de análisis de datos o programación a los agentes de IA directamente desde tableros compartidos. Estos agentes acceden en tiempo real al contexto de la empresa para ejecutar código de manera autónoma.",
+                "imagen": "./archivos/3imagen25J.PNG",
+                "enlace": "https://x.com/notionhq/status/2069816393395012009?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 23 de Junio",
         "audioSrc": "Audio23J.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 18 de Junio",
+        "tituloAudio": "Noticias de ediciones anteriores: 18 de Junio",
         "audioSrc": "Audio18J.m4a",
         "visible": true,
         "noticias": [
@@ -476,6 +513,43 @@
                 "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
                 "imagen": "./archivos/3imagen30A.PNG",
                 "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de ediciones anteriores: 28 de Abril",
+        "audioSrc": "Audio28A.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-04-27",
+                "fechaTexto": "27 Abr 2026",
+                "titulo": "¡Llega GPT-5.5!",
+                "resumen": "OpenAI presentó GPT-5.5, una versión que supera a sus predecesores en la resolución de problemas complejos. Este modelo destaca por gestionar instrucciones de múltiples pasos de forma altamente eficiente.",
+                "imagen": "./archivos/1imagen28A.PNG",
+                "enlace": "https://x.com/openai/status/2047376561205325845?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-04-20",
+                "fechaTexto": "20 Abr 2026",
+                "titulo": "Adobe lanza agentes autónomos",
+                "resumen": "En alianza con NVIDIA y WPP, Adobe ha lanzado agentes de IA autónomos a gran escala. Esta integración busca potenciar nuevas capacidades de inteligencia creativa dentro del ecosistema publicitario.",
+                "imagen": "./archivos/2imagen28A.PNG",
+                "enlace": "https://blogs.nvidia.com/blog/ai-in-retail-cpg-survey-2026/",
+                "visible": true
+            },
+            {
+                "categoria": "Estrategia Retail e IA",
+                "fechaISO": "2026-04-19",
+                "fechaTexto": "19 Abr 2026",
+                "titulo": "IA eleva ingresos retail 25%",
+                "resumen": "Informes confirman que la integración profunda de inteligencia artificial está transformando el sector retail. Las empresas que adoptan esta tecnología logran aumentar sus ingresos corporativos hasta en un 25%.",
+                "imagen": "./archivos/3imagen28A.PNG",
+                "enlace": "https://www.eleconomista.com.mx/empresas/retail-eleva-ingresos-25-inteligencia-artificial-20260419-809447.html",
                 "visible": true
             }
         ]
