@@ -1,16 +1,16 @@
 [
     {
         "tituloAudio": "Novedades de esta semana: 1 de Julio",
-        "audioSrc": "Audio1J.m4a",
+        "audioSrc": "Audio1L.m4a",
         "visible": true,
         "noticias": [
             {
-                "categoria": "Software y Herramientas",
+                "categoria": "Modelos de IA",
                 "fechaISO": "2026-07-01",
                 "fechaTexto": "01 Jul 2026",
-                "titulo": "Google lanza Nano Banana 2 Lite y Gemini Omni Flash para la creación ultrarrápida",
-                "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imágenes en cuatro segundos, junto a Gemini Omni Flash para la edición de vídeo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste en flujos de trabajo creativos multimodales.",
-                "imagen": "./archivos/1imagen1J.PNG",
+                "titulo": "Google lanza Nano Banana 2 Lite y Omni Flash",
+                "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imágenes en cuatro segundos, junto a Gemini Omni Flash para la edición de vídeo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste creativo.",
+                "imagen": "./archivos/1imagen1L.webp",
                 "enlace": "https://x.com/googleaistudio/status/2071989946827624801?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
@@ -18,9 +18,9 @@
                 "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-07-01",
                 "fechaTexto": "01 Jul 2026",
-                "titulo": "Anthropic restaura Claude Fable 5 a nivel global tras levantar restricciones de EE. UU.",
-                "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias de programación se derivarán forzosamente al modelo Opus 4.8.",
-                "imagen": "./archivos/2imagen1J.PNG",
+                "titulo": "Anthropic restaura Fable 5 a nivel global",
+                "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias se derivarán forzosamente al modelo Opus 4.8.",
+                "imagen": "./archivos/2imagen1L.webp",
                 "enlace": "https://x.com/anthropicai/status/2072163884430229756?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
@@ -28,9 +28,9 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-07-01",
                 "fechaTexto": "01 Jul 2026",
-                "titulo": "Google introduce resúmenes en vídeo vertical generados por IA en NotebookLM",
-                "resumen": "NotebookLM lanza la función \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vídeos verticales educativos de 60 segundos. Esta característica está disponible inicialmente para suscriptores de Google AI Ultra y Pro.",
-                "imagen": "./archivos/3imagen1J.PNG",
+                "titulo": "NotebookLM genera resúmenes en vídeo vertical",
+                "resumen": "NotebookLM lanza la función \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vídeos verticales educativos de 60 segundos. Esta característica está disponible para suscriptores de Google AI Ultra y Pro.",
+                "imagen": "./archivos/3imagen1L.webp",
                 "enlace": "https://x.com/notebooklm/status/2071987494799716626?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             }
@@ -550,43 +550,6 @@
                 "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
                 "imagen": "./archivos/3imagen30A.PNG",
                 "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 28 de Abril",
-        "audioSrc": "Audio28A.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Modelos de IA",
-                "fechaISO": "2026-04-27",
-                "fechaTexto": "27 Abr 2026",
-                "titulo": "¡Llega GPT-5.5!",
-                "resumen": "OpenAI presentó GPT-5.5, una versión que supera a sus predecesores en la resolución de problemas complejos. Este modelo destaca por gestionar instrucciones de múltiples pasos de forma altamente eficiente.",
-                "imagen": "./archivos/1imagen28A.PNG",
-                "enlace": "https://x.com/openai/status/2047376561205325845?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-04-20",
-                "fechaTexto": "20 Abr 2026",
-                "titulo": "Adobe lanza agentes autónomos",
-                "resumen": "En alianza con NVIDIA y WPP, Adobe ha lanzado agentes de IA autónomos a gran escala. Esta integración busca potenciar nuevas capacidades de inteligencia creativa dentro del ecosistema publicitario.",
-                "imagen": "./archivos/2imagen28A.PNG",
-                "enlace": "https://blogs.nvidia.com/blog/ai-in-retail-cpg-survey-2026/",
-                "visible": true
-            },
-            {
-                "categoria": "Estrategia Retail e IA",
-                "fechaISO": "2026-04-19",
-                "fechaTexto": "19 Abr 2026",
-                "titulo": "IA eleva ingresos retail 25%",
-                "resumen": "Informes confirman que la integración profunda de inteligencia artificial está transformando el sector retail. Las empresas que adoptan esta tecnología logran aumentar sus ingresos corporativos hasta en un 25%.",
-                "imagen": "./archivos/3imagen28A.PNG",
-                "enlace": "https://www.eleconomista.com.mx/empresas/retail-eleva-ingresos-25-inteligencia-artificial-20260419-809447.html",
                 "visible": true
             }
         ]
