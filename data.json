@@ -1,7 +1,7 @@
 [
     {
         "tituloAudio": "Novedades de esta semana: 1 de Julio",
-        "audioSrc": "Audio1LN.m4a",
+        "audioSrc": "Audio1JN.m4a",
         "visible": true,
         "noticias": [
             {
@@ -10,7 +10,7 @@
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "Google lanza Nano Banana 2 Lite y Omni Flash",
                 "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imágenes en cuatro segundos, junto a Gemini Omni Flash para la edición de vídeo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste creativo.",
-                "imagen": "./archivos/1imagen1LN.png",
+                "imagen": "./archivos/1imagen1JN.png",
                 "enlace": "https://x.com/googleaistudio/status/2071989946827624801?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
@@ -20,7 +20,7 @@
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "Anthropic restaura Fable 5 a nivel global",
                 "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias se derivarán forzosamente al modelo Opus 4.8.",
-                "imagen": "./archivos/2imagen1LN.png",
+                "imagen": "./archivos/2imagen1JN.png",
                 "enlace": "https://x.com/anthropicai/status/2072163884430229756?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
@@ -30,7 +30,7 @@
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "NotebookLM genera resúmenes en vídeo vertical",
                 "resumen": "NotebookLM lanza la función \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vídeos verticales educativos de 60 segundos. Esta característica está disponible para suscriptores de Google AI Ultra y Pro.",
-                "imagen": "./archivos/3imagen1LN.png",
+                "imagen": "./archivos/3imagen1JN.png",
                 "enlace": "https://x.com/notebooklm/status/2071987494799716626?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             }
