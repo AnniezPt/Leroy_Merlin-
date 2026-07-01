@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 25 de Junio",
+        "tituloAudio": "Novedades de esta semana: 30 de Junio",
+        "audioSrc": "Audio30J.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-06-30",
+                "fechaTexto": "30 Jun 2026",
+                "titulo": "Google lanza Nano Banana 2 Lite y Gemini Omni Flash para la creación ultrarrápida",
+                "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imágenes en cuatro segundos, junto a Gemini Omni Flash para la edición de vídeo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste en flujos de trabajo creativos multimodales.",
+                "imagen": "./archivos/1imagen30J.png",
+                "enlace": "https://x.com/googleaistudio/status/2071989946827624801?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
+                "visible": true
+            },
+            {
+                "categoria": "Negocios y Regulación",
+                "fechaISO": "2026-06-30",
+                "fechaTexto": "30 Jun 2026",
+                "titulo": "Anthropic restaura Claude Fable 5 a nivel global tras levantar restricciones de EE. UU.",
+                "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias de programación se derivarán forzosamente al modelo Opus 4.8.",
+                "imagen": "./archivos/2imagen30J.png",
+                "enlace": "https://x.com/anthropicai/status/2072163884430229756?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-06-30",
+                "fechaTexto": "30 Jun 2026",
+                "titulo": "Google introduce resúmenes en vídeo vertical generados por IA en NotebookLM",
+                "resumen": "NotebookLM lanza la función \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vídeos verticales educativos de 60 segundos. Esta característica está disponible inicialmente para suscriptores de Google AI Ultra y Pro.",
+                "imagen": "./archivos/3imagen30J.png",
+                "enlace": "https://x.com/notebooklm/status/2071987494799716626?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 25 de Junio",
         "audioSrc": "Audio25J.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 23 de Junio",
+        "tituloAudio": "Noticias de ediciones anteriores: 23 de Junio",
         "audioSrc": "Audio23J.m4a",
         "visible": true,
         "noticias": [
