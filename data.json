@@ -1,7 +1,44 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 1 de Julio",
-        "audioSrc": "Audio1JN.m4a",
+        "tituloAudio": "Novedades de esta semana: 6 de Julio",
+        "audioSrc": "Audio6JL.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-07-05",
+                "fechaTexto": "05 Jul 2026",
+                "titulo": "RegalosDigitals democratiza aprender a programar",
+                "resumen": "La cuenta \"RegalosDigitals\" en X distribuye recursos gratuitos para aprender inglés y fundamentos de programación. Estas guías buscan eliminar barreras educativas para integrar a cualquier usuario en el mercado laboral tecnológico.",
+                "imagen": "./archivos/1imagen6JL.PNG",
+                "enlace": "https://x.com/regalosdigitals/status/2073840711867240563",
+                "visible": true
+            },
+            {
+                "categoria": "Modelos de IA",
+                "fechaISO": "2026-06-22",
+                "fechaTexto": "22 Jun 2026",
+                "titulo": "DotCSV analiza el modelo Nano Banana Pro",
+                "resumen": "El experto tecnológico DotCSV expone los avances de Nano Banana Pro y su integración con el ecosistema Gemini 3. El modelo permite alterar la iluminación fotográfica, realizar transiciones ambientales y resolver problemas matemáticos.",
+                "imagen": "./archivos/2imagenJL.PNG",
+                "enlace": "https://x.com/DotCSV/status/2068991452793704761",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-07-06",
+                "fechaTexto": "06 Jul 2026",
+                "titulo": "MeiGen.ai lanza galería de prompts visuales",
+                "resumen": "MeiGen.ai es una galería gratuita de instrucciones pre-diseñadas para múltiples motores de inteligencia artificial. Permite a los usuarios generar estéticas complejas con un solo clic en modelos como Nano Banana o Midjourney.",
+                "imagen": "./archivos/3imagenJL.PNG",
+                "enlace": "https://www.meigen.ai/",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 1 de Julio",
+        "audioSrc": "Audio1LN.m4a",
         "visible": true,
         "noticias": [
             {
@@ -10,7 +47,7 @@
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "Google lanza Nano Banana 2 Lite y Omni Flash",
                 "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imágenes en cuatro segundos, junto a Gemini Omni Flash para la edición de vídeo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste creativo.",
-                "imagen": "./archivos/1imagen1JN.png",
+                "imagen": "./archivos/1imagen1LN.png",
                 "enlace": "https://x.com/googleaistudio/status/2071989946827624801?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
@@ -20,7 +57,7 @@
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "Anthropic restaura Fable 5 a nivel global",
                 "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias se derivarán forzosamente al modelo Opus 4.8.",
-                "imagen": "./archivos/2imagen1JN.png",
+                "imagen": "./archivos/2imagen1LN.png",
                 "enlace": "https://x.com/anthropicai/status/2072163884430229756?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
@@ -30,14 +67,14 @@
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "NotebookLM genera resúmenes en vídeo vertical",
                 "resumen": "NotebookLM lanza la función \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vídeos verticales educativos de 60 segundos. Esta característica está disponible para suscriptores de Google AI Ultra y Pro.",
-                "imagen": "./archivos/3imagen1JN.png",
+                "imagen": "./archivos/3imagen1LN.png",
                 "enlace": "https://x.com/notebooklm/status/2071987494799716626?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             }
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 25 de Junio",
+        "tituloAudio": "Noticias de ediciones anteriores: 25 de Junio",
         "audioSrc": "Audio25J.m4a",
         "visible": true,
         "noticias": [
@@ -93,7 +130,7 @@
                 "fechaISO": "2026-06-22",
                 "fechaTexto": "22 Jun 2026",
                 "titulo": "Sakana AI lanza arquitectura multiagente Fugu",
-                "resumen": "Sakana AI ha lanzado Fugu y Fugu Ultra, un sistema que coordina dinámicamente un grupo de modelos especialistas bajo una única API. Este método de inteligencia colectiva asegura la continuidad empresarial frente a restricciones geopolíticas de exportación.",
+                "resumen": "Sakana AI ha lanzado Fugu y Fugu Ultra, un sistema que coordina dinámicamente un grupo de modelos especialistas bajo una única API. Este método de inteligencia colectiva asegura la continuity empresarial frente a restricciones geopolíticas de exportación.",
                 "imagen": "./archivos/2imagen23J.PNG",
                 "enlace": "https://x.com/sakanaailabs/status/2068861630327443966?s=46",
                 "visible": true
@@ -328,228 +365,6 @@
                 "resumen": "El asistente autónomo \"Call for Me\" ahora ejecuta llamadas telefónicas y flujos de escritorio con mayor precisión, aumentando la efectividad conversacional un 26% sin requerir intervención humana.",
                 "imagen": "./archivos/3imagen28X.PNG",
                 "enlace": "https://x.com/genspark_ai/status/2059423824744268095?s=46",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 26 de Mayo",
-        "audioSrc": "Audio26X.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Modelos de IA",
-                "fechaISO": "2026-05-14",
-                "fechaTexto": "14 May 2026",
-                "titulo": "Gemini Omni Flash multimodal",
-                "resumen": "Este modelo permite crear y editar videos iterativamente mediante conversación, combinando múltiples formatos y respetando la física real.",
-                "imagen": "./archivos/1imagen26X.PNG",
-                "enlace": "https://x.com/googledeepmind/status/2056786446636212467?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Marketing y SEO",
-                "fechaISO": "2026-05-15",
-                "fechaTexto": "15 May 2026",
-                "titulo": "Gemini 3.1 Flash TTS añade control",
-                "resumen": "Permite dirigir el estilo vocal, la emoción, velocidad y pausas mediante comandos de texto directos, soportando más de 70 idiomas.",
-                "imagen": "./archivos/2imagen26X.PNG",
-                "enlace": "https://x.com/googledeepmind/status/2056786446636212467?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Negocios y Regulación",
-                "fechaISO": "2026-05-17",
-                "fechaTexto": "17 May 2026",
-                "titulo": "Colapso presupuestario por tokens",
-                "resumen": "La masiva adopción de Claude Code agotó presupuestos en Uber y Microsoft, demostrando que acelerar el código dispara gastos sin asegurar retornos.",
-                "imagen": "./archivos/3imagen26X.PNG",
-                "enlace": "https://x.com/ric_rtp/status/2058546401483653236?s=46",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 14 de Mayo",
-        "audioSrc": "Audio14X.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-05-13",
-                "fechaTexto": "13 May 2026",
-                "titulo": "WhatsApp lanza Incognito Chat",
-                "resumen": "La plataforma estrenó una función impulsada por su tecnología de procesamiento privado que permite a los usuarios interactuar con la inteligencia artificial de forma completamente invisible para terceros.",
-                "imagen": "./archivos/1imagen14X.PNG",
-                "enlace": "https://x.com/whatsapp/status/2054567974468481070?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-05-11",
-                "fechaTexto": "11 May 2026",
-                "titulo": "HeyGen lanza Avatar V",
-                "resumen": "Se introducen mejoras significativas enfocadas en resolver la consistencia de los personajes, añadiendo capacidades avanzadas de sincronización y control multiángulo sin necesidad de equipos de producción físicos.",
-                "imagen": "./archivos/2imagen14X.PNG",
-                "enlace": "https://x.com/heygen/status/2054582965137768817?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Robótica y Hardware",
-                "fechaISO": "2026-05-14",
-                "fechaTexto": "14 May 2026",
-                "titulo": "Figure AI exhibe Figure 03",
-                "resumen": "La compañía realizó una demostración en vivo de sus robots humanoides realizando tareas complejas de forma ininterrumpida y anunció el incremento de su capacidad de fabricación a un robot por hora.",
-                "imagen": "./archivos/3imagen14X.PNG",
-                "enlace": "https://x.com/figure_robot/status/2054603845393875452?s=46",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 12 de Mayo",
-        "audioSrc": "Audio12X.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Modelos de IA",
-                "fechaISO": "2026-05-11",
-                "fechaTexto": "11 May 2026",
-                "titulo": "IA nativa multicanal en tiempo real",
-                "resumen": "Thinking Machines lanza modelos para procesamiento simultáneo de audio, video y texto sin turnos. Con latencia de 200ms, permite una colaboración fluida humano-máquina en tiempo real.",
-                "imagen": "./archivos/1imagen12X.PNG",
-                "enlace": "https://x.com/thinkymachines/status/2053938892152435174?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Negocios y Regulación",
-                "fechaISO": "2026-05-12",
-                "fechaTexto": "12 May 2026",
-                "titulo": "OpenAI lanza Daybreak y filial de despliegue",
-                "resumen": "Presenta una plataforma autónoma de ciberseguridad y una filial financiada con 4.000 millones. Enviarán ingenieros a las empresas para integrar la inteligencia artificial en sus operaciones diarias.",
-                "imagen": "./archivos/2imagen12X.PNG",
-                "enlace": "https://x.com/openai/status/2053939702110269822?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Robótica y Hardware",
-                "fechaISO": "2026-05-12",
-                "fechaTexto": "12 May 2026",
-                "titulo": "Unitree comercializa el mecha tripulado GD01",
-                "resumen": "Lanza el primer mecha transformable producido en masa por 540.000 dólares. Pesa 500 kg y alterna entre modo humanoide y cuadrúpedo mientras transporta a un piloto humano a bordo.",
-                "imagen": "./archivos/3imagen12X.PNG",
-                "enlace": "https://x.com/unitreerobotics/status/2054067819634159622?s=46",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 7 de Mayo",
-        "audioSrc": "Audio7X.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Estrategia Retail e IA",
-                "fechaISO": "2026-05-05",
-                "fechaTexto": "05 May 2026",
-                "titulo": "IA dispara ventas en Shopify",
-                "resumen": "Las búsquedas por IA disparan las ventas en Shopify. El tráfico impulsado por modelos de lenguaje creció 8 veces y los pedidos vinculados aumentaron casi 13 veces en la plataforma. Además, esta tecnología capta nuevos clientes al doble de velocidad que el formato orgánico.",
-                "imagen": "./archivos/1imagen7X.PNG",
-                "enlace": "https://x.com/shopify/status/2051315962326999501?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-05-06",
-                "fechaTexto": "06 May 2026",
-                "titulo": "Anthropic y SpaceX se alían",
-                "resumen": "Anthropic y SpaceX firman alianza de supercomputación. Claude ocupará el 100% de la capacidad del centro de datos Colossus 1, sumando 300 MW de potencia. Esto ha permitido a la empresa duplicar de inmediato los límites de uso de su API y Claude Code.",
-                "imagen": "./archivos/2imagen7X.PNG",
-                "enlace": "https://x.com/claudeai/status/2052060691893227611?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Robótica y Hardware",
-                "fechaISO": "2026-05-02",
-                "fechaTexto": "02 May 2026",
-                "titulo": "Récord de producción en Figure",
-                "resumen": "Figure logra récord en la producción de sus humanoides. En los últimos 60 días, la compañía fabricó más robots que en sus tres años de historia combinados. Esto impulsa la captura masiva de datos en el mundo físico para acelerar el entrenamiento de su IA.",
-                "imagen": "./archivos/3imagen7X.PNG",
-                "enlace": "https://x.com/humanoidsdaily/status/2051767907349352620?s=46",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 5 de Mayo",
-        "audioSrc": "Audio5X.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Negocios y Regulación",
-                "fechaISO": "2026-05-04",
-                "fechaTexto": "04 May 2026",
-                "titulo": "OpenAI capta 4.000 millones",
-                "resumen": "OpenAI ha cerrado un acuerdo multimillonario con gigantes de la inversión como TPG y Brookfield para crear \"The Deployment Company\". El objetivo central de esta nueva sociedad es acelerar drásticamente la adopción de sus herramientas de inteligencia artificial en grandes corporaciones a nivel mundial.",
-                "imagen": "./archivos/1imagen5X.PNG",
-                "enlace": "https://cincodias.elpais.com/companias/2026-05-04/openai-capta-4000-millones-de-dolares-para-su-joint-venture-con-los-gigantes-del-capital-privado-para-impulsar-la-ia.html",
-                "visible": true
-            },
-            {
-                "categoria": "Negocios y Regulación",
-                "fechaISO": "2026-05-04",
-                "fechaTexto": "04 May 2026",
-                "titulo": "Anthropic lanza consultora IA",
-                "resumen": "En alianza estratégica con Blackstone, Goldman Sachs y Hellman & Friedman, Anthropic ha creado una consultora independiente valorada en 1.500 millones. Su misión es integrar los modelos Claude directamente en las operaciones del mercado intermedio.",
-                "imagen": "./archivos/2imagen5X.PNG",
-                "enlace": "https://www.businessinsider.com/blackstone-anthropic-hellman-goldman-sachs-ai-joint-venture-consulting-2026-5",
-                "visible": true
-            },
-            {
-                "categoria": "Negocios y Regulación",
-                "fechaISO": "2026-05-04",
-                "fechaTexto": "04 May 2026",
-                "titulo": "Pentágono integra IA militar",
-                "resumen": "El Departamento de Defensa de EE. UU. acordó integrar herramientas cognitivas de corporaciones como Microsoft, Google y OpenAI en sus sistemas de combate. Anthropic fue la gran excluida de los pactos debido a sus estrictas exigencias sobre el uso ético de su tecnología.",
-                "imagen": "./archivos/3imagen5X.PNG",
-                "enlace": "https://apnews.com/article/pentagon-artificial-intelligence-military-classified-systems-war-060cecf836c4cebcf012a3ceb5333f2c",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de ediciones anteriores: 30 de Abril",
-        "audioSrc": "Audio30A.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-04-28",
-                "fechaTexto": "28 Abr 2026",
-                "titulo": "Claude en software creativo",
-                "resumen": "La IA se integra ahora como un agente activo dentro de Adobe, Blender y Ableton, permitiendo automatizar flujos de trabajo, editar diseños y ejecutar tareas complejas directamente mediante lenguaje natural.",
-                "imagen": "./archivos/1imagen30A.PNG",
-                "enlace": "https://x.com/claudeai/status/2049143440508616863?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-04-15",
-                "fechaTexto": "15 Abr 2026",
-                "titulo": "Adobe lanza Agente Creativo IA",
-                "resumen": "El nuevo asistente ejecuta tareas complejas en Creative Cloud mediante comandos conversacionales, automatizando procesos técnicos y permitiendo a los creadores dirigir resultados con sus propias palabras.",
-                "imagen": "./archivos/2imagen30A.PNG",
-                "enlace": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
-                "visible": true
-            },
-            {
-                "categoria": "Marketing y SEO",
-                "fechaISO": "2026-04-29",
-                "fechaTexto": "29 Abr 2026",
-                "titulo": "Visibilidad en búsquedas IA",
-                "resumen": "El ranking orgánico tradicional ya no garantiza presencia; ahora son cuatro señales algorítmicas las que determinan qué marcas aparecen destacadas en los resúmenes generativos.",
-                "imagen": "./archivos/3imagen30A.PNG",
-                "enlace": "https://searchengineland.com/visibility-ai-search-signals-475863",
                 "visible": true
             }
         ]
