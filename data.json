@@ -10,7 +10,7 @@
                 "fechaTexto": "05 Jul 2026",
                 "titulo": "RegalosDigitals democratiza aprender a programar",
                 "resumen": "La cuenta \"RegalosDigitals\" en X distribuye recursos gratuitos para aprender inglés y fundamentos de programación. Estas guías buscan eliminar barreras educativas para integrar a cualquier usuario en el mercado laboral tecnológico.",
-                "imagen": "./archivos/1imagen6JL.JPG",
+                "imagen": "./archivos/1imagen6JL.PNG",
                 "enlace": "https://x.com/regalosdigitals/status/2073840711867240563",
                 "visible": true
             },
@@ -20,7 +20,7 @@
                 "fechaTexto": "22 Jun 2026",
                 "titulo": "DotCSV analiza el modelo Nano Banana Pro",
                 "resumen": "El experto tecnológico DotCSV expone los avances de Nano Banana Pro y su integración con el ecosistema Gemini 3. El modelo permite alterar la iluminación fotográfica, realizar transiciones ambientales y resolver problemas matemáticos.",
-                "imagen": "./archivos/2imagen6JL.JPG",
+                "imagen": "./archivos/2imagen6JL.PNG",
                 "enlace": "https://x.com/DotCSV/status/2068991452793704761",
                 "visible": true
             },
@@ -30,7 +30,7 @@
                 "fechaTexto": "06 Jul 2026",
                 "titulo": "MeiGen.ai lanza galería de prompts visuales",
                 "resumen": "MeiGen.ai es una galería gratuita de instrucciones pre-diseñadas para múltiples motores de inteligencia artificial. Permite a los usuarios generar estéticas complejas con un solo clic en modelos como Nano Banana o Midjourney.",
-                "imagen": "./archivos/3imagen6JL.JPG",
+                "imagen": "./archivos/3imagen6JL.PNG",
                 "enlace": "https://www.meigen.ai/",
                 "visible": true
             }
