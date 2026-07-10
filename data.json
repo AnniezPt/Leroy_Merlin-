@@ -1,6 +1,43 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 6 de Julio",
+        "tituloAudio": "Novedades de esta semana: 10 de Julio",
+        "audioSrc": "Audio10JL.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "IA (Productividad y Agentes)",
+                "fechaISO": "2026-07-09",
+                "fechaTexto": "09 Jul 2026",
+                "titulo": "OpenAI lanza ChatGPT Work con Codex y GPT-5.6",
+                "resumen": "OpenAI presenta ChatGPT Work, un agente autónomo para escritorio, web y móvil que combina las capacidades de GPT-5.6 y Codex. Esta herramienta permite ejecutar proyectos largos y editar código directamente en línea sin tener que abandonar la aplicación.",
+                "imagen": "./archivos/1imagen10JL.jpeg",
+                "enlace": "https://x.com/openai/status/2075274271845404744",
+                "visible": true
+            },
+            {
+                "categoria": "IA (Modelos de Voz)",
+                "fechaISO": "2026-07-09",
+                "fechaTexto": "09 Jul 2026",
+                "titulo": "OpenAI introduce GPT-Live con dúplex completo",
+                "resumen": "GPT-Live habilita conversaciones naturales donde el usuario y la IA pueden hablar y escuchar de manera simultánea. El sistema maneja interrupciones sin perder el contexto y transfiere tareas complejas a modelos más pesados en segundo plano.",
+                "imagen": "./archivos/2imagen10JL.jpeg",
+                "enlace": "https://x.com/openai/status/2074907025537224840",
+                "visible": true
+            },
+            {
+                "categoria": "IA (Espacios de Trabajo)",
+                "fechaISO": "2026-07-09",
+                "fechaTexto": "09 Jul 2026",
+                "titulo": "Notion presenta Ship OS con agentes de IA",
+                "resumen": "Ship OS transforma a Notion en un espacio de trabajo unificado donde agentes autónomos colaboran durante todo el ciclo de vida del software. La plataforma centraliza y automatiza tareas desde la retroalimentación del cliente hasta la gestión de despliegues.",
+                "imagen": "./archivos/3imagen10JL.jpeg",
+                "enlace": "https://x.com/notionhq/status/2075249002208227743",
+                "visible": true
+            }
+        ]
+    },
+    {
+        "tituloAudio": "Noticias de la semana pasada: 6 de Julio",
         "audioSrc": "Audio6JL.m4a",
         "visible": true,
         "noticias": [
@@ -37,7 +74,7 @@
         ]
     },
     {
-        "tituloAudio": "Noticias de la semana pasada: 1 de Julio",
+        "tituloAudio": "Noticias de ediciones anteriores: 1 de Julio",
         "audioSrc": "Audio1JN.m4a",
         "visible": true,
         "noticias": [
