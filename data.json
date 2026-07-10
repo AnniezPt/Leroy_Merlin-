@@ -20,7 +20,7 @@
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "OpenAI introduce GPT-Live con dúplex completo",
                 "resumen": "GPT-Live habilita conversaciones naturales donde el usuario y la IA pueden hablar y escuchar de manera simultánea. El sistema maneja interrupciones sin perder el contexto y transfiere tareas complejas a modelos más pesados en segundo plano.",
-                "imagen": "./archivos/2imagen10JL.jpeg",
+                "imagen": "./archivos/2imagen10JL.PNG",
                 "enlace": "https://x.com/openai/status/2074907025537224840",
                 "visible": true
             },
@@ -30,7 +30,7 @@
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "Notion presenta Ship OS con agentes de IA",
                 "resumen": "Ship OS transforma a Notion en un espacio de trabajo unificado donde agentes autónomos colaboran durante todo el ciclo de vida del software. La plataforma centraliza y automatiza tareas desde la retroalimentación del cliente hasta la gestión de despliegues.",
-                "imagen": "./archivos/3imagen10JL.jpeg",
+                "imagen": "./archivos/3imagen10JL.PNG",
                 "enlace": "https://x.com/notionhq/status/2075249002208227743",
                 "visible": true
             }
