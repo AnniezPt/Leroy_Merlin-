@@ -1,43 +1,6 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 16 de Julio",
-        "audioSrc": "Audio16JL.m4a",
-        "visible": true,
-        "noticias": [
-            {
-                "categoria": "IA (Hardware y Herramientas)",
-                "fechaISO": "2026-07-15",
-                "fechaTexto": "15 Jul 2026",
-                "titulo": "OpenAI y Work Louder lanzan teclado Codex Micro",
-                "resumen": "OpenAI presentó Codex Micro, un periférico mecánico de 230 dólares diseñado junto a Work Louder para orquestar tareas de programación. Este dispositivo permite gestionar agentes de IA autónomos de Codex mediante atajos táctiles y telemetría visual.",
-                "imagen": "./archivos/1imagen16JL.PNG",
-                "enlace": "https://x.com/openaidevs/status/2077529895052493038?s=63",
-                "visible": true
-            },
-            {
-                "categoria": "IA (Educación e Impacto Social)",
-                "fechaISO": "2026-07-14",
-                "fechaTexto": "14 Jul 2026",
-                "titulo": "Anthropic lanza Claude for Teachers gratuito",
-                "resumen": "Anthropic habilitó el acceso gratuito a su avanzado modelo Opus 4.6 para profesores de escuelas públicas en Estados Unidos. La herramienta se integra con los currículos estatales para automatizar la planificación de clases y adaptar los materiales educativos.",
-                "imagen": "./archivos/2imagen16JL.PNG",
-                "enlace": "https://x.com/claudeai/status/2077047278078931243?s=61",
-                "visible": true
-            },
-            {
-                "categoria": "IA (Espacios de Trabajo)",
-                "fechaISO": "2026-07-15",
-                "fechaTexto": "15 Jul 2026",
-                "titulo": "Notion 3.6 integra agentes y servidor MCP",
-                "resumen": "Notion actualizó su plataforma permitiendo interactuar directamente con agentes como Claude y Cursor dentro de los tableros compartidos. La actualización incluye Notion Workers y un servidor MCP alojado para sincronizar bases de datos empresariales en tiempo real.",
-                "imagen": "./archivos/3imagen16JL.PNG",
-                "enlace": "https://x.com/notionhq/status/2077459022085870043?s=61",
-                "visible": true
-            }
-        ]
-    },
-    {
-        "tituloAudio": "Noticias de la semana pasada: 10 de Julio",
+        "tituloAudio": "Novedades de esta semana: 10 de Julio",
         "audioSrc": "Audio10JL.m4a",
         "visible": true,
         "noticias": [
@@ -47,7 +10,7 @@
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "OpenAI lanza ChatGPT Work con Codex y GPT-5.6",
                 "resumen": "OpenAI presenta ChatGPT Work, un agente autónomo para escritorio, web y móvil que combina las capacidades de GPT-5.6 y Codex. Esta herramienta permite ejecutar proyectos largos y editar código directamente en línea sin tener que abandonar la aplicación.",
-                "imagen": "./archivos/1imagen10JL.jpeg",
+                "imagen": "./archivos/1imagen10JL.PNG",
                 "enlace": "https://x.com/openai/status/2075274271845404744",
                 "visible": true
             },
@@ -57,7 +20,7 @@
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "OpenAI introduce GPT-Live con dúplex completo",
                 "resumen": "GPT-Live habilita conversaciones naturales donde el usuario y la IA pueden hablar y escuchar de manera simultánea. El sistema maneja interrupciones sin perder el contexto y transfiere tareas complejas a modelos más pesados en segundo plano.",
-                "imagen": "./archivos/2imagen10JL.jpeg",
+                "imagen": "./archivos/2imagen10JL.PNG",
                 "enlace": "https://x.com/openai/status/2074907025537224840",
                 "visible": true
             },
@@ -67,14 +30,14 @@
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "Notion presenta Ship OS con agentes de IA",
                 "resumen": "Ship OS transforma a Notion en un espacio de trabajo unificado donde agentes autónomos colaboran durante todo el ciclo de vida del software. La plataforma centraliza y automatiza tareas desde la retroalimentación del cliente hasta la gestión de despliegues.",
-                "imagen": "./archivos/3imagen10JL.jpeg",
+                "imagen": "./archivos/3imagen10JL.PNG",
                 "enlace": "https://x.com/notionhq/status/2075249002208227743",
                 "visible": true
             }
         ]
     },
     {
-        "tituloAudio": "Noticias de ediciones anteriores: 6 de Julio",
+        "tituloAudio": "Noticias de la semana pasada: 6 de Julio",
         "audioSrc": "Audio6JL.m4a",
         "visible": true,
         "noticias": [
@@ -244,6 +207,16 @@
                 "resumen": "Anthropic implementa sincronización bidireccional entre diseño y código, optimizando el consumo de tokens. Permite exportar a PDF, HTML o Canva, e incluye protección de identidad visual corporativa.",
                 "imagen": "./archivos/2imagen18J.PNG",
                 "enlace": "https://x.com/claudeai/status/2067325887909884315?s=46",
+                "visible": true
+            },
+            {
+                "categoria": "Software y Herramientas",
+                "fechaISO": "2026-06-17",
+                "fechaTexto": "17 Jun 2026",
+                "titulo": "Unreal Engine 5.8 integra soporte MCP",
+                "resumen": "Unreal Engine 5.8 estrena soporte para el Model Context Protocol, conectando directamente con Claude y Gemini. Esto permite a los agentes automatizar la importación y disposición 3D mediante lenguaje natural.",
+                "imagen": "./archivos/3imagen18J.PNG",
+                "enlace": "https://x.com/unrealengine/status/2067251500900839735?s=46",
                 "visible": true
             }
         ]
@@ -434,4 +407,3 @@
         ]
     }
 ]
-```
