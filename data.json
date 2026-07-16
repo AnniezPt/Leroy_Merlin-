@@ -10,7 +10,7 @@
                 "fechaTexto": "15 Jul 2026",
                 "titulo": "OpenAI y Work Louder lanzan teclado Codex Micro",
                 "resumen": "OpenAI presentó Codex Micro, un periférico mecánico de 230 dólares diseñado junto a Work Louder para orquestar tareas de programación. Este dispositivo permite gestionar agentes de IA autónomos de Codex mediante atajos táctiles y telemetría visual.",
-                "imagen": "./archivos/1imagen16JL.jpeg",
+                "imagen": "./archivos/1imagen16JL.PNG",
                 "enlace": "https://x.com/openaidevs/status/2077529895052493038?s=63",
                 "visible": true
             },
@@ -20,7 +20,7 @@
                 "fechaTexto": "14 Jul 2026",
                 "titulo": "Anthropic lanza Claude for Teachers gratuito",
                 "resumen": "Anthropic habilitó el acceso gratuito a su avanzado modelo Opus 4.6 para profesores de escuelas públicas en Estados Unidos. La herramienta se integra con los currículos estatales para automatizar la planificación de clases y adaptar los materiales educativos.",
-                "imagen": "./archivos/2imagen16JL.jpeg",
+                "imagen": "./archivos/2imagen16JL.PNG",
                 "enlace": "https://x.com/claudeai/status/2077047278078931243?s=61",
                 "visible": true
             },
@@ -30,7 +30,7 @@
                 "fechaTexto": "15 Jul 2026",
                 "titulo": "Notion 3.6 integra agentes y servidor MCP",
                 "resumen": "Notion actualizó su plataforma permitiendo interactuar directamente con agentes como Claude y Cursor dentro de los tableros compartidos. La actualización incluye Notion Workers y un servidor MCP alojado para sincronizar bases de datos empresariales en tiempo real.",
-                "imagen": "./archivos/3imagen16JL.jpeg",
+                "imagen": "./archivos/3imagen16JL.PNG",
                 "enlace": "https://x.com/notionhq/status/2077459022085870043?s=61",
                 "visible": true
             }
@@ -245,16 +245,6 @@
                 "imagen": "./archivos/2imagen18J.PNG",
                 "enlace": "https://x.com/claudeai/status/2067325887909884315?s=46",
                 "visible": true
-            },
-            {
-                "categoria": "Software y Herramientas",
-                "fechaISO": "2026-06-17",
-                "fechaTexto": "17 Jun 2026",
-                "titulo": "Unreal Engine 5.8 integra soporte MCP",
-                "resumen": "Unreal Engine 5.8 estrena soporte para el Model Context Protocol, conectando directamente con Claude y Gemini. Esto permite a los agentes automatizar la importación y disposición 3D mediante lenguaje natural.",
-                "imagen": "./archivos/3imagen18J.PNG",
-                "enlace": "https://x.com/unrealengine/status/2067251500900839735?s=46",
-                "visible": true
             }
         ]
     },
@@ -444,3 +434,4 @@
         ]
     }
 ]
+```
