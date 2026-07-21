@@ -10,7 +10,7 @@
                 "fechaISO": "2026-07-20",
                 "fechaTexto": "20 Jul 2026",
                 "titulo": "Google integra Gemini Omni en Vids para generar vídeos multimodales",
-                "resumen": "Gemini Omni transforma Google Vids permitiendo crear y editar vídeos desde texto o bocetos al instante. Incluye avatares personales multilingües y marcas de agua SynthID para garantizar la autenticidad. Su enfoque conversacional optimiza drásticamente la producción corporativa.",
+                "resumen": "Gemini Omni transforma Google Vids permitiendo crear y editar vídeos desde texto o bocetos al instante. Incluye avatares personales multilingües y marcas de agua SynthID para garantizar la autenticidad.",
                 "imagen": "./archivos/1imagen21JL.PNG",
                 "enlace": "https://x.com/googleworkspace/status/2079287805696512460?s=46",
                 "visible": true
@@ -20,7 +20,7 @@
                 "fechaISO": "2026-07-20",
                 "fechaTexto": "20 Jul 2026",
                 "titulo": "xAI lanza Grok 4.5 en Excel para competir con Microsoft Copilot",
-                "resumen": "Este nuevo complemento gratuito permite usar el razonamiento agéntico de Grok 4.5 directamente en hojas de cálculo. Los usuarios pueden generar fórmulas, crear gráficos y modelar escenarios financieros usando lenguaje natural. Todo el análisis ocurre sin necesidad de salir del entorno nativo de Microsoft.",
+                "resumen": "Este nuevo complemento gratuito permite usar el razonamiento agéntico de Grok 4.5 directamente en hojas de cálculo. Los usuarios pueden generar fórmulas, crear gráficos y modelar escenarios financieros usando lenguaje natural.",
                 "imagen": "./archivos/2imagen21JL.PNG",
                 "enlace": "https://x.com/grok/status/2079233333893185876?s=46",
                 "visible": true
@@ -30,7 +30,7 @@
                 "fechaISO": "2026-07-20",
                 "fechaTexto": "20 Jul 2026",
                 "titulo": "GPT-5.6 Sol y Kimi K3 redefinen la frontera de los agentes autónomos",
-                "resumen": "OpenAI presentó GPT-5.6 Sol, un modelo altamente eficiente que destaca en ciberseguridad y orquestación multi-agente. Simultáneamente, Moonshot AI lanzó Kimi K3, un modelo abierto de 2.8 billones de parámetros. K3 domina la codificación frontend compitiendo en la frontera con unos costes operativos mucho menores.",
+                "resumen": "OpenAI presentó GPT-5.6 Sol, un modelo altamente eficiente que destaca en ciberseguridad y orquestación multi-agente. Simultáneamente, Moonshot AI lanzó Kimi K3, un modelo abierto de 2.8 billones de parámetros.",
                 "imagen": "./archivos/3imagen21JL.PNG",
                 "enlace": "https://youtu.be/tLiuzDpIRlc?is=cForKQmqgodwn6kH",
                 "visible": true
