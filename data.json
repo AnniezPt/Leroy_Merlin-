@@ -9,18 +9,18 @@
                 "categoria": "IA (Productividad y Espacios de Trabajo)",
                 "fechaISO": "2026-07-20",
                 "fechaTexto": "20 Jul 2026",
-                "titulo": "Google integra Gemini Omni en Vids para generar vÃ­deos multimodales",
-                "resumen": "Gemini Omni transforma Google Vids permitiendo crear y editar vÃ­deos desde texto o bocetos al instante. Incluye avatares personales multilingÃ¼es y marcas de agua SynthID para garantizar la autenticidad. Su enfoque conversacional optimiza drÃ¡sticamente la producciÃ³n corporativa.",
+                "titulo": "Google integra Gemini Omni en Vids para generar vídeos multimodales",
+                "resumen": "Gemini Omni transforma Google Vids permitiendo crear y editar vídeos desde texto o bocetos al instante. Incluye avatares personales multilingües y marcas de agua SynthID para garantizar la autenticidad. Su enfoque conversacional optimiza drásticamente la producción corporativa.",
                 "imagen": "./archivos/1imagen21JL.PNG",
                 "enlace": "https://x.com/googleworkspace/status/2079287805696512460?s=46",
                 "visible": true
             },
             {
-                "categoria": "IA (Productividad y AnÃ¡lisis de Datos)",
+                "categoria": "IA (Productividad y Análisis de Datos)",
                 "fechaISO": "2026-07-20",
                 "fechaTexto": "20 Jul 2026",
                 "titulo": "xAI lanza Grok 4.5 en Excel para competir con Microsoft Copilot",
-                "resumen": "Este nuevo complemento gratuito permite usar el razonamiento agÃ©ntico de Grok 4.5 directamente en hojas de cÃ¡lculo. Los usuarios pueden generar fÃ³rmulas, crear grÃ¡ficos y modelar escenarios financieros usando lenguaje natural. Todo el anÃ¡lisis ocurre sin necesidad de salir del entorno nativo de Microsoft.",
+                "resumen": "Este nuevo complemento gratuito permite usar el razonamiento agéntico de Grok 4.5 directamente en hojas de cálculo. Los usuarios pueden generar fórmulas, crear gráficos y modelar escenarios financieros usando lenguaje natural. Todo el análisis ocurre sin necesidad de salir del entorno nativo de Microsoft.",
                 "imagen": "./archivos/2imagen21JL.PNG",
                 "enlace": "https://x.com/grok/status/2079233333893185876?s=46",
                 "visible": true
@@ -29,8 +29,8 @@
                 "categoria": "IA (Modelos Fundacionales y Agentes)",
                 "fechaISO": "2026-07-20",
                 "fechaTexto": "20 Jul 2026",
-                "titulo": "GPT-5.6 Sol y Kimi K3 redefinen la frontera de los agentes autÃ³nomos",
-                "resumen": "OpenAI presentÃ³ GPT-5.6 Sol, un modelo altamente eficiente que destaca en ciberseguridad y orquestaciÃ³n multi-agente. SimultÃ¡neamente, Moonshot AI lanzÃ³ Kimi K3, un modelo abierto de 2.8 billones de parÃ¡metros. K3 domina la codificaciÃ³n frontend compitiendo en la frontera con unos costes operativos mucho menores.",
+                "titulo": "GPT-5.6 Sol y Kimi K3 redefinen la frontera de los agentes autónomos",
+                "resumen": "OpenAI presentó GPT-5.6 Sol, un modelo altamente eficiente que destaca en ciberseguridad y orquestación multi-agente. Simultáneamente, Moonshot AI lanzó Kimi K3, un modelo abierto de 2.8 billones de parámetros. K3 domina la codificación frontend compitiendo en la frontera con unos costes operativos mucho menores.",
                 "imagen": "./archivos/3imagen21JL.PNG",
                 "enlace": "https://youtu.be/tLiuzDpIRlc?is=cForKQmqgodwn6kH",
                 "visible": true
@@ -47,17 +47,17 @@
                 "fechaISO": "2026-07-15",
                 "fechaTexto": "15 Jul 2026",
                 "titulo": "OpenAI y Work Louder lanzan teclado Codex Micro",
-                "resumen": "OpenAI presentÃ³ Codex Micro, un perifÃ©rico mecÃ¡nico de 230 dÃ³lares diseÃ±ado junto a Work Louder para orquestar tareas de programaciÃ³n. Este dispositivo permite gestionar agentes de IA autÃ³nomos de Codex mediante atajos tÃ¡ctiles y telemetrÃ­a visual.",
+                "resumen": "OpenAI presentó Codex Micro, un periférico mecánico de 230 dólares diseñado junto a Work Louder para orquestar tareas de programación. Este dispositivo permite gestionar agentes de IA autónomos de Codex mediante atajos táctiles y telemetría visual.",
                 "imagen": "./archivos/1imagen16JL.PNG",
                 "enlace": "https://x.com/openaidevs/status/2077529895052493038?s=63",
                 "visible": true
             },
             {
-                "categoria": "IA (EducaciÃ³n e Impacto Social)",
+                "categoria": "IA (Educación e Impacto Social)",
                 "fechaISO": "2026-07-14",
                 "fechaTexto": "14 Jul 2026",
                 "titulo": "Anthropic lanza Claude for Teachers gratuito",
-                "resumen": "Anthropic habilitÃ³ el acceso gratuito a su avanzado modelo Opus 4.6 para profesores de escuelas pÃºblicas en Estados Unidos. La herramienta se integra con los currÃ­culos estatales para automatizar la planificaciÃ³n de clases y adaptar los materiales educativos.",
+                "resumen": "Anthropic habilitó el acceso gratuito a su avanzado modelo Opus 4.6 para profesores de escuelas públicas en Estados Unidos. La herramienta se integra con los currículos estatales para automatizar la planificación de clases y adaptar los materiales educativos.",
                 "imagen": "./archivos/2imagen16JL.PNG",
                 "enlace": "https://x.com/claudeai/status/2077047278078931243?s=61",
                 "visible": true
@@ -67,7 +67,7 @@
                 "fechaISO": "2026-07-15",
                 "fechaTexto": "15 Jul 2026",
                 "titulo": "Notion 3.6 integra agentes y servidor MCP",
-                "resumen": "Notion actualizÃ³ su plataforma permitiendo interactuar directamente con agentes como Claude y Cursor dentro de los tableros compartidos. La actualizaciÃ³n incluye Notion Workers y un servidor MCP alojado para sincronizar bases de datos empresariales en tiempo real.",
+                "resumen": "Notion actualizó su plataforma permitiendo interactuar directamente con agentes como Claude y Cursor dentro de los tableros compartidos. La actualización incluye Notion Workers y un servidor MCP alojado para sincronizar bases de datos empresariales en tiempo real.",
                 "imagen": "./archivos/3imagen16JL.PNG",
                 "enlace": "https://x.com/notionhq/status/2077459022085870043?s=61",
                 "visible": true
@@ -84,7 +84,7 @@
                 "fechaISO": "2026-07-09",
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "OpenAI lanza ChatGPT Work con Codex y GPT-5.6",
-                "resumen": "OpenAI presenta ChatGPT Work, un agente autÃ³nomo para escritorio, web y mÃ³vil que combina las capacidades de GPT-5.6 y Codex. Esta herramienta permite ejecutar proyectos largos y editar cÃ³digo directamente en lÃ­nea sin tener que abandonar la aplicaciÃ³n.",
+                "resumen": "OpenAI presenta ChatGPT Work, un agente autónomo para escritorio, web y móvil que combina las capacidades de GPT-5.6 y Codex. Esta herramienta permite ejecutar proyectos largos y editar código directamente en línea sin tener que abandonar la aplicación.",
                 "imagen": "./archivos/1imagen10JL.PNG",
                 "enlace": "https://x.com/openai/status/2075274271845404744",
                 "visible": true
@@ -93,8 +93,8 @@
                 "categoria": "IA (Modelos de Voz)",
                 "fechaISO": "2026-07-09",
                 "fechaTexto": "09 Jul 2026",
-                "titulo": "OpenAI introduce GPT-Live con dÃºplex completo",
-                "resumen": "GPT-Live habilita conversaciones naturales donde el usuario y la IA pueden hablar y escuchar de manera simultÃ¡nea. El sistema maneja interrupciones sin perder el contexto y transfiere tareas complejas a modelos mÃ¡s pesados en segundo plano.",
+                "titulo": "OpenAI introduce GPT-Live con dúplex completo",
+                "resumen": "GPT-Live habilita conversaciones naturales donde el usuario y la IA pueden hablar y escuchar de manera simultánea. El sistema maneja interrupciones sin perder el contexto y transfiere tareas complejas a modelos más pesados en segundo plano.",
                 "imagen": "./archivos/2imagen10JL.PNG",
                 "enlace": "https://x.com/openai/status/2074907025537224840",
                 "visible": true
@@ -104,7 +104,7 @@
                 "fechaISO": "2026-07-09",
                 "fechaTexto": "09 Jul 2026",
                 "titulo": "Notion presenta Ship OS con agentes de IA",
-                "resumen": "Ship OS transforma a Notion en un espacio de trabajo unificado donde agentes autÃ³nomos colaboran durante todo el ciclo de vida del software. La plataforma centraliza y automatiza tareas desde la retroalimentaciÃ³n del cliente hasta la gestiÃ³n de despliegues.",
+                "resumen": "Ship OS transforma a Notion en un espacio de trabajo unificado donde agentes autónomos colaboran durante todo el ciclo de vida del software. La plataforma centraliza y automatiza tareas desde la retroalimentación del cliente hasta la gestión de despliegues.",
                 "imagen": "./archivos/3imagen10JL.PNG",
                 "enlace": "https://x.com/notionhq/status/2075249002208227743",
                 "visible": true
@@ -121,7 +121,7 @@
                 "fechaISO": "2026-07-05",
                 "fechaTexto": "05 Jul 2026",
                 "titulo": "RegalosDigitals democratiza aprender a programar",
-                "resumen": "La cuenta \"RegalosDigitals\" en X distribuye recursos gratuitos para aprender inglÃ©s y fundamentos de programaciÃ³n. Estas guÃ­as buscan eliminar barreras educativas para integrar a cualquier usuario en el mercado laboral tecnolÃ³gico.",
+                "resumen": "La cuenta \"RegalosDigitals\" en X distribuye recursos gratuitos para aprender inglés y fundamentos de programación. Estas guías buscan eliminar barreras educativas para integrar a cualquier usuario en el mercado laboral tecnológico.",
                 "imagen": "./archivos/1imagen6JL.PNG",
                 "enlace": "https://x.com/regalosdigitals/status/2073840711867240563",
                 "visible": true
@@ -131,7 +131,7 @@
                 "fechaISO": "2026-06-22",
                 "fechaTexto": "22 Jun 2026",
                 "titulo": "DotCSV analiza el modelo Nano Banana Pro",
-                "resumen": "El experto tecnolÃ³gico DotCSV expone los avances de Nano Banana Pro y su integraciÃ³n con el ecosistema Gemini 3. El modelo permite alterar la iluminaciÃ³n fotogrÃ¡fica, realizar transiciones ambientales y resolver problemas matemÃ¡ticos.",
+                "resumen": "El experto tecnológico DotCSV expone los avances de Nano Banana Pro y su integración con el ecosistema Gemini 3. El modelo permite alterar la iluminación fotográfica, realizar transiciones ambientales y resolver problemas matemáticos.",
                 "imagen": "./archivos/2imagen6JL.PNG",
                 "enlace": "https://x.com/DotCSV/status/2068991452793704761",
                 "visible": true
@@ -140,8 +140,8 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-07-06",
                 "fechaTexto": "06 Jul 2026",
-                "titulo": "MeiGen.ai lanza galerÃ­a de prompts visuales",
-                "resumen": "MeiGen.ai es una galerÃ­a gratuita de instrucciones pre-diseÃ±adas para mÃºltiples motores de inteligencia artificial. Permite a los usuarios generar estÃ©ticas complejas con un solo clic en modelos como Nano Banana o Midjourney.",
+                "titulo": "MeiGen.ai lanza galería de prompts visuales",
+                "resumen": "MeiGen.ai es una galería gratuita de instrucciones pre-diseñadas para múltiples motores de inteligencia artificial. Permite a los usuarios generar estéticas complejas con un solo clic en modelos como Nano Banana o Midjourney.",
                 "imagen": "./archivos/3imagen6JL.PNG",
                 "enlace": "https://www.meigen.ai/",
                 "visible": true
@@ -158,17 +158,17 @@
                 "fechaISO": "2026-07-01",
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "Google lanza Nano Banana 2 Lite y Omni Flash",
-                "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imÃ¡genes en cuatro segundos, junto a Gemini Omni Flash para la ediciÃ³n de vÃ­deo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste creativo.",
+                "resumen": "Google presenta Nano Banana 2 Lite, un modelo que genera imágenes en cuatro segundos, junto a Gemini Omni Flash para la edición de vídeo conversacional. Estas herramientas optimizan radicalmente la velocidad y el coste creativo.",
                 "imagen": "./archivos/1imagen1JN.png",
                 "enlace": "https://x.com/googleaistudio/status/2071989946827624801?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
             },
             {
-                "categoria": "Negocios y RegulaciÃ³n",
+                "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-07-01",
                 "fechaTexto": "01 Jul 2026",
                 "titulo": "Anthropic restaura Fable 5 a nivel global",
-                "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias se derivarÃ¡n forzosamente al modelo Opus 4.8.",
+                "resumen": "Anthropic redespliega Fable 5 integrando nuevos clasificadores de ciberseguridad tras su bloqueo gubernamental. Debido a la extrema sensibilidad de esta seguridad, las tareas rutinarias se derivarán forzosamente al modelo Opus 4.8.",
                 "imagen": "./archivos/2imagen1JN.png",
                 "enlace": "https://x.com/anthropicai/status/2072163884430229756?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
@@ -177,8 +177,8 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-07-01",
                 "fechaTexto": "01 Jul 2026",
-                "titulo": "NotebookLM genera resÃºmenes en vÃ­deo vertical",
-                "resumen": "NotebookLM lanza la funciÃ³n \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vÃ­deos verticales educativos de 60 segundos. Esta caracterÃ­stica estÃ¡ disponible para suscriptores de Google AI Ultra y Pro.",
+                "titulo": "NotebookLM genera resúmenes en vídeo vertical",
+                "resumen": "NotebookLM lanza la función \"Short Video Overviews\", capaz de transformar documentos y fuentes complejas en vídeos verticales educativos de 60 segundos. Esta característica está disponible para suscriptores de Google AI Ultra y Pro.",
                 "imagen": "./archivos/3imagen1JN.png",
                 "enlace": "https://x.com/notebooklm/status/2071987494799716626?s=46&t=JtW6SMyhrGh9RSoVtlgnEA",
                 "visible": true
@@ -191,11 +191,11 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-06-24",
                 "fechaTexto": "24 Jun 2026",
-                "titulo": "OpenAI y Broadcom presentan el chip JalapeÃ±o",
-                "resumen": "OpenAI ha presentado JalapeÃ±o, su primer procesador personalizado desarrollado en tan solo nueve meses para optimizar el rendimiento y coste energÃ©tico de la IA. Este chip mitiga los cuellos de botella de memoria y comenzarÃ¡ a desplegarse a escala de gigavatios a finales de 2026.",
+                "titulo": "OpenAI y Broadcom presentan el chip Jalapeño",
+                "resumen": "OpenAI ha presentado Jalapeño, su primer procesador personalizado desarrollado en tan solo nueve meses para optimizar el rendimiento y coste energético de la IA. Este chip mitiga los cuellos de botella de memoria y comenzará a desplegarse a escala de gigavatios a finales de 2026.",
                 "imagen": "./archivos/1imagen25J.PNG",
                 "enlace": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
                 "visible": true
@@ -205,7 +205,7 @@
                 "fechaISO": "2026-06-23",
                 "fechaTexto": "23 Jun 2026",
                 "titulo": "Anthropic lanza el agente colaborativo Claude Tag",
-                "resumen": "Claude Tag permite a los equipos delegar tareas a un agente de inteligencia artificial con identidad compartida que asimila de forma continua la memoria organizativa del canal. Esta herramienta opera asÃ­ncronamente en segundo plano, ejecutando acciones de forma totalmente proactiva.",
+                "resumen": "Claude Tag permite a los equipos delegar tareas a un agente de inteligencia artificial con identidad compartida que asimila de forma continua la memoria organizativa del canal. Esta herramienta opera asíncronamente en segundo plano, ejecutando acciones de forma totalmente proactiva.",
                 "imagen": "./archivos/2imagen25J.PNG",
                 "enlace": "https://x.com/claudeai/status/2069468693017268244?s=46",
                 "visible": true
@@ -215,7 +215,7 @@
                 "fechaISO": "2026-06-24",
                 "fechaTexto": "24 Jun 2026",
                 "titulo": "Notion integra agentes de IA en su plataforma",
-                "resumen": "Notion ha lanzado una nueva API que permite asignar tareas de anÃ¡lisis de datos o programaciÃ³n a los agentes de IA directamente desde tableros compartidos. Estos agentes acceden en tiempo real al contexto de la empresa para ejecutar cÃ³digo de manera autÃ³noma.",
+                "resumen": "Notion ha lanzado una nueva API que permite asignar tareas de análisis de datos o programación a los agentes de IA directamente desde tableros compartidos. Estos agentes acceden en tiempo real al contexto de la empresa para ejecutar código de manera autónoma.",
                 "imagen": "./archivos/3imagen25J.PNG",
                 "enlace": "https://x.com/notionhq/status/2069816393395012009?s=46",
                 "visible": true
@@ -228,11 +228,11 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-06-18",
                 "fechaTexto": "18 Jun 2026",
-                "titulo": "Midjourney presenta escÃ¡ner ultrasÃ³nico 3D",
-                "resumen": "Midjourney y Butterfly Network revelaron el \"Ultrasonic CT\", un escÃ¡ner que genera reconstrucciones anatÃ³micas 3D en 60 segundos. El prototipo utiliza ondas acÃºsticas de alta frecuencia y agua como acoplador, eludiendo la radiaciÃ³n de la tomografÃ­a tradicional.",
+                "titulo": "Midjourney presenta escáner ultrasónico 3D",
+                "resumen": "Midjourney y Butterfly Network revelaron el \"Ultrasonic CT\", un escáner que genera reconstrucciones anatómicas 3D en 60 segundos. El prototipo utiliza ondas acústicas de alta frecuencia y agua como acoplador, eludiendo la radiación de la tomografía tradicional.",
                 "imagen": "./archivos/1imagen23J.PNG",
                 "enlace": "https://x.com/midjourney/status/2067421950314688759?s=46",
                 "visible": true
@@ -242,7 +242,7 @@
                 "fechaISO": "2026-06-22",
                 "fechaTexto": "22 Jun 2026",
                 "titulo": "Sakana AI lanza arquitectura multiagente Fugu",
-                "resumen": "Sakana AI ha lanzado Fugu y Fugu Ultra, un sistema que coordina dinÃ¡micamente un grupo de modelos especialistas bajo una Ãºnica API. Este mÃ©todo de inteligencia colectiva asegura la continuidad empresarial frente a restricciones geopolÃ­ticas de exportaciÃ³n.",
+                "resumen": "Sakana AI ha lanzado Fugu y Fugu Ultra, un sistema que coordina dinámicamente un grupo de modelos especialistas bajo una única API. Este método de inteligencia colectiva asegura la continuidad empresarial frente a restricciones geopolíticas de exportación.",
                 "imagen": "./archivos/2imagen23J.PNG",
                 "enlace": "https://x.com/sakanaailabs/status/2068861630327443966?s=46",
                 "visible": true
@@ -252,7 +252,7 @@
                 "fechaISO": "2026-06-23",
                 "fechaTexto": "23 Jun 2026",
                 "titulo": "eComrads integra protocolo MCP en anuncios",
-                "resumen": "La plataforma de marketing integrÃ³ flujos basados en el protocolo MCP y herramientas de terminal en su suite de anuncios. Esto permite automatizar y acelerar la producciÃ³n masiva de variaciones de anuncios directamente desde la lÃ­nea de comandos.",
+                "resumen": "La plataforma de marketing integró flujos basados en el protocolo MCP y herramientas de terminal en su suite de anuncios. Esto permite automatizar y acelerar la producción masiva de variaciones de anuncios directamente desde la línea de comandos.",
                 "imagen": "./archivos/3imagen23J.PNG",
                 "enlace": "https://x.com/ecomrads/status/2069195845371916290?s=46",
                 "visible": true
@@ -265,11 +265,11 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "Negocios y RegulaciÃ³n",
+                "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-06-11",
                 "fechaTexto": "11 Jun 2026",
                 "titulo": "EE. UU. restringe acceso a Claude Fable 5",
-                "resumen": "El gobierno estadounidense prohÃ­be el acceso global a los modelos Fable 5 y Mythos 5 a ciudadanos extranjeros. Anthropic apagÃ³ los servidores temporalmente y redirigiÃ³ el trÃ¡fico hacia Claude Opus 4.8.",
+                "resumen": "El gobierno estadounidense prohíbe el acceso global a los modelos Fable 5 y Mythos 5 a ciudadanos extranjeros. Anthropic apagó los servidores temporalmente y redirigió el tráfico hacia Claude Opus 4.8.",
                 "imagen": "./archivos/1imagen18J.PNG",
                 "enlace": "https://x.com/anthropicai/status/2065597531644743999?s=46",
                 "visible": true
@@ -278,8 +278,8 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-06-17",
                 "fechaTexto": "17 Jun 2026",
-                "titulo": "SincronizaciÃ³n entre Claude Design y Code",
-                "resumen": "Anthropic implementa sincronizaciÃ³n bidireccional entre diseÃ±o y cÃ³digo, optimizando el consumo de tokens. Permite exportar a PDF, HTML o Canva, e incluye protecciÃ³n de identidad visual corporativa.",
+                "titulo": "Sincronización entre Claude Design y Code",
+                "resumen": "Anthropic implementa sincronización bidireccional entre diseño y código, optimizando el consumo de tokens. Permite exportar a PDF, HTML o Canva, e incluye protección de identidad visual corporativa.",
                 "imagen": "./archivos/2imagen18J.PNG",
                 "enlace": "https://x.com/claudeai/status/2067325887909884315?s=46",
                 "visible": true
@@ -296,27 +296,27 @@
                 "fechaISO": "2026-06-09",
                 "fechaTexto": "09 Jun 2026",
                 "titulo": "Anthropic lanza Claude Fable 5",
-                "resumen": "Anthropic ha presentado Claude Fable 5, un modelo de inteligencia artificial seguro para uso general. Sus capacidades superan a cualquier modelo anterior de la compaÃ±Ã­a, destacando especialmente en la resoluciÃ³n de problemas complejos.",
+                "resumen": "Anthropic ha presentado Claude Fable 5, un modelo de inteligencia artificial seguro para uso general. Sus capacidades superan a cualquier modelo anterior de la compañía, destacando especialmente en la resolución de problemas complejos.",
                 "imagen": "./archivos/1imagen11J.PNG",
                 "enlace": "https://x.com/claudeai/status/2064394146916229443?s=46",
                 "visible": true
             },
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-06-08",
                 "fechaTexto": "08 Jun 2026",
-                "titulo": "SpaceX presenta el satÃ©lite AI1",
-                "resumen": "SpaceX ha revelado oficialmente AI1, un satÃ©lite pionero que integra un nÃºcleo de inteligencia artificial. El dispositivo destaca por contar con una enorme capacidad de carga Ãºtil de computaciÃ³n de hasta 150.000 vatios en Ã³rbita.",
+                "titulo": "SpaceX presenta el satélite AI1",
+                "resumen": "SpaceX ha revelado oficialmente AI1, un satélite pionero que integra un núcleo de inteligencia artificial. El dispositivo destaca por contar con una enorme capacidad de carga útil de computación de hasta 150.000 vatios en órbita.",
                 "imagen": "./archivos/2imagen11J.PNG",
                 "enlace": "https://x.com/polymarket/status/2064118435781472335?s=46",
                 "visible": true
             },
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-06-10",
                 "fechaTexto": "10 Jun 2026",
-                "titulo": "NTU crea microrobot quirÃºrgico",
-                "resumen": "CientÃ­ficos han creado un robot diminuto capaz de realizar intervenciones como cortar tejido, administrar fÃ¡rmacos y generar calor. EstÃ¡ diseÃ±ado para moverse por superficies blandas e irregulares del cuerpo, promoviendo cirugÃ­as menos invasivas.",
+                "titulo": "NTU crea microrobot quirúrgico",
+                "resumen": "Científicos han creado un robot diminuto capaz de realizar intervenciones como cortar tejido, administrar fármacos y generar calor. Está diseñado para moverse por superficies blandas e irregulares del cuerpo, promoviendo cirugías menos invasivas.",
                 "imagen": "./archivos/3imagen11J.PNG",
                 "enlace": "https://x.com/wevolverapp/status/2064637345584877692?s=46",
                 "visible": true
@@ -329,11 +329,11 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "Negocios y RegulaciÃ³n",
+                "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-06-05",
                 "fechaTexto": "05 Jun 2026",
                 "titulo": "Anthropic alerta sobre automejora de la IA",
-                "resumen": "Un informe reciente de Anthropic advierte que la IA pronto podrÃ¡ desarrollar y mejorar sus propios sistemas sin intervenciÃ³n humana. La compaÃ±Ã­a alerta sobre el riesgo de perder el control y propone un acuerdo global para ralentizar o pausar estos avances.",
+                "resumen": "Un informe reciente de Anthropic advierte que la IA pronto podrá desarrollar y mejorar sus propios sistemas sin intervención humana. La compañía alerta sobre el riesgo de perder el control y propone un acuerdo global para ralentizar o pausar estos avances.",
                 "imagen": "./archivos/1imagen9J.PNG",
                 "enlace": "https://x.com/anthropicai/status/2062568862479208923?s=46",
                 "visible": true
@@ -343,17 +343,17 @@
                 "fechaISO": "2026-06-08",
                 "fechaTexto": "08 Jun 2026",
                 "titulo": "Google actualiza NotebookLM con Gemini 3.5",
-                "resumen": "Google ha potenciado NotebookLM con un razonamiento ampliado, ejecuciÃ³n de cÃ³digo y descubrimiento de fuentes. La herramienta ahora permite estructurar investigaciones complejas y descargar reportes, grÃ¡ficos u hojas de cÃ¡lculo generados por IA.",
+                "resumen": "Google ha potenciado NotebookLM con un razonamiento ampliado, ejecución de código y descubrimiento de fuentes. La herramienta ahora permite estructurar investigaciones complejas y descargar reportes, gráficos u hojas de cálculo generados por IA.",
                 "imagen": "./archivos/2imagen9J.PNG",
                 "enlace": "https://x.com/notebooklm/status/2064016460964585549?s=46",
                 "visible": true
             },
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-06-09",
                 "fechaTexto": "09 Jun 2026",
-                "titulo": "Antioch Robotics financia simulaciÃ³n fÃ­sica",
-                "resumen": "La startup ha asegurado capital para expandir su entorno de simulaciÃ³n robÃ³tica, diseÃ±ado para reducir drÃ¡sticamente los altos costos de las pruebas de hardware reales. Su meta es consolidarse como la infraestructura principal y el \"Cursor para la IA fÃ­sica\".",
+                "titulo": "Antioch Robotics financia simulación física",
+                "resumen": "La startup ha asegurado capital para expandir su entorno de simulación robótica, diseñado para reducir drásticamente los altos costos de las pruebas de hardware reales. Su meta es consolidarse como la infraestructura principal y el \"Cursor para la IA física\".",
                 "imagen": "./archivos/3imagen9J.PNG",
                 "enlace": "https://x.com/antiochrobotics/status/2064331948290458021?s=46",
                 "visible": true
@@ -370,7 +370,7 @@
                 "fechaISO": "2026-06-03",
                 "fechaTexto": "03 Jun 2026",
                 "titulo": "OpenAI optimiza Codex para empresas",
-                "resumen": "OpenAI presenta una versiÃ³n de Codex enfocada en competir con plataformas como Replit y Lovable. Facilita la creaciÃ³n rÃ¡pida de herramientas empresariales. Mejora la productividad de los equipos de desarrollo.",
+                "resumen": "OpenAI presenta una versión de Codex enfocada en competir con plataformas como Replit y Lovable. Facilita la creación rápida de herramientas empresariales. Mejora la productividad de los equipos de desarrollo.",
                 "imagen": "./archivos/1imagen4J.PNG",
                 "enlace": "https://x.com/openai/status/2061845949170045346?s=61",
                 "visible": true
@@ -380,7 +380,7 @@
                 "fechaISO": "2026-06-03",
                 "fechaTexto": "03 Jun 2026",
                 "titulo": "Sparseal integra IA en su editor 3D",
-                "resumen": "La aplicaciÃ³n incorpora funciones de IA generativa para agilizar flujos de trabajo en el texturizado. Permite a los diseÃ±adores crear materiales complejos directamente con prompts. Ideal para el desarrollo de retail inmersivo.",
+                "resumen": "La aplicación incorpora funciones de IA generativa para agilizar flujos de trabajo en el texturizado. Permite a los diseñadores crear materiales complejos directamente con prompts. Ideal para el desarrollo de retail inmersivo.",
                 "imagen": "./archivos/2imagen4J.PNG",
                 "enlace": "https://x.com/sparseal/status/2061834526255395294?s=61",
                 "visible": true
@@ -389,8 +389,8 @@
                 "categoria": "Estrategia Retail e IA",
                 "fechaISO": "2026-06-03",
                 "fechaTexto": "03 Jun 2026",
-                "titulo": "IA impulsa el anÃ¡lisis de datos satelitales",
-                "resumen": "Nuevos modelos de IA mejoran la predicciÃ³n de anomalÃ­as y la gestiÃ³n de redes espaciales. Esto optimiza la conectividad global y el seguimiento logÃ­stico en tiempo real. Fundamental para el control global de la cadena de suministro.",
+                "titulo": "IA impulsa el análisis de datos satelitales",
+                "resumen": "Nuevos modelos de IA mejoran la predicción de anomalías y la gestión de redes espaciales. Esto optimiza la conectividad global y el seguimiento logístico en tiempo real. Fundamental para el control global de la cadena de suministro.",
                 "imagen": "./archivos/3imagen4J.PNG",
                 "enlace": "https://x.com/spaceandtech_/status/2061815359930573021?s=61",
                 "visible": true
@@ -403,11 +403,11 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "Negocios y RegulaciÃ³n",
+                "categoria": "Negocios y Regulación",
                 "fechaISO": "2026-06-01",
                 "fechaTexto": "01 Jun 2026",
                 "titulo": "Anthropic prepara su salida a bolsa",
-                "resumen": "Anthropic ha iniciado formalmente el proceso para una Oferta PÃºblica Inicial (IPO) enviando su registro a la SEC de EE. UU. Este movimiento busca consolidar financieramente a la compaÃ±Ã­a frente a sus grandes competidores en el sector de la inteligencia artificial.",
+                "resumen": "Anthropic ha iniciado formalmente el proceso para una Oferta Pública Inicial (IPO) enviando su registro a la SEC de EE. UU. Este movimiento busca consolidar financieramente a la compañía frente a sus grandes competidores en el sector de la inteligencia artificial.",
                 "imagen": "./archivos/1imagen2J.PNG",
                 "enlace": "https://x.com/anthropicai/status/2061478052257841495?s=46",
                 "visible": true
@@ -416,8 +416,8 @@
                 "categoria": "Modelos de IA",
                 "fechaISO": "2026-05-28",
                 "fechaTexto": "28 May 2026",
-                "titulo": "Claude Opus 4.8 integra agentes mÃºltiples",
-                "resumen": "La actualizaciÃ³n introduce el modelo de alto rendimiento Claude Opus 4.8 equipado con \"flujos de trabajo dinÃ¡micos\". Esto permite que mÃºltiples agentes de IA operen y se coordinen en segundo plano de manera autÃ³noma para resolver tareas de gran complejidad.",
+                "titulo": "Claude Opus 4.8 integra agentes múltiples",
+                "resumen": "La actualización introduce el modelo de alto rendimiento Claude Opus 4.8 equipado con \"flujos de trabajo dinámicos\". Esto permite que múltiples agentes de IA operen y se coordinen en segundo plano de manera autónoma para resolver tareas de gran complejidad.",
                 "imagen": "./archivos/2imagen2J.PNG",
                 "enlace": "https://x.com/claudeai/status/2060042702150930686?s=46",
                 "visible": true
@@ -426,8 +426,8 @@
                 "categoria": "Software y Herramientas",
                 "fechaISO": "2026-05-20",
                 "fechaTexto": "20 May 2026",
-                "titulo": "Rodin AI acelera la generaciÃ³n 3D",
-                "resumen": "DeemosTech impulsa Rodin, una herramienta de IA capaz de transformar simples textos o imÃ¡genes en activos 3D listos para la producciÃ³n. Esta tecnologÃ­a con mallas retopologizadas reduce drÃ¡sticamente los tiempos de desarrollo para videojuegos, retail digital y realidad virtual.",
+                "titulo": "Rodin AI acelera la generación 3D",
+                "resumen": "DeemosTech impulsa Rodin, una herramienta de IA capaz de transformar simples textos o imágenes en activos 3D listos para la producción. Esta tecnología con mallas retopologizadas reduce drásticamente los tiempos de desarrollo para videojuegos, retail digital y realidad virtual.",
                 "imagen": "./archivos/3imagen2J.PNG",
                 "enlace": "https://x.com/deemostech/status/2056744290689441833?s=46",
                 "visible": true
@@ -440,21 +440,21 @@
         "visible": true,
         "noticias": [
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-05-18",
                 "fechaTexto": "18 May 2026",
                 "titulo": "NVIDIA entrega CPUs Vera para IA",
-                "resumen": "La corporaciÃ³n iniciÃ³ la entrega fÃ­sica de procesadores Vera a gigantes como Anthropic, OpenAI y Oracle, marcando un cambio sistÃ©mico hacia infraestructuras diseÃ±adas exclusivamente para procesar simulaciones de agentes autÃ³nomos.",
+                "resumen": "La corporación inició la entrega física de procesadores Vera a gigantes como Anthropic, OpenAI y Oracle, marcando un cambio sistémico hacia infraestructuras diseñadas exclusivamente para procesar simulaciones de agentes autónomos.",
                 "imagen": "./archivos/1imagen28X.PNG",
                 "enlace": "https://www.pcmag.com/news/nvidia-exec-hand-delivers-first-vera-cpu-systems-to-ai-heavy-hitters",
                 "visible": true
             },
             {
-                "categoria": "RobÃ³tica y Hardware",
+                "categoria": "Robótica y Hardware",
                 "fechaISO": "2026-05-26",
                 "fechaTexto": "26 May 2026",
                 "titulo": "Figure AI pacta con Catalyst Brands",
-                "resumen": "Figure desplegarÃ¡ robots humanoides Figure 03 en el centro logÃ­stico de Nevada para automatizar tareas fÃ­sicas repetitivas y exigentes de la cadena de suministro, optimizando asÃ­ la fuerza laboral.",
+                "resumen": "Figure desplegará robots humanoides Figure 03 en el centro logístico de Nevada para automatizar tareas físicas repetitivas y exigentes de la cadena de suministro, optimizando así la fuerza laboral.",
                 "imagen": "./archivos/2imagen28X.PNG",
                 "enlace": "https://x.com/figure_robot/status/2059350969700491632?s=46",
                 "visible": true
@@ -464,7 +464,7 @@
                 "fechaISO": "2026-05-08",
                 "fechaTexto": "08 May 2026",
                 "titulo": "Genspark integra GPT-Realtime-2",
-                "resumen": "El asistente autÃ³nomo \"Call for Me\" ahora ejecuta llamadas telefÃ³nicas y flujos de escritorio con mayor precisiÃ³n, aumentando la efectividad conversacional un 26% sin requerir intervenciÃ³n humana.",
+                "resumen": "El asistente autónomo \"Call for Me\" ahora ejecuta llamadas telefónicas y flujos de escritorio con mayor precisión, aumentando la efectividad conversacional un 26% sin requerir intervención humana.",
                 "imagen": "./archivos/3imagen28X.PNG",
                 "enlace": "https://x.com/genspark_ai/status/2059423824744268095?s=46",
                 "visible": true
