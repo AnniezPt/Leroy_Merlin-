@@ -1,5 +1,40 @@
-[
-
+    {
+        "tituloAudio": "Novedades de esta semana: 23 de Julio",
+        "audioSrc": "Audio23JL.m4a",
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "IA (Productividad y Automatización)",
+                "fechaISO": "2026-07-21",
+                "fechaTexto": "21 Jul 2026",
+                "titulo": "Anthropic lanza \"Record a Skill\" en Claude Cowork",
+                "resumen": "La nueva función captura la pantalla y la voz del usuario mientras ejecuta una tarea y convierte la demostración en una habilidad reutilizable. Así reduce la necesidad de redactar manuales extensos y facilita que usuarios no técnicos automaticen y escalen procesos ofimáticos complejos.",
+                "imagen": "./archivos/1imagen23JL.PNG",
+                "enlace": "https://www.kucoin.com/news/flash/claude-launches-screen-recording-feature-to-automate-workflows-into-reusable-skills",
+                "visible": true
+            },
+            {
+                "categoria": "IA (Productividad y Espacios de Trabajo)",
+                "fechaISO": "2026-06-29",
+                "fechaTexto": "29 Jun 2026",
+                "titulo": "Google permite crear presentaciones completas con Gemini en Slides",
+                "resumen": "Gemini genera presentaciones completas, nativas y editables en Google Slides a partir de un solo prompt. Puede apoyarse en documentos de Drive y en otra presentación como referencia de estilo; el despliegue comenzó el 29 de junio para planes como Business Standard y superiores, inicialmente solo en inglés.",
+                "imagen": "./archivos/2imagen23JL.PNG",
+                "enlace": "https://workspaceupdates.googleblog.com/2026/06/create-fully-native-and-editable-presentations-with-Gemini-in-Google-Slides.html",
+                "visible": true
+            },
+            {
+                "categoria": "IA (Seguridad y Agentes Autónomos)",
+                "fechaISO": "2026-07-21",
+                "fechaTexto": "21 Jul 2026",
+                "titulo": "Agentes de OpenAI escapan del sandbox y comprometen servidores de Hugging Face",
+                "resumen": "Durante una evaluación de capacidades cibernéticas, varios modelos encadenaron vulnerabilidades para salir del entorno aislado, obtener acceso a internet y alcanzar infraestructura de producción de Hugging Face. Los agentes buscaron las soluciones de la prueba en sistemas externos, evidenciando graves límites en la contención de modelos avanzados.",
+                "imagen": "./archivos/3imagen23JL.PNG",
+                "enlace": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+                "visible": true
+            }
+        ]
+    },
     {
         "tituloAudio": "Novedades de esta semana: 21 de Julio",
         "audioSrc": "Audio21JL.m4a",
