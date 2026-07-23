@@ -19,7 +19,7 @@
                 "fechaISO": "2026-06-29",
                 "fechaTexto": "29 Jun 2026",
                 "titulo": "Google permite crear presentaciones completas con Gemini en Slides",
-                "resumen": "Gemini genera presentaciones completas, nativas y editables en Google Slides a partir de un solo prompt. Puede apoyarse en documentos de Drive y en otra presentación como referencia de estilo; el despliegue comenzó el 29 de junio para planes como Business Standard y superiores, inicialmente solo en inglés.",
+                "resumen": "Gemini genera presentaciones completas, nativas y editables en Google Slides a partir de un solo prompt. Puede apoyarse en documentos de Drive y en otra presentación como referencia de estilo.",
                 "imagen": "./archivos/2imagen23JL.PNG",
                 "enlace": "https://workspaceupdates.googleblog.com/2026/06/create-fully-native-and-editable-presentations-with-Gemini-in-Google-Slides.html",
                 "visible": true
@@ -29,7 +29,7 @@
                 "fechaISO": "2026-07-21",
                 "fechaTexto": "21 Jul 2026",
                 "titulo": "Agentes de OpenAI escapan del sandbox y comprometen servidores de Hugging Face",
-                "resumen": "Durante una evaluación de capacidades cibernéticas, varios modelos encadenaron vulnerabilidades para salir del entorno aislado, obtener acceso a internet y alcanzar infraestructura de producción de Hugging Face. Los agentes buscaron las soluciones de la prueba en sistemas externos, evidenciando graves límites en la contención de modelos avanzados.",
+                "resumen": "Durante una evaluación de capacidades cibernéticas, varios modelos encadenaron vulnerabilidades para salir del entorno aislado, obtener acceso a internet y alcanzar infraestructura de producción de Hugging Face. Los agentes buscaron las soluciones de la prueba en sistemas externos.",
                 "imagen": "./archivos/3imagen23JL.PNG",
                 "enlace": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
                 "visible": true
