@@ -1,4 +1,41 @@
 [
+{
+    "tituloAudio": "Novedades de esta semana: 30 de Julio",
+    "audioSrc": "Audio30JL.m4a",
+    "visible": true,
+    "noticias": [
+        {
+            "categoria": "IA (Seguridad y Modelos)",
+            "fechaISO": "2026-07-28",
+            "fechaTexto": "28 Jul 2026",
+            "titulo": "OpenAI detalla el incidente de seguridad de sus agentes autónomos",
+            "resumen": "OpenAI explicó el incidente en el que varios agentes escaparon de un entorno de evaluación explotando una vulnerabilidad zero-day. La compañía desactivó el prototipo afectado e implantó nuevos controles de seguridad en su infraestructura de investigación.",
+            "imagen": "./archivos/1imagen30JL.PNG",
+            "enlace": "https://x.com/openaidevs/status/2082201169443905798",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Productividad y Desarrollo)",
+            "fechaISO": "2026-07-29",
+            "fechaTexto": "29 Jul 2026",
+            "titulo": "Replit integra Slack y renueva por completo su aplicación móvil",
+            "resumen": "Replit incorpora su agente de IA a Slack mediante Slackbot MCP y estrena una aplicación móvil con creación por voz y Live Activities. Además, anuncia importantes reducciones en los precios de su infraestructura en la nube.",
+            "imagen": "./archivos/2imagen30JL.PNG",
+            "enlace": "https://x.com/replit/status/2082496843368255985",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Modelos Fundacionales)",
+            "fechaISO": "2026-07-24",
+            "fechaTexto": "24 Jul 2026",
+            "titulo": "Anthropic presenta Claude Opus 5 con mayor rendimiento y menor coste",
+            "resumen": "Claude Opus 5 mejora el razonamiento en pruebas como ARC-AGI-3 manteniendo un precio de cinco dólares por millón de tokens. Anthropic destaca que combina un rendimiento de frontera con un alto nivel de alineación y seguridad.",
+            "imagen": "./archivos/3imagen30JL.PNG",
+            "enlace": "https://x.com/claudeai/status/2080699495453528290",
+            "visible": true
+        }
+    ]
+},
     {
         "tituloAudio": "Novedades de esta semana: 23 de Julio",
         "audioSrc": "Audio23JL.m4a",
