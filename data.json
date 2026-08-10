@@ -1,5 +1,42 @@
 [
 {
+    "tituloAudio": "Novedades de esta semana: 10 de Agosto",
+    "audioSrc": "Audio10AG.m4a",
+    "visible": true,
+    "noticias": [
+        {
+            "categoria": "IA (Ciberseguridad)",
+            "fechaISO": "2026-08-10",
+            "fechaTexto": "10 Ago 2026",
+            "titulo": "OpenAI lanza GPT-5.6-Cyber",
+            "resumen": "OpenAI amplía Daybreak con GPT-5.6-Cyber para investigación y defensa cibernética autorizada.",
+            "imagen": "./archivos/1imagen10AG.png",
+            "enlace": "https://x.com/openai/status/2086864365379010729?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Productividad)",
+            "fechaISO": "2026-08-04",
+            "fechaTexto": "04 Ago 2026",
+            "titulo": "Notebook mejora su versión Pro",
+            "resumen": "Notebook mejora el chat y añade gráficos, documentos, hojas de cálculo, imágenes e investigación agéntica.",
+            "imagen": "./archivos/2imagen10AG.png",
+            "enlace": "https://x.com/gemini_notebook/status/2084680949342577095?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Vídeo Generativo)",
+            "fechaISO": "2026-08-10",
+            "fechaTexto": "10 Ago 2026",
+            "titulo": "Google estrena Omni Flash",
+            "resumen": "Gemini Omni Flash crea y edita vídeo desde texto, imagen, vídeo o audio, conservando la coherencia visual.",
+            "imagen": "./archivos/3imagen10AG.png",
+            "enlace": "https://x.com/google/status/2086814383582118356?s=46",
+            "visible": true
+        }
+    ]
+},
+{
     "tituloAudio": "Novedades de esta semana: 30 de Julio",
     "audioSrc": "Audio30JL.m4a",
     "visible": true,
