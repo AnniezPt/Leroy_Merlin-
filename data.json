@@ -2,6 +2,23 @@
 {
     "tituloAudio": "Novedades de esta semana: 10 de Agosto",
     "audioSrc": "Audio10AG.m4a",
+    "audioMomentos": [
+        {
+            "segundo": 0,
+            "etiqueta": "00:00",
+            "titulo": "OpenAI · Seguridad"
+        },
+        {
+            "segundo": 30,
+            "etiqueta": "00:30",
+            "titulo": "NotebookLM Pro"
+        },
+        {
+            "segundo": 60,
+            "etiqueta": "01:00",
+            "titulo": "Gemini · Vídeo"
+        }
+    ],
     "visible": true,
     "noticias": [
         {
