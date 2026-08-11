@@ -110,24 +110,6 @@
         }
     </style>
 
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function(OneSignal) {
-        await OneSignal.init({
-          appId: "a911aeb6-7ef9-41d3-9b76-6a5b3dfa9df2",
-          serviceWorkerParam: { scope: "/Leroy_Merlin-/" },
-          serviceWorkerPath: "/Leroy_Merlin-/OneSignalSDKWorker.js",
-          notifyButton: {
-            enable: true,
-          },
-        });
-        
-        if (OneSignal.Slidedown) {
-            OneSignal.Slidedown.promptPush();
-        }
-      });
-    </script>
 </head>
 <body class="text-gray-800 antialiased pb-12 relative">
 
@@ -143,10 +125,6 @@
             
             <div class="flex flex-wrap justify-center items-center gap-3">
                 
-                <button id="btn-suscribir-push" class="flex items-center gap-2 border border-blue-500 text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm hover:bg-blue-50 transition-colors focus:outline-none bg-white shadow-sm" title="Activar notificaciones">
-                    🔔 Avisos
-                </button>
-
                 <div class="relative">
                     <select id="filtro-categoria" class="border border-lm-green text-lm-dark font-semibold px-5 py-1.5 rounded-full text-sm hover:bg-green-50 transition-colors focus:outline-none filtro-estilizado pr-8 bg-transparent">
                         <option value="">Todas las categorías</option>
@@ -177,38 +155,6 @@
     </main>
 
     <script>
-        document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
-            if (window.OneSignalDeferred) {
-                window.OneSignalDeferred.push(async function(OneSignal) {
-                    try {
-                        if (!('Notification' in window)) {
-                            alert("⚠️ Tu dispositivo o navegador no soporta notificaciones web.\n\nSi usas iPad o iPhone:\n1. Toca el botón de Compartir (arriba a la derecha).\n2. Dale a 'Añadir a la pantalla de inicio'.\n3. Abre el Boletín desde el icono nuevo y vuelve a pulsar este botón.");
-                            return;
-                        }
-
-                        const permission = window.Notification.permission;
-                        
-                        if (permission === 'granted') {
-                            alert("✅ ¡Ya estás suscrito! Te avisaremos cuando haya novedades.");
-                        } else if (permission === 'denied') {
-                            alert("❌ Tienes las notificaciones bloqueadas. Ve a los Ajustes de Safari/Chrome y permite las notificaciones para esta página.");
-                        } else {
-                            if (OneSignal.Slidedown) {
-                                await OneSignal.Slidedown.promptPush();
-                            } else {
-                                await OneSignal.Notifications.requestPermission();
-                            }
-                        }
-                    } catch (error) {
-                        console.error("Error al intentar suscribir:", error);
-                        alert("Hubo un error al intentar activar las notificaciones. Inténtalo de nuevo.");
-                    }
-                });
-            } else {
-                 alert("⏳ El sistema de notificaciones aún se está cargando. Espera un segundo y vuelve a intentarlo.");
-            }
-        });
-
         const CARPETA_ASSETS = "./archivos/";
         let EDICIONES_DEL_BOLETIN = []; 
         let mostrarTodasAnteriores = false;
