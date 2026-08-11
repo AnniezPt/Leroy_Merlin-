@@ -79,6 +79,19 @@
             cursor: pointer;
             opacity: 0.6;
         }
+        .marcador-audio {
+            border: 1px solid #b8dfaa;
+            background: #f7fbf5;
+            color: #477f32;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+        .marcador-audio:hover,
+        .marcador-audio:focus-visible {
+            background: #6cc24a;
+            color: #ffffff;
+            transform: translateY(-1px);
+            outline: none;
+        }
 
         @keyframes popUp {
             from { transform: translateY(20px) scale(0.95); opacity: 0; }
@@ -163,51 +176,6 @@
     <main id="contenedor-boletines" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     </main>
 
-    <div id="truth-avatar" class="hidden fixed cursor-pointer z-[1000] hover:scale-110 transition-all duration-1000 ease-in-out" title="¡Hola! Soy Richie">
-        <img src="archivos/imagen23M.png" alt="Richie IA" class="w-16 h-16 object-contain drop-shadow-xl rounded-full">
-    </div>
-
-    <div id="truth-message" class="hidden fixed bottom-28 right-6 bg-white border-t-4 border-lm-green p-5 rounded-2xl shadow-2xl z-[2000] w-[300px] animate-pop-up">
-        
-        <div id="truth-question-view" class="hidden">
-            <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span class="text-xl" id="emoji-saludo">🤖</span> <span id="texto-saludo">¡Hola!</span>
-            </p>
-            <p id="texto-pregunta" class="text-xs text-gray-600 font-medium leading-relaxed mb-4">
-                Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?
-            </p>
-            <div class="flex gap-2">
-                <button id="btn-yes-truth" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">💉 ¡Claro!</button>
-                <button id="btn-no-truth" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Ahora no</button>
-            </div>
-        </div>
-
-        <div id="truth-ask-view" class="hidden">
-            <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span class="text-xl">🕵️‍♂️</span> ¡Momento cotilla inverso!
-            </p>
-            <p class="text-xs text-gray-600 font-medium leading-relaxed mb-2">
-                ¡Oye, para un segundo! 🛑 Siempre soy yo el que habla... Cuéntame, ¿qué herramienta se te está atascando hoy? ¿O qué miras en la pantalla para desconectar cinco minutitos?
-            </p>
-            <textarea id="user-task-input" class="w-full text-xs p-3 border border-gray-300 rounded-lg mb-3 focus:outline-none focus:border-lm-green focus:ring-1 focus:ring-lm-green resize-none text-gray-700 bg-gray-50" rows="2" placeholder="Ej: Peleándome con Figma... o viendo vídeos en YouTube"></textarea>
-            
-            <div class="flex gap-2">
-                <button id="btn-send-task" class="flex-1 bg-lm-green text-white text-xs font-bold py-2 rounded-lg hover:bg-lm-dark transition shadow-sm">Enviar 🚀</button>
-                <button id="btn-skip-task" class="flex-1 bg-gray-100 text-gray-600 text-xs font-bold py-2 rounded-lg hover:bg-gray-200 transition shadow-sm">Paso</button>
-            </div>
-        </div>
-
-        <div id="truth-fact-view" class="hidden">
-            <p class="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span class="text-xl" id="icono-perfil">💡</span> <span id="titulo-perfil">Aquí tienes:</span>
-            </p>
-            <div id="truth-text" class="text-xs text-gray-600 font-medium leading-relaxed space-y-2 mb-3"></div>
-            <button id="btn-close-fact" class="w-full bg-gray-100 text-gray-600 text-xs font-bold py-1.5 rounded-lg hover:bg-gray-200 transition shadow-sm">Entendido (Cerrar)</button>
-        </div>
-        
-        <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 shadow-sm"></div>
-    </div>
-
     <script>
         document.getElementById('btn-suscribir-push').addEventListener('click', async () => {
             if (window.OneSignalDeferred) {
@@ -250,20 +218,51 @@
         const inputFecha = document.getElementById('filtro-fecha');
         const btnLimpiar = document.getElementById('btn-limpiar');
 
-        let scoreTechie = parseInt(localStorage.getItem('lm_score_techie')) || 0;
-        let scoreBusiness = parseInt(localStorage.getItem('lm_score_business')) || 0;
+        function categoriaEditorial(categoria) {
+            const categoriaNormalizada = (categoria || '').toLocaleLowerCase('es-ES');
 
-        function actualizarPuntuacion(categoria) {
-            if (!categoria) return;
-            const cat = categoria.toUpperCase();
-            if (cat.includes('IA') || cat.includes('TECH') || cat.includes('DATOS')) {
-                scoreTechie++;
-                localStorage.setItem('lm_score_techie', scoreTechie);
-            } 
-            else if (cat.includes('GEO') || cat.includes('RETAIL') || cat.includes('NEGOCIO') || cat.includes('MARKETING') || cat.includes('SEO')) {
-                scoreBusiness++;
-                localStorage.setItem('lm_score_business', scoreBusiness);
-            }
+            if (/ciber|seguridad/.test(categoriaNormalizada)) return 'Ciberseguridad';
+            if (/educación|educacion|impacto social/.test(categoriaNormalizada)) return 'Personas y aprendizaje';
+            if (/productividad|espacios de trabajo/.test(categoriaNormalizada)) return 'Productividad';
+            if (/vídeo|video|imagen|visual/.test(categoriaNormalizada)) return 'Creación visual';
+            if (/modelo|agente|fundacional/.test(categoriaNormalizada)) return 'Modelos y agentes';
+            if (/robot|hardware|chip|periférico|periferico/.test(categoriaNormalizada)) return 'Robótica y hardware';
+            if (/retail|negocio|regulación|regulacion|estrategia/.test(categoriaNormalizada)) return 'Estrategia y negocio';
+            if (/marketing|seo|anuncio/.test(categoriaNormalizada)) return 'Marketing y visibilidad';
+            if (/software|herramienta/.test(categoriaNormalizada)) return 'Herramientas IA';
+
+            return 'Tendencias IA';
+        }
+
+        function claveMesEdicion(edicion) {
+            const fechas = (edicion.noticias || [])
+                .map(noticia => noticia.fechaISO)
+                .filter(fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha))
+                .sort((a, b) => b.localeCompare(a));
+
+            return fechas[0] ? fechas[0].slice(0, 7) : null;
+        }
+
+        function etiquetaMesArchivo(claveMes) {
+            if (!claveMes) return 'Ediciones anteriores';
+            const etiqueta = new Intl.DateTimeFormat('es-ES', { month: 'long', year: 'numeric' })
+                .format(new Date(`${claveMes}-01T12:00:00`));
+            return etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1);
+        }
+
+        function crearMarcadoresAudio(edicion, audioId) {
+            if (!Array.isArray(edicion.audioMomentos) || edicion.audioMomentos.length === 0) return '';
+
+            const botones = edicion.audioMomentos.map(momento => `
+                <button type="button" class="marcador-audio rounded-full px-3 py-2 text-xs font-bold text-left whitespace-nowrap" data-audio-id="${audioId}" data-segundo="${momento.segundo}" aria-label="Escuchar desde ${momento.etiqueta}: ${momento.titulo}">
+                    <span class="mr-1 opacity-70">${momento.etiqueta}</span>${momento.titulo}
+                </button>`).join('');
+
+            return `
+                <div class="w-full max-w-2xl mt-4" aria-label="Momentos del audio">
+                    <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Escucha por temas</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">${botones}</div>
+                </div>`;
         }
 
         async function cargarDatos() {
@@ -275,13 +274,17 @@
                 renderizarNoticias();
             } catch (error) {
                 console.error("Error cargando noticias:", error);
-                contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe.</div>`;
+                if (window.location.protocol === 'file:') {
+                    contenedor.innerHTML = `<div class="max-w-xl mx-auto text-center py-20"><p class="text-lg font-bold text-gray-700 mb-2">Esta vista previa necesita abrirse desde una página web.</p><p class="text-sm text-gray-500 mb-5">Al abrir el archivo directamente, Chrome bloquea la lectura de las noticias.</p><a href="https://anniezpt.github.io/Leroy_Merlin-/" class="inline-flex rounded-full bg-lm-green px-5 py-3 text-sm font-bold text-white hover:bg-lm-dark transition-colors">Abrir el boletín publicado →</a></div>`;
+                } else {
+                    contenedor.innerHTML = `<div class="text-center py-20 text-red-500 font-bold">Error cargando las noticias. Comprueba que el archivo data.json existe.</div>`;
+                }
             }
         }
 
         function inicializarCategorias() {
             const todasLasCategorias = EDICIONES_DEL_BOLETIN.flatMap(edicion => 
-                (edicion.noticias || []).map(noticia => noticia.categoria)
+                (edicion.noticias || []).map(noticia => categoriaEditorial(noticia.categoria))
             );
             const categoriasUnicas = [...new Set(todasLasCategorias)].sort();
             categoriasUnicas.forEach(cat => {
@@ -301,16 +304,16 @@
             let htmlFinal = '';
             let edicionesVisibles = 0;
             let hayMasOcultas = false;
+            let archivoIniciado = false;
+            let ultimoMesArchivo = null;
 
             const haceUnaSemana = new Date();
             haceUnaSemana.setDate(haceUnaSemana.getDate() - 7);
 
-            if (categoriaSeleccionada) actualizarPuntuacion(categoriaSeleccionada);
-
             EDICIONES_DEL_BOLETIN.forEach((edicion, indexEdicion) => {
                 const noticiasFiltradas = (edicion.noticias || []).filter(noticia => {
                     if (noticia.visible === false) return false;
-                    const cumpleCategoria = categoriaSeleccionada === "" || noticia.categoria === categoriaSeleccionada;
+                    const cumpleCategoria = categoriaSeleccionada === "" || categoriaEditorial(noticia.categoria) === categoriaSeleccionada;
                     const cumpleFecha = fechaSeleccionada === "" || noticia.fechaISO === fechaSeleccionada;
                     return cumpleCategoria && cumpleFecha;
                 });
@@ -334,7 +337,28 @@
                 const esLaMasNueva = edicionesVisibles === 0;
                 const opacidad = esLaMasNueva ? '' : 'opacity-80';
 
-                if (!esLaMasNueva && edicionesVisibles > 0) {
+                if (!hayFiltros && mostrarTodasAnteriores && !esLaMasNueva) {
+                    const mesArchivo = claveMesEdicion(edicion);
+                    if (!archivoIniciado) {
+                        archivoIniciado = true;
+                        htmlFinal += `
+                        <div class="flex items-center justify-center mt-20 mb-10">
+                            <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
+                            <span class="px-5 text-lm-dark text-sm font-bold uppercase tracking-widest whitespace-nowrap bg-[#f4f6f8]">Archivo de boletines</span>
+                            <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
+                        </div>`;
+                    }
+
+                    if (mesArchivo !== ultimoMesArchivo) {
+                        ultimoMesArchivo = mesArchivo;
+                        htmlFinal += `
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="h-3 w-3 rounded-full bg-lm-green"></span>
+                            <h2 class="text-lg font-bold text-gray-700">${etiquetaMesArchivo(mesArchivo)}</h2>
+                            <div class="h-px flex-1 bg-gray-200"></div>
+                        </div>`;
+                    }
+                } else if (!esLaMasNueva && edicionesVisibles > 0) {
                     htmlFinal += `
                     <div class="flex items-center justify-center mt-20 mb-14">
                         <div class="h-[1px] bg-lm-green w-full rounded-full opacity-50"></div>
@@ -369,6 +393,7 @@
 
                 noticiasFiltradas.forEach(noticia => {
                     let htmlMultimedia = '';
+                    const etiquetaCategoria = categoriaEditorial(noticia.categoria);
                     if (noticia.video) {
                         const rutaVideo = noticia.video.startsWith('http') ? noticia.video : CARPETA_ASSETS + noticia.video;
                         htmlMultimedia = `<video controls class="w-full h-full object-cover"><source src="${rutaVideo}" type="video/mp4"></video>`;
@@ -382,7 +407,7 @@
                     <article class="tarjeta-noticia bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
                         <div class="contenedor-imagen ${esLaMasNueva ? '' : 'opacity-90'} relative">
                             ${htmlMultimedia}
-                            <span class="absolute top-3 left-3 bg-white/90 text-lm-dark text-xs font-bold px-2.5 py-1 rounded shadow uppercase tracking-wide">${noticia.categoria}</span>
+                            <span title="${noticia.categoria}" class="absolute top-3 left-3 bg-white/90 text-lm-dark text-xs font-bold px-2.5 py-1 rounded shadow uppercase tracking-wide">${etiquetaCategoria}</span>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="flex justify-end mb-3">
@@ -393,7 +418,7 @@
                             </div>
                             <h3 class="titulo-noticia font-bold text-xl mb-3 leading-snug text-gray-900" title="${noticia.titulo}">${noticia.titulo}</h3>
                             <p class="resumen-noticia text-gray-600 text-sm mb-6 flex-grow">${noticia.resumen}</p>
-                            <a href="${noticia.enlace}" target="_blank" data-categoria="${noticia.categoria}" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
+                            <a href="${noticia.enlace}" target="_blank" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
                                 Leer noticia completa <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                             </a>
                         </div>
@@ -404,7 +429,7 @@
                 <section class="mb-16 ${opacidad} transition-all duration-300">
                     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
                         <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-lm-dark' : 'text-lg text-gray-500'} ${edicion.audioSrc ? 'mb-4' : 'mb-0'}">${edicion.tituloAudio}</h2>
-                        ${edicion.audioSrc ? `<audio controls class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner"><source src="${CARPETA_ASSETS}${edicion.audioSrc}"></audio>` : ''}
+                        ${edicion.audioSrc ? `<audio id="audio-edicion-${indexEdicion}" controls preload="metadata" class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner"><source src="${CARPETA_ASSETS}${edicion.audioSrc}"></audio>${crearMarcadoresAudio(edicion, `audio-edicion-${indexEdicion}`)}` : ''}
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">${tarjetasNoticias}</div>
                 </section>`;
@@ -438,10 +463,23 @@
         }
 
         contenedor.addEventListener('click', (event) => {
-            const enlaceClicked = event.target.closest('.link-noticia');
-            if (enlaceClicked) {
-                const cat = enlaceClicked.getAttribute('data-categoria');
-                actualizarPuntuacion(cat);
+            const marcadorAudio = event.target.closest('[data-audio-id]');
+            if (!marcadorAudio) return;
+
+            const audio = document.getElementById(marcadorAudio.dataset.audioId);
+            const segundo = Number(marcadorAudio.dataset.segundo);
+            if (!audio || !Number.isFinite(segundo)) return;
+
+            const reproducirDesdeMomento = () => {
+                audio.currentTime = segundo;
+                audio.play().catch(() => {});
+            };
+
+            if (audio.readyState >= 1) {
+                reproducirDesdeMomento();
+            } else {
+                audio.addEventListener('loadedmetadata', reproducirDesdeMomento, { once: true });
+                audio.load();
             }
         });
 
@@ -462,279 +500,8 @@
             }
         }, true);
 
-        // ==========================================
-        // 2. LÓGICA DE RICHIE (CEREBRO DINÁMICO Y GUIÑOS)
-        // ==========================================
-        
-        let verdadesTechie = [];
-        let verdadesBusiness = [];
-        let verdadesCotilleos = [];
+        cargarDatos();
 
-        async function cargarCerebroRichie() {
-            try {
-                const respuesta = await fetch('./richie-data.json?t=' + new Date().getTime());
-                if (!respuesta.ok) throw new Error('No se pudo cargar richie-data.json');
-                const datos = await respuesta.json();
-                
-                verdadesTechie = datos.verdadesTechie || [];
-                verdadesBusiness = datos.verdadesBusiness || [];
-                verdadesCotilleos = datos.verdadesCotilleos || [];
-            } catch (error) {
-                console.error("Richie está sin memoria:", error);
-                verdadesTechie = ["<p>¡Ups! Mi base de datos de curiosidades tech está actualizándose.</p>"];
-                verdadesBusiness = ["<p>¡Ups! Mi base de datos de negocio está actualizándose.</p>"];
-                verdadesCotilleos = ["<p>Hoy no tengo chismes, me han pillado.</p>"];
-            }
-        }
-
-        cargarDatos(); 
-        cargarCerebroRichie();
-
-        const avatar = document.getElementById('truth-avatar');
-        const messageBox = document.getElementById('truth-message');
-        
-        const questionView = document.getElementById('truth-question-view');
-        const askView = document.getElementById('truth-ask-view');
-        const factView = document.getElementById('truth-fact-view');
-        
-        const btnYes = document.getElementById('btn-yes-truth');
-        const btnNo = document.getElementById('btn-no-truth');
-        const btnCloseFact = document.getElementById('btn-close-fact');
-        const btnSendTask = document.getElementById('btn-send-task');
-        const btnSkipTask = document.getElementById('btn-skip-task');
-        const userTaskInput = document.getElementById('user-task-input');
-        
-        const truthText = document.getElementById('truth-text');
-        const textoSaludo = document.getElementById('texto-saludo');
-        const emojiSaludo = document.getElementById('emoji-saludo');
-        const tituloPerfil = document.getElementById('titulo-perfil');
-        const textoPregunta = document.getElementById('texto-pregunta'); 
-        const iconoPerfil = document.getElementById('icono-perfil');
-
-        let intervaloMovimiento;
-        let timeoutRetirada;
-        let timeoutOcultarModal;
-        let estaCorriendo = false; 
-        let esCotilleoActual = false; 
-        let esPreguntaActual = false;
-
-        function volarAleatorio() {
-            const anchoDisponible = window.innerWidth - 100; 
-            const altoDisponible = window.innerHeight - 100;
-            const randomTop = Math.floor(Math.random() * altoDisponible);
-            const randomLeft = Math.floor(Math.random() * anchoDisponible);
-            
-            avatar.style.top = Math.max(20, randomTop) + "px";
-            avatar.style.left = Math.max(20, randomLeft) + "px";
-        }
-
-        function retirarACola() {
-            estaCorriendo = false;
-            clearInterval(intervaloMovimiento);
-            
-            const destinoTop = window.innerHeight - 90; 
-            const destinoLeft = window.innerWidth - 90; 
-            
-            avatar.style.top = destinoTop + "px";
-            avatar.style.left = destinoLeft + "px";
-            
-            setTimeout(() => {
-                avatar.style.top = "";
-                avatar.style.left = "";
-                avatar.classList.add('bottom-6', 'right-6', 'latido-suave');
-            }, 1000);
-        }
-
-        if (avatar) {
-            setTimeout(() => {
-                estaCorriendo = true;
-                avatar.classList.remove('hidden');
-                volarAleatorio();
-                intervaloMovimiento = setInterval(volarAleatorio, 2000);
-                timeoutRetirada = setTimeout(retirarACola, 12000);
-            }, 1500);
-
-            avatar.addEventListener('click', () => {
-                clearTimeout(timeoutOcultarModal);
-                
-                let tiradaDados = Math.random();
-                esCotilleoActual = false;
-                esPreguntaActual = false;
-
-                if (tiradaDados < 0.333) {
-                    esPreguntaActual = true; 
-                } else if (tiradaDados < 0.666) {
-                    esCotilleoActual = true; 
-                }
-
-                if (esPreguntaActual) {
-                    userTaskInput.value = "";
-                    userTaskInput.placeholder = "Ej: Peleándome con Figma... o viendo vídeos en YouTube";
-                    questionView.classList.add('hidden');
-                    factView.classList.add('hidden');
-                    askView.classList.remove('hidden');
-                } else {
-                    askView.classList.add('hidden');
-                    factView.classList.add('hidden');
-                    questionView.classList.remove('hidden');
-                    
-                    if (esCotilleoActual) {
-                        textoSaludo.textContent = "¡Psst! Acércate...";
-                        emojiSaludo.textContent = "🤫";
-                        textoPregunta.innerHTML = "Me acabo de enterar de un <strong>cotilleo</strong> buenísimo. ¿Te lo cuento rápido antes de que nos vean?";
-                        btnYes.textContent = "👀 ¡Dime!";
-                    } else {
-                        if (estaCorriendo) {
-                            textoSaludo.textContent = "¡Me atrapaste!";
-                            emojiSaludo.textContent = "⚡";
-                        } else {
-                            textoSaludo.textContent = "¡Hola de nuevo!";
-                            emojiSaludo.textContent = "🤖";
-                        }
-                        textoPregunta.innerHTML = "Soy <strong>Richie</strong>. He preparado un enlace y un dato curioso especialmente para ti. ¿Quieres verlo?";
-                        btnYes.textContent = "💉 ¡Claro!";
-                    }
-                }
-
-                if (estaCorriendo) {
-                    clearTimeout(timeoutRetirada); 
-                    retirarACola(); 
-                }
-                
-                avatar.style.display = 'none'; 
-                
-                setTimeout(() => {
-                    messageBox.classList.remove('hidden'); 
-                }, estaCorriendo ? 1000 : 0);
-            });
-
-            btnSendTask.addEventListener('click', () => {
-                const tarea = userTaskInput.value.trim();
-                
-                if (tarea !== "") {
-                    
-                    let tareasGuardadas = JSON.parse(localStorage.getItem('lm_tareas_usuario') || '[]');
-                    tareasGuardadas.push({ fecha: new Date().toLocaleString(), tarea: tarea });
-                    localStorage.setItem('lm_tareas_usuario', JSON.stringify(tareasGuardadas));
-
-                    const emailEndpoint = "https://formspree.io/f/maqlnbdp"; 
-                    
-                    fetch(emailEndpoint, {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Accept": "application/json"
-                        },
-                        body: JSON.stringify({
-                            Origen: "Richie - Boletín",
-                            Tarea_del_usuario: tarea,
-                            Fecha: new Date().toLocaleString()
-                        })
-                    }).catch(error => console.error("Error silencioso enviando datos:", error));
-
-                    askView.classList.add('hidden');
-                    factView.classList.remove('hidden');
-                    
-                    // LÓGICA DE GUIÑOS / EASTER EGGS
-                    const textoMinusculas = tarea.toLowerCase();
-                    let respuestaEspecial = `<p>¡Oído cocina! Me apunto eso de "<em>${tarea}</em>".</p><p class='mt-2'>¡Qué currante! Venga, no te entretengo más. ¡Dale mucha caña a eso, crack! 💪😎</p>`;
-                    
-                    iconoPerfil.textContent = "💾";
-                    tituloPerfil.textContent = "¡Anotado en mi RAM!";
-
-                    if (textoMinusculas.includes("presentacion") || textoMinusculas.includes("presentación") || textoMinusculas.includes("ppt")) {
-                        iconoPerfil.textContent = "📊";
-                        tituloPerfil.textContent = "¡Ánimo con ese PPT!";
-                        respuestaEspecial = `<p>¡Uf, una presentación! Recuerda la regla de oro: menos texto y más memes. 😜</p><p class='mt-2'>Si necesitas que te genere un gatito en 3D para la diapositiva final, avísame. ¡Suerte con eso! 🚀</p>`;
-                    } else if (textoMinusculas.includes("noche") || textoMinusculas.includes("tarde") || textoMinusculas.includes("horas")) {
-                        iconoPerfil.textContent = "🌙";
-                        tituloPerfil.textContent = "¡Guerrero nocturno!";
-                        respuestaEspecial = `<p>¡Madre mía, qué horas de estar pringando! Espero que te paguen horas extras o al menos te pongan pizza. 🍕</p><p class='mt-2'>Venga, ve cerrando ya y a descansar, ¡que te lo has ganado! 💤</p>`;
-                    } else if (textoMinusculas.includes("excel") || textoMinusculas.includes("datos") || textoMinusculas.includes("numero") || textoMinusculas.includes("número")) {
-                        iconoPerfil.textContent = "🟢";
-                        tituloPerfil.textContent = "¡Maldito Excel!";
-                        respuestaEspecial = `<p>Peleándote con un Excel, ¿eh? La herramienta que mueve el mundo... y que da dolores de cabeza.</p><p class='mt-2'>Si ves que las celdas se te juntan, dale a Alt+F4 (es broma, no lo hagas). ¡Ánimo con esos BUSCARV! 🤓</p>`;
-                    } else if (textoMinusculas.includes("youtube") || textoMinusculas.includes("musica") || textoMinusculas.includes("música") || textoMinusculas.includes("video") || textoMinusculas.includes("spotify") || textoMinusculas.includes("vídeo")) {
-                        iconoPerfil.textContent = "🎧";
-                        tituloPerfil.textContent = "¡Momento relax!";
-                        respuestaEspecial = `<p>¡Di que sí! Hay que desconectar la mente de vez en cuando para no volverse loco.</p><p class='mt-2'>Sube el volumen, disfruta de ese ratito de paz y a recargar pilas para la siguiente tarea. 🎶</p>`;
-                    } else if (textoMinusculas.includes("atasco") || textoMinusculas.includes("bloqueo") || textoMinusculas.includes("funciona") || textoMinusculas.includes("herramienta")) {
-                        iconoPerfil.textContent = "🔧";
-                        tituloPerfil.textContent = "¡Maldita tecnología!";
-                        respuestaEspecial = `<p>No te agobies, a veces la tecnología se levanta con el pie izquierdo. 🤖</p><p class='mt-2'>Mi mejor consejo: apaga, vete a por un buen café y vuelve a encender. Si sigue sin ir... ¡échale la culpa al wifi! ☕</p>`;
-                    }
-
-                    truthText.innerHTML = respuestaEspecial;
-                    
-                    timeoutOcultarModal = setTimeout(() => {
-                        messageBox.classList.add('hidden');
-                        avatar.style.display = 'block'; 
-                    }, 9000);
-                } else {
-                    userTaskInput.placeholder = "¡Escribe algo primero, anda! 😂";
-                }
-            });
-
-            btnSkipTask.addEventListener('click', () => {
-                messageBox.classList.add('hidden'); 
-                avatar.style.display = 'block'; 
-            });
-
-            btnYes.addEventListener('click', () => {
-                let poolDeFrases = [];
-                iconoPerfil.textContent = "💡";
-
-                if (esCotilleoActual) {
-                    poolDeFrases = verdadesCotilleos;
-                    tituloPerfil.textContent = "Secreto de pasillo:";
-                    iconoPerfil.textContent = "🤫";
-                } else {
-                    if (scoreTechie > scoreBusiness) {
-                        poolDeFrases = verdadesTechie;
-                        tituloPerfil.textContent = "Para mi colega Techie:";
-                    } else if (scoreBusiness > scoreTechie) {
-                        poolDeFrases = verdadesBusiness;
-                        tituloPerfil.textContent = "Para mi compi de Negocio:";
-                    } else {
-                        if (Math.random() > 0.5) {
-                            poolDeFrases = verdadesTechie;
-                            tituloPerfil.textContent = "Para mi colega Techie:";
-                        } else {
-                            poolDeFrases = verdadesBusiness;
-                            tituloPerfil.textContent = "Para mi compi de Negocio:";
-                        }
-                    }
-                }
-
-                if (!poolDeFrases || poolDeFrases.length === 0) {
-                    poolDeFrases = ["<p>Mi base de datos está sincronizándose ahora mismo. ¡Vuelve en un ratito!</p>"];
-                }
-
-                const indiceSesgado = Math.floor(Math.random() * poolDeFrases.length);
-                const datoAleatorio = poolDeFrases[indiceSesgado];
-                
-                truthText.innerHTML = datoAleatorio;
-                
-                questionView.classList.add('hidden');
-                factView.classList.remove('hidden');
-
-                timeoutOcultarModal = setTimeout(() => {
-                    messageBox.classList.add('hidden');
-                    avatar.style.display = 'block'; 
-                }, 12000); 
-            });
-
-            btnNo.addEventListener('click', () => {
-                messageBox.classList.add('hidden'); 
-                avatar.style.display = 'block'; 
-            });
-
-            btnCloseFact.addEventListener('click', () => {
-                clearTimeout(timeoutOcultarModal);
-                messageBox.classList.add('hidden'); 
-                avatar.style.display = 'block'; 
-            });
-        }
     </script>
 </body>
 </html>
