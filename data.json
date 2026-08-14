@@ -1,5 +1,59 @@
 [
 {
+    "tituloAudio": "Novedades de esta semana: 13 de Agosto",
+    "audioSrc": "Audio13AG.m4a",
+    "audioMomentos": [
+        {
+            "segundo": 0,
+            "etiqueta": "00:00",
+            "titulo": "OpenAI · GPT-5.6 Sol"
+        },
+        {
+            "segundo": 35,
+            "etiqueta": "00:35",
+            "titulo": "AI Studio · Apps"
+        },
+        {
+            "segundo": 68,
+            "etiqueta": "01:08",
+            "titulo": "DeepMind · Accesibilidad"
+        }
+    ],
+    "visible": true,
+    "noticias": [
+        {
+            "categoria": "IA (Modelos y Desarrollo)",
+            "fechaISO": "2026-08-13",
+            "fechaTexto": "13 Ago 2026",
+            "titulo": "OpenAI prueba GPT-5.6 Sol veloz",
+            "resumen": "OpenAI prueba GPT-5.6 Sol, un modo ultrarrápido que alcanza hasta catorce veces más velocidad en la API.",
+            "imagen": "./archivos/1imagen13AG.png",
+            "enlace": "https://x.com/openai/status/2087947721936359705?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Productividad y Desarrollo)",
+            "fechaISO": "2026-08-12",
+            "fechaTexto": "12 Ago 2026",
+            "titulo": "AI Studio crea apps sin código",
+            "resumen": "Google AI Studio estrena un curso para convertir ideas en aplicaciones personalizadas y compartibles sin programar.",
+            "imagen": "./archivos/2imagen13AG.png",
+            "enlace": "https://x.com/googleaistudio/status/2087569873043910664?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Accesibilidad)",
+            "fechaISO": "2026-08-12",
+            "fechaTexto": "12 Ago 2026",
+            "titulo": "Google traduce signos a texto",
+            "resumen": "SL2T lleva la lengua de signos americana a texto en Pixel 11 para escribir en Gboard y transcribir conversaciones.",
+            "imagen": "./archivos/3imagen13AG.png",
+            "enlace": "https://x.com/googledeepmind/status/2087541213284946191?s=46",
+            "visible": true
+        }
+    ]
+},
+{
     "tituloAudio": "Novedades de esta semana: 10 de Agosto",
     "audioSrc": "Audio10AG.m4a",
     "audioMomentos": [

@@ -168,7 +168,7 @@
             const categoriaNormalizada = (categoria || '').toLocaleLowerCase('es-ES');
 
             if (/ciber|seguridad/.test(categoriaNormalizada)) return 'Ciberseguridad';
-            if (/educación|educacion|impacto social/.test(categoriaNormalizada)) return 'Personas y aprendizaje';
+            if (/educación|educacion|impacto social|accesibilidad/.test(categoriaNormalizada)) return 'Personas y aprendizaje';
             if (/productividad|espacios de trabajo/.test(categoriaNormalizada)) return 'Productividad';
             if (/vídeo|video|imagen|visual/.test(categoriaNormalizada)) return 'Creación visual';
             if (/modelo|agente|fundacional/.test(categoriaNormalizada)) return 'Modelos y agentes';
