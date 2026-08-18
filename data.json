@@ -1,5 +1,41 @@
 [
 {
+    "tituloAudio": "Novedades de esta semana: 17 de Agosto",
+    "visible": true,
+    "noticias": [
+        {
+            "categoria": "IA (Desarrollo)",
+            "fechaISO": "2026-08-17",
+            "fechaTexto": "17 Ago 2026",
+            "titulo": "Cursor lanza Origin",
+            "resumen": "Cursor lanza Origin, una plataforma de alojamiento de código integrada para sincronizar repositorios de GitHub.",
+            "imagen": "./archivos/1imagen17AG.png",
+            "enlace": "https://x.com/cursor_ai/status/2089399057659596847?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Marketing)",
+            "fechaISO": "2026-08-17",
+            "fechaTexto": "17 Ago 2026",
+            "titulo": "Google Ads incorpora agentes",
+            "resumen": "Google Ads y Analytics estrenan capacidades agénticas para analizar datos y gestionar flujos mediante peticiones.",
+            "imagen": "./archivos/2imagen17AG.png",
+            "enlace": "https://x.com/googleads/status/2089445129257902401?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Diseño y Desarrollo)",
+            "fechaISO": "2026-08-17",
+            "fechaTexto": "17 Ago 2026",
+            "titulo": "Claude Code añade /design",
+            "resumen": "ClaudeDevs muestra /design, una vista previa para crear y ajustar artboards editables antes de implementarlos.",
+            "imagen": "./archivos/3imagen17AG.png",
+            "enlace": "https://x.com/ClaudeDevs",
+            "visible": true
+        }
+    ]
+},
+{
     "tituloAudio": "Novedades de esta semana: 13 de Agosto",
     "audioSrc": "Audio13AG.m4a",
     "audioMomentos": [
