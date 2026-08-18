@@ -1,6 +1,24 @@
 [
 {
     "tituloAudio": "Novedades de esta semana: 17 de Agosto",
+    "audioSrc": "Audio17AG.m4a",
+    "audioMomentos": [
+        {
+            "segundo": 0,
+            "etiqueta": "00:00",
+            "titulo": "Cursor · Origin"
+        },
+        {
+            "segundo": 32,
+            "etiqueta": "00:32",
+            "titulo": "Google Ads · Agentes"
+        },
+        {
+            "segundo": 66,
+            "etiqueta": "01:06",
+            "titulo": "Claude Code · /design"
+        }
+    ],
     "visible": true,
     "noticias": [
         {
