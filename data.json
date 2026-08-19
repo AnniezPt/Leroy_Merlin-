@@ -1,5 +1,15 @@
 [
 {
+    "tituloAudio": "Especial práctico · IA que te quita trabajo",
+    "bannerLanding": {
+        "titulo": "IA que te quita trabajo.",
+        "imagen": "EspecialIA20AG.png",
+        "enlace": "especial-ia-20-agosto.html"
+    },
+    "visible": true,
+    "noticias": []
+},
+{
     "tituloAudio": "Novedades de esta semana: 17 de Agosto",
     "audioSrc": "Audio17AG.m4a",
     "audioMomentos": [

@@ -373,10 +373,10 @@
 
                 htmlFinal += `
                 <section class="mb-16 ${opacidad} transition-all duration-300">
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
+                    ${mostrarBanner ? '' : `<div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 w-full max-w-4xl mx-auto flex flex-col items-center">
                         <h2 class="text-center font-bold ${esLaMasNueva ? 'text-xl text-lm-dark' : 'text-lg text-gray-500'} ${edicion.audioSrc ? 'mb-4' : 'mb-0'}">${edicion.tituloAudio}</h2>
                         ${edicion.audioSrc ? `<audio id="audio-edicion-${indexEdicion}" controls preload="metadata" class="w-full max-w-2xl audio-boletin bg-gray-50 rounded-lg shadow-inner"><source src="${CARPETA_ASSETS}${edicion.audioSrc}"></audio>${crearMarcadoresAudio(edicion, `audio-edicion-${indexEdicion}`)}` : ''}
-                    </div>
+                    </div>`}
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">${tarjetasNoticias}</div>
                 </section>`;
                 edicionesVisibles++;
