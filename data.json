@@ -1,5 +1,59 @@
 [
 {
+    "tituloAudio": "Novedades de esta semana: 24 de Agosto",
+    "audioSrc": "Audio24AG.m4a",
+    "audioMomentos": [
+        {
+            "segundo": 0,
+            "etiqueta": "00:00",
+            "titulo": "ElevenLabs · CLI v1"
+        },
+        {
+            "segundo": 26,
+            "etiqueta": "00:26",
+            "titulo": "Google Ads · Memoria"
+        },
+        {
+            "segundo": 52,
+            "etiqueta": "00:52",
+            "titulo": "Codex · Por voz"
+        }
+    ],
+    "visible": true,
+    "noticias": [
+        {
+            "categoria": "IA (Desarrollo)",
+            "fechaISO": "2026-08-24",
+            "fechaTexto": "24 Ago 2026",
+            "titulo": "ElevenLabs estrena CLI v1",
+            "resumen": "ElevenLabs CLI v1 gestiona flujos y agentes desde terminal, con JSON estructurado y pruebas antes de ejecutar.",
+            "imagen": "./archivos/1imagen24AG.png",
+            "enlace": "https://x.com/elevenlabsdevs/status/2091915556907532577?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Marketing)",
+            "fechaISO": "2026-08-24",
+            "fechaTexto": "24 Ago 2026",
+            "titulo": "Ask Advisor gana memoria",
+            "resumen": "Google Ads incorporará memoria compartida para conservar objetivos, decisiones y rendimiento entre herramientas.",
+            "imagen": "./archivos/2imagen24AG.png",
+            "enlace": "https://x.com/googleads/status/2091903359053643859?s=46",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Productividad)",
+            "fechaISO": "2026-08-24",
+            "fechaTexto": "24 Ago 2026",
+            "titulo": "Codex se controla por voz",
+            "resumen": "OpenAI muestra cómo guiar flujos de Codex por voz desde escritorio y móvil durante un directo con Alex Finn.",
+            "imagen": "./archivos/3imagen24AG.png",
+            "enlace": "https://x.com/openaidevs/status/2091995301397893501?s=46",
+            "visible": true
+        }
+    ]
+},
+{
     "tituloAudio": "Especial práctico · IA que te quita trabajo",
     "bannerLanding": {
         "titulo": "IA que te quita trabajo.",
