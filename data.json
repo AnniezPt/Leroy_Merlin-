@@ -1,5 +1,59 @@
 [
-{
+    {
+        "tituloAudio": "Novedades de esta semana: 1 de Septiembre",
+        "audioSrc": "Audio01SP.m4a",
+        "audioMomentos": [
+            {
+                "segundo": 0,
+                "etiqueta": "00:00",
+                "titulo": "ChatGPT Ads"
+            },
+            {
+                "segundo": 27,
+                "etiqueta": "00:27",
+                "titulo": "OpenAI · Hugging Face"
+            },
+            {
+                "segundo": 54,
+                "etiqueta": "00:54",
+                "titulo": "Runway · Solaris"
+            }
+        ],
+        "visible": true,
+        "noticias": [
+            {
+                "categoria": "IA (Marketing)",
+                "fechaISO": "2026-09-01",
+                "fechaTexto": "01 Sep 2026",
+                "titulo": "ChatGPT Ads se expande",
+                "resumen": "OpenAI amplía ChatGPT Ads y prepara acceso autoservicio para anunciantes en Europa.",
+                "imagen": "./archivos/1imagen01SP.png",
+                "enlace": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+                "visible": true
+            },
+            {
+                "categoria": "IA (Ciberseguridad)",
+                "fechaISO": "2026-09-01",
+                "fechaTexto": "01 Sep 2026",
+                "titulo": "OpenAI analiza el caso HF",
+                "resumen": "El informe explica cómo un ecosistema de agentes superó controles durante una evaluación de seguridad.",
+                "imagen": "./archivos/2imagen01SP.png",
+                "enlace": "https://openai.com/es-419/index/hugging-face-incident-and-the-road-ahead/",
+                "visible": true
+            },
+            {
+                "categoria": "IA (Interfaces)",
+                "fechaISO": "2026-09-01",
+                "fechaTexto": "01 Sep 2026",
+                "titulo": "Runway presenta Solaris",
+                "resumen": "Solaris genera interfaces interactivas en tiempo real, fotograma a fotograma y sin código.",
+                "imagen": "./archivos/3imagen01SP.png",
+                "enlace": "https://x.com/runwayml/status/2094463070466646019?s=46",
+                "visible": true
+            }
+        ]
+    },
+    {
     "tituloAudio": "Novedades de esta semana: 24 de Agosto",
     "audioSrc": "Audio24AG.m4a",
     "audioMomentos": [
