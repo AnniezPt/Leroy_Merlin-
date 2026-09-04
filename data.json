@@ -1,54 +1,54 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 1 de Septiembre",
-        "audioSrc": "Audio01SP.m4a",
+        "tituloAudio": "Novedades de esta semana: 4 de Septiembre",
+        "audioSrc": "Audio04SP.m4a",
         "audioMomentos": [
             {
                 "segundo": 0,
                 "etiqueta": "00:00",
-                "titulo": "ChatGPT Ads"
+                "titulo": "OpenAI · GPT-6 Astra"
             },
             {
-                "segundo": 27,
-                "etiqueta": "00:27",
-                "titulo": "OpenAI · Hugging Face"
+                "segundo": 30,
+                "etiqueta": "00:30",
+                "titulo": "Claude · Comercio"
             },
             {
-                "segundo": 54,
-                "etiqueta": "00:54",
-                "titulo": "Runway · Solaris"
+                "segundo": 60,
+                "etiqueta": "01:00",
+                "titulo": "Gemini Notebook"
             }
         ],
         "visible": true,
         "noticias": [
             {
-                "categoria": "IA (Marketing)",
-                "fechaISO": "2026-09-01",
-                "fechaTexto": "01 Sep 2026",
-                "titulo": "ChatGPT Ads se expande",
-                "resumen": "OpenAI amplía ChatGPT Ads y prepara acceso autoservicio para anunciantes en Europa.",
-                "imagen": "./archivos/1imagen01SP.png",
-                "enlace": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+                "categoria": "IA (Modelos y Agentes)",
+                "fechaISO": "2026-09-04",
+                "fechaTexto": "04 Sep 2026",
+                "titulo": "OpenAI presenta GPT-6 Astra",
+                "resumen": "GPT-6 Astra mejora el trabajo autónomo en navegador, código y tareas profesionales, con nuevos controles de seguridad.",
+                "imagen": "./archivos/1imagen04SP.png",
+                "enlace": "https://x.com/openai/status/2095595741528125780?s=46",
                 "visible": true
             },
             {
-                "categoria": "IA (Ciberseguridad)",
-                "fechaISO": "2026-09-01",
-                "fechaTexto": "01 Sep 2026",
-                "titulo": "OpenAI analiza el caso HF",
-                "resumen": "El informe explica cómo un ecosistema de agentes superó controles durante una evaluación de seguridad.",
-                "imagen": "./archivos/2imagen01SP.png",
-                "enlace": "https://openai.com/es-419/index/hugging-face-incident-and-the-road-ahead/",
+                "categoria": "IA (Comercio y Retail)",
+                "fechaISO": "2026-09-04",
+                "fechaTexto": "04 Sep 2026",
+                "titulo": "Claude abre agentes de comercio",
+                "resumen": "Anthropic publica un modelo abierto para agentes de compra y de gestión, con inventario, promociones y aprobación humana.",
+                "imagen": "./archivos/2imagen04SP.png",
+                "enlace": "https://x.com/claudedevs/status/2095233745167282602?s=46",
                 "visible": true
             },
             {
-                "categoria": "IA (Interfaces)",
-                "fechaISO": "2026-09-01",
-                "fechaTexto": "01 Sep 2026",
-                "titulo": "Runway presenta Solaris",
-                "resumen": "Solaris genera interfaces interactivas en tiempo real, fotograma a fotograma y sin código.",
-                "imagen": "./archivos/3imagen01SP.png",
-                "enlace": "https://x.com/runwayml/status/2094463070466646019?s=46",
+                "categoria": "IA (Productividad)",
+                "fechaISO": "2026-09-04",
+                "fechaTexto": "04 Sep 2026",
+                "titulo": "Gemini Notebook flexibiliza límites",
+                "resumen": "Gemini Notebook pasa a un límite por uso de cómputo, se renueva cada cinco horas y permite programar tareas pesadas.",
+                "imagen": "./archivos/3imagen04SP.png",
+                "enlace": "https://x.com/gemini_notebook/status/2095215233468092742?s=46",
                 "visible": true
             }
         ]
