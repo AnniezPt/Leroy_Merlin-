@@ -1,54 +1,54 @@
 [
     {
-        "tituloAudio": "Novedades de esta semana: 4 de Septiembre",
-        "audioSrc": "Audio04SP.m4a",
+        "tituloAudio": "Novedades de esta semana: 10 de Septiembre",
+        "audioSrc": "Audio10SP.m4a",
         "audioMomentos": [
             {
                 "segundo": 0,
                 "etiqueta": "00:00",
-                "titulo": "OpenAI · GPT-6 Astra"
+                "titulo": "ChatGPT Images 2.5"
             },
             {
                 "segundo": 30,
                 "etiqueta": "00:30",
-                "titulo": "Claude · Comercio"
+                "titulo": "OpenAI · Navier-Stokes"
             },
             {
                 "segundo": 60,
                 "etiqueta": "01:00",
-                "titulo": "Gemini Notebook"
+                "titulo": "Google · Finlandia"
             }
         ],
         "visible": true,
         "noticias": [
             {
+                "categoria": "IA (Creación visual)",
+                "fechaISO": "2026-09-10",
+                "fechaTexto": "10 Sep 2026",
+                "titulo": "ChatGPT Images 2.5 mejora",
+                "resumen": "OpenAI acelera la generación y mejora la fidelidad, la consistencia entre ediciones y los retoques puntuales con comentarios.",
+                "imagen": "./archivos/1imagen10SP.png",
+                "enlace": "https://x.com/openai/status/2097394956457623964?s=46",
+                "visible": true
+            },
+            {
                 "categoria": "IA (Modelos y Agentes)",
-                "fechaISO": "2026-09-04",
-                "fechaTexto": "04 Sep 2026",
-                "titulo": "OpenAI presenta GPT-6 Astra",
-                "resumen": "GPT-6 Astra mejora el trabajo autónomo en navegador, código y tareas profesionales, con nuevos controles de seguridad.",
-                "imagen": "./archivos/1imagen04SP.png",
-                "enlace": "https://x.com/openai/status/2095595741528125780?s=46",
+                "fechaISO": "2026-09-10",
+                "fechaTexto": "10 Sep 2026",
+                "titulo": "OpenAI aborda Navier-Stokes",
+                "resumen": "OpenAI comparte una solución generada por agentes y formalizada en Lean; el resultado requerirá revisión matemática independiente.",
+                "imagen": "./archivos/2imagen10SP.png",
+                "enlace": "https://x.com/OpenAI/status/2097374640582668336?s=20",
                 "visible": true
             },
             {
-                "categoria": "IA (Comercio y Retail)",
-                "fechaISO": "2026-09-04",
-                "fechaTexto": "04 Sep 2026",
-                "titulo": "Claude abre agentes de comercio",
-                "resumen": "Anthropic publica un modelo abierto para agentes de compra y de gestión, con inventario, promociones y aprobación humana.",
-                "imagen": "./archivos/2imagen04SP.png",
-                "enlace": "https://x.com/claudedevs/status/2095233745167282602?s=46",
-                "visible": true
-            },
-            {
-                "categoria": "IA (Productividad)",
-                "fechaISO": "2026-09-04",
-                "fechaTexto": "04 Sep 2026",
-                "titulo": "Gemini Notebook flexibiliza límites",
-                "resumen": "Gemini Notebook pasa a un límite por uso de cómputo, se renueva cada cinco horas y permite programar tareas pesadas.",
-                "imagen": "./archivos/3imagen04SP.png",
-                "enlace": "https://x.com/gemini_notebook/status/2095215233468092742?s=46",
+                "categoria": "IA (Estrategia y negocio)",
+                "fechaISO": "2026-09-10",
+                "fechaTexto": "10 Sep 2026",
+                "titulo": "Google invierte en IA en Finlandia",
+                "resumen": "Google destina 13.000 millones de euros a centros de datos, energía limpia y alianzas locales en Finlandia durante dos años.",
+                "imagen": "./archivos/3imagen10SP.png",
+                "enlace": "https://x.com/google/status/2097795419296477256?s=46",
                 "visible": true
             }
         ]
