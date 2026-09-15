@@ -1,4 +1,58 @@
 [
+  {
+    "tituloAudio": "Novedades de esta semana: 16 de Septiembre",
+    "audioSrc": "Audio16SP.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "Debate sobre frenar la IA"
+      },
+      {
+        "segundo": 32,
+        "etiqueta": "00:32",
+        "titulo": "Gemini 4 · Preentrenamiento"
+      },
+      {
+        "segundo": 64,
+        "etiqueta": "01:04",
+        "titulo": "ElevenLabs · MCP creativo"
+      }
+    ],
+    "visible": false,
+    "noticias": [
+      {
+        "categoria": "IA (Estrategia y negocio)",
+        "fechaISO": "2026-09-16",
+        "fechaTexto": "16 Sep 2026",
+        "titulo": "Crece el debate sobre frenar la IA",
+        "resumen": "Dot CSV analiza el debate público sobre la velocidad y el control del desarrollo de la inteligencia artificial.",
+        "imagen": "./archivos/1imagen16SP.png",
+        "enlace": "https://youtu.be/t2DE62wxDxA?si=j4FP043QbbYO6dR7",
+        "visible": false
+      },
+      {
+        "categoria": "IA (Modelos y Agentes)",
+        "fechaISO": "2026-09-16",
+        "fechaTexto": "16 Sep 2026",
+        "titulo": "Gemini 4 sigue en preentrenamiento",
+        "resumen": "Google confirma el preentrenamiento de Gemini 4, pero aún no ha anunciado fecha, acceso por API ni lanzamiento público.",
+        "imagen": "./archivos/2imagen16SP.png",
+        "enlace": "https://felloai.com/es/todo-lo-que-sabemos-sobre-google-gemini-4/",
+        "visible": false
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-09-16",
+        "fechaTexto": "16 Sep 2026",
+        "titulo": "ElevenLabs amplía su MCP creativo",
+        "resumen": "El MCP de ElevenLabs permite generar voz, música, imágenes y vídeo desde asistentes compatibles, junto con transcripciones, doblajes y efectos.",
+        "imagen": "./archivos/3imagen16SP.png",
+        "enlace": "https://x.com/ElevenLabs/status/2099547227223908568?s=20",
+        "visible": false
+      }
+    ]
+  },
     {
         "tituloAudio": "Novedades de esta semana: 10 de Septiembre",
         "audioSrc": "Audio10SP.m4a",
