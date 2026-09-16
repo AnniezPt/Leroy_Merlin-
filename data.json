@@ -19,7 +19,7 @@
         "titulo": "ElevenLabs · MCP creativo"
       }
     ],
-    "visible": false,
+    "visible": true,
     "noticias": [
       {
         "categoria": "IA (Estrategia y negocio)",
@@ -29,7 +29,7 @@
         "resumen": "Dot CSV analiza el debate público sobre la velocidad y el control del desarrollo de la inteligencia artificial.",
         "imagen": "./archivos/1imagen16SP.png",
         "enlace": "https://youtu.be/t2DE62wxDxA?si=j4FP043QbbYO6dR7",
-        "visible": false
+        "visible": true
       },
       {
         "categoria": "IA (Modelos y Agentes)",
@@ -39,7 +39,7 @@
         "resumen": "Google confirma el preentrenamiento de Gemini 4, pero aún no ha anunciado fecha, acceso por API ni lanzamiento público.",
         "imagen": "./archivos/2imagen16SP.png",
         "enlace": "https://felloai.com/es/todo-lo-que-sabemos-sobre-google-gemini-4/",
-        "visible": false
+        "visible": true
       },
       {
         "categoria": "IA (Productividad)",
@@ -49,7 +49,7 @@
         "resumen": "El MCP de ElevenLabs permite generar voz, música, imágenes y vídeo desde asistentes compatibles, junto con transcripciones, doblajes y efectos.",
         "imagen": "./archivos/3imagen16SP.png",
         "enlace": "https://x.com/ElevenLabs/status/2099547227223908568?s=20",
-        "visible": false
+        "visible": true
       }
     ]
   },
