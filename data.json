@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 18 de Septiembre",
+    "audioSrc": "Audio18SP.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "ElevenLabs · Reception"
+      },
+      {
+        "segundo": 34,
+        "etiqueta": "00:34",
+        "titulo": "Gemini · Workspace por voz"
+      },
+      {
+        "segundo": 68,
+        "etiqueta": "01:08",
+        "titulo": "ChatGPT · Images 2.5"
+      }
+    ],
+    "visible": false,
+    "noticias": [
+      {
+        "categoria": "IA (Atención al cliente)",
+        "fechaISO": "2026-09-18",
+        "fechaTexto": "18 Sep 2026",
+        "titulo": "ElevenLabs lanza Reception",
+        "resumen": "Reception atiende llamadas, resuelve consultas habituales y deriva cada caso a una persona cuando hace falta.",
+        "imagen": "./archivos/1imagen18SP.png",
+        "enlace": "https://elevenlabs.io/blog/reception",
+        "visible": false
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-09-18",
+        "fechaTexto": "18 Sep 2026",
+        "titulo": "Gemini se usa por voz en Workspace",
+        "resumen": "Gemini permite buscar correos, redactar documentos y transformar ideas habladas en notas organizadas, sin teclear.",
+        "imagen": "./archivos/2imagen18SP.png",
+        "enlace": "https://blog.google/products-and-platforms/products/workspace/voice-features-gmail-docs-keep/",
+        "visible": false
+      },
+      {
+        "categoria": "IA (Creación visual)",
+        "fechaISO": "2026-09-18",
+        "fechaTexto": "18 Sep 2026",
+        "titulo": "ChatGPT estrena Images 2.5",
+        "resumen": "El nuevo modelo mejora el detalle y la edición precisa para adaptar imágenes de producto y campañas sin rehacerlas.",
+        "imagen": "./archivos/3imagen18SP.png",
+        "enlace": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+        "visible": false
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 16 de Septiembre",
     "audioSrc": "Audio16SP.m4a",
     "audioMomentos": [
