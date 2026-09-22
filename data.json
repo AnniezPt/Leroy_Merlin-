@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 22 de Septiembre",
+    "audioSrc": "Audio22SP.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "Gemini · Sheets"
+      },
+      {
+      "segundo": 33,
+      "etiqueta": "00:33",
+        "titulo": "ChatGPT · Word"
+      },
+      {
+      "segundo": 66,
+      "etiqueta": "01:06",
+        "titulo": "Mistral y Mozilla · Smart Window"
+      }
+    ],
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-09-22",
+        "fechaTexto": "22 Sep 2026",
+        "titulo": "Gemini organiza datos en Sheets",
+        "resumen": "Gemini en Sheets crea o edita tablas con fórmulas y gráficos nativos a partir de una instrucción y del contexto empresarial.",
+        "imagen": "./archivos/1imagen22SP.png",
+        "enlace": "https://x.com/googleworkspace/status/2102020772558467097?s=46",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-09-22",
+        "fechaTexto": "22 Sep 2026",
+        "titulo": "ChatGPT llega a Word",
+        "resumen": "ChatGPT se integra en Word para convertir notas en borradores, resumir documentos y revisar texto seleccionado sin salir de la aplicación.",
+        "imagen": "./archivos/2imagen22SP.png",
+        "enlace": "https://help.openai.com/en/articles/20001526-chatgpt-for-word",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Investigación y privacidad)",
+        "fechaISO": "2026-09-22",
+        "fechaTexto": "22 Sep 2026",
+        "titulo": "Mistral y Mozilla llevan IA a Firefox",
+        "resumen": "Smart Window ayuda a investigar con las pestañas abiertas, recuperar información vista y encontrar fuentes, con foco en privacidad y uso multilingüe.",
+        "imagen": "./archivos/3imagen22SP.png",
+        "enlace": "https://mistral.ai/news/mistral-x-mozilla/",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 18 de Septiembre",
     "audioSrc": "Audio18SP.m4a",
     "audioMomentos": [
