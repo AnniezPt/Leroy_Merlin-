@@ -92,6 +92,10 @@
             transform: translateY(-1px);
             outline: none;
         }
+        .marcador-audio__titulo {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
 
         @keyframes popUp {
             from { transform: translateY(20px) scale(0.95); opacity: 0; }
@@ -200,8 +204,8 @@
             if (!Array.isArray(edicion.audioMomentos) || edicion.audioMomentos.length === 0) return '';
 
             const botones = edicion.audioMomentos.map(momento => `
-                <button type="button" class="marcador-audio rounded-full px-3 py-2 text-xs font-bold text-left whitespace-nowrap" data-audio-id="${audioId}" data-segundo="${momento.segundo}" aria-label="Escuchar desde ${momento.etiqueta}: ${momento.titulo}">
-                    <span class="mr-1 opacity-70">${momento.etiqueta}</span>${momento.titulo}
+                <button type="button" class="marcador-audio min-w-0 w-full rounded-2xl px-3 py-2 text-xs font-bold text-left leading-snug" data-audio-id="${audioId}" data-segundo="${momento.segundo}" aria-label="Escuchar desde ${momento.etiqueta}: ${momento.titulo}">
+                    <span class="block opacity-70">${momento.etiqueta}</span><span class="marcador-audio__titulo block">${momento.titulo}</span>
                 </button>`).join('');
 
             return `

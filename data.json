@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 24 de Septiembre",
+    "audioSrc": "Audio24SP.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "Gemini · Conexiones"
+      },
+      {
+        "segundo": 33,
+        "etiqueta": "00:33",
+        "titulo": "Claude · Opus 5.5"
+      },
+      {
+        "segundo": 66,
+        "etiqueta": "01:06",
+        "titulo": "OpenAI · Sol y Luna"
+      }
+    ],
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-09-23",
+        "fechaTexto": "23 Sep 2026",
+        "titulo": "Gemini conecta más aplicaciones",
+        "resumen": "Gemini amplía sus aplicaciones conectadas para reunir proyectos, bases de datos y herramientas creativas sin saltar entre pestañas.",
+        "imagen": "./archivos/1imagen24SP.png",
+        "enlace": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-09-22",
+        "fechaTexto": "22 Sep 2026",
+        "titulo": "Claude Opus 5.5 reduce costes",
+        "resumen": "Anthropic presenta Opus 5.5 y afirma que mantiene el nivel de Fable 5.1 en gran parte del trabajo con un coste un 40% menor que Opus 5.",
+        "imagen": "./archivos/2imagen24SP.png",
+        "enlace": "https://www.anthropic.com/news",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-09-22",
+        "fechaTexto": "22 Sep 2026",
+        "titulo": "OpenAI estrena GPT-6 Sol y Luna",
+        "resumen": "OpenAI incorpora dos modelos de razonamiento para texto e imagen: Sol prioriza capacidad y Luna ofrece una alternativa de menor coste.",
+        "imagen": "./archivos/3imagen24SP.png",
+        "enlace": "https://developers.openai.com/api/docs/changelog",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 22 de Septiembre",
     "audioSrc": "Audio22SP.m4a",
     "audioMomentos": [
