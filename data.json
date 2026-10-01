@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 29 de Septiembre",
+    "audioSrc": "Audio29SP.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "OpenAI · DevDay"
+      },
+      {
+        "segundo": 32,
+        "etiqueta": "00:32",
+        "titulo": "Claude · Sonnet 5.5"
+      },
+      {
+        "segundo": 64,
+        "etiqueta": "01:04",
+        "titulo": "ElevenLabs · Eleven v4"
+      }
+    ],
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Desarrollo y comunidad)",
+        "fechaISO": "2026-09-29",
+        "fechaTexto": "29 Sep 2026",
+        "titulo": "OpenAI celebra DevDay 2026",
+        "resumen": "DevDay reúne hoy en San Francisco a la comunidad desarrolladora para conocer las novedades de OpenAI, probar herramientas y seguir sesiones técnicas.",
+        "imagen": "./archivos/1imagen29SP.png",
+        "enlace": "https://openai.com/index/devday-2026/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Modelos y productividad)",
+        "fechaISO": "2026-09-28",
+        "fechaTexto": "28 Sep 2026",
+        "titulo": "Claude Sonnet 5.5 gana velocidad",
+        "resumen": "Anthropic presenta Claude Sonnet 5.5 y afirma que funciona un 30% más rápido y puede costar hasta un 30% menos en la mayoría de tareas.",
+        "imagen": "./archivos/2imagen29SP.png",
+        "enlace": "https://www.anthropic.com/news",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Audio y creación)",
+        "fechaISO": "2026-09-28",
+        "fechaTexto": "28 Sep 2026",
+        "titulo": "ElevenLabs estrena Eleven v4",
+        "resumen": "Eleven v4 mejora la expresividad de las voces generadas por IA y añade una versión Turbo de baja latencia para contenido, doblaje y agentes de voz.",
+        "imagen": "./archivos/3imagen29SP.png",
+        "enlace": "https://elevenlabs.io/es/blog/eleven-v4",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 24 de Septiembre",
     "audioSrc": "Audio24SP.m4a",
     "audioMomentos": [
