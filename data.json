@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 2 de Octubre",
+    "audioSrc": "Audio2OC.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "OpenAI · GPT-6.1 Sol"
+      },
+      {
+        "segundo": 34,
+        "etiqueta": "00:34",
+        "titulo": "Google · Gemini 4 Argon"
+      },
+      {
+        "segundo": 68,
+        "etiqueta": "01:08",
+        "titulo": "Microsoft · Copilot"
+      }
+    ],
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-09-29",
+        "fechaTexto": "29 Sep 2026",
+        "titulo": "OpenAI presenta GPT-6.1 Sol",
+        "resumen": "GPT-6.1 Sol llega para programación, uso de ordenador y trabajo profesional con rendimiento cercano a Astra y un coste menor.",
+        "imagen": "./archivos/1imagen2OC.png",
+        "enlace": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-10-01",
+        "fechaTexto": "01 Oct 2026",
+        "titulo": "Google prueba Gemini 4 Argon",
+        "resumen": "Google presenta Gemini 4 Argon para razonamiento de largo recorrido, programación, trabajo de conocimiento y defensa cibernética, inicialmente con acceso gradual.",
+        "imagen": "./archivos/2imagen2OC.png",
+        "enlace": "https://blog.google/intl/en-mena/company-news/technology/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-09-25",
+        "fechaTexto": "25 Sep 2026",
+        "titulo": "Microsoft renueva Copilot",
+        "resumen": "Microsoft incorpora Home, Code y Autopilot para reunir trabajo en Office, crear soluciones y delegar tareas que continúan de forma proactiva.",
+        "imagen": "./archivos/3imagen2OC.png",
+        "enlace": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 29 de Septiembre",
     "audioSrc": "Audio29SP.m4a",
     "audioMomentos": [
