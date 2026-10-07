@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 7 de Octubre",
+    "audioSrc": "Audio7OC.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "Claude · Ciberseguridad"
+      },
+      {
+        "segundo": 28,
+        "etiqueta": "00:28",
+        "titulo": "Google · Nano Banana"
+      },
+      {
+        "segundo": 56,
+        "etiqueta": "00:56",
+        "titulo": "OpenAI · Decisiones"
+      }
+    ],
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Ciberseguridad)",
+        "fechaISO": "2026-10-06",
+        "fechaTexto": "06 Oct 2026",
+        "titulo": "Claude abre acceso verificado",
+        "resumen": "Anthropic abre tres niveles de acceso verificado para que equipos defensivos usen capacidades avanzadas de Claude en incidentes y vulnerabilidades.",
+        "imagen": "./archivos/1imagen7OC.png",
+        "enlace": "https://www.anthropic.com/news/cyber-verification-program",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Creación visual)",
+        "fechaISO": "2026-10-06",
+        "fechaTexto": "06 Oct 2026",
+        "titulo": "Google mejora Nano Banana 2.1",
+        "resumen": "Nano Banana 2.1 genera y edita imágenes con más fidelidad al prompt, mejor texto y hasta catorce referencias visuales.",
+        "imagen": "./archivos/2imagen7OC.png",
+        "enlace": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-10-06",
+        "fechaTexto": "06 Oct 2026",
+        "titulo": "OpenAI estrena Decisions API",
+        "resumen": "Decisions API permite clasificar, elegir opciones y puntuar texto o imágenes para automatizar decisiones simples de una aplicación.",
+        "imagen": "./archivos/3imagen7OC.png",
+        "enlace": "https://developers.openai.com/api/docs/guides/decisions",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 2 de Octubre",
     "audioSrc": "Audio2OC.m4a",
     "audioMomentos": [
