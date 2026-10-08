@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 8 de Octubre",
+    "audioSrc": "Audio8OC.m4a",
+    "audioMomentos": [
+      {
+        "segundo": 0,
+        "etiqueta": "00:00",
+        "titulo": "ChatGPT · Intelligent UI"
+      },
+      {
+        "segundo": 27,
+        "etiqueta": "00:27",
+        "titulo": "Google · SynthID"
+      },
+      {
+        "segundo": 54,
+        "etiqueta": "00:54",
+        "titulo": "Mistral · Large 4"
+      }
+    ],
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-10-07",
+        "fechaTexto": "07 Oct 2026",
+        "titulo": "ChatGPT estrena Intelligent UI",
+        "resumen": "ChatGPT suma respuestas visuales e interactivas que pueden crear pequeñas herramientas para resolver una tarea al momento.",
+        "imagen": "./archivos/1imagen8OC.png",
+        "enlace": "https://x.com/chatgpt/status/2107933133635248145?s=46",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Ciberseguridad)",
+        "fechaISO": "2026-10-07",
+        "fechaTexto": "07 Oct 2026",
+        "titulo": "Google abre SynthID Detector",
+        "resumen": "Google abre SynthID Detector para comprobar si una imagen, vídeo o audio incluye una marca de agua invisible de IA.",
+        "imagen": "./archivos/2imagen8OC.png",
+        "enlace": "https://x.com/google/status/2107836407616299371?s=46",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-10-06",
+        "fechaTexto": "06 Oct 2026",
+        "titulo": "Mistral presenta Large 4",
+        "resumen": "Mistral Large 4 llega en vista previa como modelo multimodal abierto para razonamiento, programación y agentes.",
+        "imagen": "./archivos/3imagen8OC.png",
+        "enlace": "https://mistral.ai/news/mistral-large-4/",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 7 de Octubre",
     "audioSrc": "Audio7OC.m4a",
     "audioMomentos": [
