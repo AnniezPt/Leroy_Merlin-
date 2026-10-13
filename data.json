@@ -1,5 +1,42 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 13 de Octubre",
+    "audioSrc": "Audio13OC.m4a",
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-10-13",
+        "fechaTexto": "13 Oct 2026",
+        "titulo": "Gemini incorpora Skills",
+        "resumen": "Empieza el despliegue de instrucciones reutilizables para tareas repetitivas. Llegarán hasta mediados de noviembre.",
+        "imagen": "./archivos/1imagen13OC.png",
+        "enlace": "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Creación visual)",
+        "fechaISO": "2026-10-13",
+        "fechaTexto": "13 Oct 2026",
+        "titulo": "Ink Canvas convierte tus bocetos",
+        "resumen": "Ink Canvas llega a Windows táctil. Su IA convierte notas y bocetos en texto o imágenes; requiere Microsoft 365.",
+        "imagen": "./archivos/2imagen13OC.png",
+        "enlace": "https://support.microsoft.com/en-us/surface/introducing-microsoft-ink-canvas",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad y automatización)",
+        "fechaISO": "2026-10-13",
+        "fechaTexto": "13 Oct 2026",
+        "titulo": "Workspace automatiza más tareas",
+        "resumen": "Empieza el despliegue de búsquedas en Drive y borradores tras reuniones, sin programar. Puede tardar hasta 15 días.",
+        "imagen": "./archivos/3imagen13OC.png",
+        "enlace": "https://workspaceupdates.googleblog.com/2026/10/new-logic-and-search-steps-in-workspace-Studio-help-expand-automation-capabilities.html",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 8 de Octubre",
     "audioSrc": "Audio8OC.m4a",
     "audioMomentos": [
