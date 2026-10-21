@@ -1,5 +1,47 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 21 de Octubre",
+    "audioSrc": "Audio21OC.m4a",
+    "visible": true,
+    "bannerLanding": {
+      "titulo": "De pedir respuestas a hacer trabajo",
+      "imagen": "1imagen21OC.png",
+      "enlace": "especial-fabricantes-ia-21-octubre-2026.html"
+    },
+    "noticias": [
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-10-20",
+        "fechaTexto": "20 Oct 2026",
+        "titulo": "Gemini reúne marca y datos",
+        "resumen": "Google anuncia un espacio para negocios con marca, contenido y datos. El despliegue global comienza en los próximos días.",
+        "imagen": "./archivos/1imagen21OC.png",
+        "enlace": "https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad y análisis)",
+        "fechaISO": "2026-10-20",
+        "fechaTexto": "20 Oct 2026",
+        "titulo": "Copilot trabaja con tus archivos",
+        "resumen": "Microsoft presenta análisis de hojas e informes desde OneDrive. El anuncio incluye funciones disponibles y otras en despliegue.",
+        "imagen": "./archivos/2imagen21OC.png",
+        "enlace": "https://techcommunity.microsoft.com/blog/onedriveblog/onedrive-just-got-a-major-upgrade-new-copilot-capabilities-simpler-sharing-and-s/4565995",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Creación visual)",
+        "fechaISO": "2026-10-08",
+        "fechaTexto": "08 Oct 2026",
+        "titulo": "Claude suma paneles y animación",
+        "resumen": "Claude estrena paneles y animaciones en beta: Dashboards en planes de pago y Motion en Team y Enterprise.",
+        "imagen": "./archivos/3imagen21OC.png",
+        "enlace": "https://claude.com/resources/articles/dashboards-and-motion",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 13 de Octubre",
     "audioSrc": "Audio13OC.m4a",
     "visible": true,
