@@ -1,5 +1,42 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 24 de Octubre",
+    "audioSrc": "Audio24OC.m4a",
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Marketing y visibilidad)",
+        "fechaISO": "2026-10-22",
+        "fechaTexto": "22 Oct 2026",
+        "titulo": "Gemini refuerza la publicidad",
+        "resumen": "Google incorpora Gemini a la selección de medios en DV360 y a las sugerencias de Search Ads 360, sus herramientas publicitarias profesionales.",
+        "imagen": "./archivos/1imagen24OC.png",
+        "enlace": "https://blog.google/products/marketingplatform/360/google-marketing-platform-drop-october/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-10-23",
+        "fechaTexto": "23 Oct 2026",
+        "titulo": "Claude une chat y Cowork",
+        "resumen": "Claude Enterprise reúne conversación y trabajo con archivos en la nube, que puede continuar al cerrar el portátil. El acceso lo gestiona cada organización.",
+        "imagen": "./archivos/2imagen24OC.png",
+        "enlace": "https://claude.com/resources/articles/unified-claude-enterprise",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Herramientas de trabajo)",
+        "fechaISO": "2026-10-21",
+        "fechaTexto": "21 Oct 2026",
+        "titulo": "Copilot Code crea herramientas",
+        "resumen": "Copilot Code llega en acceso anticipado con Frontier: permite crear pequeñas aplicaciones internas describiendo lo que necesitas.",
+        "imagen": "./archivos/3imagen24OC.png",
+        "enlace": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/copilot-code-make-the-power-of-coding-accessible-to-everyone/4562358",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 21 de Octubre",
     "audioSrc": "Audio21OC.m4a",
     "visible": true,
