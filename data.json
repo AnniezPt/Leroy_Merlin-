@@ -1,5 +1,42 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 27 de Octubre",
+    "audioSrc": "Audio27OC.m4a",
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-10-26",
+        "fechaTexto": "26 Oct 2026",
+        "titulo": "OpenAI presenta GPT-6.1 Terra",
+        "resumen": "GPT-6.1 Terra combina análisis de imágenes y uso de aplicaciones. Llega a ChatGPT Work y Codex según plan, permisos y disponibilidad.",
+        "imagen": "./archivos/1imagen27OC.png",
+        "enlace": "https://learn.chatgpt.com/docs/whats-new/october-26-30-2026",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Productividad)",
+        "fechaISO": "2026-10-23",
+        "fechaTexto": "23 Oct 2026",
+        "titulo": "Gemini conecta tus cuadernos",
+        "resumen": "Gemini permite crear cuadernos, añadir fuentes y consultar su contenido desde el chat. En España debe activarse la conexión.",
+        "imagen": "./archivos/2imagen27OC.png",
+        "enlace": "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Impacto social)",
+        "fechaISO": "2026-10-26",
+        "fechaTexto": "26 Oct 2026",
+        "titulo": "Claude amplía su apoyo a ONG",
+        "resumen": "Anthropic lanza un plugin para ONG verificadas con funciones de captación de fondos, marketing y operaciones.",
+        "imagen": "./archivos/3imagen27OC.png",
+        "enlace": "https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+        "visible": true
+      }
+    ]
+  },
+  {
     "tituloAudio": "Novedades de esta semana: 24 de Octubre",
     "audioSrc": "Audio24OC.m4a",
     "visible": true,
