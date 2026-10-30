@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+body{margin:0;background:#fafbf7}
+#leroy-library-redesign{--ll-bg:#fafbf7;--ll-white:#fff;--ll-ink:#173325;--ll-muted:#58675b;--ll-line:#d9e2d7;--ll-green:#6cc24a;--ll-soft:#e9f3e2;--ll-lime:#d5f59e;color:var(--ll-ink);background:var(--ll-bg);font:15px/1.65 'Manrope',Arial,sans-serif;overflow-wrap:anywhere;color-scheme:light}
+#leroy-library-redesign *{box-sizing:border-box}
+#leroy-library-redesign a{color:inherit;text-decoration:none}
+#leroy-library-redesign a:hover{text-decoration:underline;text-underline-offset:5px}
+#leroy-library-redesign a:focus-visible,#leroy-library-redesign button:focus-visible{outline:3px solid #408824;outline-offset:5px}
+#leroy-library-redesign .skip-link{position:absolute;left:12px;top:-100px;z-index:20;background:var(--ll-ink);color:var(--ll-white);padding:10px}
+#leroy-library-redesign .skip-link:focus{top:12px}
+#leroy-library-redesign .site-header{max-width:1240px;padding:25px 42px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--ll-line)}
+#leroy-library-redesign .wordmark{display:flex;gap:11px;align-items:center;font-size:16px;font-weight:800;line-height:1.3;letter-spacing:-.6px}
+#leroy-library-redesign .wordmark small{display:block;font-size:13px;letter-spacing:.06em;font-weight:500;color:var(--ll-muted);margin-top:4px}
+#leroy-library-redesign .brand-dot{width:25px;height:25px;border-radius:50% 50% 0 50%;background:var(--ll-green);transform:rotate(-45deg);flex-shrink:0}
+#leroy-library-redesign .site-header nav{display:flex;gap:27px;align-items:center;font-size:14px;font-weight:700}
+#leroy-library-redesign .site-header nav a:last-child{display:flex;align-items:center;gap:8px}
+#leroy-library-redesign .nav-dot{width:6px;height:6px;border-radius:50%;background:var(--ll-green)}
+#leroy-library-redesign main{max-width:1240px;padding:0 42px;margin:auto}
+#leroy-library-redesign .library-hero{display:grid;grid-template-columns:1fr 1fr;gap:45px;padding:66px 0 52px;align-items:center}
+#leroy-library-redesign .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:0 0 22px}
+#leroy-library-redesign .hero-copy>.eyebrow{display:flex;align-items:center;gap:9px}
+#leroy-library-redesign .tiny-line{width:23px;height:2px;background:var(--ll-green)}
+#leroy-library-redesign h1{font-size:clamp(42px,5.2vw,69px);font-weight:600;line-height:1.02;letter-spacing:-3.4px;margin:0 0 25px}
+#leroy-library-redesign h1 em{font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:#427a31;letter-spacing:-2px}
+#leroy-library-redesign .hero-intro{font-size:14px;color:var(--ll-muted);max-width:340px;margin:0 0 27px;line-height:1.75}
+#leroy-library-redesign .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;font-size:14px;font-weight:700}
+#leroy-library-redesign .solid-link{display:inline-flex;align-items:center;gap:20px;padding:13px 18px;background:var(--ll-ink);color:var(--ll-white);border-radius:4px}
+#leroy-library-redesign .plain-link{display:inline-flex;align-items:center;border-bottom:1px solid #8ba180;padding-bottom:3px}
+#leroy-library-redesign .hero-visual{position:relative;margin:4px 0 25px;isolation:isolate}
+#leroy-library-redesign .hero-visual:before{content:'';position:absolute;inset:24px -15px -20px 20px;z-index:-1;border-radius:50% 48% 4px 4px;background:var(--ll-lime);transform:rotate(4deg)}
+#leroy-library-redesign .hero-visual>img{display:block;width:100%;height:420px;object-fit:cover;object-position:53% 50%;border-radius:160px 160px 5px 5px}
+#leroy-library-redesign .image-caption{position:absolute;bottom:21px;left:18px;background:var(--ll-white);font-size:12px;font-weight:700;padding:8px 12px;border-radius:3px}
+#leroy-library-redesign .paper-sticker{position:absolute;top:13px;right:-14px;width:110px;height:110px;padding:18px 13px;background:var(--ll-lime);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:14px;font-weight:800;line-height:1.35;transform:rotate(12deg);box-shadow:0 4px 15px #183b2912}
+#leroy-library-redesign .sticker-check{width:14px;height:8px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);margin:10px 0 5px}
+#leroy-library-redesign .section-index{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ll-line);border-bottom:1px solid var(--ll-line);margin-bottom:65px}
+#leroy-library-redesign .section-index a{display:flex;gap:18px;align-items:center;padding:20px 0;font-size:14px;font-weight:700}
+#leroy-library-redesign .section-index a+ a{border-left:1px solid var(--ll-line);padding-left:30px}
+#leroy-library-redesign .section-index a:hover .section-no{color:var(--ll-ink)}
+#leroy-library-redesign .section-no{font-size:12px;font-weight:500;color:var(--ll-muted)}
+#leroy-library-redesign section[id]{scroll-margin-top:22px}
+#leroy-library-redesign .section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:30px}
+#leroy-library-redesign .section-heading .eyebrow{margin-bottom:14px;color:#427a31}
+#leroy-library-redesign h2{font:500 43px/1.07 'Manrope',Arial,sans-serif;letter-spacing:-2px;margin:0}
+#leroy-library-redesign .section-heading>p{color:var(--ll-muted);font-size:14px;line-height:1.8;margin:0 0 4px}
+#leroy-library-redesign .feature{display:grid;grid-template-columns:.8fr 1.2fr;border-radius:10px;background:var(--ll-soft);overflow:hidden}
+#leroy-library-redesign .feature-copy{padding:37px 30px}
+#leroy-library-redesign .feature-meta{display:flex;flex-wrap:wrap;gap:8px 13px;font-size:11px;align-items:center;color:var(--ll-muted);margin-bottom:29px}
+#leroy-library-redesign .maker-label{background:var(--ll-ink);color:var(--ll-white);border-radius:20px;padding:5px 10px;font-weight:600}
+#leroy-library-redesign .feature h3{font:400 45px/1.02 'DM Serif Display',Georgia,serif;letter-spacing:-1px;margin:0 0 23px}
+#leroy-library-redesign .feature-copy p{font-size:14px;line-height:1.85;margin:0 0 17px;color:#405443}
+#leroy-library-redesign .feature-copy .feature-question{font-size:15px;font-weight:700;line-height:1.55;color:var(--ll-ink)}
+#leroy-library-redesign .source-link{display:inline-flex;gap:15px;align-items:center;font-size:12px;font-weight:700;border-bottom:1px solid var(--ll-ink);padding-bottom:4px;margin:5px 0 28px}
+#leroy-library-redesign .availability{border-top:1px solid #c6d5bd;padding-top:15px;font-size:12px;color:var(--ll-muted);line-height:1.7}
+#leroy-library-redesign .availability>span{display:block;font-weight:700;color:var(--ll-ink);margin-bottom:4px}
+#leroy-library-redesign .demo{padding:27px;background:#deecd4;position:relative}
+#leroy-library-redesign .demo-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+#leroy-library-redesign .demo-top .eyebrow{margin:0}
+#leroy-library-redesign .demo-tag{font-size:11px;color:var(--ll-muted);white-space:nowrap}
+#leroy-library-redesign .step-controls{display:flex;gap:5px;background:#cbdcbe;padding:4px;border-radius:6px;margin-bottom:17px}
+#leroy-library-redesign button{border:0;background:transparent;color:var(--ll-ink);font:700 10px/1.3 'Manrope',Arial,sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;border-radius:4px;padding:12px 6px;min-height:40px;flex:1}
+#leroy-library-redesign button>span{font-size:11px;opacity:.65;font-weight:500}
+#leroy-library-redesign button[aria-pressed=true]{background:var(--ll-white);box-shadow:0 2px 6px #183b2910}
+#leroy-library-redesign button:hover{background:#f3faec}
+#leroy-library-redesign .request-bubble{padding:13px 16px;background:var(--ll-ink);color:#f3f9ef;border-radius:9px 9px 2px 9px;margin-bottom:24px}
+#leroy-library-redesign .request-bubble>span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#c0e79d}
+#leroy-library-redesign .request-bubble p{font-size:13px;line-height:1.75;margin:6px 0 0}
+#leroy-library-redesign .document-stack{position:relative;margin:0 8px 10px}
+#leroy-library-redesign .document-stack:before{content:'';position:absolute;inset:5px -5px -6px 5px;background:#c0d1b1;border-radius:5px;transform:rotate(2deg)}
+#leroy-library-redesign .document-sheet{background:var(--ll-white);border-radius:5px;position:relative;padding:17px 23px 21px;min-height:320px;box-shadow:0 5px 16px #183b290d}
+#leroy-library-redesign .document-toolbar{display:flex;gap:7px;align-items:center;font-size:11px;color:var(--ll-muted);border-bottom:1px solid #e5e9e1;padding-bottom:12px;margin-bottom:16px}
+#leroy-library-redesign .document-toolbar>span:last-child{margin-left:auto;font-size:14px;line-height:1}
+#leroy-library-redesign .file-dot{width:7px;height:9px;border:1px solid #669450;border-radius:1px}
+#leroy-library-redesign .document-sheet h4{font:400 25px/1.1 'DM Serif Display',Georgia,serif;letter-spacing:-.3px;margin:0 0 18px}
+#leroy-library-redesign #demo-document p,#leroy-library-redesign .activity{font-size:12px;line-height:1.8;margin:0 0 12px}
+#leroy-library-redesign #demo-document b{font-weight:700;display:block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px;color:#427a31}
+#leroy-library-redesign .activity ul{padding-left:16px;margin:0}
+#leroy-library-redesign .activity li{margin-bottom:3px}
+#leroy-library-redesign #demo-document .pending{padding-top:11px;margin-bottom:0;border-top:1px solid #e5e9e1}
+#leroy-library-redesign mark{background:#e2f5c7;color:var(--ll-ink);padding:1px 3px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+#leroy-library-redesign .document-tab{position:absolute;right:-15px;bottom:30px;background:var(--ll-lime);color:var(--ll-ink);padding:9px 12px;font:italic 14px/1.2 'DM Serif Display',Georgia,serif;transform:rotate(-8deg);box-shadow:0 4px 8px #183b2910}
+#leroy-library-redesign .demo-caption{font-size:12px;line-height:1.7;color:#4c6244;margin:22px 7px 0;min-height:35px}
+#leroy-library-redesign .takeaway{display:grid;grid-template-columns:40px 1.4fr 1fr;gap:22px;padding:30px 0;border-bottom:1px solid var(--ll-line)}
+#leroy-library-redesign .takeaway-quote{font:60px/.9 "DM Serif Display",Georgia,serif;color:#427a31}
+#leroy-library-redesign .takeaway h4{font-size:14px;font-weight:700;margin:0 0 8px}
+#leroy-library-redesign .takeaway p{font-size:13px;color:var(--ll-muted);line-height:1.8;margin:0}
+#leroy-library-redesign .human-check{border-left:1px solid var(--ll-line);padding-left:24px}
+#leroy-library-redesign .human-check>span{font-size:12px;font-weight:700;display:block;margin-bottom:8px}
+#leroy-library-redesign .guides-section{padding:66px 0}
+#leroy-library-redesign .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+#leroy-library-redesign .guide-card{min-width:0}
+#leroy-library-redesign .guide-image-link{display:block;position:relative;overflow:hidden;border-radius:7px}
+#leroy-library-redesign .guide-image-link img{display:block;width:100%;height:235px;object-fit:cover;transition:transform .35s ease}
+#leroy-library-redesign .guide-image-link:hover img{transform:scale(1.035)}
+#leroy-library-redesign .guide-bookmark{position:absolute;right:22px;top:0;width:22px;height:44px;background:var(--ll-lime);clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%);box-shadow:0 2px 4px #183b2910}
+#leroy-library-redesign .guide-content{padding:21px 0 0}
+#leroy-library-redesign .guide-content time{font-size:11px;color:var(--ll-muted)}
+#leroy-library-redesign .guide-content h3{font:400 31px/1.1 'DM Serif Display',Georgia,serif;letter-spacing:-.4px;margin:12px 0}
+#leroy-library-redesign .guide-content p{font-size:14px;color:var(--ll-muted);max-width:350px;line-height:1.8;margin:0 0 17px}
+#leroy-library-redesign .guide-content>a{font-size:13px;font-weight:700;display:inline-flex;gap:20px;border-bottom:1px solid var(--ll-ink);padding-bottom:4px}
+#leroy-library-redesign .guides-note{font-size:12px;color:var(--ll-muted);border-top:1px solid var(--ll-line);padding-top:20px;margin:30px 0 0}
+#leroy-library-redesign footer{padding:38px 42px 22px;background:var(--ll-ink);color:var(--ll-white)}
+#leroy-library-redesign footer>div{display:flex;max-width:1156px;margin:auto;justify-content:space-between;align-items:center;gap:25px}
+#leroy-library-redesign .footer-brand{font-size:18px;line-height:1.3;letter-spacing:-.5px;font-weight:700}
+#leroy-library-redesign .footer-brand>span{display:block;font-size:12px;color:#bfd3bd;letter-spacing:.03em;font-weight:400;margin-top:6px}
+#leroy-library-redesign footer a{font-size:13px;border-bottom:1px solid #9eb79d;padding-bottom:5px}
+#leroy-library-redesign footer>p{max-width:1156px;margin:30px auto 0;padding-top:13px;border-top:1px solid #45634a;font-size:11px;color:#bfd3bd}
+@media(min-width:1000px){#leroy-library-redesign .hero-visual>img{height:480px}#leroy-library-redesign .feature-copy{padding:45px}#leroy-library-redesign .demo{padding:33px}#leroy-library-redesign .document-sheet{min-height:340px}#leroy-library-redesign .request-bubble p{font-size:14px}#leroy-library-redesign #demo-document p,#leroy-library-redesign .activity{font-size:14px}#leroy-library-redesign .document-sheet h4{font-size:29px}#leroy-library-redesign .step-controls button{font-size:13px}#leroy-library-redesign .guide-image-link img{height:290px}}
+@media(max-width:760px){#leroy-library-redesign .site-header{padding:20px 24px}#leroy-library-redesign main{padding:0 24px}#leroy-library-redesign .library-hero{gap:27px;padding:43px 0}#leroy-library-redesign h1{font-size:45px;letter-spacing:-2.3px}#leroy-library-redesign .hero-visual>img{height:350px;border-radius:120px 120px 4px 4px}#leroy-library-redesign .hero-intro{font-size:14px}#leroy-library-redesign .eyebrow{font-size:11px}#leroy-library-redesign .paper-sticker{width:89px;height:89px;font-size:12px;right:-8px}#leroy-library-redesign .hero-actions{gap:13px;font-size:12px}#leroy-library-redesign .solid-link{padding:12px;gap:10px}#leroy-library-redesign h2{font-size:35px}#leroy-library-redesign .feature{grid-template-columns:1fr}#leroy-library-redesign .feature-copy{padding:30px}#leroy-library-redesign .feature-copy p{max-width:530px;font-size:13px}#leroy-library-redesign .availability{font-size:13px}#leroy-library-redesign .feature h3{font-size:43px}#leroy-library-redesign .feature h3 br{display:none}#leroy-library-redesign .demo{padding:27px 35px}#leroy-library-redesign .request-bubble p{font-size:14px}#leroy-library-redesign .document-sheet{min-height:350px}#leroy-library-redesign #demo-document p,#leroy-library-redesign .activity{font-size:14px}#leroy-library-redesign .document-sheet h4{font-size:29px}#leroy-library-redesign .takeaway{grid-template-columns:30px 1fr}#leroy-library-redesign .human-check{grid-column:2;border:0;padding:0}#leroy-library-redesign .takeaway p{font-size:14px}#leroy-library-redesign .guide-image-link img{height:180px}#leroy-library-redesign .guide-content h3{font-size:26px}#leroy-library-redesign .guide-grid{gap:22px}#leroy-library-redesign footer{padding:30px 24px 20px}}
+@media(max-width:540px){#leroy-library-redesign .site-header{padding:18px 20px;gap:12px}#leroy-library-redesign .wordmark{font-size:14px}#leroy-library-redesign .site-header nav{font-size:12px;gap:13px}#leroy-library-redesign .brand-dot{width:20px;height:20px}#leroy-library-redesign main{padding:0 20px}#leroy-library-redesign .library-hero{grid-template-columns:1fr;padding:35px 0 40px;gap:33px}#leroy-library-redesign h1{font-size:52px;letter-spacing:-2.7px}#leroy-library-redesign h1 em br{display:none}#leroy-library-redesign .hero-intro{font-size:14px;max-width:350px}#leroy-library-redesign .hero-actions{font-size:14px;gap:24px}#leroy-library-redesign .solid-link{padding:13px 16px;gap:20px}#leroy-library-redesign .hero-visual{margin:0 12px 10px 0}#leroy-library-redesign .hero-visual>img{height:340px;border-radius:140px 140px 4px 4px}#leroy-library-redesign .paper-sticker{width:95px;height:95px;font-size:13px;right:-14px;top:5px}#leroy-library-redesign .section-index{margin-bottom:43px}#leroy-library-redesign .section-index a{font-size:13px;gap:9px;padding:18px 0}#leroy-library-redesign .section-index a+ a{padding-left:15px}#leroy-library-redesign .section-heading{display:block}#leroy-library-redesign h2{font-size:39px}#leroy-library-redesign .section-heading>p{margin:17px 0 0;font-size:14px}#leroy-library-redesign .section-heading>p br{display:none}#leroy-library-redesign .feature-copy{padding:26px 23px}#leroy-library-redesign .feature h3{font-size:40px}#leroy-library-redesign .feature h3 br{display:initial}#leroy-library-redesign .feature-copy p{font-size:13px}#leroy-library-redesign .demo{padding:23px 17px}#leroy-library-redesign .demo-top .eyebrow{font-size:11px}#leroy-library-redesign .demo-tag{font-size:11px}#leroy-library-redesign button{font-size:12px;padding:12px 4px;min-height:44px}#leroy-library-redesign .document-sheet{padding:17px 16px 20px;min-height:380px}#leroy-library-redesign .document-sheet h4{font-size:25px}#leroy-library-redesign .document-tab{right:-8px;font-size:14px;padding:8px;bottom:30px}#leroy-library-redesign .demo-caption{font-size:13px;min-height:53px}#leroy-library-redesign .takeaway{gap:12px;padding:25px 0}#leroy-library-redesign .takeaway h4{font-size:13px}#leroy-library-redesign .human-check>span{font-size:13px}#leroy-library-redesign .guides-section{padding:45px 0}#leroy-library-redesign .guide-grid{grid-template-columns:1fr;gap:35px}#leroy-library-redesign .guide-image-link img{height:220px}#leroy-library-redesign .guide-content h3{font-size:32px}#leroy-library-redesign .guide-content p{font-size:13px}#leroy-library-redesign .guide-content>a{font-size:14px}#leroy-library-redesign .guide-content time{font-size:12px}#leroy-library-redesign .guides-note{font-size:13px}#leroy-library-redesign footer>div{align-items:flex-start}#leroy-library-redesign .footer-brand{font-size:15px}#leroy-library-redesign footer a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#leroy-library-redesign *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+#leroy-library-redesign .section-index a{transition:background .2s ease}
+#leroy-library-redesign .section-index a:hover{background:#eef4e8;text-decoration:none}
+#leroy-library-redesign .section-no{display:grid;place-items:center;width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--ll-soft)}
+#leroy-library-redesign .paper-sticker{border-radius:3px 3px 17px 3px;width:112px;height:106px;transform:rotate(8deg)}
+#leroy-library-redesign .paper-sticker:after{content:"";position:absolute;top:-8px;left:36px;width:42px;height:16px;background:#f6f1d3c9;transform:rotate(-8deg)}
+#leroy-library-redesign .image-caption{border-left:3px solid var(--ll-green)}
+@media(max-width:760px){#leroy-library-redesign .paper-sticker{width:96px;height:96px}#leroy-library-redesign .paper-sticker:after{left:26px}}
+@media(max-width:540px){#leroy-library-redesign .section-no{width:23px;height:23px}#leroy-library-redesign .section-index a{font-size:12px;gap:7px}#leroy-library-redesign .paper-sticker{width:100px;height:100px}}
