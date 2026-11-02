@@ -1,4 +1,42 @@
 [
+{
+    "tituloAudio": "Noticias y una idea práctica: 3 de Noviembre",
+    "audioSrc": "Audio3NV.m4a",
+    "visible": true,
+    "noticias": [
+        {
+            "categoria": "IA (Productividad)",
+            "fechaISO": "2026-10-27",
+            "fechaTexto": "27 Oct · act. 29 Oct 2026",
+            "titulo": "Copilot limpia datos en Excel",
+            "resumen": "Copilot detecta duplicados, fechas y formatos incoherentes y propone cambios que puedes revisar. Acceso según licencia y despliegue.",
+            "imagen": "./archivos/1imagen3NV-v2.png",
+            "enlace": "https://techcommunity.microsoft.com/blog/excelblog/whats-new-in-excel-october-2026/4549758",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Herramientas de trabajo)",
+            "fechaISO": "2026-10-28",
+            "fechaTexto": "28 Oct 2026",
+            "titulo": "Claude revisa contratos",
+            "resumen": "Claude Enterprise incorpora herramientas para contrastar cláusulas y consultar sus fuentes. El equipo jurídico revisa los resultados.",
+            "imagen": "./archivos/2imagen3NV-v2.png",
+            "enlace": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work",
+            "visible": true
+        },
+        {
+            "categoria": "IA (Productividad)",
+            "fechaISO": "2026-07-30",
+            "fechaTexto": "¿Sabías que…? · Función existente",
+            "titulo": "ChatGPT junto a la página",
+            "resumen": "Con su extensión puedes consultar una pestaña o un fragmento seleccionado desde un chat lateral. Requiere la app y una configuración compatible.",
+            "imagen": "./archivos/3imagen3NV-v2.png",
+            "enlace": "https://learn.chatgpt.com/docs/chrome-extension",
+            "visible": true,
+            "textoEnlace": "Ver cómo funciona"
+        }
+    ]
+},
   {
     "tituloAudio": "Novedades de esta semana: 27 de Octubre",
     "audioSrc": "Audio27OC.m4a",
