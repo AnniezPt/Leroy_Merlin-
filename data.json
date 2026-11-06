@@ -22,9 +22,10 @@
       "titulo": "Claude anima tus ideas",
       "resumen": "Motion anima textos, gráficos e imágenes y exporta el resultado en MP4. Beta para Team y Enterprise, según permisos.",
       "imagen": "./archivos/2imagen5NV.png",
-      "enlace": "https://support.claude.com/en/articles/17454997-get-started-with-claude-motion",
-      "textoEnlace": "Ver cómo funciona",
-      "visible": true
+      "enlace": "https://www.youtube.com/watch?v=en0GuyhieQk",
+      "textoEnlace": "Ver vídeo · 1:21",
+      "visible": true,
+      "notaEnlace": "Audio en español: ⚙ → Pista de audio → Español (US)."
     },
     {
       "categoria": "IA (Productividad)",
@@ -33,8 +34,12 @@
       "titulo": "Copilot sigue a la competencia",
       "resumen": "KPIT combina Copilot y Power Automate para seguir anuncios de 14 competidores y preparar informes mensuales.",
       "imagen": "./archivos/3imagen5NV.png",
-      "enlace": "https://news.microsoft.com/source/asia/features/from-copilot-to-agents-inside-kpits-ai-powered-marketing-transformation/",
-      "visible": true
+      "enlace": "https://www.linkedin.com/posts/davidhurtadotoran_mentesinquietas-microsoft365-copilot-ugcPost-7310554134045220864-VaKy/",
+      "visible": true,
+      "textoEnlace": "Ver vídeo relacionado · 4:14",
+      "notaEnlace": "En español. Introducción a Researcher y Analyst.",
+      "enlaceFuente": "https://news.microsoft.com/source/asia/features/from-copilot-to-agents-inside-kpits-ai-powered-marketing-transformation/",
+      "textoFuente": "Leer el caso de KPIT"
     }
   ]
 },

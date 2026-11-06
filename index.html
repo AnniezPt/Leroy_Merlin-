@@ -61,7 +61,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        .resumen-noticia {
+        .tarjeta-noticia .resumen-noticia {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
@@ -371,10 +371,14 @@
                                 </span>
                             </div>
                             <h3 class="titulo-noticia font-bold text-xl mb-3 leading-snug text-gray-900" title="${noticia.titulo}">${noticia.titulo}</h3>
-                            <p class="resumen-noticia text-gray-600 text-sm mb-6 flex-grow">${noticia.resumen}</p>
-                            <a href="${noticia.enlace}" target="_blank" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors mt-auto inline-flex items-center group">
+                            <p class="resumen-noticia text-gray-600 text-sm mb-6">${noticia.resumen}</p>
+                            <div class="mt-auto">
+                            <a href="${noticia.enlace}" target="_blank" class="link-noticia text-sm font-bold text-lm-dark hover:text-lm-green transition-colors inline-flex items-center group">
                                 ${noticia.textoEnlace || 'Leer noticia completa'} <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                             </a>
+                            ${noticia.notaEnlace ? `<p class="text-xs text-gray-500 mt-2 leading-relaxed">${noticia.notaEnlace}</p>` : ''}
+                            ${noticia.enlaceFuente ? `<a href="${noticia.enlaceFuente}" target="_blank" class="text-xs text-lm-dark underline inline-block mt-2">${noticia.textoFuente || 'Leer la fuente'}</a>` : ''}
+                            </div>
                         </div>
                     </article>`;
                 });
