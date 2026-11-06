@@ -1,5 +1,44 @@
 [
 {
+  "tituloAudio": "Noticias y una idea práctica: 5 de Noviembre",
+  "audioSrc": "Audio5NV.m4a",
+  "visible": true,
+  "noticias": [
+    {
+      "categoria": "IA (Modelos y agentes)",
+      "fechaISO": "2026-11-02",
+      "fechaTexto": "02 Nov 2026 · Investigación",
+      "titulo": "Una IA corrige a otra",
+      "resumen": "En una simulación del MIT, Astra corrige un coche atascado para que tome impulso y suba una rampa. Investigación inicial.",
+      "imagen": "./archivos/1imagen5NV.png",
+      "enlace": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "textoEnlace": "Ver el experimento",
+      "visible": true
+    },
+    {
+      "categoria": "IA (Creación visual)",
+      "fechaISO": "2026-10-08",
+      "fechaTexto": "Píldora práctica · Función existente",
+      "titulo": "Claude anima tus ideas",
+      "resumen": "Motion anima textos, gráficos e imágenes y exporta el resultado en MP4. Beta para Team y Enterprise, según permisos.",
+      "imagen": "./archivos/2imagen5NV.png",
+      "enlace": "https://support.claude.com/en/articles/17454997-get-started-with-claude-motion",
+      "textoEnlace": "Ver cómo funciona",
+      "visible": true
+    },
+    {
+      "categoria": "IA (Productividad)",
+      "fechaISO": "2026-11-04",
+      "fechaTexto": "04 Nov 2026 · Caso de uso",
+      "titulo": "Copilot sigue a la competencia",
+      "resumen": "KPIT combina Copilot y Power Automate para seguir anuncios de 14 competidores y preparar informes mensuales.",
+      "imagen": "./archivos/3imagen5NV.png",
+      "enlace": "https://news.microsoft.com/source/asia/features/from-copilot-to-agents-inside-kpits-ai-powered-marketing-transformation/",
+      "visible": true
+    }
+  ]
+},
+{
     "tituloAudio": "Noticias y una idea práctica: 3 de Noviembre",
     "audioSrc": "Audio3NV.m4a",
     "visible": true,
