@@ -1,5 +1,60 @@
 [
 {
+  "tituloAudio": "Novedades de esta semana: 10 de noviembre",
+  "audioSrc": "Audio10NV.m4a",
+  "audioMomentos": [
+    {
+      "segundo": 14,
+      "etiqueta": "00:14",
+      "titulo": "Google · Gemini Skills"
+    },
+    {
+      "segundo": 40,
+      "etiqueta": "00:40",
+      "titulo": "Anthropic · Fable 5.2"
+    },
+    {
+      "segundo": 65,
+      "etiqueta": "01:05",
+      "titulo": "QIDI · MakeBuddy Smart5"
+    }
+  ],
+  "visible": true,
+  "noticias": [
+    {
+      "categoria": "IA (Productividad)",
+      "fechaISO": "2026-11-10",
+      "fechaTexto": "10 Nov 2026 · Actualización",
+      "titulo": "Gemini Skills para equipos",
+      "resumen": "Workspace permite compartir instrucciones para tareas como informes semanales. Por ahora, solo en inglés.",
+      "imagen": "./archivos/1imagen10NV.png",
+      "enlace": "https://workspaceupdates.googleblog.com/2026/11/skills-in-workspace.html",
+      "visible": true
+    },
+    {
+      "categoria": "IA (Modelos y agentes)",
+      "fechaISO": "2026-11-09",
+      "fechaTexto": "09 Nov 2026 · Lanzamiento",
+      "titulo": "Llega Claude Fable 5.2",
+      "resumen": "Anthropic mejora la programación, el razonamiento y el análisis de imágenes en tareas complejas.",
+      "imagen": "./archivos/2imagen10NV.png",
+      "enlace": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "visible": true
+    },
+    {
+      "categoria": "IA (Robótica y hardware)",
+      "fechaISO": "2026-11-10",
+      "fechaTexto": "10 Nov 2026 · Lanzamiento",
+      "titulo": "QIDI: del dibujo al 3D",
+      "resumen": "La MakeBuddy Smart5 convierte imágenes en modelos 3D con QIDI Joy para imprimir objetos decorativos.",
+      "imagen": "./archivos/3imagen10NV.png",
+      "enlace": "https://eu.qidi3d.com/pages/smart5-reserve",
+      "visible": true,
+      "textoEnlace": "Ver el anuncio de QIDI"
+    }
+  ]
+},
+{
   "tituloAudio": "Noticias y una idea práctica: 5 de Noviembre",
   "audioSrc": "Audio5NV.m4a",
   "visible": true,
