@@ -1,0 +1,36 @@
+{
+  "tituloAudio": "Novedades de esta semana: 12 de noviembre",
+  "visible": true,
+  "noticias": [
+    {
+      "categoria": "IA (Comercio)",
+      "fechaISO": "2026-11-10",
+      "fechaTexto": "10 Nov 2026 · Lanzamiento",
+      "titulo": "Las empresas llegan a ChatGPT",
+      "resumen": "Business Hub permite a empresas elegibles gestionar su información en ChatGPT. Los agentes para clientes comienzan en EE. UU.",
+      "imagen": "./archivos/1imagen12NV.png",
+      "enlace": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "visible": true
+    },
+    {
+      "categoria": "IA (Productividad)",
+      "fechaISO": "2026-11-10",
+      "fechaTexto": "10 Nov 2026 · Novedad",
+      "titulo": "Claude estrena hojas y pizarras",
+      "resumen": "Claude incorpora hojas de cálculo y pizarras colaborativas en versión beta para planes de pago.",
+      "imagen": "./archivos/2imagen12NV.png",
+      "enlace": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "visible": true
+    },
+    {
+      "categoria": "IA (Diseño y creatividad)",
+      "fechaISO": "2026-11-10",
+      "fechaTexto": "10 Nov 2026 · Anuncio",
+      "titulo": "Adobe y Google amplían su alianza",
+      "resumen": "Adobe y Google acercan herramientas creativas y modelos de IA. Investigan nuevas formas de edición en Photoshop.",
+      "imagen": "./archivos/3imagen12NV.png",
+      "enlace": "https://news.adobe.com/news/2026/11/adobe-and-google-deepen-partnership",
+      "visible": true
+    }
+  ]
+}
