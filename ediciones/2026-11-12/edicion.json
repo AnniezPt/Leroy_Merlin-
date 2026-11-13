@@ -32,5 +32,23 @@
       "enlace": "https://news.adobe.com/news/2026/11/adobe-and-google-deepen-partnership",
       "visible": true
     }
+  ],
+  "audioSrc": "Audio12NV.m4a",
+  "audioMomentos": [
+    {
+      "segundo": 14,
+      "etiqueta": "00:14",
+      "titulo": "OpenAI · Empresas en ChatGPT"
+    },
+    {
+      "segundo": 43,
+      "etiqueta": "00:43",
+      "titulo": "Claude · Hojas y pizarras"
+    },
+    {
+      "segundo": 69,
+      "etiqueta": "01:09",
+      "titulo": "Adobe y Google · Creatividad"
+    }
   ]
 }
