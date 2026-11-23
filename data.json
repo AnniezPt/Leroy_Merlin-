@@ -1,7 +1,7 @@
 [
   {
     "tituloAudio": "Novedades de esta semana: 23 de noviembre",
-    "audioSrc": "Audio23NV.m4a",
+    "audioSrc": "Audio23NV-natural.m4a",
     "visible": true,
     "noticias": [
       {
@@ -37,18 +37,18 @@
     ],
     "audioMomentos": [
       {
-        "segundo": 5,
-        "etiqueta": "00:05",
+        "segundo": 17,
+        "etiqueta": "00:17",
         "titulo": "OpenAI · GPT-6.2"
       },
       {
-        "segundo": 27,
-        "etiqueta": "00:27",
+        "segundo": 36,
+        "etiqueta": "00:36",
         "titulo": "Google · Gemini 4 Neon"
       },
       {
-        "segundo": 43,
-        "etiqueta": "00:43",
+        "segundo": 57,
+        "etiqueta": "00:57",
         "titulo": "Bancos · Seguridad de agentes"
       }
     ]
