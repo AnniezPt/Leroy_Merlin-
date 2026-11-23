@@ -1,5 +1,59 @@
 [
   {
+    "tituloAudio": "Novedades de esta semana: 23 de noviembre",
+    "audioSrc": "Audio23NV.m4a",
+    "visible": true,
+    "noticias": [
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-11-17",
+        "fechaTexto": "17 Nov 2026 · Lanzamiento",
+        "titulo": "OpenAI presenta GPT-6.2",
+        "resumen": "Astra aborda tareas complejas y Sol se orienta al trabajo cotidiano. OpenAI muestra ejemplos de diseño y experiencias 3D.",
+        "imagen": "./archivos/1imagen23NV.jpg",
+        "enlace": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Modelos y agentes)",
+        "fechaISO": "2026-11-18",
+        "fechaTexto": "18 Nov 2026 · Lanzamiento",
+        "titulo": "Google lanza Gemini 4 Neon",
+        "resumen": "El nuevo modelo combina razonamiento y rapidez para trabajar con documentos, imágenes, audio y vídeo. Acceso según plan.",
+        "imagen": "./archivos/2imagen23NV.jpg",
+        "enlace": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+        "visible": true
+      },
+      {
+        "categoria": "IA (Ciberseguridad)",
+        "fechaISO": "2026-11-23",
+        "fechaTexto": "23 Nov 2026 · Seguridad",
+        "titulo": "Más control para los agentes de IA",
+        "resumen": "Varios bancos de EE. UU. refuerzan los límites y la supervisión de sus agentes tras incidentes en empresas tecnológicas.",
+        "imagen": "./archivos/3imagen23NV.jpg",
+        "enlace": "https://www.channelnewsasia.com/business/exclusive-some-us-banks-tighten-ai-agent-controls-concern-about-models-escaping-safeguards-6574571",
+        "visible": true
+      }
+    ],
+    "audioMomentos": [
+      {
+        "segundo": 5,
+        "etiqueta": "00:05",
+        "titulo": "OpenAI · GPT-6.2"
+      },
+      {
+        "segundo": 27,
+        "etiqueta": "00:27",
+        "titulo": "Google · Gemini 4 Neon"
+      },
+      {
+        "segundo": 43,
+        "etiqueta": "00:43",
+        "titulo": "Bancos · Seguridad de agentes"
+      }
+    ]
+  },
+  {
     "tituloAudio": "Especial comercio e IA · 17 de noviembre",
     "visible": true,
     "bannerLanding": {
